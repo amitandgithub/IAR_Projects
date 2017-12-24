@@ -1,0 +1,14 @@
+
+*.out
+*.o
+*.pbi
+*.xcl
+*.wsdt
+*.bat
+*.dnx
+*.ps1
+*.pbd
+*.linf
+*.html
+*.dbgdt
+*.crun
