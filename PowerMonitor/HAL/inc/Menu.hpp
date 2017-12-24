@@ -60,7 +60,7 @@ public:
 
 	void SetLineChar(unsigned char Line, unsigned char Col, char Ch);
   
-        inline char * GetMenuAddress(){return &MenuText[0];}
+        inline char * GetMenuAddress(){return MenuText;}
 
 
 	//EventHandler_t  __attribute__ ((aligned (2))) EventHandlers[NO_OF_LINES_IN_MENU * NO_OF_HANDLERS_IN_LINE];
