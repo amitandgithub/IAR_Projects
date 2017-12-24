@@ -343,7 +343,6 @@
                     <name>CCIncludePath2</name>
                     <state>$PROJ_DIR$\CMSIS_Startup</state>
                     <state>$PROJ_DIR$\STM32F10x_StdPeriph_Driver\inc</state>
-                    <state>$PROJ_DIR$\..\..\..\..\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\arm\CMSIS\Include</state>
                     <state>$PROJ_DIR$\HAL\inc</state>
                 </option>
                 <option>

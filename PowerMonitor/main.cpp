@@ -91,13 +91,13 @@ int main(void)
     INA219_Obj.Run(&Power); 
     ftoa(Power.Voltage, (char*)aVoltage, 6);
     ftoa(Power.Current, (char*)aCurrent, 6);
-    MyUI.SetMenuLineTest(0,1,0,"V = ");
-    MyUI.SetMenuLineTest(0,1,4,(char*)aVoltage);
-    MyUI.SetMenuLineTest(0,2,0,"I = ");
-    MyUI.SetMenuLineTest(0,2,4,(char*)aCurrent);
-    ftoa(Power.Power, (char*)aCurrent, 6);
-    MyUI.SetMenuLineTest(0,3,0,"P = ");
+    MyUI.SetMenuLineTest(0,2,0,"V = ");
+    MyUI.SetMenuLineTest(0,2,4,(char*)aVoltage);
+    MyUI.SetMenuLineTest(0,3,0,"I = ");
     MyUI.SetMenuLineTest(0,3,4,(char*)aCurrent);
+    ftoa(Power.Power, (char*)aCurrent, 6);
+    MyUI.SetMenuLineTest(0,4,0,"P = ");
+    MyUI.SetMenuLineTest(0,4,4,(char*)aCurrent);
   }
 
 }

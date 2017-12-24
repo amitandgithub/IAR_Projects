@@ -1,70 +1,80 @@
 ###############################################################################
 #
-# IAR ELF Linker V8.20.1.14183/W32 for ARM                24/Dec/2017  08:38:21
+# IAR ELF Linker V8.20.1.14183/W32 for ARM                24/Dec/2017  10:04:51
 # Copyright 2007-2017 IAR Systems AB.
 #
 #    Output file  =  
 #        C:\Amit
-#        Caudhary\STM32_IAR\Projects\PowerMonitor\Debug\Exe\PowerMonitor.out
+#        Caudhary\STM32_IAR\Projects\IAR_Projects\PowerMonitor\Debug\Exe\PowerMonitor.out
 #    Map file     =  
 #        C:\Amit
-#        Caudhary\STM32_IAR\Projects\PowerMonitor\Debug\List\PowerMonitor.map
+#        Caudhary\STM32_IAR\Projects\IAR_Projects\PowerMonitor\Debug\List\PowerMonitor.map
 #    Command line =  
-#        -f C:\Users\AMITCH~1\AppData\Local\Temp\EW4526.tmp ("C:\Amit
-#        Caudhary\STM32_IAR\Projects\PowerMonitor\Debug\Obj\ClockManager.o"
-#        "C:\Amit Caudhary\STM32_IAR\Projects\PowerMonitor\Debug\Obj\Gpio.o"
+#        -f C:\Users\AMITCH~1\AppData\Local\Temp\EW554C.tmp ("C:\Amit
+#        Caudhary\STM32_IAR\Projects\IAR_Projects\PowerMonitor\Debug\Obj\ClockManager.o"
 #        "C:\Amit
-#        Caudhary\STM32_IAR\Projects\PowerMonitor\Debug\Obj\GpioInput.o"
+#        Caudhary\STM32_IAR\Projects\IAR_Projects\PowerMonitor\Debug\Obj\Gpio.o"
 #        "C:\Amit
-#        Caudhary\STM32_IAR\Projects\PowerMonitor\Debug\Obj\GpioOutput.o"
+#        Caudhary\STM32_IAR\Projects\IAR_Projects\PowerMonitor\Debug\Obj\GpioInput.o"
 #        "C:\Amit
-#        Caudhary\STM32_IAR\Projects\PowerMonitor\Debug\Obj\HwButton.o"
+#        Caudhary\STM32_IAR\Projects\IAR_Projects\PowerMonitor\Debug\Obj\GpioOutput.o"
 #        "C:\Amit
-#        Caudhary\STM32_IAR\Projects\PowerMonitor\Debug\Obj\HwButtonIntr.o"
-#        "C:\Amit Caudhary\STM32_IAR\Projects\PowerMonitor\Debug\Obj\I2c.o"
+#        Caudhary\STM32_IAR\Projects\IAR_Projects\PowerMonitor\Debug\Obj\HwButton.o"
 #        "C:\Amit
-#        Caudhary\STM32_IAR\Projects\PowerMonitor\Debug\Obj\I2CDriver.o"
-#        "C:\Amit Caudhary\STM32_IAR\Projects\PowerMonitor\Debug\Obj\INA219.o"
+#        Caudhary\STM32_IAR\Projects\IAR_Projects\PowerMonitor\Debug\Obj\HwButtonIntr.o"
 #        "C:\Amit
-#        Caudhary\STM32_IAR\Projects\PowerMonitor\Debug\Obj\InterruptManager.o"
-#        "C:\Amit Caudhary\STM32_IAR\Projects\PowerMonitor\Debug\Obj\Led.o"
-#        "C:\Amit Caudhary\STM32_IAR\Projects\PowerMonitor\Debug\Obj\Line.o"
-#        "C:\Amit Caudhary\STM32_IAR\Projects\PowerMonitor\Debug\Obj\main.o"
-#        "C:\Amit Caudhary\STM32_IAR\Projects\PowerMonitor\Debug\Obj\Menu.o"
-#        "C:\Amit Caudhary\STM32_IAR\Projects\PowerMonitor\Debug\Obj\misc.o"
+#        Caudhary\STM32_IAR\Projects\IAR_Projects\PowerMonitor\Debug\Obj\I2c.o"
 #        "C:\Amit
-#        Caudhary\STM32_IAR\Projects\PowerMonitor\Debug\Obj\Nokia5110LCD.o"
+#        Caudhary\STM32_IAR\Projects\IAR_Projects\PowerMonitor\Debug\Obj\I2CDriver.o"
 #        "C:\Amit
-#        Caudhary\STM32_IAR\Projects\PowerMonitor\Debug\Obj\PortManager.o"
-#        "C:\Amit Caudhary\STM32_IAR\Projects\PowerMonitor\Debug\Obj\Queue.o"
+#        Caudhary\STM32_IAR\Projects\IAR_Projects\PowerMonitor\Debug\Obj\INA219.o"
 #        "C:\Amit
-#        Caudhary\STM32_IAR\Projects\PowerMonitor\Debug\Obj\SpiDriver.o"
+#        Caudhary\STM32_IAR\Projects\IAR_Projects\PowerMonitor\Debug\Obj\InterruptManager.o"
 #        "C:\Amit
-#        Caudhary\STM32_IAR\Projects\PowerMonitor\Debug\Obj\startup_stm32f10x_md.o"
+#        Caudhary\STM32_IAR\Projects\IAR_Projects\PowerMonitor\Debug\Obj\Led.o"
 #        "C:\Amit
-#        Caudhary\STM32_IAR\Projects\PowerMonitor\Debug\Obj\stm32f10x_exti.o"
+#        Caudhary\STM32_IAR\Projects\IAR_Projects\PowerMonitor\Debug\Obj\Line.o"
 #        "C:\Amit
-#        Caudhary\STM32_IAR\Projects\PowerMonitor\Debug\Obj\stm32f10x_gpio.o"
+#        Caudhary\STM32_IAR\Projects\IAR_Projects\PowerMonitor\Debug\Obj\main.o"
 #        "C:\Amit
-#        Caudhary\STM32_IAR\Projects\PowerMonitor\Debug\Obj\stm32f10x_i2c.o"
+#        Caudhary\STM32_IAR\Projects\IAR_Projects\PowerMonitor\Debug\Obj\Menu.o"
 #        "C:\Amit
-#        Caudhary\STM32_IAR\Projects\PowerMonitor\Debug\Obj\stm32f10x_it.o"
+#        Caudhary\STM32_IAR\Projects\IAR_Projects\PowerMonitor\Debug\Obj\misc.o"
 #        "C:\Amit
-#        Caudhary\STM32_IAR\Projects\PowerMonitor\Debug\Obj\stm32f10x_rcc.o"
+#        Caudhary\STM32_IAR\Projects\IAR_Projects\PowerMonitor\Debug\Obj\Nokia5110LCD.o"
 #        "C:\Amit
-#        Caudhary\STM32_IAR\Projects\PowerMonitor\Debug\Obj\stm32f10x_spi.o"
+#        Caudhary\STM32_IAR\Projects\IAR_Projects\PowerMonitor\Debug\Obj\PortManager.o"
 #        "C:\Amit
-#        Caudhary\STM32_IAR\Projects\PowerMonitor\Debug\Obj\stm32f10x_usart.o"
+#        Caudhary\STM32_IAR\Projects\IAR_Projects\PowerMonitor\Debug\Obj\Queue.o"
 #        "C:\Amit
-#        Caudhary\STM32_IAR\Projects\PowerMonitor\Debug\Obj\system_stm32f10x.o"
+#        Caudhary\STM32_IAR\Projects\IAR_Projects\PowerMonitor\Debug\Obj\SpiDriver.o"
 #        "C:\Amit
-#        Caudhary\STM32_IAR\Projects\PowerMonitor\Debug\Obj\SysTickTimer.o"
-#        "C:\Amit Caudhary\STM32_IAR\Projects\PowerMonitor\Debug\Obj\UI.o" -o
+#        Caudhary\STM32_IAR\Projects\IAR_Projects\PowerMonitor\Debug\Obj\startup_stm32f10x_md.o"
 #        "C:\Amit
-#        Caudhary\STM32_IAR\Projects\PowerMonitor\Debug\Exe\PowerMonitor.out"
+#        Caudhary\STM32_IAR\Projects\IAR_Projects\PowerMonitor\Debug\Obj\stm32f10x_exti.o"
+#        "C:\Amit
+#        Caudhary\STM32_IAR\Projects\IAR_Projects\PowerMonitor\Debug\Obj\stm32f10x_gpio.o"
+#        "C:\Amit
+#        Caudhary\STM32_IAR\Projects\IAR_Projects\PowerMonitor\Debug\Obj\stm32f10x_i2c.o"
+#        "C:\Amit
+#        Caudhary\STM32_IAR\Projects\IAR_Projects\PowerMonitor\Debug\Obj\stm32f10x_it.o"
+#        "C:\Amit
+#        Caudhary\STM32_IAR\Projects\IAR_Projects\PowerMonitor\Debug\Obj\stm32f10x_rcc.o"
+#        "C:\Amit
+#        Caudhary\STM32_IAR\Projects\IAR_Projects\PowerMonitor\Debug\Obj\stm32f10x_spi.o"
+#        "C:\Amit
+#        Caudhary\STM32_IAR\Projects\IAR_Projects\PowerMonitor\Debug\Obj\stm32f10x_usart.o"
+#        "C:\Amit
+#        Caudhary\STM32_IAR\Projects\IAR_Projects\PowerMonitor\Debug\Obj\system_stm32f10x.o"
+#        "C:\Amit
+#        Caudhary\STM32_IAR\Projects\IAR_Projects\PowerMonitor\Debug\Obj\SysTickTimer.o"
+#        "C:\Amit
+#        Caudhary\STM32_IAR\Projects\IAR_Projects\PowerMonitor\Debug\Obj\UI.o"
+#        -o "C:\Amit
+#        Caudhary\STM32_IAR\Projects\IAR_Projects\PowerMonitor\Debug\Exe\PowerMonitor.out"
 #        --redirect _Printf=_PrintfFullNoMb --redirect _Scanf=_ScanfFullNoMb
 #        --map "C:\Amit
-#        Caudhary\STM32_IAR\Projects\PowerMonitor\Debug\List\PowerMonitor.map"
+#        Caudhary\STM32_IAR\Projects\IAR_Projects\PowerMonitor\Debug\List\PowerMonitor.map"
 #        --config "C:\Program Files (x86)\IAR Systems\Embedded Workbench
 #        8.0\arm\config\linker\ST\stm32f103x8.icf" --semihosting --entry
 #        __iar_program_start --vfe --text_out locale)
@@ -379,7 +389,7 @@ Extra (__iar_cstart_call_ctors)
 
     Module                  ro code  ro data  rw data
     ------                  -------  -------  -------
-C:\Amit Caudhary\STM32_IAR\Projects\PowerMonitor\Debug\Obj: [1]
+C:\Amit Caudhary\STM32_IAR\Projects\IAR_Projects\PowerMonitor\Debug\Obj: [1]
     ClockManager.o              106                 5
     GpioInput.o                 798       20
     GpioOutput.o                246       20
@@ -974,7 +984,7 @@ next_abi_dtor_rec       0x200004b0    0x4  Data  Lc  cppinit.o [3]
 reverse(char *, int)    0x08001809   0x1c  Code  Gb  main.o [1]
 
 
-[1] = C:\Amit Caudhary\STM32_IAR\Projects\PowerMonitor\Debug\Obj
+[1] = C:\Amit Caudhary\STM32_IAR\Projects\IAR_Projects\PowerMonitor\Debug\Obj
 [2] = command line
 [3] = dl7M_tln.a
 [4] = dlpp7M_tl_nc.a
