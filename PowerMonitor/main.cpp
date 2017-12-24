@@ -95,6 +95,9 @@ int main(void)
     MyUI.SetMenuLineTest(0,1,4,(char*)aVoltage);
     MyUI.SetMenuLineTest(0,2,0,"I = ");
     MyUI.SetMenuLineTest(0,2,4,(char*)aCurrent);
+    ftoa(Power.Power, (char*)aCurrent, 6);
+    MyUI.SetMenuLineTest(0,3,0,"P = ");
+    MyUI.SetMenuLineTest(0,3,4,(char*)aCurrent);
   }
 
 }

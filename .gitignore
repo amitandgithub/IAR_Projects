@@ -12,3 +12,7 @@
 *.html
 *.dbgdt
 *.crun
+*.sim
+*.browse
+*.browse
+*.sim
