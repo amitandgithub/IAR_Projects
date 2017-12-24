@@ -32,7 +32,7 @@ void UI::DisplayMenu(unsigned char Slot)
 	if( Slot <= NO_OF_MENUS_IN_UI)
 	{
 		//m_pNokiaLCD->DrawBuffer(reinterpret_cast<char *>(&Menus[Slot]) );
-		m_pNokiaLCD->DrawBuffer(&Menus[Slot].MenuText[0] );
+		m_pNokiaLCD->DrawBuffer(Menus[Slot].GetMenuAddress() );
 	}
 }
 void UI::Run()

@@ -25,7 +25,6 @@ public:
 	//const static unsigned char FIRST_LINE = 0U;
 	constexpr static unsigned char SIZE_OF_PAGE = ( NO_OF_CHARS_IN_LINE * NO_OF_LINES_IN_PAGE) ;
 
-
 	Page();
 
 	~Page(){};
@@ -42,7 +41,6 @@ public:
         
         void SetPageText(const char* pText);
 private:
-
 	char PageText[NO_OF_LINES_IN_PAGE * NO_OF_CHARS_IN_LINE];
 
 

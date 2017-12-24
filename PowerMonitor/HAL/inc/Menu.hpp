@@ -42,7 +42,7 @@ public:
 	const static unsigned char FIRST_LINE = 0U;
 	constexpr static unsigned char SIZE_OF_MENU = ( (NO_OF_LINES_IN_MENU * NO_OF_CHARS_IN_LINE) + (NO_OF_LINES_IN_MENU * NO_OF_HANDLERS_IN_LINE * sizeof(EventHandler_t)) ) ;
 
-	Menu(Nokia5110LCD* m_pNokiaLCD);
+	//Menu(Nokia5110LCD* m_pNokiaLCD);
 
 	Menu();
 
@@ -59,16 +59,19 @@ public:
 	void SetLineText(unsigned char Line, unsigned char Col, const char* pName);
 
 	void SetLineChar(unsigned char Line, unsigned char Col, char Ch);
+  
+        inline char * GetMenuAddress(){return &MenuText[0];}
 
-	char MenuText[NO_OF_LINES_IN_MENU * NO_OF_CHARS_IN_LINE];
 
-	EventHandler_t EventHandlers[NO_OF_LINES_IN_MENU * NO_OF_HANDLERS_IN_LINE];
 	//EventHandler_t  __attribute__ ((aligned (2))) EventHandlers[NO_OF_LINES_IN_MENU * NO_OF_HANDLERS_IN_LINE];
 
 private:
+  	char MenuText[NO_OF_LINES_IN_MENU * NO_OF_CHARS_IN_LINE];
+
+	EventHandler_t EventHandlers[NO_OF_LINES_IN_MENU * NO_OF_HANDLERS_IN_LINE];
 	void MovePointer(Direction_t Direction);
 	unsigned char ActiveLine;
-	Nokia5110LCD* m_pNokiaLCD;
+	//Nokia5110LCD* m_pNokiaLCD;
 
 };
 

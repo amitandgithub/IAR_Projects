@@ -13,7 +13,7 @@ namespace App
 
 
 
-
+/*
 Menu::Menu(Nokia5110LCD* pNokiaLCD):ActiveLine(0), m_pNokiaLCD(pNokiaLCD)
 {
 	for(int i = 0; i<Menu::NO_OF_LINES_IN_MENU * Menu::NO_OF_CHARS_IN_LINE; i++)
@@ -22,8 +22,8 @@ Menu::Menu(Nokia5110LCD* pNokiaLCD):ActiveLine(0), m_pNokiaLCD(pNokiaLCD)
 	for(int i = 0; i<Menu::NO_OF_LINES_IN_MENU * Menu::NO_OF_HANDLERS_IN_LINE; i++)
 		EventHandlers[i] = nullptr;
 }
-
-Menu::Menu():ActiveLine(0), m_pNokiaLCD(nullptr)
+*/
+Menu::Menu():ActiveLine(0)
 {
 	for(int i = 0; i<Menu::NO_OF_LINES_IN_MENU * Menu::NO_OF_CHARS_IN_LINE; i++)
 		MenuText[i] = ' ';
