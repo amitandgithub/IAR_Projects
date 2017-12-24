@@ -8,6 +8,7 @@
 #include"UI.hpp"
 #include"Line.hpp"
 #include"Menu.hpp"
+#include"Page.hpp"
 #include"Nokia5110LCD.hpp"
 
 using namespace std;

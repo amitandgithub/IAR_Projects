@@ -11,6 +11,7 @@
 #include"Line.hpp"
 #include"Menu.hpp"
 #include"Nokia5110LCD.hpp"
+#include"Page.hpp"
 #include <cstring>
 
 namespace App

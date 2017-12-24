@@ -2420,6 +2420,9 @@
             <name>$PROJ_DIR$\HAL\src\Nokia5110LCD.cpp</name>
         </file>
         <file>
+            <name>$PROJ_DIR$\HAL\src\Page.cpp</name>
+        </file>
+        <file>
             <name>$PROJ_DIR$\HAL\src\PortManager.cpp</name>
         </file>
         <file>
