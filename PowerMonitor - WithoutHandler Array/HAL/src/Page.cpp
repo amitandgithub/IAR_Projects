@@ -3,7 +3,6 @@
 #include"Page.hpp"
 #include <cstring>
 #include<stdio.h>
-#include"UI.hpp"
 
 namespace App
 {
@@ -26,26 +25,6 @@ void Page::SetPageText(const char* pText)
   {
       std::memcpy(&PageText[0],pText, SIZE_OF_PAGE );
   }
-}
-
-void Page::EventHandler(Event_t anEvent)
-{
-	if(anEvent == Touch)
-	{
-		
-	}
-	else if(anEvent == LongTouch)
-	{
-
-	}
-	else if(anEvent == LongLongTouch)
-	{
-
-	}
-	else
-	{
-		// Nothing To Do
-	}
 }
 
 

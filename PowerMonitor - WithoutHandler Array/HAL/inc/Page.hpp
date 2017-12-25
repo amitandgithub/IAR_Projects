@@ -16,15 +16,6 @@ namespace App
 class Page
 {
 public:
-        typedef void(*EventHandler_t)();
-	typedef enum
-	{
-		Touch = 0,
-		LongTouch,
-		LongLongTouch,
-		MaxEvents
-	}Event_t;
-   
 	const static unsigned char NO_OF_CHARS_IN_LINE = 12U;
 	//const static unsigned char NO_OF_HANDLERS_IN_LINE = 3U;
 	const static unsigned char NO_OF_LINES_IN_PAGE = 6U;
@@ -49,8 +40,6 @@ public:
 	void SetPageText(unsigned char Line, unsigned char Col, const char* pText, unsigned char Len);
         
         void SetPageText(const char* pText);
-        
-        void EventHandler(Event_t anEvent);
 private:
 	char PageText[NO_OF_LINES_IN_PAGE * NO_OF_CHARS_IN_LINE];
 
