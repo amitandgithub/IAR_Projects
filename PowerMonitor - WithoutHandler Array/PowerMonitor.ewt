@@ -2448,6 +2448,18 @@
         </file>
     </group>
     <group>
+        <name>Library</name>
+        <group>
+            <name>OLED</name>
+            <file>
+                <name>$PROJ_DIR$\Library\src\DefaultFonts.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\Library\src\OLED_I2C.cpp</name>
+            </file>
+        </group>
+    </group>
+    <group>
         <name>Startup</name>
         <file>
             <name>$PROJ_DIR$\CMSIS_Startup\startup_stm32f10x_md.s</name>

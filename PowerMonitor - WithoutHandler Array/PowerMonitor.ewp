@@ -345,6 +345,7 @@
                     <state>$PROJ_DIR$\STM32F10x_StdPeriph_Driver\inc</state>
                     <state>$PROJ_DIR$\HAL\inc</state>
                     <state>$PROJ_DIR$\App\Inc</state>
+                    <state>$PROJ_DIR$\Library\inc</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -2110,6 +2111,18 @@
         <file>
             <name>$PROJ_DIR$\HAL\src\UI.cpp</name>
         </file>
+    </group>
+    <group>
+        <name>Library</name>
+        <group>
+            <name>OLED</name>
+            <file>
+                <name>$PROJ_DIR$\Library\src\DefaultFonts.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\Library\src\OLED_I2C.cpp</name>
+            </file>
+        </group>
     </group>
     <group>
         <name>Startup</name>

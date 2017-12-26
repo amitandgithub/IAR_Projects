@@ -1,103 +1,15 @@
+#if defined(__AVR__)
+	#include <avr/pgmspace.h>
+	#define fontdatatype const uint8_t
+#elif defined(__PIC32MX__)
+	#define PROGMEM
+	#define fontdatatype const unsigned char
+#elif defined(__arm__)
+	#define PROGMEM
+	#define fontdatatype const unsigned char
+#endif
 
-/* Includes */
-#include<stddef.h>
-#include<stdio.h>
-#include<math.h>
-#include"stm32f10x.h"
-#include"I2CDriver.hpp"
-#include"UIApp.hpp"
-#include"OLED_I2C.h"
-
-using namespace Bsp;
-using namespace App;
-#define fontdatatype const uint8_t
-static void prvSetupHardware( void );
-
-extern I2CDriver INA219_I2C(I2CDriver::I2C1_B6_B7, nullptr, I2CDriver::Master, I2CDriver::BaudRate_400000 ); // I2C1_B6_B7
-OLED myOLED(&INA219_I2C);
-extern fontdatatype TinyFont[];
-
-int main(void)
-{
-   // Initialize the Clocks, memories and other HW of Microcontroller
-   prvSetupHardware();
-
-  // Start SysTick Timer for 1ms (1000 us) tick resolution
-  SysTickTimer::HwInit(1000UL);
-
-  // Create the User Interface and Initialize it
-  CreateUI();  
-  
-  myOLED.begin();
-  myOLED.setFont((uint8_t*)TinyFont);
-  while(1)
-  {
-    // Run the UI Engine 
-    RunUI();
-    myOLED.print("0123456789:;<=>?", CENTER, 22);
-  }
-
-}
-
-static void prvSetupHardware( void )
-{
-	/* Start with the clocks in their expected state. */
-	RCC_DeInit();
-
-	/* Enable HSE (high speed external clock). */
-	RCC_HSEConfig( RCC_HSE_ON );
-
-	/* Wait till HSE is ready. */
-	while( RCC_GetFlagStatus( RCC_FLAG_HSERDY ) == RESET )
-	{
-	}
-
-	/* 2 wait states required on the flash. */
-	*( ( unsigned long * ) 0x40022000 ) = 0x02;
-
-	/* HCLK = SYSCLK */
-	RCC_HCLKConfig( RCC_SYSCLK_Div1 );
-
-	/* PCLK2 = HCLK */
-	RCC_PCLK2Config( RCC_HCLK_Div1 );
-
-	/* PCLK1 = HCLK/2 */
-	RCC_PCLK1Config( RCC_HCLK_Div2 );
-
-	/* PLLCLK = 8MHz * 9 = 72 MHz. */
-	RCC_PLLConfig( RCC_PLLSource_HSE_Div1, RCC_PLLMul_9 );
-
-	/* Enable PLL. */
-	RCC_PLLCmd( ENABLE );
-
-	/* Wait till PLL is ready. */
-	while(RCC_GetFlagStatus(RCC_FLAG_PLLRDY) == RESET)
-	{
-	}
-
-	/* Select PLL as system clock source. */
-	RCC_SYSCLKConfig( RCC_SYSCLKSource_PLLCLK );
-
-	/* Wait till PLL is used as system clock source. */
-	while( RCC_GetSYSCLKSource() != 0x08 )
-	{
-	}
-
-	RCC_APB2PeriphClockCmd(	RCC_APB2Periph_AFIO, ENABLE );
-
-	/* Set the Vector Table base address at 0x08000000 */
-	NVIC_SetVectorTable( NVIC_VectTab_FLASH, 0x0 );
-
-	NVIC_PriorityGroupConfig( NVIC_PriorityGroup_4 );
-
-	/* Configure HCLK clock as SysTick clock source. */
-	SysTick_CLKSourceConfig( SysTick_CLKSource_HCLK );
-
-}
-
-
-
-
+#define fontdatatype const unsigned char
 
 fontdatatype SmallFont[] =
 {
