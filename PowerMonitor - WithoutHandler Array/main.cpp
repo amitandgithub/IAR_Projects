@@ -6,8 +6,6 @@
 #include"stm32f10x.h"
 #include"I2CDriver.hpp"
 #include"UIApp.hpp"
-//#include"OLED_I2C.h"
-#include "SD1306.h"
 
 using namespace Bsp;
 using namespace App;
