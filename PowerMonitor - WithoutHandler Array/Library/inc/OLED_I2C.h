@@ -123,7 +123,7 @@ class OLED
 	public:
 		OLED(uint8_t data_pin, uint8_t sclk_pin, uint8_t rst_pin);
 		OLED(uint8_t data_pin, uint8_t sclk_pin);
-                OLED( Bsp::I2CDriver* pI2CDriver);
+        OLED( Bsp::I2CDriver* pI2CDriver);
 		void	begin();
 		void	update();
 		void	setBrightness(uint8_t value);
