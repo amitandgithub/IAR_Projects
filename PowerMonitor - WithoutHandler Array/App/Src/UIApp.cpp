@@ -59,7 +59,7 @@ static Screen HomeScreen;
                        );
     
     PowerMonitorScreen.AddText( (char *)
-                       " Live Power "
+                       "<Live Power>"
                        "            "
                        "            "
                        "            "

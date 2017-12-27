@@ -54,7 +54,9 @@ typedef bool boolean;
  #define abs(a) ((a > 0) ? a : -a)
 #endif
 
+#ifndef SSD1306_ADDR
 #define SSD1306_ADDR		(0x78)
+#endif
 
 #define LEFT	0
 #define RIGHT	9999

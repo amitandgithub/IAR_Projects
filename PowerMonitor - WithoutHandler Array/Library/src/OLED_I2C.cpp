@@ -21,9 +21,10 @@
 */
 
 #include "OLED_I2C.h"
+#include "SysTickTimer.hpp"
 namespace App 
 {
-  
+#define SSD1306_WRITECOMMAND _sendTWIcommand 
 void pinMode(uint8_t pinmode, uint8_t direction)
 {
   
@@ -94,8 +95,12 @@ void OLED::begin()
         #pragma message("SCL pinmode OUTPUT")
 	}
         */
+  
+  
     m_pI2CDriver->HwInit();
-
+    
+    Bsp::SysTickTimer::DelayTicks(100);
+    
     _sendTWIcommand(SSD1306_DISPLAY_OFF);
     _sendTWIcommand(SSD1306_SET_DISPLAY_CLOCK_DIV_RATIO);
     _sendTWIcommand(0x80);
@@ -124,6 +129,7 @@ void OLED::begin()
     _sendTWIcommand(SSD1306_NORMAL_DISPLAY);
     _sendTWIcommand(SSD1306_DISPLAY_ON);
 
+        
 	clrScr();
 	update();
 	cfont.font=0;
@@ -131,7 +137,7 @@ void OLED::begin()
 
 void OLED::clrScr()
 {
-	memset(scrbuf, 0, 1024);
+	memset(scrbuf, 1, 1024);
 }
 
 void OLED::fillScr()
@@ -881,6 +887,7 @@ void OLED::_writeByte(uint8_t value)
 void OLED::_sendTWIcommand(uint8_t value)
 {
   uint8_t Lvalue = value;
+  uint8_t LCommand = SSD1306_COMMAND;
 #if 0
 	if (_use_hw)
 	{
@@ -903,6 +910,7 @@ void OLED::_sendTWIcommand(uint8_t value)
          */
 	}
 #endif
+        m_pI2CDriver->Send(SSD1306_ADDR, &LCommand, 1);
         m_pI2CDriver->Send(SSD1306_ADDR, &Lvalue, 1);
 }
 
