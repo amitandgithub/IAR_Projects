@@ -17,6 +17,14 @@ namespace Bsp
 class I2CDriver : public Peripheral
 {
 public:
+typedef enum
+{
+I2C_ERROR_NONE = 0,
+I2C_ERROR_RECIEVE_NACK,
+I2C_ERROR_BUSY_TRANSMITTING,
+I2C_ERROR_BUSY_RECEIVING,
+}I2C_STATUS;
+;
 	typedef void(*I2CIsr_t)();
 	typedef enum{
 		I2C1_B6_B7 = 0,
@@ -35,8 +43,14 @@ public:
 	virtual ~I2CDriver();
 	I2CDriver(I2CInstance_t I2CInstance, I2CIsr_t aI2CIsr = nullptr, I2CMode_t I2CMode = Master, I2CBaudRate_t I2CBaudRate = BaudRate_100000 );
 	bool HwInit();
-	bool Send   (u8 SlaveAddress, u8* pBuf, u32 Bytes);
-	bool Receive(u8 SlaveAddress, u8* pBuf, u32 Bytes);
+	int HwStart(){};
+	I2C_STATUS HwStop();
+	I2C_STATUS HwSendAddressWithDirection(uint8_t address, uint8_t direction);
+	I2C_STATUS HwSendACK();
+	I2C_STATUS HwSendNACK();
+	I2C_STATUS HwReset();
+	I2C_STATUS Send   (u8 SlaveAddress, u8* pBuf, u32 Bytes);
+	I2C_STATUS Receive(u8 SlaveAddress, u8* pBuf, u32 Bytes);
 	uint8_t ScanDevice(uint8_t SlaveAddress);
         uint8_t ScanBus(uint8_t* pResult, uint8_t Len);
 
