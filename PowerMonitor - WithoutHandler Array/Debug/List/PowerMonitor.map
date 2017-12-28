@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR ELF Linker V8.20.1.14183/W32 for ARM                27/Dec/2017  23:07:38
+# IAR ELF Linker V8.20.1.14183/W32 for ARM                28/Dec/2017  20:19:50
 # Copyright 2007-2017 IAR Systems AB.
 #
 #    Output file  =  
@@ -10,7 +10,7 @@
 #        C:\Amit Caudhary\STM32_IAR\Projects\IAR_Projects\PowerMonitor -
 #        WithoutHandler Array\Debug\List\PowerMonitor.map
 #    Command line =  
-#        -f C:\Users\AMITCH~1\AppData\Local\Temp\EW33CB.tmp ("C:\Amit
+#        -f C:\Users\AMITCH~1\AppData\Local\Temp\EWEB75.tmp ("C:\Amit
 #        Caudhary\STM32_IAR\Projects\IAR_Projects\PowerMonitor - WithoutHandler
 #        Array\Debug\Obj\ClockManager.o" "C:\Amit
 #        Caudhary\STM32_IAR\Projects\IAR_Projects\PowerMonitor - WithoutHandler
@@ -130,7 +130,7 @@ initialize by copy { rw };
   .intvec                ro code  0x08000000    0xec  startup_stm32f10x_md.o [1]
                                 - 0x080000ec    0xec
 
-"P1":                                         0x3d6c
+"P1":                                         0x3e2c
   .text                  ro code  0x080000ec   0x734  InterruptManager.o [1]
   .text                  ro code  0x08000820    0xb8  misc.o [1]
   .text                  ro code  0x080008d8    0xc0  stm32f10x_exti.o [1]
@@ -199,78 +199,78 @@ initialize by copy { rw };
   .rodata                const    0x08003ac4    0x4c  UIApp.o [1]
   .rodata                const    0x08003b10    0x4c  UIApp.o [1]
   .text                  ro code  0x08003b5c    0x40  zero_init3.o [6]
-  .text                  ro code  0x08003b9c    0x2c  copy_init3.o [6]
-  .text                  ro code  0x08003bc8    0x28  data_init.o [6]
-  .iar.init_table        const    0x08003bf0    0x28  - Linker created -
-  .text                  ro code  0x08003c18    0x20  cmain_call_ctors.o [6]
-  .text                  ro code  0x08003c38    0x1e  cmain.o [6]
-  .text                  ro code  0x08003c56     0x4  low_level_init.o [3]
-  .text                  ro code  0x08003c5a     0x4  exit.o [3]
-  .text                  ro code  0x08003c60     0xe  cexit.o [6]
-  .text                  ro code  0x08003c70    0x14  exit.o [7]
-  .rodata                const    0x08003c84    0x18  ControlScreen.o [1]
-  .rodata                const    0x08003c9c    0x18  Screen.o [1]
-  Initializer bytes      const    0x08003cb4    0x18  <for P2-1>
-  .rodata                const    0x08003ccc    0x14  GpioInput.o [1]
-  .rodata                const    0x08003ce0    0x14  GpioOutput.o [1]
-  .rodata                const    0x08003cf4    0x14  HwButtonIntr.o [1]
-  .rodata                const    0x08003d08    0x14  I2CDriver.o [1]
-  .rodata                const    0x08003d1c    0x14  Led.o [1]
-  .rodata                const    0x08003d30    0x14  SpiDriver.o [1]
-  .rodata                const    0x08003d44    0x10  INA219.o [1]
-  .rodata                const    0x08003d54    0x10  Nokia5110LCD.o [1]
-  .rodata                const    0x08003d64    0x10  UI.o [1]
-  .text                  ro code  0x08003d74    0x10  startup_stm32f10x_md.o [1]
-  .text                  ro code  0x08003d84    0x10  stm32f10x_it.o [1]
-  .text                  ro code  0x08003d94     0xc  cstartup_M.o [6]
-  .text                  ro code  0x08003da0     0xa  ControlScreen.o [1]
-  .rodata                const    0x08003dac     0x8  UIApp.o [1]
-  .rodata                const    0x08003db4     0x8  UIApp.o [1]
-  .rodata                const    0x08003dbc     0x8  UIApp.o [1]
-  .text                  ro code  0x08003dc4     0x4  startup_stm32f10x_md.o [1]
-  .text                  ro code  0x08003dc8     0x4  startup_stm32f10x_md.o [1]
-  .text                  ro code  0x08003dcc     0x4  startup_stm32f10x_md.o [1]
-  .text                  ro code  0x08003dd0     0x4  startup_stm32f10x_md.o [1]
-  .text                  ro code  0x08003dd4     0x4  startup_stm32f10x_md.o [1]
-  .text                  ro code  0x08003dd8     0x4  startup_stm32f10x_md.o [1]
-  .text                  ro code  0x08003ddc     0x4  startup_stm32f10x_md.o [1]
-  .text                  ro code  0x08003de0     0x4  startup_stm32f10x_md.o [1]
-  .text                  ro code  0x08003de4     0x4  startup_stm32f10x_md.o [1]
-  .text                  ro code  0x08003de8     0x4  startup_stm32f10x_md.o [1]
-  .text                  ro code  0x08003dec     0x4  startup_stm32f10x_md.o [1]
-  .text                  ro code  0x08003df0     0x4  startup_stm32f10x_md.o [1]
-  .text                  ro code  0x08003df4     0x4  startup_stm32f10x_md.o [1]
-  .text                  ro code  0x08003df8     0x4  startup_stm32f10x_md.o [1]
-  .text                  ro code  0x08003dfc     0x4  startup_stm32f10x_md.o [1]
-  .text                  ro code  0x08003e00     0x4  startup_stm32f10x_md.o [1]
-  .text                  ro code  0x08003e04     0x4  startup_stm32f10x_md.o [1]
-  .text                  ro code  0x08003e08     0x4  startup_stm32f10x_md.o [1]
-  .text                  ro code  0x08003e0c     0x4  startup_stm32f10x_md.o [1]
-  .text                  ro code  0x08003e10     0x4  startup_stm32f10x_md.o [1]
-  .text                  ro code  0x08003e14     0x4  startup_stm32f10x_md.o [1]
-  .text                  ro code  0x08003e18     0x4  startup_stm32f10x_md.o [1]
-  .text                  ro code  0x08003e1c     0x4  startup_stm32f10x_md.o [1]
-  .text                  ro code  0x08003e20     0x4  startup_stm32f10x_md.o [1]
-  .text                  ro code  0x08003e24     0x4  startup_stm32f10x_md.o [1]
-  .text                  ro code  0x08003e28     0x4  startup_stm32f10x_md.o [1]
-  .text                  ro code  0x08003e2c     0x4  startup_stm32f10x_md.o [1]
-  .text                  ro code  0x08003e30     0x4  startup_stm32f10x_md.o [1]
-  .text                  ro code  0x08003e34     0x4  startup_stm32f10x_md.o [1]
-  .text                  ro code  0x08003e38     0x4  startup_stm32f10x_md.o [1]
-  .text                  ro code  0x08003e3c     0x4  startup_stm32f10x_md.o [1]
-  .text                  ro code  0x08003e40     0x4  startup_stm32f10x_md.o [1]
-  .text                  ro code  0x08003e44     0x4  startup_stm32f10x_md.o [1]
-  .text                  ro code  0x08003e48     0x4  startup_stm32f10x_md.o [1]
-  .text                  ro code  0x08003e4c     0x4  startup_stm32f10x_md.o [1]
-  .text                  ro code  0x08003e50     0x4  startup_stm32f10x_md.o [1]
-  SHT$$PREINIT_ARRAY              0x08003e54     0x0  <Block>
-  SHT$$INIT_ARRAY                 0x08003e54     0x4  <Block>
-    .init_array          const    0x08003e54     0x4  UIApp.o [1]
-  __iar_tls$$INIT_ARRAY           0x08003e58     0x0  <Block>
-  .text                  ro code  0x08003e58     0x0  cstart_call_dtors.o [6]
-  .rodata                const    0x08003e58     0x0  zero_init3.o [6]
-  .rodata                const    0x08003e58     0x0  copy_init3.o [6]
-                                - 0x08003e58  0x3d6c
+  .rodata                const    0x08003b9c    0x34  GpioInput.o [1]
+  .rodata                const    0x08003bd0    0x34  GpioOutput.o [1]
+  .rodata                const    0x08003c04    0x34  HwButtonIntr.o [1]
+  .rodata                const    0x08003c38    0x34  I2CDriver.o [1]
+  .rodata                const    0x08003c6c    0x34  Led.o [1]
+  .rodata                const    0x08003ca0    0x34  SpiDriver.o [1]
+  .text                  ro code  0x08003cd4    0x2c  copy_init3.o [6]
+  .text                  ro code  0x08003d00    0x28  data_init.o [6]
+  .iar.init_table        const    0x08003d28    0x28  - Linker created -
+  .text                  ro code  0x08003d50    0x20  cmain_call_ctors.o [6]
+  .text                  ro code  0x08003d70    0x1e  cmain.o [6]
+  .text                  ro code  0x08003d8e     0x4  low_level_init.o [3]
+  .text                  ro code  0x08003d92     0x4  exit.o [3]
+  .text                  ro code  0x08003d98     0xe  cexit.o [6]
+  .text                  ro code  0x08003da8    0x14  exit.o [7]
+  .rodata                const    0x08003dbc    0x18  ControlScreen.o [1]
+  .rodata                const    0x08003dd4    0x18  Screen.o [1]
+  Initializer bytes      const    0x08003dec    0x18  <for P2-1>
+  .rodata                const    0x08003e04    0x10  INA219.o [1]
+  .rodata                const    0x08003e14    0x10  Nokia5110LCD.o [1]
+  .rodata                const    0x08003e24    0x10  UI.o [1]
+  .text                  ro code  0x08003e34    0x10  startup_stm32f10x_md.o [1]
+  .text                  ro code  0x08003e44    0x10  stm32f10x_it.o [1]
+  .text                  ro code  0x08003e54     0xc  cstartup_M.o [6]
+  .text                  ro code  0x08003e60     0xa  ControlScreen.o [1]
+  .rodata                const    0x08003e6c     0x8  UIApp.o [1]
+  .rodata                const    0x08003e74     0x8  UIApp.o [1]
+  .rodata                const    0x08003e7c     0x8  UIApp.o [1]
+  .text                  ro code  0x08003e84     0x4  startup_stm32f10x_md.o [1]
+  .text                  ro code  0x08003e88     0x4  startup_stm32f10x_md.o [1]
+  .text                  ro code  0x08003e8c     0x4  startup_stm32f10x_md.o [1]
+  .text                  ro code  0x08003e90     0x4  startup_stm32f10x_md.o [1]
+  .text                  ro code  0x08003e94     0x4  startup_stm32f10x_md.o [1]
+  .text                  ro code  0x08003e98     0x4  startup_stm32f10x_md.o [1]
+  .text                  ro code  0x08003e9c     0x4  startup_stm32f10x_md.o [1]
+  .text                  ro code  0x08003ea0     0x4  startup_stm32f10x_md.o [1]
+  .text                  ro code  0x08003ea4     0x4  startup_stm32f10x_md.o [1]
+  .text                  ro code  0x08003ea8     0x4  startup_stm32f10x_md.o [1]
+  .text                  ro code  0x08003eac     0x4  startup_stm32f10x_md.o [1]
+  .text                  ro code  0x08003eb0     0x4  startup_stm32f10x_md.o [1]
+  .text                  ro code  0x08003eb4     0x4  startup_stm32f10x_md.o [1]
+  .text                  ro code  0x08003eb8     0x4  startup_stm32f10x_md.o [1]
+  .text                  ro code  0x08003ebc     0x4  startup_stm32f10x_md.o [1]
+  .text                  ro code  0x08003ec0     0x4  startup_stm32f10x_md.o [1]
+  .text                  ro code  0x08003ec4     0x4  startup_stm32f10x_md.o [1]
+  .text                  ro code  0x08003ec8     0x4  startup_stm32f10x_md.o [1]
+  .text                  ro code  0x08003ecc     0x4  startup_stm32f10x_md.o [1]
+  .text                  ro code  0x08003ed0     0x4  startup_stm32f10x_md.o [1]
+  .text                  ro code  0x08003ed4     0x4  startup_stm32f10x_md.o [1]
+  .text                  ro code  0x08003ed8     0x4  startup_stm32f10x_md.o [1]
+  .text                  ro code  0x08003edc     0x4  startup_stm32f10x_md.o [1]
+  .text                  ro code  0x08003ee0     0x4  startup_stm32f10x_md.o [1]
+  .text                  ro code  0x08003ee4     0x4  startup_stm32f10x_md.o [1]
+  .text                  ro code  0x08003ee8     0x4  startup_stm32f10x_md.o [1]
+  .text                  ro code  0x08003eec     0x4  startup_stm32f10x_md.o [1]
+  .text                  ro code  0x08003ef0     0x4  startup_stm32f10x_md.o [1]
+  .text                  ro code  0x08003ef4     0x4  startup_stm32f10x_md.o [1]
+  .text                  ro code  0x08003ef8     0x4  startup_stm32f10x_md.o [1]
+  .text                  ro code  0x08003efc     0x4  startup_stm32f10x_md.o [1]
+  .text                  ro code  0x08003f00     0x4  startup_stm32f10x_md.o [1]
+  .text                  ro code  0x08003f04     0x4  startup_stm32f10x_md.o [1]
+  .text                  ro code  0x08003f08     0x4  startup_stm32f10x_md.o [1]
+  .text                  ro code  0x08003f0c     0x4  startup_stm32f10x_md.o [1]
+  .text                  ro code  0x08003f10     0x4  startup_stm32f10x_md.o [1]
+  SHT$$PREINIT_ARRAY              0x08003f14     0x0  <Block>
+  SHT$$INIT_ARRAY                 0x08003f14     0x4  <Block>
+    .init_array          const    0x08003f14     0x4  UIApp.o [1]
+  __iar_tls$$INIT_ARRAY           0x08003f18     0x0  <Block>
+  .text                  ro code  0x08003f18     0x0  cstart_call_dtors.o [6]
+  .rodata                const    0x08003f18     0x0  zero_init3.o [6]
+  .rodata                const    0x08003f18     0x0  copy_init3.o [6]
+                                - 0x08003f18  0x3e2c
 
 "P2", part 1 of 3:                              0x18
   P2-1                            0x20000000    0x15  <Init block>
@@ -403,7 +403,7 @@ Zero (__iar_zero_init3)
 
 Copy (__iar_copy_init3)
     1 source range, total size 0x18 (114% of destination):
-          0x08003cb4   0x18
+          0x08003dec   0x18
     1 destination range, total size 0x15:
           0x20000000   0x15
 
@@ -420,17 +420,17 @@ Extra (__iar_cstart_call_ctors)
 C:\Amit Caudhary\STM32_IAR\Projects\IAR_Projects\PowerMonitor - WithoutHandler Array\Debug\Obj: [1]
     ClockManager.o              106                 5
     ControlScreen.o             380       24
-    GpioInput.o                 798       20
-    GpioOutput.o                246       20
-    HwButtonIntr.o              816       20       15
-    I2CDriver.o               1 312       20
+    GpioInput.o                 798       52
+    GpioOutput.o                246       52
+    HwButtonIntr.o              816       52       15
+    I2CDriver.o               1 312       52
     INA219.o                    414       16
     InterruptManager.o        1 844               250
-    Led.o                        32       20
+    Led.o                        32       52
     Menu.o                       26
     Nokia5110LCD.o              708      496       96
     Screen.o                    226       24
-    SpiDriver.o                 668       20       21
+    SpiDriver.o                 668       52       21
     SysTickTimer.o              224                 4
     UI.o                        140       16        3
     UIApp.o                   1 244      333    1 013
@@ -445,7 +445,7 @@ C:\Amit Caudhary\STM32_IAR\Projects\IAR_Projects\PowerMonitor - WithoutHandler A
     stm32f10x_spi.o             116
     system_stm32f10x.o          344
     -------------------------------------------------
-    Total:                   12 110    1 049    1 427
+    Total:                   12 110    1 241    1 427
 
 command line: [2]
     -------------------------------------------------
@@ -503,7 +503,7 @@ shb_l.a: [7]
     Gaps                         35        2
     Linker created                        43    2 492
 -----------------------------------------------------
-    Grand Total:             14 865    1 095    3 939
+    Grand Total:             14 865    1 287    3 939
 
 
 *******************************************************************************
@@ -514,9 +514,9 @@ Entry                      Address   Size  Type      Object
 -----                      -------   ----  ----      ------
 .iar.dynexit$$Base      0x200005a0          --   Gb  - Linker created -
 .iar.dynexit$$Limit     0x20000768          --   Gb  - Linker created -
-.iar.init_table$$Base   0x08003bf0          --   Gb  - Linker created -
-.iar.init_table$$Limit  0x08003c18          --   Gb  - Linker created -
-?main                   0x08003c39         Code  Gb  cmain.o [6]
+.iar.init_table$$Base   0x08003d28          --   Gb  - Linker created -
+.iar.init_table$$Limit  0x08003d50          --   Gb  - Linker created -
+?main                   0x08003d71         Code  Gb  cmain.o [6]
 ADCPrescTable           0x20000010    0x4  Data  Lc  stm32f10x_rcc.o [1]
 APBAHBPrescTable        0x20000000   0x10  Data  Lc  stm32f10x_rcc.o [1]
 App::ClickEvent()       0x08001889    0x8  Code  Gb  UIApp.o [1]
@@ -618,7 +618,7 @@ Bsp::ControlScreen::ControlScreen()
 Bsp::ControlScreen::EventHandler(Bsp::Screen::Event_t)
                         0x08002195   0x60  Code  Gb  ControlScreen.o [1]
 Bsp::ControlScreen::GetScreenTextArray()
-                        0x08003da1    0xa  Code  Gb  ControlScreen.o [1]
+                        0x08003e61    0xa  Code  Gb  ControlScreen.o [1]
 Bsp::ControlScreen::MovePointer(Bsp::ControlScreen::Direction_t)
                         0x080021f5   0x82  Code  Gb  ControlScreen.o [1]
 Bsp::ControlScreen::~ControlScreen()
@@ -886,10 +886,10 @@ Bsp::SysTickTimer::IncrementTicks()
                         0x08003531   0x10  Code  Gb  SysTickTimer.o [1]
 Bsp::SysTickTimer::m_ticks
                         0x20000584    0x4  Data  Gb  SysTickTimer.o [1]
-BusFault_Handler        0x08003d8b    0x2  Code  Gb  stm32f10x_it.o [1]
+BusFault_Handler        0x08003e4b    0x2  Code  Gb  stm32f10x_it.o [1]
 CSTACK$$Base            0x20000768          --   Gb  - Linker created -
 CSTACK$$Limit           0x20000f68          --   Gb  - Linker created -
-DebugMon_Handler        0x08003d91    0x2  Code  Gb  stm32f10x_it.o [1]
+DebugMon_Handler        0x08003e51    0x2  Code  Gb  stm32f10x_it.o [1]
 DtorRecArray            0x200005a0    0xc  Data  Lc  cppinit.o [3]
 EXTI0_IRQHandler        0x080006a3   0x18  Code  Gb  InterruptManager.o [1]
 EXTI15_10_IRQHandler    0x080005c9   0xda  Code  Gb  InterruptManager.o [1]
@@ -904,7 +904,7 @@ EXTI_Init               0x080008d9   0x84  Code  Gb  stm32f10x_exti.o [1]
 GPIO_EXTILineConfig     0x080012f7   0x56  Code  Gb  stm32f10x_gpio.o [1]
 GPIO_Init               0x08001221   0xc4  Code  Gb  stm32f10x_gpio.o [1]
 GPIO_WriteBit           0x080012e5   0x12  Code  Gb  stm32f10x_gpio.o [1]
-HardFault_Handler       0x08003d87    0x2  Code  Gb  stm32f10x_it.o [1]
+HardFault_Handler       0x08003e47    0x2  Code  Gb  stm32f10x_it.o [1]
 I2C_AcknowledgeConfig   0x08001475   0x1c  Code  Gb  stm32f10x_i2c.o [1]
 I2C_CheckEvent          0x080014d1   0x24  Code  Gb  stm32f10x_i2c.o [1]
 I2C_Cmd                 0x08001421   0x1c  Code  Gb  stm32f10x_i2c.o [1]
@@ -919,13 +919,13 @@ I2C_SendData            0x08001491    0x6  Code  Gb  stm32f10x_i2c.o [1]
 Led::Led(GPIO_TypeDef *, unsigned short)
                         0x080020e5   0x1a  Code  Gb  Led.o [1]
 Led::Toggle()           0x08002905    0x8  Code  Gb  UIApp.o [1]
-MemManage_Handler       0x08003d89    0x2  Code  Gb  stm32f10x_it.o [1]
-NMI_Handler             0x08003d85    0x2  Code  Gb  stm32f10x_it.o [1]
+MemManage_Handler       0x08003e49    0x2  Code  Gb  stm32f10x_it.o [1]
+NMI_Handler             0x08003e45    0x2  Code  Gb  stm32f10x_it.o [1]
 NVIC_Init               0x0800082b   0x60  Code  Gb  misc.o [1]
 NVIC_PriorityGroupConfig
                         0x08000821    0xa  Code  Gb  misc.o [1]
 NVIC_SetVectorTable     0x0800088b    0xc  Code  Gb  misc.o [1]
-PendSV_Handler          0x08003d93    0x2  Code  Gb  stm32f10x_it.o [1]
+PendSV_Handler          0x08003e53    0x2  Code  Gb  stm32f10x_it.o [1]
 RCC_AHBPeriphClockCmd   0x08001123   0x20  Code  Gb  stm32f10x_rcc.o [1]
 RCC_APB1PeriphClockCmd  0x08001163   0x20  Code  Gb  stm32f10x_rcc.o [1]
 RCC_APB1PeriphResetCmd  0x08001183   0x20  Code  Gb  stm32f10x_rcc.o [1]
@@ -941,43 +941,43 @@ RCC_PCLK2Config         0x08001055   0x14  Code  Gb  stm32f10x_rcc.o [1]
 RCC_PLLCmd              0x0800100d    0x8  Code  Gb  stm32f10x_rcc.o [1]
 RCC_PLLConfig           0x08000ff9   0x14  Code  Gb  stm32f10x_rcc.o [1]
 RCC_SYSCLKConfig        0x08001015   0x12  Code  Gb  stm32f10x_rcc.o [1]
-Region$$Table$$Base     0x08003bf0          --   Gb  - Linker created -
-Region$$Table$$Limit    0x08003c18          --   Gb  - Linker created -
-SHT$$INIT_ARRAY$$Base   0x08003e54          --   Gb  - Linker created -
-SHT$$INIT_ARRAY$$Limit  0x08003e58          --   Gb  - Linker created -
+Region$$Table$$Base     0x08003d28          --   Gb  - Linker created -
+Region$$Table$$Limit    0x08003d50          --   Gb  - Linker created -
+SHT$$INIT_ARRAY$$Base   0x08003f14          --   Gb  - Linker created -
+SHT$$INIT_ARRAY$$Limit  0x08003f18          --   Gb  - Linker created -
 SHT$$PREINIT_ARRAY$$Base
-                        0x08003e54          --   Gb  - Linker created -
+                        0x08003f14          --   Gb  - Linker created -
 SHT$$PREINIT_ARRAY$$Limit
-                        0x08003e54          --   Gb  - Linker created -
+                        0x08003f14          --   Gb  - Linker created -
 SPI_Cmd                 0x0800359f   0x1c  Code  Gb  stm32f10x_spi.o [1]
 SPI_I2S_GetFlagStatus   0x080035c3   0x12  Code  Gb  stm32f10x_spi.o [1]
 SPI_I2S_ReceiveData     0x080035bf    0x4  Code  Gb  stm32f10x_spi.o [1]
 SPI_I2S_SendData        0x080035bb    0x4  Code  Gb  stm32f10x_spi.o [1]
 SPI_Init                0x08003561   0x3e  Code  Gb  stm32f10x_spi.o [1]
-SVC_Handler             0x08003d8f    0x2  Code  Gb  stm32f10x_it.o [1]
+SVC_Handler             0x08003e4f    0x2  Code  Gb  stm32f10x_it.o [1]
 SysTick_CLKSourceConfig
                         0x08000897   0x20  Code  Gb  misc.o [1]
 SysTick_Handler         0x08002971    0x8  Code  Gb  SysTickTimer.o [1]
 SystemInit              0x080037b5   0x54  Code  Gb  system_stm32f10x.o [1]
-UsageFault_Handler      0x08003d8d    0x2  Code  Gb  stm32f10x_it.o [1]
+UsageFault_Handler      0x08003e4d    0x2  Code  Gb  stm32f10x_it.o [1]
 Virtual function table for Bsp::ControlScreen
-                        0x08003c84   0x18  Data  Gb  ControlScreen.o [1]
+                        0x08003dbc   0x18  Data  Gb  ControlScreen.o [1]
 Virtual function table for Bsp::GpioInput
-                        0x08003ccc   0x14  Data  Gb  GpioInput.o [1]
+                        0x08003b9c   0x34  Data  Gb  GpioInput.o [1]
 Virtual function table for Bsp::GpioOutput
-                        0x08003ce0   0x14  Data  Gb  GpioOutput.o [1]
+                        0x08003bd0   0x34  Data  Gb  GpioOutput.o [1]
 Virtual function table for Bsp::HwButtonIntr
-                        0x08003cf4   0x14  Data  Gb  HwButtonIntr.o [1]
+                        0x08003c04   0x34  Data  Gb  HwButtonIntr.o [1]
 Virtual function table for Bsp::I2CDriver
-                        0x08003d08   0x14  Data  Gb  I2CDriver.o [1]
+                        0x08003c38   0x34  Data  Gb  I2CDriver.o [1]
 Virtual function table for Bsp::INA219
-                        0x08003d44   0x10  Data  Gb  INA219.o [1]
+                        0x08003e04   0x10  Data  Gb  INA219.o [1]
 Virtual function table for Bsp::Screen
-                        0x08003c9c   0x18  Data  Gb  Screen.o [1]
+                        0x08003dd4   0x18  Data  Gb  Screen.o [1]
 Virtual function table for Bsp::SpiDriver
-                        0x08003d30   0x14  Data  Gb  SpiDriver.o [1]
+                        0x08003ca0   0x34  Data  Gb  SpiDriver.o [1]
 Virtual function table for Led
-                        0x08003d1c   0x14  Data  Gb  Led.o [1]
+                        0x08003c6c   0x34  Data  Gb  Led.o [1]
 [local to Nokia5110LCD_cpp]::App::ASCII
                         0x080035d4  0x1e0  Data  Lc  Nokia5110LCD.o [1]
 [local to SysTickTimer_cpp]::NVIC_SetPriority(IRQn, unsigned int)
@@ -1024,37 +1024,37 @@ __aeabi_vec_ctor_nocookie_nodtor
 __call_ctors            0x080030a1   0x18  Code  Gb  cppinit.o [3]
 __call_dtors            0x080030ef    0xc  Code  Gb  cppinit.o [3]
 __call_dtors0           0x080030fb   0x36  Code  Gb  cppinit.o [3]
-__cexit_call_dtors      0x08003c63         Code  Gb  cexit.o [6]
-__cmain                 0x08003c39         Code  Gb  cmain.o [6]
-__cstart_call_dtors     0x08003e58         Data  Gb  cstart_call_dtors.o [6]
+__cexit_call_dtors      0x08003d9b         Code  Gb  cexit.o [6]
+__cmain                 0x08003d71         Code  Gb  cmain.o [6]
+__cstart_call_dtors     0x08003f18         Data  Gb  cstart_call_dtors.o [6]
 __cxa_atexit            0x080030b9   0x36  Code  Gb  cppinit.o [3]
 __dso_handle            0x2000058c    0x4  Data  Gb  cppinit.o [3]
-__exit                  0x08003c71   0x14  Code  Gb  exit.o [7]
+__exit                  0x08003da9   0x14  Code  Gb  exit.o [7]
 __iar_Memset            0x080032a1         Code  Gb  ABImemset.o [6]
 __iar_Memset_word       0x080032a9         Code  Gb  ABImemset.o [6]
-__iar_copy_init3        0x08003b9d   0x2c  Code  Gb  copy_init3.o [6]
+__iar_copy_init3        0x08003cd5   0x2c  Code  Gb  copy_init3.o [6]
 __iar_cstart_call_ctors
-                        0x08003c19   0x20  Code  Gb  cmain_call_ctors.o [6]
-__iar_data_init3        0x08003bc9   0x28  Code  Gb  data_init.o [6]
+                        0x08003d51   0x20  Code  Gb  cmain_call_ctors.o [6]
+__iar_data_init3        0x08003d01   0x28  Code  Gb  data_init.o [6]
 __iar_debug_exceptions  0x08001536    0x1  Data  Gb  unwind_debug.o [7]
 __iar_fadd              0x080023bd         Code  Gb  FltSub.o [5]
 __iar_fsub              0x08003459         Code  Gb  FltAdd.o [5]
 __iar_fsubStart         0x08003469         Code  Gb  FltAdd.o [5]
-__iar_program_start     0x08003d95         Code  Gb  cstartup_M.o [6]
+__iar_program_start     0x08003e55         Code  Gb  cstartup_M.o [6]
 __iar_systems$$module {Abs}
                         0x00000001         Data  Gb  command line/config [2]
 __iar_tls$$INIT_ARRAY$$Base
-                        0x08003e58          --   Gb  - Linker created -
+                        0x08003f18          --   Gb  - Linker created -
 __iar_tls$$INIT_ARRAY$$Limit
-                        0x08003e58          --   Gb  - Linker created -
+                        0x08003f18          --   Gb  - Linker created -
 __iar_zero_init3        0x08003b5d   0x40  Code  Gb  zero_init3.o [6]
-__low_level_init        0x08003c57    0x4  Code  Gb  low_level_init.o [3]
+__low_level_init        0x08003d8f    0x4  Code  Gb  low_level_init.o [3]
 __sti__routine          0x08001539   0xd4  Code  Lc  UIApp.o [1]
 __vector_table          0x08000000         Data  Gb  startup_stm32f10x_md.o [1]
-_call_main              0x08003c45         Code  Gb  cmain.o [6]
-_exit                   0x08003c61         Code  Gb  cexit.o [6]
-_main                   0x08003c53         Code  Gb  cmain.o [6]
-exit                    0x08003c5b    0x4  Code  Gb  exit.o [3]
+_call_main              0x08003d7d         Code  Gb  cmain.o [6]
+_exit                   0x08003d99         Code  Gb  cexit.o [6]
+_main                   0x08003d8b         Code  Gb  cmain.o [6]
+exit                    0x08003d93    0x4  Code  Gb  exit.o [3]
 main                    0x0800390d   0x18  Code  Gb  main.o [1]
 next_abi_dtor_rec       0x20000588    0x4  Data  Lc  cppinit.o [3]
 
@@ -1068,7 +1068,7 @@ next_abi_dtor_rec       0x20000588    0x4  Data  Lc  cppinit.o [3]
 [7] = shb_l.a
 
   14 865 bytes of readonly  code memory
-   1 095 bytes of readonly  data memory
+   1 287 bytes of readonly  data memory
    3 939 bytes of readwrite data memory
 
 Errors: none

@@ -162,7 +162,7 @@ bool I2CDriver::HwInit()
 
 }
 
-bool I2CDriver::Send(u8 SlaveAddress, u8* pBuf, u32 Bytes)
+I2CDriver::I2C_STATUS I2CDriver::Send(u8 SlaveAddress, u8* pBuf, u32 Bytes)
 {
 	volatile uint32_t Timeout = 0;
 	if (Bytes)
@@ -193,17 +193,17 @@ bool I2CDriver::Send(u8 SlaveAddress, u8* pBuf, u32 Bytes)
 		I2C_GenerateSTOP(m_I2Cx , ENABLE);
 		Timed(I2C_GetFlagStatus(m_I2Cx , I2C_FLAG_STOPF));
 	}
-	return false;
+	return I2C_ERROR_NONE;
 	errReturn:
         HwInit();
-	return true;
+	return I2C_ERROR_BUSY_TRANSMITTING;
 }
 
-bool I2CDriver::Receive(u8 SlaveAddress, u8* pBuf, u32 Bytes)
+I2CDriver::I2C_STATUS I2CDriver::Receive(u8 SlaveAddress, u8* pBuf, u32 Bytes)
 {
 	 vu32 Timeout = 0;
 	  if (!Bytes)
-	    return 0;
+	    return I2C_ERROR_NONE;
 
 		// Wait for idle I2C interface
 
@@ -309,11 +309,11 @@ bool I2CDriver::Receive(u8 SlaveAddress, u8* pBuf, u32 Bytes)
 	  // Wait for stop
 
 	  Timed(I2C_GetFlagStatus(m_I2Cx, I2C_FLAG_STOPF));
-	  return false;
+	  return I2C_ERROR_BUSY_TRANSMITTING;
 
 	 errReturn:
          HwInit();
-	 return true;
+	 return I2C_ERROR_NONE;
 }
 
 } /* namespace Bsp */

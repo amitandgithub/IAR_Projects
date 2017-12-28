@@ -17,14 +17,14 @@ namespace Bsp
 class I2CDriver : public Peripheral
 {
 public:
-typedef enum
-{
-I2C_ERROR_NONE = 0,
-I2C_ERROR_RECIEVE_NACK,
-I2C_ERROR_BUSY_TRANSMITTING,
-I2C_ERROR_BUSY_RECEIVING,
-}I2C_STATUS;
-;
+      typedef enum
+      {
+        I2C_ERROR_NONE = 0,
+        I2C_ERROR_RECIEVE_NACK,
+        I2C_ERROR_BUSY_TRANSMITTING,
+        I2C_ERROR_BUSY_RECEIVING,
+      }I2C_STATUS;
+                
 	typedef void(*I2CIsr_t)();
 	typedef enum{
 		I2C1_B6_B7 = 0,
