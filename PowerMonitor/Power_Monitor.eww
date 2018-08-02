@@ -3,5 +3,8 @@
     <project>
         <path>$WS_DIR$\PowerMonitor.ewp</path>
     </project>
+    <project>
+        <path>$WS_DIR$\..\Template\IAR\Template.ewp</path>
+    </project>
     <batchBuild />
 </workspace>

@@ -3,5 +3,8 @@
     <project>
         <path>$WS_DIR$\PowerMonitor.ewp</path>
     </project>
+    <project>
+        <path>$WS_DIR$\..\..\..\STM32_Keil\Projects\PowerMonitor_IAR\IAR\PowerMonitor_IAR.ewp</path>
+    </project>
     <batchBuild />
 </workspace>

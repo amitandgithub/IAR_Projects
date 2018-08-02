@@ -1,0 +1,276 @@
+###############################################################################
+#
+# IAR ELF Linker V8.30.1.114/W32 for ARM                  02/Aug/2018  12:23:04
+# Copyright 2007-2018 IAR Systems AB.
+#
+#    Output file  =  
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Power_Monitor_2_Aug_2018\IAR\Debug\Exe\Power_Monitor_2_Aug_2018.out
+#    Map file     =  
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Power_Monitor_2_Aug_2018\IAR\Debug\List\Power_Monitor_2_Aug_2018.map
+#    Command line =  
+#        -f C:\Users\achaudha\AppData\Local\Temp\EW99BC.tmp
+#        (C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Power_Monitor_2_Aug_2018\IAR\Debug\Obj\main.o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Power_Monitor_2_Aug_2018\IAR\Debug\Obj\misc.o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Power_Monitor_2_Aug_2018\IAR\Debug\Obj\startup_stm32f10x_md.o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Power_Monitor_2_Aug_2018\IAR\Debug\Obj\stm32f10x_adc.o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Power_Monitor_2_Aug_2018\IAR\Debug\Obj\stm32f10x_bkp.o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Power_Monitor_2_Aug_2018\IAR\Debug\Obj\stm32f10x_can.o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Power_Monitor_2_Aug_2018\IAR\Debug\Obj\stm32f10x_cec.o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Power_Monitor_2_Aug_2018\IAR\Debug\Obj\stm32f10x_crc.o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Power_Monitor_2_Aug_2018\IAR\Debug\Obj\stm32f10x_dac.o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Power_Monitor_2_Aug_2018\IAR\Debug\Obj\stm32f10x_dbgmcu.o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Power_Monitor_2_Aug_2018\IAR\Debug\Obj\stm32f10x_dma.o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Power_Monitor_2_Aug_2018\IAR\Debug\Obj\stm32f10x_exti.o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Power_Monitor_2_Aug_2018\IAR\Debug\Obj\stm32f10x_flash.o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Power_Monitor_2_Aug_2018\IAR\Debug\Obj\stm32f10x_fsmc.o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Power_Monitor_2_Aug_2018\IAR\Debug\Obj\stm32f10x_gpio.o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Power_Monitor_2_Aug_2018\IAR\Debug\Obj\stm32f10x_i2c.o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Power_Monitor_2_Aug_2018\IAR\Debug\Obj\stm32f10x_it.o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Power_Monitor_2_Aug_2018\IAR\Debug\Obj\stm32f10x_iwdg.o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Power_Monitor_2_Aug_2018\IAR\Debug\Obj\stm32f10x_pwr.o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Power_Monitor_2_Aug_2018\IAR\Debug\Obj\stm32f10x_rcc.o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Power_Monitor_2_Aug_2018\IAR\Debug\Obj\stm32f10x_rtc.o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Power_Monitor_2_Aug_2018\IAR\Debug\Obj\stm32f10x_sdio.o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Power_Monitor_2_Aug_2018\IAR\Debug\Obj\stm32f10x_spi.o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Power_Monitor_2_Aug_2018\IAR\Debug\Obj\stm32f10x_tim.o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Power_Monitor_2_Aug_2018\IAR\Debug\Obj\stm32f10x_usart.o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Power_Monitor_2_Aug_2018\IAR\Debug\Obj\stm32f10x_wwdg.o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Power_Monitor_2_Aug_2018\IAR\Debug\Obj\system_stm32f10x.o
+#        --no_out_extension -o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Power_Monitor_2_Aug_2018\IAR\Debug\Exe\Power_Monitor_2_Aug_2018.out
+#        --redirect _Printf=_PrintfFullNoMb --redirect _Scanf=_ScanfFullNoMb
+#        --map
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Power_Monitor_2_Aug_2018\IAR\Debug\List\Power_Monitor_2_Aug_2018.map
+#        --config "C:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        8.1\arm\config\linker\ST\stm32f103x8.icf" --semihosting --entry
+#        __iar_program_start --vfe --text_out locale)
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor        = *
+__CPP_Exceptions = Disabled
+__CPP_Language   = C++14
+__SystemLibrary  = DLib
+__dlib_version   = 6
+
+
+*******************************************************************************
+*** HEAP SELECTION
+***
+
+The basic heap was selected because some modules are built with
+size limitations (and not runtime checking), and --advanced_heap
+was not specified.
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at 0x800'0000 { ro section .intvec };
+"P1":  place in [from 0x800'0000 to 0x800'ffff] { ro };
+define block CSTACK with size = 2K, alignment = 8 { };
+define block HEAP with size = 2K, alignment = 8 { };
+"P2":  place in [from 0x2000'0000 to 0x2000'4fff] {
+          rw, block CSTACK, block HEAP };
+
+No sections matched the following patterns:
+
+  rw  in "P2"
+
+
+  Section   Kind         Address   Size  Object
+  -------   ----         -------   ----  ------
+"A0":                              0xec
+  .intvec   ro code   0x800'0000   0xec  startup_stm32f10x_md.o [1]
+                    - 0x800'00ec   0xec
+
+"P1":                             0x46c
+  .text     ro code   0x800'00ec  0x15c  stm32f10x_rcc.o [1]
+  .text     ro code   0x800'0248  0x118  system_stm32f10x.o [1]
+  .text     ro code   0x800'0360   0x8c  main.o [1]
+  .text     ro code   0x800'03ec   0x48  misc.o [1]
+  .text     ro code   0x800'0434   0x1e  cmain.o [3]
+  .text     ro code   0x800'0452    0x4  low_level_init.o [2]
+  .text     ro code   0x800'0456    0x4  exit.o [2]
+  .rodata   const     0x800'045a    0x1  unwind_debug.o [4]
+  .text     ro code   0x800'045c    0xa  cexit.o [3]
+  .text     ro code   0x800'0468   0x14  exit.o [4]
+  .text     ro code   0x800'047c   0x10  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'048c   0x10  stm32f10x_it.o [1]
+  .text     ro code   0x800'049c    0xc  cstartup_M.o [3]
+  .text     ro code   0x800'04a8    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'04ac    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'04b0    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'04b4    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'04b8    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'04bc    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'04c0    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'04c4    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'04c8    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'04cc    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'04d0    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'04d4    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'04d8    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'04dc    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'04e0    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'04e4    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'04e8    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'04ec    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'04f0    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'04f4    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'04f8    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'04fc    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'0500    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'0504    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'0508    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'050c    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'0510    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'0514    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'0518    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'051c    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'0520    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'0524    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'0528    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'052c    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'0530    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'0534    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'0538    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'053c    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'0540    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'0544    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'0548    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'054c    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'0550    0x4  startup_stm32f10x_md.o [1]
+  .text     ro code   0x800'0554    0x4  startup_stm32f10x_md.o [1]
+                    - 0x800'0558  0x46c
+
+"P2":                             0x800
+  CSTACK             0x2000'0000  0x800  <Block>
+    CSTACK  uninit   0x2000'0000  0x800  <Block tail>
+                   - 0x2000'0800  0x800
+
+Unused ranges:
+
+         From           To    Size
+         ----           --    ----
+   0x800'0558   0x800'ffff  0xfaa8
+  0x2000'0800  0x2000'4fff  0x4800
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module                  ro code  ro data  rw data
+    ------                  -------  -------  -------
+command line/config:
+    -------------------------------------------------
+    Total:
+
+C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Power_Monitor_2_Aug_2018\IAR\Debug\Obj: [1]
+    main.o                      140
+    misc.o                       72
+    startup_stm32f10x_md.o      428
+    stm32f10x_it.o               16
+    stm32f10x_rcc.o             348
+    system_stm32f10x.o          280
+    -------------------------------------------------
+    Total:                    1 284
+
+dl7M_tln.a: [2]
+    exit.o                        4
+    low_level_init.o              4
+    -------------------------------------------------
+    Total:                        8
+
+rt7M_tl.a: [3]
+    cexit.o                      10
+    cmain.o                      30
+    cstartup_M.o                 12
+    -------------------------------------------------
+    Total:                       52
+
+shb_l.a: [4]
+    exit.o                       20
+    unwind_debug.o                         1
+    -------------------------------------------------
+    Total:                       20        1
+
+    Gaps                          3
+    Linker created                              2 048
+-----------------------------------------------------
+    Grand Total:              1 367        1    2 048
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                       Address  Size  Type      Object
+-----                       -------  ----  ----      ------
+?main                    0x800'0435        Code  Gb  cmain.o [3]
+BusFault_Handler         0x800'0493   0x2  Code  Gb  stm32f10x_it.o [1]
+CSTACK$$Base            0x2000'0000         --   Gb  - Linker created -
+CSTACK$$Limit           0x2000'0800         --   Gb  - Linker created -
+DebugMon_Handler         0x800'0499   0x2  Code  Gb  stm32f10x_it.o [1]
+HardFault_Handler        0x800'048f   0x2  Code  Gb  stm32f10x_it.o [1]
+MemManage_Handler        0x800'0491   0x2  Code  Gb  stm32f10x_it.o [1]
+NMI_Handler              0x800'048d   0x2  Code  Gb  stm32f10x_it.o [1]
+NVIC_PriorityGroupConfig
+                         0x800'03ed   0xa  Code  Gb  misc.o [1]
+NVIC_SetVectorTable      0x800'03f7   0xc  Code  Gb  misc.o [1]
+PendSV_Handler           0x800'049b   0x2  Code  Gb  stm32f10x_it.o [1]
+RCC_APB2PeriphClockCmd   0x800'01cb  0x1c  Code  Gb  stm32f10x_rcc.o [1]
+RCC_DeInit               0x800'00ed  0x40  Code  Gb  stm32f10x_rcc.o [1]
+RCC_GetFlagStatus        0x800'01e7  0x3c  Code  Gb  stm32f10x_rcc.o [1]
+RCC_GetSYSCLKSource      0x800'018f   0xa  Code  Gb  stm32f10x_rcc.o [1]
+RCC_HCLKConfig           0x800'0199  0x10  Code  Gb  stm32f10x_rcc.o [1]
+RCC_HSEConfig            0x800'012d  0x38  Code  Gb  stm32f10x_rcc.o [1]
+RCC_PCLK1Config          0x800'01a9  0x10  Code  Gb  stm32f10x_rcc.o [1]
+RCC_PCLK2Config          0x800'01b9  0x12  Code  Gb  stm32f10x_rcc.o [1]
+RCC_PLLCmd               0x800'0177   0x8  Code  Gb  stm32f10x_rcc.o [1]
+RCC_PLLConfig            0x800'0165  0x12  Code  Gb  stm32f10x_rcc.o [1]
+RCC_SYSCLKConfig         0x800'017f  0x10  Code  Gb  stm32f10x_rcc.o [1]
+Region$$Table$$Base             0x0         --   Gb  - Linker created -
+Region$$Table$$Limit            0x0         --   Gb  - Linker created -
+SVC_Handler              0x800'0497   0x2  Code  Gb  stm32f10x_it.o [1]
+SysTick_CLKSourceConfig
+                         0x800'0403  0x1c  Code  Gb  misc.o [1]
+SystemInit               0x800'0249  0x44  Code  Gb  system_stm32f10x.o [1]
+UsageFault_Handler       0x800'0495   0x2  Code  Gb  stm32f10x_it.o [1]
+[local to main_cpp]::prvSetupHardware()
+                         0x800'0369  0x7e  Code  Lc  main.o [1]
+[local to system_stm32f10x_c]::SetSysClock()
+                         0x800'028d   0x8  Code  Lc  system_stm32f10x.o [1]
+[local to system_stm32f10x_c]::SetSysClockTo72()
+                         0x800'0295  0xae  Code  Lc  system_stm32f10x.o [1]
+__cmain                  0x800'0435        Code  Gb  cmain.o [3]
+__exit                   0x800'0469  0x14  Code  Gb  exit.o [4]
+__iar_debug_exceptions   0x800'045a   0x1  Data  Gb  unwind_debug.o [4]
+__iar_program_start      0x800'049d        Code  Gb  cstartup_M.o [3]
+__low_level_init         0x800'0453   0x4  Code  Gb  low_level_init.o [2]
+__vector_table           0x800'0000        Data  Gb  startup_stm32f10x_md.o [1]
+_call_main               0x800'0441        Code  Gb  cmain.o [3]
+_exit                    0x800'045d        Code  Gb  cexit.o [3]
+_main                    0x800'044f        Code  Gb  cmain.o [3]
+exit                     0x800'0457   0x4  Code  Gb  exit.o [2]
+main                     0x800'0361   0x8  Code  Gb  main.o [1]
+
+
+[1] = C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Power_Monitor_2_Aug_2018\IAR\Debug\Obj
+[2] = dl7M_tln.a
+[3] = rt7M_tl.a
+[4] = shb_l.a
+
+  1 367 bytes of readonly  code memory
+      1 byte  of readonly  data memory
+  2 048 bytes of readwrite data memory
+
+Errors: none
+Warnings: none
