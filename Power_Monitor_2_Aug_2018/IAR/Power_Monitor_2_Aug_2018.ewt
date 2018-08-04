@@ -2376,7 +2376,37 @@
         </file>
     </group>
     <group>
+        <name>CPP_FW</name>
+        <file>
+            <name>$PROJ_DIR$\..\CPP_FW\src\ClockManager.cpp</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\CPP_FW\src\InterruptManager.cpp</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\CPP_FW\src\Peripheral.cpp</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\CPP_FW\src\PortManager.cpp</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\CPP_FW\src\SysTickTimer.cpp</name>
+        </file>
+    </group>
+    <group>
         <name>Drivers</name>
+        <file>
+            <name>$PROJ_DIR$\..\Drivers\src\GpioInput.cpp</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Drivers\src\GpioOutput.cpp</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Drivers\src\I2CDriver.cpp</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Drivers\src\SpiDriver.cpp</name>
+        </file>
     </group>
     <group>
         <name>HW_Modules</name>
