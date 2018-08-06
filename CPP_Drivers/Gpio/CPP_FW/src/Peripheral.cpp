@@ -6,7 +6,7 @@ namespace Peripherals
 {
 
 
-
+#if 0
 Status_t Peripheral::HwClockEnable(Peripheral_t Peripheral)
 {
     Status_t Status = 0;
@@ -71,7 +71,7 @@ Status_t Peripheral::HwClockDisble(Peripheral_t Peripheral)
 }
 
 
-
+#endif
 
 
 

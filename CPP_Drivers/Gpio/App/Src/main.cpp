@@ -21,15 +21,24 @@ void _Error_Handler(char *, int);
 void SystemClock_Config(void);
 void HAL_MspInit(void);
 
+#include "GpioOutput.hpp"
+using namespace Peripherals;
+
+Peripherals::GpioOutput LED(GPIOC,GPIO_PIN_13);
+
+
 int main(void)
 {		
   /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
   HAL_Init();
   HAL_MspInit();
-
+  LED.HwInit();
     while(1)
     {    
-
+      LED.On();
+      HAL_Delay(100);
+      LED.Off();
+      HAL_Delay(30);
     }
 }
 

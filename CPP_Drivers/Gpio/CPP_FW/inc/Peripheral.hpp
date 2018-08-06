@@ -86,10 +86,10 @@ namespace Peripherals
         virtual    Status_t     HwInit          (){return true;}
         virtual    Status_t     HwDeInit        (){return true;}
         virtual    Status_t     HwConfig        (void* pConfigStruct){return true;};
-        virtual    Status_t     HwEnable        ();
-        virtual    Status_t     HwDisable       ();
-        virtual    Status_t     HwClockEnable   (Peripheral_t Peripheral);
-        virtual    Status_t     HwClockDisble   (Peripheral_t Peripheral);
+       // virtual    Status_t     HwEnable        ();
+       // virtual    Status_t     HwDisable       ();
+       // virtual    Status_t     HwClockEnable   (Peripheral_t Peripheral);
+        //virtual    Status_t     HwClockDisble   (Peripheral_t Peripheral);
         
         
         //    virtual bool RegisterInterrupt  (ISR pISR,IRQn eIRQn, InterruptPriority_t aInterruptPriority); 

@@ -2385,6 +2385,9 @@
         </group>
         <group>
             <name>Gpio</name>
+            <file>
+                <name>$PROJ_DIR$\..\Drivers\Gpio\src\GpioOutput.cpp</name>
+            </file>
         </group>
     </group>
     <group>
@@ -2394,6 +2397,9 @@
         </file>
         <file>
             <name>$PROJ_DIR$\..\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_cortex.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio.c</name>
         </file>
         <file>
             <name>$PROJ_DIR$\..\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_pwr.c</name>
