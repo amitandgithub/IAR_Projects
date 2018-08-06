@@ -1,0 +1,281 @@
+###############################################################################
+#
+# IAR ELF Linker V8.30.1.114/W32 for ARM                  06/Aug/2018  09:25:02
+# Copyright 2007-2018 IAR Systems AB.
+#
+#    Output file  =  
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\CPP_Drivers\I2C_CubeMX\I2C\EWARM\I2C\Exe\I2C.out
+#    Map file     =  
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\CPP_Drivers\I2C_CubeMX\I2C\EWARM\I2C\List\I2C.map
+#    Command line =  
+#        -f C:\Users\achaudha\AppData\Local\Temp\EWFAF8.tmp
+#        (C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\CPP_Drivers\I2C_CubeMX\I2C\EWARM\I2C\Obj\main.o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\CPP_Drivers\I2C_CubeMX\I2C\EWARM\I2C\Obj\stm32f1xx_hal.o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\CPP_Drivers\I2C_CubeMX\I2C\EWARM\I2C\Obj\stm32f1xx_hal_cortex.o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\CPP_Drivers\I2C_CubeMX\I2C\EWARM\I2C\Obj\stm32f1xx_hal_dma.o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\CPP_Drivers\I2C_CubeMX\I2C\EWARM\I2C\Obj\stm32f1xx_hal_flash.o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\CPP_Drivers\I2C_CubeMX\I2C\EWARM\I2C\Obj\stm32f1xx_hal_flash_ex.o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\CPP_Drivers\I2C_CubeMX\I2C\EWARM\I2C\Obj\stm32f1xx_hal_gpio.o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\CPP_Drivers\I2C_CubeMX\I2C\EWARM\I2C\Obj\stm32f1xx_hal_gpio_ex.o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\CPP_Drivers\I2C_CubeMX\I2C\EWARM\I2C\Obj\stm32f1xx_hal_i2c.o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\CPP_Drivers\I2C_CubeMX\I2C\EWARM\I2C\Obj\stm32f1xx_hal_msp.o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\CPP_Drivers\I2C_CubeMX\I2C\EWARM\I2C\Obj\stm32f1xx_hal_pwr.o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\CPP_Drivers\I2C_CubeMX\I2C\EWARM\I2C\Obj\stm32f1xx_hal_rcc.o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\CPP_Drivers\I2C_CubeMX\I2C\EWARM\I2C\Obj\stm32f1xx_hal_rcc_ex.o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\CPP_Drivers\I2C_CubeMX\I2C\EWARM\I2C\Obj\stm32f1xx_hal_tim.o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\CPP_Drivers\I2C_CubeMX\I2C\EWARM\I2C\Obj\stm32f1xx_hal_tim_ex.o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\CPP_Drivers\I2C_CubeMX\I2C\EWARM\I2C\Obj\stm32f1xx_it.o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\CPP_Drivers\I2C_CubeMX\I2C\EWARM\I2C\Obj\system_stm32f1xx.o
+#        --redirect _Printf=_PrintfFull --redirect _Scanf=_ScanfFull
+#        --no_out_extension -o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\CPP_Drivers\I2C_CubeMX\I2C\EWARM\I2C\Exe\I2C.out
+#        --map
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\CPP_Drivers\I2C_CubeMX\I2C\EWARM\I2C\List\I2C.map
+#        --semihosting --entry __iar_program_start --vfe --text_out locale)
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__SystemLibrary = DLib
+__dlib_version  = 6
+
+
+*******************************************************************************
+*** HEAP SELECTION
+***
+
+The basic heap was selected because some modules are built with
+size limitations (and not runtime checking), and --advanced_heap
+was not specified.
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at 0x0 { ro section .intvec };
+"P1":  place in [from 0x8000 to 0x7fff'ffff] { ro };
+define block HEAP
+   with expanding size, minimum size = 64K, maximum size = 16M, alignment = 8 {
+      };
+define block CSTACK with size = 16K, alignment = 8 { };
+define block IRQ_STACK with size = 8K, alignment = 8 { };
+define block FIQ_STACK with size = 8K, alignment = 8 { };
+"P2":  place in [from 0x8000'0000 to 0xffff'ffff] {
+          rw, block HEAP, block CSTACK, block IRQ_STACK, block FIQ_STACK };
+initialize by copy { rw };
+
+  Section            Kind         Address    Size  Object
+  -------            ----         -------    ----  ------
+"A0":                                        0x40
+  .intvec            ro code          0x0    0x40  vector_table_M.o [3]
+                                   - 0x40    0x40
+
+"P1":                                       0xc04
+  .text              ro code       0x8000   0x4ce  stm32f1xx_hal_rcc.o [1]
+  .text              ro code       0x84ce    0x3a  zero_init3.o [3]
+  .text              ro code       0x8508     0xc  stm32f1xx_hal.o [1]
+  .text              ro code       0x8514    0x40  stm32f1xx_hal.o [1]
+  .text              ro code       0x8554    0xca  stm32f1xx_hal_cortex.o [1]
+  .text              ro code       0x8620   0x1b8  stm32f1xx_hal_gpio.o [1]
+  .text              ro code       0x87d8   0x108  stm32f1xx_hal_i2c.o [1]
+  .text              ro code       0x88e0    0xe0  stm32f1xx_hal_msp.o [1]
+  .text              ro code       0x89c0    0xfc  main.o [1]
+  .text              ro code       0x8abc    0x24  stm32f1xx_hal.o [1]
+  .text              ro code       0x8ae0    0x2c  copy_init3.o [3]
+  .text              ro code       0x8b0c    0x28  data_init.o [3]
+  .iar.init_table    const         0x8b34    0x24  - Linker created -
+  .text              ro code       0x8b58    0x1e  stm32f1xx_it.o [1]
+  .text              ro code       0x8b78    0x10  stm32f1xx_hal.o [1]
+  .text              ro code       0x8b88    0x1e  cmain.o [3]
+  .text              ro code       0x8ba6     0x4  low_level_init.o [2]
+  .text              ro code       0x8baa     0x4  exit.o [2]
+  .text              ro code       0x8bb0     0xa  cexit.o [3]
+  .text              ro code       0x8bbc    0x14  exit.o [4]
+  .text              ro code       0x8bd0    0x10  system_stm32f1xx.o [1]
+  Initializer bytes  const         0x8be0    0x10  <for P2-1>
+  .text              ro code       0x8bf0     0xc  cstartup_M.o [3]
+  .rodata            const         0x8bfc     0x8  system_stm32f1xx.o [1]
+  .rodata            const         0x8c04     0x0  zero_init3.o [3]
+  .rodata            const         0x8c04     0x0  copy_init3.o [3]
+                                 - 0x8c04   0xc04
+
+"P2", part 1 of 3:                           0x10
+  P2-1                        0x8000'0000    0x10  <Init block>
+    .data            inited   0x8000'0000     0xc  stm32f1xx_hal.o [1]
+    .data            inited   0x8000'000c     0x4  system_stm32f1xx.o [1]
+                            - 0x8000'0010    0x10
+
+"P2", part 2 of 3:                           0x54
+  .bss               zero     0x8000'0010    0x54  main.o [1]
+                            - 0x8000'0064    0x54
+
+"P2", part 3 of 3:                         0x4000
+  CSTACK                      0x8000'0068  0x4000  <Block>
+    CSTACK           uninit   0x8000'0068  0x4000  <Block tail>
+                            - 0x8000'4068  0x4000
+
+Unused ranges:
+
+         From           To         Size
+         ----           --         ----
+       0x8c04  0x7fff'ffff  0x7fff'73fc
+  0x8000'0064  0x8000'0067          0x4
+  0x8000'4068  0xffff'ffff  0x7fff'bf98
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address      Size
+          -------      ----
+Zero (__iar_zero_init3)
+    1 destination range, total size 0x54:
+          0x8000'0010  0x54
+
+Copy (__iar_copy_init3)
+    1 source range, total size 0x10:
+               0x8be0  0x10
+    1 destination range, total size 0x10:
+          0x8000'0000  0x10
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module                  ro code  ro data  rw data
+    ------                  -------  -------  -------
+command line/config:
+    -------------------------------------------------
+    Total:
+
+C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\CPP_Drivers\I2C_CubeMX\I2C\EWARM\I2C\Obj: [1]
+    main.o                      252                84
+    stm32f1xx_hal.o             128       12       12
+    stm32f1xx_hal_cortex.o      202
+    stm32f1xx_hal_gpio.o        440
+    stm32f1xx_hal_i2c.o         264
+    stm32f1xx_hal_msp.o         224
+    stm32f1xx_hal_rcc.o       1 230
+    stm32f1xx_it.o               30
+    system_stm32f1xx.o           16       12        4
+    -------------------------------------------------
+    Total:                    2 786       24      100
+
+dl7M_tlf.a: [2]
+    exit.o                        4
+    low_level_init.o              4
+    -------------------------------------------------
+    Total:                        8
+
+rt7M_tl.a: [3]
+    cexit.o                      10
+    cmain.o                      30
+    copy_init3.o                 44
+    cstartup_M.o                 12
+    data_init.o                  40
+    vector_table_M.o             64
+    zero_init3.o                 58
+    -------------------------------------------------
+    Total:                      258
+
+shb_l.a: [4]
+    exit.o                       20
+    -------------------------------------------------
+    Total:                       20
+
+    Gaps                          8
+    Linker created                        36   16 384
+-----------------------------------------------------
+    Grand Total:              3 080       60   16 484
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                       Address   Size  Type      Object
+-----                       -------   ----  ----      ------
+.iar.init_table$$Base        0x8b34          --   Gb  - Linker created -
+.iar.init_table$$Limit       0x8b58          --   Gb  - Linker created -
+?main                        0x8b89         Code  Gb  cmain.o [3]
+AHBPrescTable                0x8bd0   0x10  Data  Gb  system_stm32f1xx.o [1]
+APBPrescTable                0x8bfc    0x8  Data  Gb  system_stm32f1xx.o [1]
+BusFault_Handler             0x8b5f    0x2  Code  Gb  stm32f1xx_it.o [1]
+CSTACK$$Base            0x8000'0068          --   Gb  - Linker created -
+CSTACK$$Limit           0x8000'4068          --   Gb  - Linker created -
+DebugMon_Handler             0x8b65    0x2  Code  Gb  stm32f1xx_it.o [1]
+HAL_GPIO_Init                0x8621  0x182  Code  Gb  stm32f1xx_hal_gpio.o [1]
+HAL_GetTick                  0x8509    0xc  Code  Wk  stm32f1xx_hal.o [1]
+HAL_I2C_Init                 0x87d9   0xe0  Code  Gb  stm32f1xx_hal_i2c.o [1]
+HAL_I2C_MspInit              0x8973   0x38  Code  Gb  stm32f1xx_hal_msp.o [1]
+HAL_IncTick                  0x8b79   0x10  Code  Wk  stm32f1xx_hal.o [1]
+HAL_Init                     0x8abd   0x20  Code  Gb  stm32f1xx_hal.o [1]
+HAL_InitTick                 0x8515   0x40  Code  Wk  stm32f1xx_hal.o [1]
+HAL_MspInit                  0x88e1   0x92  Code  Gb  stm32f1xx_hal_msp.o [1]
+HAL_NVIC_SetPriority         0x8589   0x3a  Code  Gb  stm32f1xx_hal_cortex.o [1]
+HAL_NVIC_SetPriorityGrouping
+                             0x856f   0x1a  Code  Gb  stm32f1xx_hal_cortex.o [1]
+HAL_RCC_ClockConfig          0x8319  0x10a  Code  Gb  stm32f1xx_hal_rcc.o [1]
+HAL_RCC_GetHCLKFreq          0x8473    0x6  Code  Gb  stm32f1xx_hal_rcc.o [1]
+HAL_RCC_GetPCLK1Freq         0x8479   0x10  Code  Gb  stm32f1xx_hal_rcc.o [1]
+HAL_RCC_GetSysClockFreq
+                             0x8439   0x3a  Code  Gb  stm32f1xx_hal_rcc.o [1]
+HAL_RCC_GetSysClockFreq::aPLLMULFactorTable
+                             0x84bc   0x10  Data  Lc  stm32f1xx_hal_rcc.o [1]
+HAL_RCC_GetSysClockFreq::aPredivFactorTable
+                             0x84cc    0x2  Data  Lc  stm32f1xx_hal_rcc.o [1]
+HAL_RCC_OscConfig            0x8001  0x310  Code  Gb  stm32f1xx_hal_rcc.o [1]
+HAL_SYSTICK_CLKSourceConfig
+                             0x85eb   0x1a  Code  Gb  stm32f1xx_hal_cortex.o [1]
+HAL_SYSTICK_Config           0x85c3   0x28  Code  Gb  stm32f1xx_hal_cortex.o [1]
+HAL_SYSTICK_IRQHandler       0x8619    0x4  Code  Gb  stm32f1xx_hal_cortex.o [1]
+HardFault_Handler            0x8b5b    0x2  Code  Gb  stm32f1xx_it.o [1]
+MemManage_Handler            0x8b5d    0x2  Code  Gb  stm32f1xx_it.o [1]
+NMI_Handler                  0x8b59    0x2  Code  Gb  stm32f1xx_it.o [1]
+NVIC_SetPriority             0x8555   0x1a  Code  Lc  stm32f1xx_hal_cortex.o [1]
+PendSV_Handler               0x8b67    0x2  Code  Gb  stm32f1xx_it.o [1]
+Region$$Table$$Base          0x8b34          --   Gb  - Linker created -
+Region$$Table$$Limit         0x8b58          --   Gb  - Linker created -
+SVC_Handler                  0x8b63    0x2  Code  Gb  stm32f1xx_it.o [1]
+SysTick_Handler              0x8b69    0xe  Code  Gb  stm32f1xx_it.o [1]
+SystemClock_Config           0x8a4d   0x70  Code  Gb  main.o [1]
+SystemCoreClock         0x8000'000c    0x4  Data  Gb  system_stm32f1xx.o [1]
+UsageFault_Handler           0x8b61    0x2  Code  Gb  stm32f1xx_it.o [1]
+__cmain                      0x8b89         Code  Gb  cmain.o [3]
+__exit                       0x8bbd   0x14  Code  Gb  exit.o [4]
+__iar_copy_init3             0x8ae1   0x2c  Code  Gb  copy_init3.o [3]
+__iar_data_init3             0x8b0d   0x28  Code  Gb  data_init.o [3]
+__iar_program_start          0x8bf1         Code  Gb  cstartup_M.o [3]
+__iar_zero_init3             0x84cf   0x3a  Code  Gb  zero_init3.o [3]
+__low_level_init             0x8ba7    0x4  Code  Gb  low_level_init.o [2]
+__vector_table                  0x0         Data  Gb  vector_table_M.o [3]
+_call_main                   0x8b95         Code  Gb  cmain.o [3]
+_exit                        0x8bb1         Code  Gb  cexit.o [3]
+_main                        0x8ba3         Code  Gb  cmain.o [3]
+exit                         0x8bab    0x4  Code  Gb  exit.o [2]
+hi2c1                   0x8000'0010   0x54  Data  Gb  main.o [1]
+main                         0x89c1   0x7c  Code  Gb  main.o [1]
+uwTick                  0x8000'0004    0x4  Data  Gb  stm32f1xx_hal.o [1]
+uwTickFreq              0x8000'0000    0x1  Data  Gb  stm32f1xx_hal.o [1]
+uwTickPrio              0x8000'0008    0x4  Data  Gb  stm32f1xx_hal.o [1]
+
+
+[1] = C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\CPP_Drivers\I2C_CubeMX\I2C\EWARM\I2C\Obj
+[2] = dl7M_tlf.a
+[3] = rt7M_tl.a
+[4] = shb_l.a
+
+   3 080 bytes of readonly  code memory
+      60 bytes of readonly  data memory
+  16 484 bytes of readwrite data memory
+
+Errors: none
+Warnings: none
