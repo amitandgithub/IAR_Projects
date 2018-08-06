@@ -2073,6 +2073,12 @@
     </group>
     <group>
         <name>Drivers</name>
+        <group>
+            <name>Common</name>
+        </group>
+        <group>
+            <name>Gpio</name>
+        </group>
     </group>
     <group>
         <name>HAL</name>
