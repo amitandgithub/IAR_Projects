@@ -22,10 +22,11 @@ void SystemClock_Config(void);
 void HAL_MspInit(void);
 
 #include "GpioOutput.hpp"
+#include "GpioInput.hpp"
 using namespace Peripherals;
 
 Peripherals::GpioOutput LED(GPIOC,GPIO_PIN_13);
-
+Peripherals::GpioInput  TouchButton(GPIOB, GPIO_PIN_11 );
 
 int main(void)
 {		
@@ -33,6 +34,7 @@ int main(void)
   HAL_Init();
   HAL_MspInit();
   LED.HwInit();
+  TouchButton.HwInit();
     while(1)
     {    
       LED.On();

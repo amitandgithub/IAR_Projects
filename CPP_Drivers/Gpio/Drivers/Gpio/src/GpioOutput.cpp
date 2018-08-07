@@ -54,8 +54,7 @@ Status_t GpioOutput::HwInit()
          __HAL_RCC_GPIOD_CLK_ENABLE();
      else if(PeripheralName == APB2Periph_GPIOE )
          __HAL_RCC_GPIOE_CLK_ENABLE();
-     else { ;}  // Error }
-         
+     else {;}       // Error          
      
      GPIO_InitStructure.Pin   = m_Pin;
      GPIO_InitStructure.Speed = m_Speed;

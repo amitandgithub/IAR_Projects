@@ -2386,6 +2386,9 @@
         <group>
             <name>Gpio</name>
             <file>
+                <name>$PROJ_DIR$\..\Drivers\Gpio\src\GpioInput.cpp</name>
+            </file>
+            <file>
                 <name>$PROJ_DIR$\..\Drivers\Gpio\src\GpioOutput.cpp</name>
             </file>
         </group>
@@ -2402,6 +2405,9 @@
             <name>$PROJ_DIR$\..\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio.c</name>
         </file>
         <file>
+            <name>$PROJ_DIR$\..\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio_ex.c</name>
+        </file>
+        <file>
             <name>$PROJ_DIR$\..\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_pwr.c</name>
         </file>
         <file>
@@ -2409,6 +2415,9 @@
         </file>
         <file>
             <name>$PROJ_DIR$\..\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc_ex.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\STM32F1xx_HAL_Driver\Src\stm32f1xx_ll_exti.c</name>
         </file>
     </group>
     <group>
