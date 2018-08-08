@@ -2078,6 +2078,9 @@
         <group>
             <name>Common</name>
             <file>
+                <name>$PROJ_DIR$\..\CPP_FW\src\Interrupt.cpp</name>
+            </file>
+            <file>
                 <name>$PROJ_DIR$\..\CPP_FW\src\Peripheral.cpp</name>
             </file>
         </group>
@@ -2120,6 +2123,12 @@
     </group>
     <group>
         <name>HW_Modules</name>
+    </group>
+    <group>
+        <name>IAR</name>
+        <file>
+            <name>$PROJ_DIR$\..\STM32F1xx_HAL_Driver\CMSIS\Device\ST\STM32F1xx\Source\Templates\iar\startup_stm32f103xb.s</name>
+        </file>
     </group>
     <group>
         <name>Peripherals</name>

@@ -12,11 +12,12 @@
 #include "stm32f1xx_hal_gpio.h"
 #include "stm32f1xx_ll_exti.h"
 #include "Peripheral.hpp"
+#include "Interrupt.hpp"
 
 namespace Peripherals
 {
 
-class GpioInput : public Peripheral
+class GpioInput : public Peripheral, public Interrupt 
 {
 public:
     
@@ -44,6 +45,7 @@ public:
         
         typedef GPIO_TypeDef*     PORT_t;
         typedef uint16_t          PIN_t;
+        typedef Interrupt::ISR    ISR_t;
         
         typedef enum
         {
@@ -55,10 +57,8 @@ public:
 
         typedef enum
         {
-            EXT_MODE_INTERRUPT           = LL_EXTI_MODE_IT,
-            EXT_MODE_EVENT               = LL_EXTI_MODE_EVENT,
-            EXT_MODE_INTERRUPT_EVENT     = LL_EXTI_MODE_IT_EVENT,
-            EXT_MODE_NONE                = 0xFF,
+            EXTI_MODE_GPIO                = 0,
+            EXTI_MODE_EXTI                = 1,
         }EXTIMode_t;
         
         typedef enum
@@ -83,15 +83,33 @@ public:
             GPIO_EVT         = 0x00020000U,
         }INTR_OR_EVENT_t;
         
-        typedef void* ISR_t;
-    
-    GpioInput(PORT_t Port, PIN_t Pin, PULL_t PULL = NO_PULL, ISR_t aISR = nullptr, EXTIMode_t EXTIMode = EXT_MODE_NONE, EXTIIntrOnEdge_t EXTIIntrOnEdge = EXTI_NONE  );
+        typedef enum
+        {
+            IT_ON_RISING                    = 0x10110000U,
+            IT_ON_FALLING                   = 0x10210000U,
+            IT_ON_RISING_FALLING            = 0x10310000U,
+            EVT_ON_RISING                   = 0x10120000U,
+            EVT_ON_FALLING                  = 0x10220000U,
+            EVT_ON_RISING_FALLING           = 0x10320000U,
+        }Intr_Event_Edge_t;
+        
+        typedef struct
+        {
+            uint16_t Port : 3;
+            uint16_t Pin  : 4;
+            uint16_t Mode : 3;
+            uint16_t Pull : 1;
+            uint16_t Rsvd : 5;
+
+        }Gpio_Info_t;
+        
+    GpioInput(PORT_t Port, PIN_t Pin, ISR_t aISR = nullptr, Intr_Event_Edge_t Intr_Event_Edge = IT_ON_FALLING, PULL_t PULL = PULL_UP  );
 
 	virtual ~GpioInput(){};
 
 	virtual Status_t HwInit();
 
-	inline Status_t ReadInput() const { return HAL_GPIO_ReadPin(m_Port,m_Pin); }
+	inline uint8_t ReadInput() const { return HAL_GPIO_ReadPin(m_Port,m_Pin); }
 
 
 
@@ -99,7 +117,7 @@ public:
 private:
     Status_t ConfigureInterrupt();
 
-	//Bsp::PeripheralBase::IRQn MapPin2ExtLine();
+	Interrupt::IRQn MapPin2ExtLine();
 
 	uint8_t MapPin2PinSource();
 
@@ -110,8 +128,8 @@ private:
 	PORT_t                  m_Port;
     PULL_t                  m_Pull;
     ISR_t                   m_pISR;
-    EXTIMode_t              m_ExtIntrMode;
-    EXTIIntrOnEdge_t        m_eEdge;    
+    Intr_Event_Edge_t       m_Intr_Event_Edge;
+   // Gpio_Info_t             m_Gpio_Info;
 };
 
 }// namespace Bsp

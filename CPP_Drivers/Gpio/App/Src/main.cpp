@@ -20,29 +20,36 @@ void _Error_Handler(char *, int);
 
 void SystemClock_Config(void);
 void HAL_MspInit(void);
-
+void Led ();
 #include "GpioOutput.hpp"
 #include "GpioInput.hpp"
 using namespace Peripherals;
 
 Peripherals::GpioOutput LED(GPIOC,GPIO_PIN_13);
-Peripherals::GpioInput  TouchButton(GPIOB, GPIO_PIN_11 );
+Peripherals::GpioInput  TouchButton(GPIOA, GPIO_PIN_8, Led  );
 
 int main(void)
-{		
+{	
   /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
+  Interrupt::Relocate_Vector_Table();
   HAL_Init();
   HAL_MspInit();
   LED.HwInit();
   TouchButton.HwInit();
+
     while(1)
     {    
-      LED.On();
-      HAL_Delay(100);
-      LED.Off();
-      HAL_Delay(30);
+      //HAL_Delay(30);      
+      //(TouchButton.ReadInput()) ? LED.On() : LED.Off();
     }
 }
+
+void Led ()
+{
+   LED.ToggleOutput(); 
+}
+
+
 
 /**
   * @brief System Clock Configuration
