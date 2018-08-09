@@ -772,11 +772,11 @@
                 </option>
                 <option>
                     <name>IlinkIcfOverride</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>IlinkIcfFile</name>
-                    <state>$TOOLKIT_DIR$\config\linker\ST\stm32f103x8.icf</state>
+                    <state>C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\CPP_Drivers\Gpio\System\stm32f103x8.icf</state>
                 </option>
                 <option>
                     <name>IlinkIcfFileSlave</name>
@@ -2138,6 +2138,9 @@
     </group>
     <group>
         <name>System</name>
+        <file>
+            <name>$PROJ_DIR$\..\System\low_level_init.c</name>
+        </file>
         <file>
             <name>$PROJ_DIR$\..\System\stm32f1xx_it.c</name>
         </file>
