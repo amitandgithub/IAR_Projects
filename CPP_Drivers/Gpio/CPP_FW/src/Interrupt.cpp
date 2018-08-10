@@ -11,6 +11,9 @@
 
 namespace Peripherals
 {
+    
+Interrupt::ISR Interrupt::Vectors_RAM[64] = {0,};
+
 typedef uint8_t u8;
 Interrupt::ISR Interrupt::m_NMI_Handler = nullptr;
 Interrupt::ISR Interrupt::m_HardFault_Handler = nullptr;
@@ -233,14 +236,28 @@ Status_t Interrupt::NVICConfig(IRQn eIRQn, u8 Priority, u8 SubPriority)
     return Status;
 }
 
-/*
+
 Status_t Interrupt::RegisterInterrupt_Vct_Table(ISR pISR, IRQn eIRQn,  uint8_t Priority , uint8_t SubPriority)
 {
-    VECTOR_TABLE_RAM[eIRQn] = pISR;
+    Vectors_RAM[eIRQn] = pISR;
     if(pISR) NVICConfig(eIRQn, Priority, SubPriority);
     return 1;
 }
-*/
+
+void Interrupt::Relocate_Vector_Table()
+{
+    
+    uint32_t *Ram_Start  = (uint32_t*)Vectors_RAM;
+    uint32_t *ROM_Start = (uint32_t*)0x08000000;
+    
+    for(uint32_t start = 0; start<= 0x3E; start++)
+    {
+        Ram_Start[start] = ROM_Start[start];
+    }
+    
+    SCB->VTOR = (uint32_t)Vectors_RAM | (0U & (uint32_t)0x1FFFFF80);
+}
+
 } // namespace Peripherals
 
 extern "C"

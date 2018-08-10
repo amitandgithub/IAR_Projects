@@ -133,8 +133,8 @@ Status_t GpioInput::ConfigureInterrupt()
     {
         L_IRQn = MapPin2ExtLine();
         //Register Interrupt
-        Interrupt::RegisterInterrupt(m_pISR, L_IRQn); 
-        //Interrupt::RegisterInterrupt_Vct_Table(m_pISR, L_IRQn); 
+        //Interrupt::RegisterInterrupt(m_pISR, L_IRQn); 
+        Interrupt::RegisterInterrupt_Vct_Table(m_pISR, L_IRQn); 
         //Enable_Interrupt
         Interrupt::EnableInterrupt(L_IRQn);
 

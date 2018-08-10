@@ -154,11 +154,7 @@ public:
     //static const uint32_t VECTOR_TABLE_SIZE = EXTI15_IRQHandler+9;
    // static ISR VECTOR_TABLE_RAM[VECTOR_TABLE_SIZE]; 
     
-    inline static void Relocate_Vector_Table()
-    {
-       // SCB->VTOR = (uint32_t)&VECTOR_TABLE_RAM[0] | (0U & (uint32_t)0x1FFFFF80);
-
-    }
+    static void Relocate_Vector_Table();
     Interrupt(){};
     
     ~Interrupt(){};
@@ -178,6 +174,8 @@ public:
     static Status_t SetInterruptPriority(IRQn eIRQn,uint8_t Priority, uint8_t SubPriority);
     
     static Status_t GetInterruptPriority(IRQn eIRQn,uint8_t* pPriority, uint8_t* pSubPriority);
+    
+     static  ISR Vectors_RAM[64];
 
 };
 

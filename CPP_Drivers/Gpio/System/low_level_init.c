@@ -36,7 +36,7 @@ __interwork int __low_level_init(void)
   /*==================================*/
   /*  Initialize hardware.            */
   /*==================================*/
-    VTOR = (unsigned int) & __vector_table;
+   // VTOR = (unsigned int) & __vector_table;
   /*==================================*/
   /* Choose if segment initialization */
   /* should be done or not.           */
