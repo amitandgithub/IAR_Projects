@@ -70,7 +70,7 @@
 
         DATA
 __vector_table
-        DCD     sfe(CSTACK)
+        DCD     sfe(CSTACK)                          ; 1
         DCD     Reset_Handler             ; Reset Handler
         DCD     NMI_Handler               ; NMI Handler
         DCD     HardFault_Handler         ; Hard Fault Handler
@@ -85,7 +85,7 @@ __vector_table
         DCD     DebugMon_Handler          ; Debug Monitor Handler
         DCD     0                         ; Reserved
         DCD     PendSV_Handler            ; PendSV Handler
-        DCD     SysTick_Handler           ; SysTick Handler
+        DCD     SysTick_Handler           ; SysTick Handler 16
 
          ; External Interrupts
         DCD     WWDG_IRQHandler           ; Window Watchdog
@@ -101,7 +101,7 @@ __vector_table
         DCD     EXTI4_IRQHandler          ; EXTI Line 4
         DCD     DMA1_Channel1_IRQHandler  ; DMA1 Channel 1
         DCD     DMA1_Channel2_IRQHandler  ; DMA1 Channel 2
-        DCD     DMA1_Channel3_IRQHandler  ; DMA1 Channel 3
+        DCD     DMA1_Channel3_IRQHandler  ; DMA1 Channel 3 30
         DCD     DMA1_Channel4_IRQHandler  ; DMA1 Channel 4
         DCD     DMA1_Channel5_IRQHandler  ; DMA1 Channel 5
         DCD     DMA1_Channel6_IRQHandler  ; DMA1 Channel 6
@@ -111,7 +111,7 @@ __vector_table
         DCD     USB_LP_CAN1_RX0_IRQHandler ; USB Low  Priority or CAN1 RX0
         DCD     CAN1_RX1_IRQHandler       ; CAN1 RX1
         DCD     CAN1_SCE_IRQHandler       ; CAN1 SCE
-        DCD     EXTI9_5_IRQHandler        ; EXTI Line 9..5
+        DCD     EXTI9_5_IRQHandler        ; EXTI Line 9..5 (0->23)  40
         DCD     TIM1_BRK_IRQHandler       ; TIM1 Break
         DCD     TIM1_UP_IRQHandler        ; TIM1 Update
         DCD     TIM1_TRG_COM_IRQHandler   ; TIM1 Trigger and Commutation
@@ -121,7 +121,7 @@ __vector_table
         DCD     TIM4_IRQHandler           ; TIM4
         DCD     I2C1_EV_IRQHandler        ; I2C1 Event
         DCD     I2C1_ER_IRQHandler        ; I2C1 Error
-        DCD     I2C2_EV_IRQHandler        ; I2C2 Event
+        DCD     I2C2_EV_IRQHandler        ; I2C2 Event 50
         DCD     I2C2_ER_IRQHandler        ; I2C2 Error
         DCD     SPI1_IRQHandler           ; SPI1
         DCD     SPI2_IRQHandler           ; SPI2
@@ -130,7 +130,7 @@ __vector_table
         DCD     USART3_IRQHandler         ; USART3
         DCD     EXTI15_10_IRQHandler      ; EXTI Line 15..10
         DCD     RTC_Alarm_IRQHandler       ; RTC Alarm through EXTI Line
-        DCD     USBWakeUp_IRQHandler      ; USB Wakeup from suspend
+        DCD     USBWakeUp_IRQHandler      ; USB Wakeup from suspend 59
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;

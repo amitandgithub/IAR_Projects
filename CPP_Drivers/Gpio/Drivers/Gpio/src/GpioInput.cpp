@@ -32,17 +32,17 @@ Interrupt::IRQn GpioInput::MapPin2ExtLine()
         (GpioInput::m_Pin == GPIO_PIN_2) ? Interrupt::EXTI2_IRQHandler :
         (GpioInput::m_Pin == GPIO_PIN_3) ? Interrupt::EXTI3_IRQHandler :
         (GpioInput::m_Pin == GPIO_PIN_4) ? Interrupt::EXTI4_IRQHandler :
-        (GpioInput::m_Pin == GPIO_PIN_5) ? Interrupt::EXTI5_IRQHandler :
-        (GpioInput::m_Pin == GPIO_PIN_6) ? Interrupt::EXTI6_IRQHandler :
-        (GpioInput::m_Pin == GPIO_PIN_7) ? Interrupt::EXTI7_IRQHandler :
-        (GpioInput::m_Pin == GPIO_PIN_8) ? Interrupt::EXTI8_IRQHandler :
-        (GpioInput::m_Pin == GPIO_PIN_9) ? Interrupt::EXTI9_IRQHandler :
-        (GpioInput::m_Pin == GPIO_PIN_10)? Interrupt::EXTI10_IRQHandler :
-        (GpioInput::m_Pin == GPIO_PIN_11)? Interrupt::EXTI11_IRQHandler :
-        (GpioInput::m_Pin == GPIO_PIN_12)? Interrupt::EXTI12_IRQHandler :
-        (GpioInput::m_Pin == GPIO_PIN_13)? Interrupt::EXTI13_IRQHandler :
-        (GpioInput::m_Pin == GPIO_PIN_14)? Interrupt::EXTI14_IRQHandler :
-        (GpioInput::m_Pin == GPIO_PIN_15)? Interrupt::EXTI15_IRQHandler : Interrupt::EXTI0_IRQHandler;
+        (GpioInput::m_Pin == GPIO_PIN_5) ? Interrupt::EXTI9_5_IRQHandler :
+        (GpioInput::m_Pin == GPIO_PIN_6) ? Interrupt::EXTI9_5_IRQHandler :
+        (GpioInput::m_Pin == GPIO_PIN_7) ? Interrupt::EXTI9_5_IRQHandler :
+        (GpioInput::m_Pin == GPIO_PIN_8) ? Interrupt::EXTI9_5_IRQHandler :
+        (GpioInput::m_Pin == GPIO_PIN_9) ? Interrupt::EXTI9_5_IRQHandler :
+        (GpioInput::m_Pin == GPIO_PIN_10)? Interrupt::EXTI15_10_IRQHandler :
+        (GpioInput::m_Pin == GPIO_PIN_11)? Interrupt::EXTI15_10_IRQHandler :
+        (GpioInput::m_Pin == GPIO_PIN_12)? Interrupt::EXTI15_10_IRQHandler :
+        (GpioInput::m_Pin == GPIO_PIN_13)? Interrupt::EXTI15_10_IRQHandler :
+        (GpioInput::m_Pin == GPIO_PIN_14)? Interrupt::EXTI15_10_IRQHandler :
+        (GpioInput::m_Pin == GPIO_PIN_15)? Interrupt::EXTI15_10_IRQHandler : Interrupt::EXTI0_IRQHandler;
 
 	return ExtLine;
 }

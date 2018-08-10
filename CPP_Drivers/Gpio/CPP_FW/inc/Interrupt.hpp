@@ -22,39 +22,44 @@ public:
 	typedef enum {DISABLE = 0, ENABLE = !DISABLE}InterruptState;
 	typedef enum
 	{
-        NMI_Handler = -9,
-	    HardFault_Handler,
-	    MemManage_Handler,
-	    BusFault_Handler,
-	    UsageFault_Handler,
-	    SVC_Handler,
-	    DebugMon_Handler,
-	    PendSV_Handler,
-	    SysTick_Handler,
-            WWDG_IRQHandler,
-            PVD_IRQHandler,
-            TAMPER_IRQHandler,
-            RTC_IRQHandler,
-            FLASH_IRQHandler,
-            RCC_IRQHandler,
-            EXTI0_IRQHandler,
-            EXTI1_IRQHandler,
-            EXTI2_IRQHandler,
-            EXTI3_IRQHandler,
-            EXTI4_IRQHandler,
-            DMA1_Channel1_IRQHandler,
-            DMA1_Channel2_IRQHandler,
-            DMA1_Channel3_IRQHandler,
-            DMA1_Channel4_IRQHandler,
-            DMA1_Channel5_IRQHandler,
-            DMA1_Channel6_IRQHandler,
-            DMA1_Channel7_IRQHandler,
-            ADC1_2_IRQHandler,
-            USB_HP_CAN1_TX_IRQHandler,
-            USB_LP_CAN1_RX0_IRQHandler,
-            CAN1_RX1_IRQHandler,
-            CAN1_SCE_IRQHandler,
-            EXTI9_5_IRQHandler,
+        NMI_Handler = -14,
+	    HardFault_Handler = -13,
+	    MemManage_Handler = -12,
+	    BusFault_Handler = -11,
+	    UsageFault_Handler = -10,
+        _Rsvd1 = -9,                         
+		_Rsvd2 = -8,                        
+		_Rsvd3 = -7,                       
+		_Rsvd4 = -6, 
+	    SVC_Handler = -5,
+	    DebugMon_Handler = -4,
+        _Rsvd5 = -3,
+	    PendSV_Handler = -2,
+	    SysTick_Handler = -1,
+            WWDG_IRQHandler = 0,
+            PVD_IRQHandler = 1,
+            TAMPER_IRQHandler = 2,
+            RTC_IRQHandler = 3,
+            FLASH_IRQHandler = 4,
+            RCC_IRQHandler = 5,
+            EXTI0_IRQHandler = 6,
+            EXTI1_IRQHandler = 7,
+            EXTI2_IRQHandler = 8,
+            EXTI3_IRQHandler = 9,
+            EXTI4_IRQHandler = 10,
+            DMA1_Channel1_IRQHandler = 11,
+            DMA1_Channel2_IRQHandler = 12,
+            DMA1_Channel3_IRQHandler = 13,
+            DMA1_Channel4_IRQHandler = 14,
+            DMA1_Channel5_IRQHandler = 15,
+            DMA1_Channel6_IRQHandler = 16,
+            DMA1_Channel7_IRQHandler = 17,
+            ADC1_2_IRQHandler = 18,
+            USB_HP_CAN1_TX_IRQHandler = 19,
+            USB_LP_CAN1_RX0_IRQHandler = 20,
+            CAN1_RX1_IRQHandler = 21,
+            CAN1_SCE_IRQHandler = 22,
+            EXTI9_5_IRQHandler = 23,
             TIM1_BRK_IRQHandler,
             TIM1_UP_IRQHandler,
             TIM1_TRG_COM_IRQHandler,
@@ -86,73 +91,6 @@ public:
             EXTI14_IRQHandler,
             EXTI15_IRQHandler
 	}IRQn;
-
-	static ISR m_NMI_Handler;
-	static ISR m_HardFault_Handler;
-	static ISR m_MemManage_Handler;
-	static ISR m_BusFault_Handler;
-	static ISR m_UsageFault_Handler;
-	static ISR m_SVC_Handler;
-	static ISR m_DebugMon_Handler;
-	static ISR m_PendSV_Handler;
-	static ISR m_SysTick_Handler;
-	static ISR m_WWDG_IRQHandler;
-	static ISR m_PVD_IRQHandler;
-	static ISR m_TAMPER_IRQHandler;
-	static ISR m_RTC_IRQHandler;
-	static ISR m_FLASH_IRQHandler;
-	static ISR m_RCC_IRQHandler;
-	static ISR m_EXTI0_IRQHandler;
-	static ISR m_EXTI1_IRQHandler;
-	static ISR m_EXTI2_IRQHandler;
-	static ISR m_EXTI3_IRQHandler;
-	static ISR m_EXTI4_IRQHandler;
-	static ISR m_EXTI5_IRQHandler;
-	static ISR m_EXTI6_IRQHandler;
-	static ISR m_EXTI7_IRQHandler;
-	static ISR m_EXTI8_IRQHandler;
-	static ISR m_EXTI9_IRQHandler;
-	static ISR m_EXTI10_IRQHandler;
-	static ISR m_EXTI11_IRQHandler;
-	static ISR m_EXTI12_IRQHandler;
-	static ISR m_EXTI13_IRQHandler;
-	static ISR m_EXTI14_IRQHandler;
-	static ISR m_EXTI15_IRQHandler;
-	static ISR m_DMA1_Channel1_IRQHandler;
-	static ISR m_DMA1_Channel2_IRQHandler;
-	static ISR m_DMA1_Channel3_IRQHandler;
-	static ISR m_DMA1_Channel4_IRQHandler;
-	static ISR m_DMA1_Channel5_IRQHandler;
-	static ISR m_DMA1_Channel6_IRQHandler;
-	static ISR m_DMA1_Channel7_IRQHandler;
-	static ISR m_ADC1_2_IRQHandler;
-	static ISR m_USB_HP_CAN1_TX_IRQHandler;
-	static ISR m_USB_LP_CAN1_RX0_IRQHandler;
-	static ISR m_CAN1_RX1_IRQHandler;
-	static ISR m_CAN1_SCE_IRQHandler;
-	static ISR m_EXTI9_5_IRQHandler;
-	static ISR m_TIM1_BRK_IRQHandler;
-	static ISR m_TIM1_UP_IRQHandler;
-	static ISR m_TIM1_TRG_COM_IRQHandler;
-	static ISR m_TIM1_CC_IRQHandler;
-	static ISR m_TIM2_IRQHandler;
-	static ISR m_TIM3_IRQHandler;
-	static ISR m_TIM4_IRQHandler;
-	static ISR m_I2C1_EV_IRQHandler;
-	static ISR m_I2C1_ER_IRQHandler;
-	static ISR m_I2C2_EV_IRQHandler;
-	static ISR m_I2C2_ER_IRQHandler;
-	static ISR m_SPI1_IRQHandler;
-	static ISR m_SPI2_IRQHandler;
-	static ISR m_USART1_IRQHandler;
-	static ISR m_USART2_IRQHandler;
-	static ISR m_USART3_IRQHandler;
-	static ISR m_EXTI15_10_IRQHandler;
-	static ISR m_RTCAlarm_IRQHandler;
-	static ISR m_USBWakeUp_IRQHandler;
-    
-    //static const uint32_t VECTOR_TABLE_SIZE = EXTI15_IRQHandler+9;
-   // static ISR VECTOR_TABLE_RAM[VECTOR_TABLE_SIZE]; 
     
     static void Relocate_Vector_Table();
     Interrupt(){};
@@ -175,7 +113,7 @@ public:
     
     static Status_t GetInterruptPriority(IRQn eIRQn,uint8_t* pPriority, uint8_t* pSubPriority);
     
-     static  ISR Vectors_RAM[64];
+     //static  ISR Vectors_RAM[64];
 
 };
 

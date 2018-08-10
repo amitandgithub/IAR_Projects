@@ -43,9 +43,13 @@ int main(void)
       //(TouchButton.ReadInput()) ? LED.On() : LED.Off();
     }
 }
-
+extern "C"
+{
+extern void EXTI9_5_IRQHandler(void);
+}
 void Led ()
 {
+   EXTI9_5_IRQHandler();
    LED.ToggleOutput(); 
 }
 
