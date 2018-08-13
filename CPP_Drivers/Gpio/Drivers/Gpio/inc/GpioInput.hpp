@@ -116,12 +116,26 @@ public:
 
 private:
     Status_t ConfigureInterrupt();
-
+    
 	Interrupt::IRQn MapPin2ExtLine();
-
+    
 	uint8_t MapPin2PinSource();
-
+    
 	Status_t ExtLineInit();
+    
+    static void EXTI0_IRQHandler();
+    
+    static void EXTI1_IRQHandler();
+    
+    static void EXTI2_IRQHandler();
+    
+    static void EXTI3_IRQHandler();
+    
+    static void EXTI4_IRQHandler();
+    
+    static void EXTI5_9_IRQHandler();
+    
+    static void EXTI15_10_IRQHandler();
 
 private:
 	PIN_t                   m_Pin;
@@ -129,7 +143,7 @@ private:
     PULL_t                  m_Pull;
     ISR_t                   m_pISR;
     Intr_Event_Edge_t       m_Intr_Event_Edge;
-   // Gpio_Info_t             m_Gpio_Info;
+    static Interrupt::ISR   GPIO_ISRs[16];
 };
 
 }// namespace Bsp

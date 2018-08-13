@@ -16,8 +16,9 @@ namespace Peripherals
 
 class Interrupt
 {
+
 public:
-    
+   static const uint32_t TOTAL_INTERRUPT_VECTORS = 64;
 	typedef void(*ISR)(void);
 	typedef enum {DISABLE = 0, ENABLE = !DISABLE}InterruptState;
 	typedef enum
@@ -27,13 +28,13 @@ public:
 	    MemManage_Handler = -12,
 	    BusFault_Handler = -11,
 	    UsageFault_Handler = -10,
-        _Rsvd1 = -9,                         
-		_Rsvd2 = -8,                        
-		_Rsvd3 = -7,                       
-		_Rsvd4 = -6, 
+//        _Rsvd1 = -9,                         
+//		_Rsvd2 = -8,                        
+//		_Rsvd3 = -7,                       
+//		_Rsvd4 = -6, 
 	    SVC_Handler = -5,
 	    DebugMon_Handler = -4,
-        _Rsvd5 = -3,
+//        _Rsvd5 = -3,
 	    PendSV_Handler = -2,
 	    SysTick_Handler = -1,
             WWDG_IRQHandler = 0,
@@ -60,43 +61,45 @@ public:
             CAN1_RX1_IRQHandler = 21,
             CAN1_SCE_IRQHandler = 22,
             EXTI9_5_IRQHandler = 23,
-            TIM1_BRK_IRQHandler,
-            TIM1_UP_IRQHandler,
-            TIM1_TRG_COM_IRQHandler,
-            TIM1_CC_IRQHandler,
-            TIM2_IRQHandler,
-            TIM3_IRQHandler,
-            TIM4_IRQHandler,
-            I2C1_EV_IRQHandler,
-            I2C1_ER_IRQHandler,
-            I2C2_EV_IRQHandler,
-            I2C2_ER_IRQHandler,
-            SPI1_IRQHandler,
-            SPI2_IRQHandler,
-            USART1_IRQHandler,
-            USART2_IRQHandler,
-            USART3_IRQHandler,
-            EXTI15_10_IRQHandler,
-            RTCAlarm_IRQHandler,
-            USBWakeUp_IRQHandler,
-            EXTI5_IRQHandler,
-            EXTI6_IRQHandler,
-            EXTI7_IRQHandler,
-            EXTI8_IRQHandler,
-            EXTI9_IRQHandler,
-            EXTI10_IRQHandler,
-            EXTI11_IRQHandler,
-            EXTI12_IRQHandler,
-            EXTI13_IRQHandler,
-            EXTI14_IRQHandler,
-            EXTI15_IRQHandler
+            TIM1_BRK_IRQHandler = 24,
+            TIM1_UP_IRQHandler = 25,
+            TIM1_TRG_COM_IRQHandler = 26,
+            TIM1_CC_IRQHandler = 27,
+            TIM2_IRQHandler = 28,
+            TIM3_IRQHandler = 29,
+            TIM4_IRQHandler = 30,
+            I2C1_EV_IRQHandler = 31,
+            I2C1_ER_IRQHandler = 32,
+            I2C2_EV_IRQHandler = 33,
+            I2C2_ER_IRQHandler = 34,
+            SPI1_IRQHandler = 35,
+            SPI2_IRQHandler = 36,
+            USART1_IRQHandler = 37,
+            USART2_IRQHandler = 38,
+            USART3_IRQHandler = 39,
+            EXTI15_10_IRQHandler = 40,
+            RTCAlarm_IRQHandler = 41,
+            USBWakeUp_IRQHandler = 42,
+            EXTI5_IRQHandler = 43,
+            EXTI6_IRQHandler = 44,
+            EXTI7_IRQHandler = 45,
+            EXTI8_IRQHandler = 46,
+            EXTI9_IRQHandler = 47,
+            EXTI10_IRQHandler = 48,
+            EXTI11_IRQHandler = 49,
+            EXTI12_IRQHandler = 50,
+            EXTI13_IRQHandler = 51,
+            EXTI14_IRQHandler = 52,
+            EXTI15_IRQHandler = 53
 	}IRQn;
     
-    static void Relocate_Vector_Table();
+   
     Interrupt(){};
     
     ~Interrupt(){};
     
+    static void Relocate_Vector_Table();
+     
 	static Status_t RegisterInterrupt(ISR pISR, IRQn eIRQn,  uint8_t Priority = 15, uint8_t SubPriority = 0 );
     
     static Status_t RegisterInterrupt_Vct_Table(ISR pISR, IRQn eIRQn,  uint8_t Priority = 15, uint8_t SubPriority = 0 );
@@ -113,7 +116,10 @@ public:
     
     static Status_t GetInterruptPriority(IRQn eIRQn,uint8_t* pPriority, uint8_t* pSubPriority);
     
-     //static  ISR Vectors_RAM[64];
+    static ISR GetISR(IRQn eIRQn){return Vectors_RAM[ eIRQn % TOTAL_INTERRUPT_VECTORS ]; }
+    
+private: 
+    static ISR Vectors_RAM[TOTAL_INTERRUPT_VECTORS];
 
 };
 

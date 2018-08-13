@@ -11,7 +11,7 @@
 namespace Peripherals
 {
 
-
+Interrupt::ISR GpioInput::GPIO_ISRs[16];
 
 GpioInput::GpioInput(PORT_t Port, PIN_t Pin, ISR_t aISR, Intr_Event_Edge_t Intr_Event_Edge, PULL_t PULL)
 {
@@ -125,61 +125,185 @@ Status_t GpioInput::HwInit()
 
 Status_t GpioInput::ConfigureInterrupt()
 {
-    Status_t Status = false;
-
     Interrupt::IRQn L_IRQn;
+    uint8_t Pin = MapPin2PinSource();
 
     if(m_pISR != nullptr)
     {
         L_IRQn = MapPin2ExtLine();
-        //Register Interrupt
-        //Interrupt::RegisterInterrupt(m_pISR, L_IRQn); 
-        Interrupt::RegisterInterrupt_Vct_Table(m_pISR, L_IRQn); 
+        
+        if( L_IRQn == Interrupt::EXTI9_5_IRQHandler)
+        {
+            if((Pin > 4) && (Pin < 10) )
+            {
+                GPIO_ISRs[Pin] = m_pISR;
+                Interrupt::RegisterInterrupt_Vct_Table(GpioInput::EXTI5_9_IRQHandler, L_IRQn); 
+            }
+        }
+        else if( L_IRQn == Interrupt::EXTI15_10_IRQHandler)
+        {
+             if((Pin > 9) && (Pin < 16) )
+             {
+                GPIO_ISRs[Pin] = m_pISR;
+                Interrupt::RegisterInterrupt_Vct_Table(GpioInput::EXTI15_10_IRQHandler, L_IRQn); 
+             }
+        }
+        else 
+        {
+             Interrupt::ISR L_ISR = nullptr;
+             GPIO_ISRs[Pin%16] = m_pISR;
+             
+             switch(Pin)
+             {
+             case 0 : L_ISR = EXTI0_IRQHandler; break;
+             case 1 : L_ISR = EXTI1_IRQHandler; break;
+             case 2 : L_ISR = EXTI2_IRQHandler; break;
+             case 3 : L_ISR = EXTI3_IRQHandler; break;
+             case 4 : L_ISR = EXTI4_IRQHandler; break;
+             default: ;
+             }
+             
+             Interrupt::RegisterInterrupt_Vct_Table(L_ISR, L_IRQn); 
+        }
         //Enable_Interrupt
         Interrupt::EnableInterrupt(L_IRQn);
 
-        Status = true;
+        return true;
     }
 
-    return Status;
+    return false;
 }
 
 Status_t GpioInput::ExtLineInit()
 {
 	LL_EXTI_InitTypeDef EXTI_InitStruct;
-        
-       EXTI_InitStruct.Line_0_31 = m_Pin;
-       EXTI_InitStruct.Mode = m_Intr_Event_Edge;
-       EXTI_InitStruct.Trigger = EXTI_FALLING;
-       EXTI_InitStruct.LineCommand = (FunctionalState)ENABLE;
-       LL_EXTI_Init(&EXTI_InitStruct);
-
-       return true;
+    
+    EXTI_InitStruct.Line_0_31 = m_Pin;
+    EXTI_InitStruct.Mode = m_Intr_Event_Edge;
+    EXTI_InitStruct.Trigger = EXTI_FALLING;
+    EXTI_InitStruct.LineCommand = (FunctionalState)ENABLE;
+    LL_EXTI_Init(&EXTI_InitStruct);
+    return true;
 }
-/*
-InterruptManager::IRQn GpioInput::MapPin2IRQn()
+void GpioInput::EXTI5_9_IRQHandler()
 {
-	const InterruptManager::IRQn ExtLine =
-			(GpioInput::m_Pin == GPIO_PIN_0) ? InterruptManager::EXTI0_IRQHandler :
-            (GpioInput::m_Pin == GPIO_PIN_1) ? InterruptManager::EXTI1_IRQHandler :
-            (GpioInput::m_Pin == GPIO_PIN_2) ? InterruptManager::EXTI2_IRQHandler :
-            (GpioInput::m_Pin == GPIO_PIN_3) ? InterruptManager::EXTI3_IRQHandler :
-            (GpioInput::m_Pin == GPIO_PIN_4) ? InterruptManager::EXTI4_IRQHandler :
-            (GpioInput::m_Pin == GPIO_PIN_5) ? InterruptManager::EXTI9_5_IRQHandler :
-			(GpioInput::m_Pin == GPIO_PIN_6) ? InterruptManager::EXTI9_5_IRQHandler :
-            (GpioInput::m_Pin == GPIO_PIN_7) ? InterruptManager::EXTI9_5_IRQHandler :
-            (GpioInput::m_Pin == GPIO_PIN_8) ? InterruptManager::EXTI9_5_IRQHandler :
-            (GpioInput::m_Pin == GPIO_PIN_9) ? InterruptManager::EXTI9_5_IRQHandler :
-            (GpioInput::m_Pin == GPIO_PIN_10)? InterruptManager::EXTI15_10_IRQHandler :
-            (GpioInput::m_Pin == GPIO_PIN_11)? InterruptManager::EXTI15_10_IRQHandler :
-			(GpioInput::m_Pin == GPIO_PIN_12)? InterruptManager::EXTI15_10_IRQHandler :
-            (GpioInput::m_Pin == GPIO_PIN_13)? InterruptManager::EXTI15_10_IRQHandler :
-            (GpioInput::m_Pin == GPIO_PIN_14)? InterruptManager::EXTI15_10_IRQHandler :
-            (GpioInput::m_Pin == GPIO_PIN_15)? InterruptManager::EXTI15_10_IRQHandler : InterruptManager::EXTI0_IRQHandler;
+	if((bool)LL_EXTI_IsEnabledIT_0_31(LL_EXTI_LINE_5) == true)
+	{
+		SET_BIT(EXTI->PR,LL_EXTI_LINE_5);
+        if (GPIO_ISRs[5])  GPIO_ISRs[5]();
+	}
+	else if ((bool)LL_EXTI_IsEnabledIT_0_31(LL_EXTI_LINE_6) == true)
+	{
+		SET_BIT(EXTI->PR,LL_EXTI_LINE_6);
+        if (GPIO_ISRs[6])  GPIO_ISRs[6]();
+	}
+	else if ((bool)LL_EXTI_IsEnabledIT_0_31(LL_EXTI_LINE_7) == true)
+	{
+		SET_BIT(EXTI->PR,LL_EXTI_LINE_7);
+        if (GPIO_ISRs[7])  GPIO_ISRs[7]();
 
-	return ExtLine;
+	}
+	else if ((bool)LL_EXTI_IsEnabledIT_0_31(LL_EXTI_LINE_8) == true)
+	{
+		SET_BIT(EXTI->PR,LL_EXTI_LINE_8);
+        if (GPIO_ISRs[8])  GPIO_ISRs[8]();
+
+	}
+	else if ((bool)LL_EXTI_IsEnabledIT_0_31(LL_EXTI_LINE_9) == true)
+	{
+		SET_BIT(EXTI->PR,LL_EXTI_LINE_9);
+        if (GPIO_ISRs[9])  GPIO_ISRs[9]();
+	}
 }
-*/
+
+void GpioInput::EXTI15_10_IRQHandler()
+{
+
+	if((bool)LL_EXTI_IsEnabledIT_0_31(LL_EXTI_LINE_10) == true)
+	{
+		SET_BIT(EXTI->PR,LL_EXTI_LINE_10);
+        if (GPIO_ISRs[10])  GPIO_ISRs[10]();
+
+	}
+	else if ((bool)LL_EXTI_IsEnabledIT_0_31(LL_EXTI_LINE_11) == true)
+	{
+		SET_BIT(EXTI->PR,LL_EXTI_LINE_11);
+        if (GPIO_ISRs[11])  GPIO_ISRs[11]();
+
+	}
+	else if ((bool)LL_EXTI_IsEnabledIT_0_31(LL_EXTI_LINE_12) == true)
+	{
+        SET_BIT(EXTI->PR,LL_EXTI_LINE_12);
+        if (GPIO_ISRs[12])  GPIO_ISRs[12]();
+
+	}
+	else if ((bool)LL_EXTI_IsEnabledIT_0_31(LL_EXTI_LINE_13) == true)
+	{
+		SET_BIT(EXTI->PR,LL_EXTI_LINE_13);
+        if (GPIO_ISRs[13])  GPIO_ISRs[13]();
+
+	}
+	else if ((bool)LL_EXTI_IsEnabledIT_0_31(LL_EXTI_LINE_14) == true)
+	{
+		SET_BIT(EXTI->PR,LL_EXTI_LINE_14);
+        if (GPIO_ISRs[14])  GPIO_ISRs[14]();
+
+	}
+	else if ((bool)LL_EXTI_IsEnabledIT_0_31(LL_EXTI_LINE_15) == true)
+	{
+		SET_BIT(EXTI->PR,LL_EXTI_LINE_15);
+        if (GPIO_ISRs[15])  GPIO_ISRs[15]();
+
+	}
+}
+
+void GpioInput::EXTI0_IRQHandler()
+{
+	if((bool)LL_EXTI_IsEnabledIT_0_31(LL_EXTI_LINE_0) == true)
+	{
+		SET_BIT(EXTI->PR,LL_EXTI_LINE_0);
+         if (GPIO_ISRs[0])  GPIO_ISRs[0]();
+	}
+
+}
+void GpioInput::EXTI1_IRQHandler()
+{
+	if((bool)LL_EXTI_IsEnabledIT_0_31(LL_EXTI_LINE_1) == true)
+	{
+		SET_BIT(EXTI->PR,LL_EXTI_LINE_1);
+         if (GPIO_ISRs[1])  GPIO_ISRs[1]();
+	}
+
+}
+void GpioInput::EXTI2_IRQHandler()
+{
+	if((bool)LL_EXTI_IsEnabledIT_0_31(LL_EXTI_LINE_2) == true)
+	{
+		SET_BIT(EXTI->PR,LL_EXTI_LINE_2);
+         if (GPIO_ISRs[2])  GPIO_ISRs[2]();
+	}
+
+}
+void GpioInput::EXTI3_IRQHandler()
+{
+	if((bool)LL_EXTI_IsEnabledIT_0_31(LL_EXTI_LINE_3) == true)
+	{
+		SET_BIT(EXTI->PR,LL_EXTI_LINE_3);
+         if (GPIO_ISRs[3])  GPIO_ISRs[3]();
+
+	}
+
+}
+void GpioInput::EXTI4_IRQHandler()
+{
+	if((bool)LL_EXTI_IsEnabledIT_0_31(LL_EXTI_LINE_4) == true)
+	{
+		SET_BIT(EXTI->PR,LL_EXTI_LINE_4);
+         if (GPIO_ISRs[4])  GPIO_ISRs[4]();
+
+	}
+
+}
 
 }
 

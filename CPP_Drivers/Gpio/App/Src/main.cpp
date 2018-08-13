@@ -16,41 +16,33 @@ void _Error_Handler(char *, int);
 }
 #endif
 
-
-
 void SystemClock_Config(void);
 void HAL_MspInit(void);
-void Led ();
+void Led();
 #include "GpioOutput.hpp"
 #include "GpioInput.hpp"
 using namespace Peripherals;
 
 Peripherals::GpioOutput LED(GPIOC,GPIO_PIN_13);
-Peripherals::GpioInput  TouchButton(GPIOA, GPIO_PIN_8, Led  );
+Peripherals::GpioInput  TouchButton(GPIOA, GPIO_PIN_8);
 
 int main(void)
 {	
   /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
-  Interrupt::Relocate_Vector_Table();
   HAL_Init();
-  HAL_MspInit();
   LED.HwInit();
   TouchButton.HwInit();
 
     while(1)
     {    
-      //HAL_Delay(30);      
-      //(TouchButton.ReadInput()) ? LED.On() : LED.Off();
+      HAL_Delay(30);      
+      (TouchButton.ReadInput()) ? LED.On() : LED.Off();
     }
 }
-extern "C"
-{
-extern void EXTI9_5_IRQHandler(void);
-}
+
 void Led ()
 {
-   EXTI9_5_IRQHandler();
-   LED.ToggleOutput(); 
+   LED.ToggleOutput();   
 }
 
 
