@@ -16,22 +16,23 @@ void _Error_Handler(char *, int);
 }
 #endif
 
-
-
 void SystemClock_Config(void);
 void HAL_MspInit(void);
+void Led();
+#include "GpioOutput.hpp"
+#include "GpioInput.hpp"
+using namespace Peripherals;
+
+Peripherals::GpioOutput LED(GPIOC,GPIO_PIN_13);
+Peripherals::GpioInput  TouchButton(GPIOA, GPIO_PIN_8);
 
 int main(void)
-{		
+{	
   /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
   HAL_Init();
-  HAL_MspInit();
 
-    while(1)
-    {    
-
-    }
 }
+
 
 /**
   * @brief System Clock Configuration
@@ -83,42 +84,6 @@ void SystemClock_Config(void)
   HAL_NVIC_SetPriority(SysTick_IRQn, 0, 0);
 }
 
-void HAL_MspInit(void)
-{
-  /* USER CODE BEGIN MspInit 0 */
-
-  /* USER CODE END MspInit 0 */
-
-  __HAL_RCC_AFIO_CLK_ENABLE();
-  __HAL_RCC_PWR_CLK_ENABLE();
-
-  HAL_NVIC_SetPriorityGrouping(NVIC_PRIORITYGROUP_4);
-
-  /* System interrupt init*/
-  /* MemoryManagement_IRQn interrupt configuration */
-  HAL_NVIC_SetPriority(MemoryManagement_IRQn, 0, 0);
-  /* BusFault_IRQn interrupt configuration */
-  HAL_NVIC_SetPriority(BusFault_IRQn, 0, 0);
-  /* UsageFault_IRQn interrupt configuration */
-  HAL_NVIC_SetPriority(UsageFault_IRQn, 0, 0);
-  /* SVCall_IRQn interrupt configuration */
-  HAL_NVIC_SetPriority(SVCall_IRQn, 0, 0);
-  /* DebugMonitor_IRQn interrupt configuration */
-  HAL_NVIC_SetPriority(DebugMonitor_IRQn, 0, 0);
-  /* PendSV_IRQn interrupt configuration */
-  HAL_NVIC_SetPriority(PendSV_IRQn, 0, 0);
-  /* SysTick_IRQn interrupt configuration */
-  HAL_NVIC_SetPriority(SysTick_IRQn, 0, 0);
-
-    /**NOJTAG: JTAG-DP Disabled and SW-DP Enabled 
-    */
-  __HAL_AFIO_REMAP_SWJ_NOJTAG();
-
-  /* USER CODE BEGIN MspInit 1 */
-
-  /* USER CODE END MspInit 1 */
-}
-
 
 
 /**
@@ -153,67 +118,3 @@ void assert_failed(uint8_t* file, uint32_t line)
   /* USER CODE END 6 */
 }
 #endif /* USE_FULL_ASSERT */
-
-
-
-#if 0
-
-static void prvSetupHardware( void )
-{
-	/* Start with the clocks in their expected state. */
-	RCC_DeInit();
-
-	/* Enable HSE (high speed external clock). */
-	RCC_HSEConfig( RCC_HSE_ON );
-
-	/* Wait till HSE is ready. */
-	while( RCC_GetFlagStatus( RCC_FLAG_HSERDY ) == RESET )
-	{
-	}
-
-	/* 2 wait states required on the flash. */
-	*( ( unsigned long * ) 0x40022000 ) = 0x02;
-
-	/* HCLK = SYSCLK */
-	RCC_HCLKConfig( RCC_SYSCLK_Div1 );
-
-	/* PCLK2 = HCLK */
-	RCC_PCLK2Config( RCC_HCLK_Div1 );
-
-	/* PCLK1 = HCLK/2 */
-	RCC_PCLK1Config( RCC_HCLK_Div2 );
-
-	/* PLLCLK = 8MHz * 9 = 72 MHz. */
-	RCC_PLLConfig( RCC_PLLSource_HSE_Div1, RCC_PLLMul_9 );
-
-	/* Enable PLL. */
-	RCC_PLLCmd( ENABLE );
-
-	/* Wait till PLL is ready. */
-	while(RCC_GetFlagStatus(RCC_FLAG_PLLRDY) == RESET)
-	{
-	}
-
-	/* Select PLL as system clock source. */
-	RCC_SYSCLKConfig( RCC_SYSCLKSource_PLLCLK );
-
-	/* Wait till PLL is used as system clock source. */
-	while( RCC_GetSYSCLKSource() != 0x08 )
-	{
-	}
-
-	RCC_APB2PeriphClockCmd(	RCC_APB2Periph_AFIO, ENABLE );
-
-	/* Set the Vector Table base address at 0x08000000 */
-	NVIC_SetVectorTable( NVIC_VectTab_FLASH, 0x0 );
-
-	NVIC_PriorityGroupConfig( NVIC_PriorityGroup_4 );
-
-	/* Configure HCLK clock as SysTick clock source. */
-	SysTick_CLKSourceConfig( SysTick_CLKSource_HCLK );
-	
-
-}
-
-
-#endif

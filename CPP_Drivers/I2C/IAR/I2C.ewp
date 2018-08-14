@@ -226,6 +226,7 @@
                     <name>CCDefines</name>
                     <state>USE_HAL_DRIVER</state>
                     <state>STM32F103xB</state>
+                    <state>USE_FULL_LL_DRIVER</state>
                 </option>
                 <option>
                     <name>CCPreprocFile</name>
@@ -352,7 +353,6 @@
                     <name>CCIncludePath2</name>
                     <state>$PROJ_DIR$\..\App\Inc</state>
                     <state>$PROJ_DIR$\..\Devices\inc</state>
-                    <state>$PROJ_DIR$\..\Drivers\inc</state>
                     <state>$PROJ_DIR$\..</state>
                     <state>$PROJ_DIR$\..\Test\inc</state>
                     <state>$PROJ_DIR$\..\Utils\inc</state>
@@ -360,6 +360,8 @@
                     <state>$PROJ_DIR$\..\STM32F1xx_HAL_Driver\CMSIS\Device\ST\STM32F1xx\Include</state>
                     <state>$PROJ_DIR$\..\System</state>
                     <state>$PROJ_DIR$\..\STM32F1xx_HAL_Driver\CMSIS\Include</state>
+                    <state>$PROJ_DIR$\..\Drivers\Gpio\inc</state>
+                    <state>$PROJ_DIR$\..\CPP_FW\inc</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -770,11 +772,11 @@
                 </option>
                 <option>
                     <name>IlinkIcfOverride</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>IlinkIcfFile</name>
-                    <state>$TOOLKIT_DIR$\config\linker\ST\stm32f103x8.icf</state>
+                    <state>C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\CPP_Drivers\Gpio\System\stm32f103x8.icf</state>
                 </option>
                 <option>
                     <name>IlinkIcfFileSlave</name>
@@ -2075,9 +2077,24 @@
         <name>Drivers</name>
         <group>
             <name>Common</name>
+            <file>
+                <name>$PROJ_DIR$\..\CPP_FW\src\Interrupt.cpp</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\CPP_FW\src\Peripheral.cpp</name>
+            </file>
         </group>
         <group>
             <name>Gpio</name>
+            <file>
+                <name>$PROJ_DIR$\..\Drivers\Gpio\src\GpioInput.cpp</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Drivers\Gpio\src\GpioOutput.cpp</name>
+            </file>
+        </group>
+        <group>
+            <name>I2C</name>
         </group>
     </group>
     <group>
@@ -2089,6 +2106,15 @@
             <name>$PROJ_DIR$\..\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_cortex.c</name>
         </file>
         <file>
+            <name>$PROJ_DIR$\..\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio_ex.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_i2c.c</name>
+        </file>
+        <file>
             <name>$PROJ_DIR$\..\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_pwr.c</name>
         </file>
         <file>
@@ -2097,9 +2123,18 @@
         <file>
             <name>$PROJ_DIR$\..\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc_ex.c</name>
         </file>
+        <file>
+            <name>$PROJ_DIR$\..\STM32F1xx_HAL_Driver\Src\stm32f1xx_ll_exti.c</name>
+        </file>
     </group>
     <group>
         <name>HW_Modules</name>
+    </group>
+    <group>
+        <name>IAR</name>
+        <file>
+            <name>$PROJ_DIR$\..\STM32F1xx_HAL_Driver\CMSIS\Device\ST\STM32F1xx\Source\Templates\iar\startup_stm32f103xb.s</name>
+        </file>
     </group>
     <group>
         <name>Peripherals</name>

@@ -52,7 +52,7 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f1xx_hal.h"
-
+#include "Interrupt.hpp"
 /** @addtogroup STM32F1xx_HAL_Driver
   * @{
   */
@@ -177,7 +177,9 @@ HAL_StatusTypeDef HAL_Init(void)
 
   /* Init the low level hardware */
   HAL_MspInit();
-
+  
+  /* Relocate vector table from ROM to RAM*/
+  Peripherals::Interrupt::Relocate_Vector_Table();
   /* Return function status */
   return HAL_OK;
 }

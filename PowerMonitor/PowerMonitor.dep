@@ -5,948 +5,231 @@
     <configuration>
         <name>Debug</name>
         <outputs>
-            <file>$PROJ_DIR$\CMSIS_Startup\system_stm32f10x.c</file>
-            <file>$PROJ_DIR$\Debug\Obj\GpioOutput.__cstat.et</file>
-            <file>$PROJ_DIR$\Debug\Obj\Line.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\Page.o</file>
-            <file>$PROJ_DIR$\HAL\inc\HwButton.hpp</file>
-            <file>$PROJ_DIR$\Debug\Obj\PortManager.__cstat.et</file>
-            <file>$PROJ_DIR$\Debug\Obj\PowerMonitor.pbd</file>
-            <file>$PROJ_DIR$\Debug\Obj\Line.__cstat.et</file>
-            <file>$PROJ_DIR$\Debug\Obj\INA219.__cstat.et</file>
-            <file>$PROJ_DIR$\Debug\Obj\GpioInput.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\SysTickTimer.pbi</file>
-            <file>$PROJ_DIR$\Debug\Obj\stm32f10x_exti.__cstat.et</file>
-            <file>$TOOLKIT_DIR$\inc\c\xtgmath.h</file>
-            <file>$PROJ_DIR$\CMSIS_Startup\cmsis_compiler.h</file>
-            <file>$PROJ_DIR$\HAL\inc\Peripheral.hpp</file>
-            <file>$PROJ_DIR$\Debug\Obj\PortManager.pbi</file>
-            <file>$PROJ_DIR$\HAL\inc\I2c.hpp</file>
-            <file>$PROJ_DIR$\STM32F10x_StdPeriph_Driver\inc\misc.h</file>
-            <file>$PROJ_DIR$\Debug\Obj\HwButton.pbi</file>
-            <file>$PROJ_DIR$\STM32F10x_StdPeriph_Driver\inc\stm32f10x_exti.h</file>
-            <file>$PROJ_DIR$\Debug\Obj\InterruptManager.__cstat.et</file>
-            <file>$PROJ_DIR$\HAL\inc\GpioOutput.hpp</file>
-            <file>$PROJ_DIR$\Debug\Obj\GpioInput.pbi</file>
-            <file>$PROJ_DIR$\Debug\Obj\Led.pbi</file>
-            <file>$PROJ_DIR$\Debug\Obj\Page.pbi</file>
-            <file>$PROJ_DIR$\STM32F10x_StdPeriph_Driver\inc\stm32f10x_fsmc.h</file>
-            <file>$PROJ_DIR$\Debug\Obj\HwButtonIntr.__cstat.et</file>
-            <file>$TOOLKIT_DIR$\inc\c\cmsis_iar.h</file>
-            <file>$PROJ_DIR$\Debug\Obj\main.pbi</file>
-            <file>$PROJ_DIR$\Debug\Obj\stm32f10x_usart.pbi</file>
-            <file>$PROJ_DIR$\HAL\inc\HwButtonIntr.hpp</file>
-            <file>$TOOLKIT_DIR$\inc\cpp\cstdlib</file>
-            <file>$PROJ_DIR$\Debug\Obj\stm32f10x_usart.o</file>
-            <file>$TOOLKIT_DIR$\inc\c\stdlib.h</file>
-            <file>$PROJ_DIR$\HAL\inc\Queue.hpp</file>
-            <file>$PROJ_DIR$\Debug\Obj\SysTickTimer.o</file>
-            <file>$TOOLKIT_DIR$\inc\c\string.h</file>
-            <file>$PROJ_DIR$\Debug\Obj\I2c.__cstat.et</file>
-            <file>$PROJ_DIR$\HAL\inc\Page.hpp</file>
-            <file>$PROJ_DIR$\Debug\Obj\SpiDriver.o</file>
-            <file>$PROJ_DIR$\HAL\inc\Nokia5110LCD.hpp</file>
-            <file>$PROJ_DIR$\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h</file>
-            <file>$PROJ_DIR$\Debug\Obj\ClockManager.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\Nokia5110LCD.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\stm32f10x_exti.pbi</file>
-            <file>$PROJ_DIR$\Debug\Obj\INA219.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\Page.__cstat.et</file>
-            <file>$PROJ_DIR$\Debug\Obj\Menu.pbi</file>
-            <file>$PROJ_DIR$\Debug\Obj\GpioOutput.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\SpiDriver.__cstat.et</file>
-            <file>$PROJ_DIR$\Debug\Obj\Queue.pbi</file>
-            <file>$PROJ_DIR$\Debug\Obj\SysTickTimer.__cstat.et</file>
-            <file>$PROJ_DIR$\Debug\Obj\main.__cstat.et</file>
-            <file>$PROJ_DIR$\Debug\Obj\stm32f10x_it.__cstat.et</file>
-            <file>$PROJ_DIR$\HAL\inc\InterruptManager.hpp</file>
-            <file>$PROJ_DIR$\Debug\Obj\stm32f10x_usart.__cstat.et</file>
-            <file>$PROJ_DIR$\CMSIS_Startup\stm32f10x_it.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\ysizet.h</file>
-            <file>$TOOLKIT_DIR$\config\linker\ST\stm32f103x8.icf</file>
-            <file>$PROJ_DIR$\Debug\Obj\UI.pbi</file>
-            <file>$PROJ_DIR$\Debug\Obj\Queue.__cstat.et</file>
-            <file>$PROJ_DIR$\Debug\Obj\stm32f10x_gpio.__cstat.et</file>
+            <file>$PROJ_DIR$\CMSIS_Startup\stm32f10x_it.c</file>
+            <file>$PROJ_DIR$\HAL\src\GpioInput.cpp</file>
+            <file>$PROJ_DIR$\HAL\src\INA219.cpp</file>
+            <file>$PROJ_DIR$\HAL\src\InterruptManager.cpp</file>
+            <file>$PROJ_DIR$\HAL\src\UI.cpp</file>
+            <file>$PROJ_DIR$\HAL\src\Nokia5110LCD.cpp</file>
+            <file>$PROJ_DIR$\HAL\src\Led.cpp</file>
+            <file>$PROJ_DIR$\HAL\src\HwButton.cpp</file>
+            <file>$PROJ_DIR$\HAL\src\I2c.cpp</file>
+            <file>$PROJ_DIR$\HAL\src\I2CDriver.cpp</file>
+            <file>$PROJ_DIR$\HAL\src\Queue.cpp</file>
+            <file>$PROJ_DIR$\HAL\src\GpioOutput.cpp</file>
+            <file>$PROJ_DIR$\HAL\src\Line.cpp</file>
+            <file>$PROJ_DIR$\HAL\src\SpiDriver.cpp</file>
+            <file>$PROJ_DIR$\HAL\src\PortManager.cpp</file>
+            <file>$PROJ_DIR$\HAL\src\SysTickTimer.cpp</file>
+            <file>$PROJ_DIR$\CMSIS_Startup\startup_stm32f10x_md.s</file>
+            <file>$PROJ_DIR$\HAL\src\ClockManager.cpp</file>
+            <file>$PROJ_DIR$\HAL\src\Gpio.cpp</file>
+            <file>$PROJ_DIR$\HAL\src\HwButtonIntr.cpp</file>
+            <file>$PROJ_DIR$\HAL\src\Menu.cpp</file>
+            <file>$PROJ_DIR$\HAL\src\Page.cpp</file>
+            <file>$PROJ_DIR$\main.cpp</file>
             <file>$PROJ_DIR$\HAL\inc\UI.hpp</file>
-            <file>$TOOLKIT_DIR$\inc\c\DLib_Product_string.h</file>
-            <file>$TOOLKIT_DIR$\inc\cpp\xtr1common</file>
             <file>$PROJ_DIR$\Debug\Obj\GpioInput.__cstat.et</file>
-            <file>$PROJ_DIR$\Debug\Obj\HwButtonIntr.pbi</file>
             <file>$PROJ_DIR$\HAL\inc\Led.hpp</file>
-            <file>$PROJ_DIR$\Debug\Obj\HwButton.__cstat.et</file>
             <file>$TOOLKIT_DIR$\inc\c\stdio.h</file>
             <file>$PROJ_DIR$\HAL\inc\Menu.hpp</file>
             <file>$PROJ_DIR$\HAL\inc\ClockManager.hpp</file>
-            <file>$PROJ_DIR$\Debug\Obj\UI.__cstat.et</file>
-            <file>$PROJ_DIR$\Debug\Obj\I2CDriver.pbi</file>
             <file>$PROJ_DIR$\Debug\Exe\PowerMonitor.out</file>
-            <file>$PROJ_DIR$\Debug\Obj\GpioOutput.pbi</file>
-            <file>$TOOLKIT_DIR$\lib\dlpp7M_tl_nc.a</file>
             <file>$PROJ_DIR$\Debug\Obj\stm32f10x_spi.o</file>
-            <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
-            <file>$PROJ_DIR$\Debug\Obj\I2c.pbi</file>
-            <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
-            <file>$PROJ_DIR$\Debug\Obj\Nokia5110LCD.pbi</file>
-            <file>$PROJ_DIR$\Debug\Obj\stm32f10x_i2c.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\UI.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\I2CDriver.pbi</file>
+            <file>$TOOLKIT_DIR$\lib\dlpp7M_tl_nc.a</file>
             <file>$PROJ_DIR$\Debug\Obj\stm32f10x_i2c.o</file>
             <file>$PROJ_DIR$\Debug\Obj\HwButtonIntr.o</file>
             <file>$TOOLKIT_DIR$\inc\c\iar_intrinsics_common.h</file>
             <file>$PROJ_DIR$\Debug\Obj\Line.pbi</file>
+            <file>$TOOLKIT_DIR$\inc\c\ysizet.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\HwButtonIntr.pbi</file>
+            <file>$TOOLKIT_DIR$\config\linker\ST\stm32f103x8.icf</file>
+            <file>$PROJ_DIR$\Debug\Obj\UI.__cstat.et</file>
+            <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\GpioOutput.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\I2c.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\HwButton.__cstat.et</file>
+            <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\Nokia5110LCD.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\Queue.__cstat.et</file>
+            <file>$TOOLKIT_DIR$\inc\cpp\xtr1common</file>
+            <file>$PROJ_DIR$\Debug\Obj\stm32f10x_i2c.__cstat.et</file>
             <file>$TOOLKIT_DIR$\inc\c\intrinsics.h</file>
-            <file>$PROJ_DIR$\Debug\Obj\InterruptManager.o</file>
-            <file>$PROJ_DIR$\CMSIS_Startup\stm32f10x.h</file>
-            <file>$PROJ_DIR$\Debug\Obj\misc.pbi</file>
-            <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
-            <file>$PROJ_DIR$\Debug\Obj\InterruptManager.pbi</file>
-            <file>$PROJ_DIR$\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h</file>
-            <file>$PROJ_DIR$\HAL\inc\I2CDriver.hpp</file>
-            <file>$PROJ_DIR$\Debug\Obj\stm32f10x_rcc.__cstat.et</file>
+            <file>$PROJ_DIR$\CMSIS_Startup\stm32f10x_it.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\stm32f10x_gpio.__cstat.et</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Product_string.h</file>
             <file>$PROJ_DIR$\STM32F10x_StdPeriph_Driver\inc\stm32f10x_tim.h</file>
-            <file>$PROJ_DIR$\Debug\Obj\Menu.__cstat.et</file>
-            <file>$PROJ_DIR$\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c</file>
-            <file>$PROJ_DIR$\Debug\Obj\stm32f10x_rcc.pbi</file>
             <file>$PROJ_DIR$\Debug\Obj\stm32f10x_i2c.pbi</file>
-            <file>$PROJ_DIR$\STM32F10x_StdPeriph_Driver\src\stm32f10x_i2c.c</file>
-            <file>$PROJ_DIR$\STM32F10x_StdPeriph_Driver\inc\stm32f10x_i2c.h</file>
-            <file>$PROJ_DIR$\Debug\Obj\main.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\startup_stm32f10x_md.o</file>
-            <file>$TOOLKIT_DIR$\lib\dl7M_tln.a</file>
             <file>$PROJ_DIR$\Debug\Obj\Led.o</file>
-            <file>$PROJ_DIR$\STM32F10x_StdPeriph_Driver\src\misc.c</file>
-            <file>$TOOLKIT_DIR$\inc\c\DLib_float_setup.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\math.h</file>
             <file>$PROJ_DIR$\Debug\Obj\Gpio.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\misc.pbi</file>
             <file>$PROJ_DIR$\Debug\Obj\HwButton.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\stm32f10x_rcc.__cstat.et</file>
+            <file>$PROJ_DIR$\CMSIS_Startup\stm32f10x.h</file>
             <file>$PROJ_DIR$\HAL\inc\INA219.hpp</file>
-            <file>$PROJ_DIR$\Debug\Obj\stm32f10x_spi.pbi</file>
-            <file>$PROJ_DIR$\HAL\inc\PortManager.hpp</file>
+            <file>$PROJ_DIR$\Debug\Obj\InterruptManager.o</file>
             <file>$PROJ_DIR$\Debug\Obj\stm32f10x_it.o</file>
-            <file>$PROJ_DIR$\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.c</file>
-            <file>$TOOLKIT_DIR$\inc\c\DLib_Product_stdlib.h</file>
             <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
             <file>$PROJ_DIR$\Debug\Obj\INA219.pbi</file>
-            <file>$PROJ_DIR$\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c</file>
+            <file>$PROJ_DIR$\Debug\Obj\main.o</file>
+            <file>$TOOLKIT_DIR$\inc\c\math.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\stm32f10x_spi.pbi</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_float_setup.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\startup_stm32f10x_md.o</file>
             <file>$PROJ_DIR$\Debug\Obj\stm32f10x_gpio.pbi</file>
             <file>$PROJ_DIR$\Debug\Obj\Gpio.o</file>
-            <file>$PROJ_DIR$\STM32F10x_StdPeriph_Driver\src\stm32f10x_exti.c</file>
-            <file>$PROJ_DIR$\STM32F10x_StdPeriph_Driver\src\stm32f10x_spi.c</file>
+            <file>$PROJ_DIR$\STM32F10x_StdPeriph_Driver\inc\stm32f10x_rcc.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\stm32f10x_rcc.pbi</file>
+            <file>$TOOLKIT_DIR$\lib\dl7M_tln.a</file>
             <file>$PROJ_DIR$\Debug\Obj\misc.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\UI.o</file>
-            <file>$PROJ_DIR$\HAL\src\GpioOutput.cpp</file>
-            <file>$PROJ_DIR$\HAL\src\INA219.cpp</file>
-            <file>$PROJ_DIR$\HAL\src\HwButton.cpp</file>
-            <file>$PROJ_DIR$\main.cpp</file>
-            <file>$PROJ_DIR$\HAL\src\Line.cpp</file>
-            <file>$PROJ_DIR$\HAL\src\InterruptManager.cpp</file>
-            <file>$PROJ_DIR$\HAL\src\I2c.cpp</file>
-            <file>$PROJ_DIR$\HAL\src\Led.cpp</file>
-            <file>$PROJ_DIR$\HAL\src\Menu.cpp</file>
-            <file>$PROJ_DIR$\HAL\src\PortManager.cpp</file>
-            <file>$PROJ_DIR$\HAL\src\SpiDriver.cpp</file>
-            <file>$PROJ_DIR$\CMSIS_Startup\startup_stm32f10x_md.s</file>
-            <file>$PROJ_DIR$\HAL\src\ClockManager.cpp</file>
-            <file>$PROJ_DIR$\HAL\src\Gpio.cpp</file>
-            <file>$PROJ_DIR$\HAL\src\Nokia5110LCD.cpp</file>
-            <file>$PROJ_DIR$\HAL\src\Page.cpp</file>
-            <file>$PROJ_DIR$\HAL\src\Queue.cpp</file>
-            <file>$PROJ_DIR$\HAL\src\SysTickTimer.cpp</file>
-            <file>$PROJ_DIR$\HAL\src\UI.cpp</file>
-            <file>$PROJ_DIR$\CMSIS_Startup\stm32f10x_it.c</file>
-            <file>$PROJ_DIR$\HAL\src\GpioInput.cpp</file>
-            <file>$PROJ_DIR$\HAL\src\HwButtonIntr.cpp</file>
-            <file>$PROJ_DIR$\HAL\src\I2CDriver.cpp</file>
-            <file>$PROJ_DIR$\HAL\inc\Line.hpp</file>
-            <file>$PROJ_DIR$\Debug\Obj\misc.__cstat.et</file>
-            <file>$PROJ_DIR$\CMSIS_Startup\stm32f10x_conf.h</file>
+            <file>$PROJ_DIR$\STM32F10x_StdPeriph_Driver\inc\stm32f10x_i2c.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\Menu.__cstat.et</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Product_stdlib.h</file>
+            <file>$PROJ_DIR$\HAL\inc\PortManager.hpp</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
+            <file>$PROJ_DIR$\HAL\inc\I2CDriver.hpp</file>
+            <file>$PROJ_DIR$\Debug\Obj\InterruptManager.pbi</file>
+            <file>$TOOLKIT_DIR$\inc\c\iccarm_builtin.h</file>
+            <file>$TOOLKIT_DIR$\lib\m7M_tl.a</file>
+            <file>$PROJ_DIR$\CMSIS_Startup\arm_comm.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\stm32f10x_spi.__cstat.et</file>
             <file>$PROJ_DIR$\STM32F10x_StdPeriph_Driver\inc\stm32f10x_gpio.h</file>
-            <file>$PROJ_DIR$\Debug\Obj\stm32f10x_exti.o</file>
-            <file>$PROJ_DIR$\HAL\inc\SysTickTimer.hpp</file>
-            <file>$PROJ_DIR$\Debug\Obj\stm32f10x_gpio.o</file>
-            <file>$TOOLKIT_DIR$\inc\cpp\cstring</file>
-            <file>$PROJ_DIR$\Debug\Obj\system_stm32f10x.__cstat.et</file>
-            <file>$PROJ_DIR$\Debug\List\PowerMonitor.map</file>
-            <file>$PROJ_DIR$\Debug\Obj\Queue.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\I2c.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\stm32f10x_it.pbi</file>
-            <file>$PROJ_DIR$\Debug\Obj\I2CDriver.o</file>
+            <file>$PROJ_DIR$\CMSIS_Startup\stm32f10x_conf.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\system_stm32f10x.o</file>
             <file>$PROJ_DIR$\CMSIS_Startup\system_stm32f10x.h</file>
-            <file>$PROJ_DIR$\HAL\inc\Gpio.hpp</file>
-            <file>$PROJ_DIR$\Debug\Obj\stm32f10x_rcc.o</file>
             <file>$TOOLKIT_DIR$\inc\c\stddef.h</file>
+            <file>$PROJ_DIR$\HAL\inc\SpiDriver.hpp</file>
+            <file>$PROJ_DIR$\HAL\inc\Line.hpp</file>
+            <file>$PROJ_DIR$\Debug\Obj\Nokia5110LCD.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\UI.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\I2c.o</file>
+            <file>$TOOLKIT_DIR$\lib\rt7M_tl.a</file>
+            <file>$PROJ_DIR$\HAL\inc\Gpio.hpp</file>
+            <file>$PROJ_DIR$\Debug\Obj\Menu.o</file>
+            <file>$PROJ_DIR$\Debug\List\PowerMonitor.map</file>
+            <file>$PROJ_DIR$\Debug\Obj\ClockManager.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\stm32f10x_exti.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\stm32f10x_gpio.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\stm32f10x_it.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\system_stm32f10x.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\Queue.o</file>
+            <file>$TOOLKIT_DIR$\inc\cpp\cstring</file>
+            <file>$PROJ_DIR$\Debug\Obj\I2CDriver.o</file>
+            <file>$PROJ_DIR$\HAL\inc\SysTickTimer.hpp</file>
+            <file>$PROJ_DIR$\Debug\Obj\stm32f10x_rcc.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\misc.__cstat.et</file>
             <file>$PROJ_DIR$\CMSIS_Startup\core_cm3.h</file>
             <file>$PROJ_DIR$\Debug\Obj\I2CDriver.__cstat.et</file>
             <file>$PROJ_DIR$\Debug\Obj\ClockManager.pbi</file>
-            <file>$PROJ_DIR$\Debug\Obj\system_stm32f10x.o</file>
-            <file>$TOOLKIT_DIR$\inc\c\iccarm_builtin.h</file>
-            <file>$PROJ_DIR$\HAL\inc\SpiDriver.hpp</file>
-            <file>$PROJ_DIR$\Debug\Obj\Nokia5110LCD.__cstat.et</file>
-            <file>$PROJ_DIR$\Debug\Obj\ClockManager.__cstat.et</file>
-            <file>$TOOLKIT_DIR$\lib\rt7M_tl.a</file>
-            <file>$PROJ_DIR$\Debug\Obj\stm32f10x_spi.__cstat.et</file>
-            <file>$TOOLKIT_DIR$\lib\m7M_tl.a</file>
-            <file>$PROJ_DIR$\Debug\Obj\Menu.o</file>
-            <file>$PROJ_DIR$\CMSIS_Startup\arm_comm.h</file>
             <file>$PROJ_DIR$\Debug\Obj\PortManager.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\Led.__cstat.et</file>
-            <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
-            <file>$PROJ_DIR$\STM32F10x_StdPeriph_Driver\inc\stm32f10x_spi.h</file>
-            <file>$TOOLKIT_DIR$\lib\shb_l.a</file>
-            <file>$PROJ_DIR$\Debug\Obj\system_stm32f10x.pbi</file>
-            <file>$PROJ_DIR$\Debug\Obj\SpiDriver.pbi</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Config_Normal.h</file>
             <file>$PROJ_DIR$\HAL\inc\GpioInput.hpp</file>
             <file>$PROJ_DIR$\Debug\Obj\Gpio.pbi</file>
-            <file>$TOOLKIT_DIR$\inc\c\DLib_Config_Normal.h</file>
-            <file>$PROJ_DIR$\..\Template\App\Src\main.cpp</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
+            <file>$TOOLKIT_DIR$\lib\shb_l.a</file>
+            <file>$PROJ_DIR$\Debug\Obj\system_stm32f10x.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\Led.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\SpiDriver.pbi</file>
+            <file>$PROJ_DIR$\STM32F10x_StdPeriph_Driver\inc\stm32f10x_spi.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\INA219.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\Page.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\I2c.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\SysTickTimer.__cstat.et</file>
+            <file>$PROJ_DIR$\HAL\inc\Page.hpp</file>
+            <file>$PROJ_DIR$\Debug\Obj\GpioOutput.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\main.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\stm32f10x_usart.__cstat.et</file>
+            <file>$PROJ_DIR$\STM32F10x_StdPeriph_Driver\inc\stm32f10x_fsmc.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\stm32f10x_usart.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\HwButtonIntr.__cstat.et</file>
+            <file>$TOOLKIT_DIR$\inc\c\cmsis_iar.h</file>
+            <file>$PROJ_DIR$\HAL\inc\Queue.hpp</file>
+            <file>$PROJ_DIR$\Debug\Obj\Page.pbi</file>
+            <file>$TOOLKIT_DIR$\inc\c\string.h</file>
+            <file>$PROJ_DIR$\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\Nokia5110LCD.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\stm32f10x_exti.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\Menu.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\SpiDriver.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\Queue.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\SpiDriver.o</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdlib.h</file>
+            <file>$PROJ_DIR$\HAL\inc\Nokia5110LCD.hpp</file>
+            <file>$PROJ_DIR$\Debug\Obj\stm32f10x_it.__cstat.et</file>
+            <file>$PROJ_DIR$\HAL\inc\InterruptManager.hpp</file>
+            <file>$PROJ_DIR$\Debug\Obj\main.pbi</file>
+            <file>$TOOLKIT_DIR$\inc\cpp\cstdlib</file>
+            <file>$PROJ_DIR$\HAL\inc\HwButtonIntr.hpp</file>
+            <file>$PROJ_DIR$\Debug\Obj\SysTickTimer.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\stm32f10x_usart.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\ClockManager.o</file>
+            <file>$PROJ_DIR$\STM32F10x_StdPeriph_Driver\src\stm32f10x_exti.c</file>
+            <file>$PROJ_DIR$\STM32F10x_StdPeriph_Driver\src\stm32f10x_i2c.c</file>
+            <file>$PROJ_DIR$\Debug\Obj\GpioOutput.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\Page.o</file>
+            <file>$PROJ_DIR$\HAL\inc\HwButton.hpp</file>
+            <file>$PROJ_DIR$\CMSIS_Startup\system_stm32f10x.c</file>
+            <file>$PROJ_DIR$\Debug\Obj\INA219.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\Line.o</file>
+            <file>$PROJ_DIR$\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c</file>
+            <file>$PROJ_DIR$\STM32F10x_StdPeriph_Driver\src\stm32f10x_spi.c</file>
+            <file>$PROJ_DIR$\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.c</file>
+            <file>$TOOLKIT_DIR$\inc\c\xtgmath.h</file>
+            <file>$PROJ_DIR$\CMSIS_Startup\cmsis_compiler.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\stm32f10x_exti.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\PowerMonitor.pbd</file>
+            <file>$PROJ_DIR$\HAL\inc\Peripheral.hpp</file>
+            <file>$PROJ_DIR$\HAL\inc\I2c.hpp</file>
+            <file>$PROJ_DIR$\STM32F10x_StdPeriph_Driver\src\misc.c</file>
+            <file>$PROJ_DIR$\STM32F10x_StdPeriph_Driver\inc\misc.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\PortManager.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\SysTickTimer.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\PortManager.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\HwButton.pbi</file>
+            <file>$PROJ_DIR$\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c</file>
+            <file>$PROJ_DIR$\STM32F10x_StdPeriph_Driver\inc\stm32f10x_exti.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\InterruptManager.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\Line.__cstat.et</file>
+            <file>$PROJ_DIR$\Debug\Obj\GpioInput.o</file>
+            <file>$PROJ_DIR$\HAL\inc\GpioOutput.hpp</file>
+            <file>$PROJ_DIR$\Debug\Obj\GpioInput.pbi</file>
+            <file>$PROJ_DIR$\Debug\Obj\Led.pbi</file>
         </outputs>
         <file>
             <name>[ROOT_NODE]</name>
             <outputs>
                 <tool>
                     <name>ILINK</name>
-                    <file> 74 159</file>
+                    <file> 29 103</file>
                 </tool>
             </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\CMSIS_Startup\system_stm32f10x.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 171</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 186</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 158</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 89 168 91 78 80 183 190 118 13 27 172 164 152 19 25 153 102 93 184 96 41 17</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 91 190 152 172 96 168 80 153 164 183 118 19 93 17 89 13 78 27 25 102 184 41</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\Debug\Exe\PowerMonitor.out</name>
-            <outputs>
-                <tool>
-                    <name>ILINK</name>
-                    <file> 159</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ILINK</name>
-                    <file> 58 42 122 9 48 111 84 161 163 45 88 106 2 103 179 125 43 3 181 160 39 104 154 156 83 115 166 77 32 171 35 126 185 176 76 178 105</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 156</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 121</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 61</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 153 89 168 91 78 80 183 190 118 13 27 172 164 152 19 25 102 93 184 96 41 17</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 93 168 91 89 183 118 19 17 164 152 80 190 172 153 96 13 78 27 25 102 184 41</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\STM32F10x_StdPeriph_Driver\src\stm32f10x_i2c.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 83</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 100</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 82</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 102 89 168 91 78 80 183 190 118 13 27 172 164 152 19 25 153 93 184 96 41 17</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 168 13 78 91 27 25 89 184 93 164 102 41 152 80 183 190 118 172 19 153 96 17</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\STM32F10x_StdPeriph_Driver\src\misc.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 125</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 90</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 151</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 17 89 168 91 78 80 183 190 118 13 27 172 164 152 19 25 153 102 93 184 96 41</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 168 41 89 91 102 164 13 78 27 25 184 17 152 80 183 190 118 172 19 153 93 96</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 32</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 29</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 55</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 41 89 168 91 78 80 183 190 118 13 27 172 164 152 19 25 153 102 93 184 96 17</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 89 184 164 91 13 78 27 25 93 168 102 41 152 80 183 190 118 172 19 153 96 17</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 166</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 99</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 95</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 93 89 168 91 78 80 183 190 118 13 27 172 164 152 19 25 153 102 184 96 41 17</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 168 80 153 91 152 190 172 96 89 164 183 118 19 93 17 13 78 27 25 102 184 41</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\STM32F10x_StdPeriph_Driver\src\stm32f10x_exti.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 154</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 44</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 11</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 19 89 168 91 78 80 183 190 118 13 27 172 164 152 25 153 102 93 184 96 41 17</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 41 91 168 102 89 164 13 78 27 25 184 19 152 80 183 190 118 172 153 93 96 17</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\STM32F10x_StdPeriph_Driver\src\stm32f10x_spi.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 77</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 113</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 177</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 184 89 168 91 78 80 183 190 118 13 27 172 164 152 19 25 153 102 93 96 41 17</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 91 80 89 153 168 152 190 172 96 93 164 183 118 19 17 184 13 78 27 25 102 41</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\HAL\src\GpioOutput.cpp</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 48</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 75</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 1</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 21 89 168 91 78 80 183 190 118 13 27 172 164 152 19 25 153 102 93 184 96 41 17 165 14 71 114 54</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 89 184 91 165 168 13 78 27 25 71 153 164 102 41 14 54 21 152 80 183 190 118 172 19 93 96 17 114</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\HAL\src\INA219.cpp</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 45</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 119</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 8</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 112 94 14 71 89 168 91 78 80 183 190 118 13 27 172 164 152 19 25 153 102 93 184 96 41 17 114 54</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 71 89 91 184 54 168 13 78 27 25 94 14 114 164 102 41 112 152 80 183 190 118 172 19 153 93 96 17</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\HAL\src\HwButton.cpp</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 111</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 18</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 68</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 4 188 89 168 91 78 80 183 190 118 13 27 172 164 152 19 25 153 102 93 184 96 41 17 165 14 71 114 54 155</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 89 118 19 54 164 183 17 71 155 153 91 93 188 165 168 152 80 190 172 96 4 13 78 27 25 102 184 41 14 114</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\main.cpp</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 103</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 28</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 52</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 167 78 80 183 190 118 57 69 109 108 12 64 31 33 117 89 168 91 13 27 172 164 152 19 25 153 102 93 184 96 41 17 67 21 165 14 71 114 54 188 4 155 30 34 173 40 62 150 70 157 36 63 38 94 112 16</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 89 57 112 80 30 78 153 21 40 36 67 62 183 118 164 152 172 96 71 54 109 188 173 70 190 91 19 93 17 69 4 155 150 94 16 108 12 64 31 33 117 168 13 27 25 102 184 41 165 38 14 167 114 34 157 63</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\HAL\src\Line.cpp</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 2</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 86</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 7</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 150</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 150</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\HAL\src\InterruptManager.cpp</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 88</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 92</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 20</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 54 89 168 91 78 80 183 190 118 13 27 172 164 152 19 25 153 102 93 184 96 41 17</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 89 164 93 91 183 118 19 17 168 152 80 190 172 153 96 54 13 78 27 25 102 184 41</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\HAL\src\I2c.cpp</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 161</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 79</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 37</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 89 168 91 78 80 183 190 118 13 27 172 164 152 19 25 153 102 93 184 96 41 17 16</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 168 41 89 16 91 102 164 13 78 27 25 184 152 80 183 190 118 172 19 153 93 96 17</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\HAL\src\Led.cpp</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 106</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 23</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 182</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 89 168 91 78 80 183 190 118 13 27 172 164 152 19 25 153 102 93 184 96 41 17 67 21 165 14 71 114 54</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 89 80 153 164 152 190 172 96 71 67 168 91 183 118 19 93 17 21 165 14 54 13 78 27 25 102 184 41 114</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\HAL\src\Menu.cpp</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 179</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 47</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 97</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 150 70 40 165 89 168 91 78 80 183 190 118 13 27 172 164 152 19 25 153 102 93 184 96 41 17 14 71 114 54 173 21 188 157 36 57 63</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 80 89 188 153 168 27 25 71 40 165 91 152 184 36 70 150 157 173 21 14 164 102 41 54 78 13 183 190 118 172 19 93 96 17 114 57 63</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\HAL\src\PortManager.cpp</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 181</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 15</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 5</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 114 89 168 91 78 80 183 190 118 13 27 172 164 152 19 25 153 102 93 184 96 41 17</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 168 93 91 89 183 118 19 17 164 152 80 190 172 153 96 114 13 78 27 25 102 184 41</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\HAL\src\SpiDriver.cpp</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 39</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 187</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 49</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 173 14 71 89 168 91 78 80 183 190 118 13 27 172 164 152 19 25 153 102 93 184 96 41 17 114 54 21 165</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 17 168 183 89 54 14 21 118 19 165 184 71 91 93 114 164 152 80 190 172 153 96 173 13 78 27 25 102 41</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\CMSIS_Startup\startup_stm32f10x_md.s</name>
-            <outputs>
-                <tool>
-                    <name>AARM</name>
-                    <file> 104</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\HAL\src\ClockManager.cpp</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 42</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 170</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 175</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 71 89 168 91 78 80 183 190 118 13 27 172 164 152 19 25 153 102 93 184 96 41 17</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 91 93 89 168 183 118 19 17 164 152 80 190 172 153 96 71 13 78 27 25 102 184 41</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\HAL\src\Gpio.cpp</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 122</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 189</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 110</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\HAL\src\Nokia5110LCD.cpp</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 43</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 81</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 174</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 40 165 89 168 91 78 80 183 190 118 13 27 172 164 152 19 25 153 102 93 184 96 41 17 14 71 114 54 173 21 188 155</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 91 89 183 17 165 118 19 54 188 153 168 93 155 173 21 14 164 152 80 190 172 96 114 40 13 78 27 25 102 184 41 71</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\HAL\src\Page.cpp</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 3</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 24</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 46</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 38 157 36 78 80 183 190 118 57 63 69 62 150 70 40 165 89 168 91 13 27 172 164 152 19 25 153 102 93 184 96 41 17 14 71 114 54 173 21 188</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 89 91 36 80 57 40 157 173 93 69 78 150 21 14 164 19 17 54 62 63 183 190 118 70 38 165 188 153 168 152 172 96 114 13 27 25 102 184 41 71</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\HAL\src\Queue.cpp</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 160</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 50</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 60</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 34 89 168 91 78 80 183 190 118 13 27 172 164 152 19 25 153 102 93 184 96 41 17</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 164 93 91 89 183 118 19 17 168 152 80 190 172 153 96 34 13 78 27 25 102 184 41</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\HAL\src\SysTickTimer.cpp</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 35</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 10</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 51</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 89 168 91 78 80 183 190 118 13 27 172 164 152 19 25 153 102 93 184 96 41 17 155</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 91 27 25 13 78 89 164 184 155 168 102 41 152 80 183 190 118 172 19 153 93 96 17</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\HAL\src\UI.cpp</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 126</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 59</file>
-                </tool>
-                <tool>
-                    <name>__cstat</name>
-                    <file> 72</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 62 150 70 40 165 89 168 91 78 80 183 190 118 13 27 172 164 152 19 25 153 102 93 184 96 41 17 14 71 114 54 173 21 188 157 36 57 63 38</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 183 13 89 78 17 40 157 173 91 118 19 54 57 70 150 21 14 164 93 80 38 165 188 153 168 190 172 96 114 63 62 152 27 25 102 184 41 71 36</file>
-                </tool>
-            </inputs>
         </file>
         <file>
             <name>$PROJ_DIR$\CMSIS_Startup\stm32f10x_it.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 115</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 162</file>
+                    <file> 65</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>
-                    <file> 53</file>
+                    <file> 152</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 107</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 56 89 168 91 78 80 183 190 118 13 27 172 164 152 19 25 153 102 93 184 96 41 17 180 87 85</file>
+                    <file> 52 62 115 83 42 46 122 119 66 172 139 86 93 91 184 136 90 79 75 127 55 143 178 88 51 36</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 89 172 91 93 164 183 118 19 17 180 168 152 80 190 153 96 87 56 13 78 27 25 102 184 41 85</file>
+                    <file> 62 86 83 75 93 122 66 184 178 88 115 91 46 119 90 55 51 52 172 42 139 136 79 127 143 36</file>
                 </tool>
             </inputs>
         </file>
@@ -955,52 +238,214 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 9</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 22</file>
+                    <file> 187</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>
-                    <file> 65</file>
+                    <file> 24</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 189</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 188 89 168 91 78 80 183 190 118 13 27 172 164 152 19 25 153 102 93 184 96 41 17 165 14 71 114 54</file>
+                    <file> 120 62 115 83 42 46 122 119 66 172 139 86 93 91 184 136 90 79 75 127 55 143 178 101 175 28 82 153</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 168 89 93 165 91 19 71 183 118 17 54 153 164 152 80 190 172 96 188 13 78 27 25 102 184 41 14 114</file>
+                    <file> 115 62 75 101 83 184 28 122 66 178 153 90 93 91 46 119 86 55 120 172 42 139 136 79 127 143 175 82</file>
                 </tool>
             </inputs>
         </file>
         <file>
-            <name>$PROJ_DIR$\HAL\src\HwButtonIntr.cpp</name>
+            <name>$PROJ_DIR$\HAL\src\INA219.cpp</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 84</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 66</file>
+                    <file> 128</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>
-                    <file> 26</file>
+                    <file> 166</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 67</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 89 168 91 78 80 183 190 118 13 27 172 164 152 19 25 153 102 93 184 96 41 17 30 188 165 14 71 114 54 155 34</file>
+                    <file> 63 84 175 28 62 115 83 42 46 122 119 66 172 139 86 93 91 184 136 90 79 75 127 55 143 178 82 153</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 80 89 153 155 164 152 190 172 96 54 71 30 168 91 183 118 19 93 17 13 78 27 25 102 184 41 188 34 165 14 114</file>
+                    <file> 28 62 83 127 153 115 172 42 139 136 84 175 82 93 79 143 63 91 46 122 119 66 86 184 90 75 55 178</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\HAL\src\InterruptManager.cpp</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 64</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 185</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 85</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 153 62 115 83 42 46 122 119 66 172 139 86 93 91 184 136 90 79 75 127 55 143 178</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 62 93 75 83 122 66 184 178 115 91 46 119 86 90 55 153 172 42 139 136 79 127 143</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\HAL\src\UI.cpp</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 98</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 41</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 31</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 23 96 27 151 101 62 115 83 42 46 122 119 66 172 139 86 93 91 184 136 90 79 75 127 55 143 178 175 28 82 153 95 188 120 110 142 38 54 132</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 122 172 62 42 178 151 110 95 83 66 184 153 38 27 96 188 175 93 75 46 132 101 120 90 115 119 86 55 82 54 23 91 139 136 79 127 143 28 142</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\HAL\src\Nokia5110LCD.cpp</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 144</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 97</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 47</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 151 101 62 115 83 42 46 122 119 66 172 139 86 93 91 184 136 90 79 75 127 55 143 178 175 28 82 153 95 188 120 112</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 83 62 122 178 101 66 184 153 120 90 115 75 112 95 188 175 93 91 46 119 86 55 82 151 172 42 139 136 79 127 143 28</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\HAL\src\Led.cpp</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 57</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 125</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 190</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 62 115 83 42 46 122 119 66 172 139 86 93 91 184 136 90 79 75 127 55 143 178 25 188 101 175 28 82 153</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 62 46 90 93 91 119 86 55 28 25 115 83 122 66 184 75 178 188 101 175 153 172 42 139 136 79 127 143 82</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\HAL\src\HwButton.cpp</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 60</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 45</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 182</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 164 120 62 115 83 42 46 122 119 66 172 139 86 93 91 184 136 90 79 75 127 55 143 178 101 175 28 82 153 112</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 62 66 184 153 93 122 178 28 112 90 83 75 120 101 115 91 46 119 86 55 164 172 42 139 136 79 127 143 175 82</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\HAL\src\I2c.cpp</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 99</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 130</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 44</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 62 115 83 42 46 122 119 66 172 139 86 93 91 184 136 90 79 75 127 55 143 178 176</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 115 143 62 176 83 79 93 172 42 139 136 127 91 46 122 119 66 86 184 90 75 55 178</file>
                 </tool>
             </inputs>
         </file>
@@ -1009,25 +454,579 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 163</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 73</file>
+                    <file> 111</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>
-                    <file> 169</file>
+                    <file> 116</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 32</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 94 14 71 89 168 91 78 80 183 190 118 13 27 172 164 152 19 25 153 102 93 184 96 41 17 114 54</file>
+                    <file> 84 175 28 62 115 83 42 46 122 119 66 172 139 86 93 91 184 136 90 79 75 127 55 143 178 82 153</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 164 89 14 184 114 91 13 78 27 25 102 71 54 168 41 94 152 80 183 190 118 172 19 153 93 96 17</file>
+                    <file> 93 62 175 127 82 83 172 42 139 136 79 28 153 115 143 84 91 46 122 119 66 86 184 90 75 55 178</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\HAL\src\Queue.cpp</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 109</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 48</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 148</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 140 62 115 83 42 46 122 119 66 172 139 86 93 91 184 136 90 79 75 127 55 143 178</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 93 75 83 62 122 66 184 178 115 91 46 119 86 90 55 140 172 42 139 136 79 127 143</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\HAL\src\GpioOutput.cpp</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 133</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 162</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 43</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 188 62 115 83 42 46 122 119 66 172 139 86 93 91 184 136 90 79 75 127 55 143 178 101 175 28 82 153</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 62 127 83 101 115 172 42 139 136 28 90 93 79 143 175 153 188 91 46 122 119 66 86 184 75 55 178 82</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\HAL\src\Line.cpp</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 167</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 186</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 37</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 96</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 96</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\HAL\src\SpiDriver.cpp</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 149</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 147</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 126</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 95 175 28 62 115 83 42 46 122 119 66 172 139 86 93 91 184 136 90 79 75 127 55 143 178 82 153 188 101</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 178 115 122 62 153 175 188 66 184 101 127 28 83 75 82 93 91 46 119 86 90 55 95 172 42 139 136 79 143</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\HAL\src\PortManager.cpp</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 118</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 179</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 181</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 82 62 115 83 42 46 122 119 66 172 139 86 93 91 184 136 90 79 75 127 55 143 178</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 115 75 83 62 122 66 184 178 93 91 46 119 86 90 55 82 172 42 139 136 79 127 143</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\HAL\src\SysTickTimer.cpp</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 157</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 131</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 180</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 62 115 83 42 46 122 119 66 172 139 86 93 91 184 136 90 79 75 127 55 143 178 112</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 83 139 136 172 42 62 93 127 112 115 79 143 91 46 122 119 66 86 184 90 75 55 178</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\CMSIS_Startup\startup_stm32f10x_md.s</name>
+            <outputs>
+                <tool>
+                    <name>AARM</name>
+                    <file> 72</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\HAL\src\ClockManager.cpp</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 159</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 104</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 117</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 28 62 115 83 42 46 122 119 66 172 139 86 93 91 184 136 90 79 75 127 55 143 178</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 83 75 62 115 122 66 184 178 93 91 46 119 86 90 55 28 172 42 139 136 79 127 143</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\HAL\src\Gpio.cpp</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 74</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 58</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 121</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\HAL\src\HwButtonIntr.cpp</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 35</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 138</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 39</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 62 115 83 42 46 122 119 66 172 139 86 93 91 184 136 90 79 75 127 55 143 178 156 120 101 175 28 82 153 112 140</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 46 62 90 112 93 91 119 86 55 153 28 156 115 83 122 66 184 75 178 172 42 139 136 79 127 143 120 140 101 175 82</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\HAL\src\Menu.cpp</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 102</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 80</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 146</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 96 27 151 101 62 115 83 42 46 122 119 66 172 139 86 93 91 184 136 90 79 75 127 55 143 178 175 28 82 153 95 188 120 110 142 38 54</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 46 62 120 90 115 139 136 28 151 101 83 91 127 142 27 96 110 95 188 175 93 79 143 153 42 172 122 119 66 86 184 75 55 178 82 38 54</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\HAL\src\Page.cpp</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 163</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 129</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 141</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 132 110 142 42 46 122 119 66 38 54 26 23 96 27 151 101 62 115 83 172 139 86 93 91 184 136 90 79 75 127 55 143 178 175 28 82 153 95 188 120</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 62 83 142 46 38 151 110 95 75 26 42 96 188 175 93 184 178 153 23 54 122 119 66 27 132 101 120 90 115 91 86 55 82 172 139 136 79 127 143 28</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\main.cpp</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 68</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 134</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 154</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 94 42 46 122 119 66 38 26 69 71 171 49 155 150 81 62 115 83 172 139 86 93 91 184 136 90 79 75 127 55 143 178 25 188 101 175 28 82 153 120 164 112 156 140 95 151 23 96 27 110 142 54 132 84 63 176</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 62 38 63 46 156 42 90 188 151 142 25 23 122 66 93 91 86 55 28 153 69 120 95 27 119 83 184 75 178 26 164 112 96 84 176 71 171 49 155 150 81 115 172 139 136 79 127 143 101 132 175 94 82 140 110 54</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Debug\Exe\PowerMonitor.out</name>
+            <outputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 103</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 40 159 74 187 133 60 35 99 111 128 64 57 167 68 102 78 144 163 118 109 149 72 105 106 34 65 113 30 137 92 157 98 123 100 33 87 77</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\STM32F10x_StdPeriph_Driver\src\stm32f10x_exti.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 105</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 173</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 145</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 184 62 115 83 42 46 122 119 66 172 139 86 93 91 136 90 79 75 127 55 143 178</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 143 83 115 79 62 93 172 42 139 136 127 184 91 46 122 119 66 86 90 75 55 178</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\STM32F10x_StdPeriph_Driver\src\stm32f10x_i2c.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 34</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 50</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 56</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 79 62 115 83 42 46 122 119 66 172 139 86 93 91 184 136 90 75 127 55 143 178</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 115 172 42 83 139 136 62 127 75 93 79 143 91 46 122 119 66 86 184 90 55 178</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\CMSIS_Startup\system_stm32f10x.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 92</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 108</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 124</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 62 115 83 42 46 122 119 66 172 139 86 93 91 184 136 90 79 75 127 55 143 178</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 83 119 91 86 55 115 46 90 93 122 66 184 75 178 62 172 42 139 136 79 127 143</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 113</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 61</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 76</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 75 62 115 83 42 46 122 119 66 172 139 86 93 91 184 136 90 79 127 55 143 178</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 115 46 90 83 91 119 86 55 62 93 122 66 184 75 178 172 42 139 136 79 127 143</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\STM32F10x_StdPeriph_Driver\src\stm32f10x_spi.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 30</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 89</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 70</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 127 62 115 83 42 46 122 119 66 172 139 86 93 91 184 136 90 79 75 55 143 178</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 83 46 62 90 115 91 119 86 55 75 93 122 66 184 178 127 172 42 139 136 79 143</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 137</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 135</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 158</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 143 62 115 83 42 46 122 119 66 172 139 86 93 91 184 136 90 79 75 127 55 178</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 62 127 93 83 172 42 139 136 75 115 79 143 91 46 122 119 66 86 184 90 55 178</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\STM32F10x_StdPeriph_Driver\src\misc.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 78</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 114</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 59</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 178 62 115 83 42 46 122 119 66 172 139 86 93 91 184 136 90 79 75 127 55 143</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 115 143 62 83 79 93 172 42 139 136 127 178 91 46 122 119 66 86 184 90 75 55</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 106</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 53</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 73</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 90 62 115 83 42 46 122 119 66 172 139 86 93 91 184 136 79 75 127 55 143 178</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 75 115 83 62 122 66 184 178 93 91 46 119 86 90 55 172 42 139 136 79 127 143</file>
                 </tool>
             </inputs>
         </file>

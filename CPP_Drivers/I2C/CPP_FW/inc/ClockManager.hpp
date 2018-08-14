@@ -8,7 +8,7 @@
 #ifndef APP_INC_CLOCKMANAGER_HPP_
 #define APP_INC_CLOCKMANAGER_HPP_
 
-#include "stm32f10x.h"
+#include "stm32f1xx_hal_rcc.h"
 #include "PeripheralBase.h"
 
 

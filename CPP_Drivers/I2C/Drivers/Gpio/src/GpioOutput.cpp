@@ -8,59 +8,61 @@
 
 #include "GpioOutput.hpp"
 
-namespace Bsp
+namespace Peripherals
 {
-GpioOutput::GpioOutput(PORT Port, u16 Pin)
+GpioOutput::GpioOutput(PORT_t Port, PIN_t Pin)
 {
 	m_Port = Port;
 	m_Pin  = Pin;
-	m_Mode = GPIO_Mode_Out_PP;
+	m_Mode = OUTPUT_PP;
+    m_Speed = HIGH;
 }
-GpioOutput::GpioOutput(PORT Port, u16 Pin, MODE aMODE)
+GpioOutput::GpioOutput(PORT_t Port, PIN_t Pin, MODE_t aMODE)
 {
 	m_Port = Port;
 	m_Pin  = Pin;
 	m_Mode = aMODE;
+    m_Speed = HIGH;
 }
-bool GpioOutput::HwInit()
+GpioOutput::GpioOutput(PORT_t Port, PIN_t Pin, MODE_t aMODE, SPEED_t SPEED)
+{
+	m_Port = Port;
+	m_Pin  = Pin;
+	m_Mode = aMODE;
+    m_Speed = SPEED;
+}
+Status_t GpioOutput::HwInit()
 {
 	GPIO_InitTypeDef GPIO_InitStructure;
-	const Bsp::PeripheralBase::Peripheral_t  PeripheralName =
-			             (m_Port==GPIOA)? Bsp::PeripheralBase::APB2Periph_GPIOA :
-				         (m_Port==GPIOB)? Bsp::PeripheralBase::APB2Periph_GPIOB :
-				         (m_Port==GPIOC)? Bsp::PeripheralBase::APB2Periph_GPIOC :
-				         (m_Port==GPIOD)? Bsp::PeripheralBase::APB2Periph_GPIOD :
-				         (m_Port==GPIOE)? Bsp::PeripheralBase::APB2Periph_GPIOE :
-				         (m_Port==GPIOF)? Bsp::PeripheralBase::APB2Periph_GPIOF : Bsp::PeripheralBase::APB2Periph_GPIOG;
+	const Peripheral_t  PeripheralName =
+                                         (m_Port==GPIOA)? APB2Periph_GPIOA :
+                                         (m_Port==GPIOB)? APB2Periph_GPIOB :
+                                         (m_Port==GPIOC)? APB2Periph_GPIOC :
+                                         (m_Port==GPIOD)? APB2Periph_GPIOD :
+                                         (m_Port==GPIOE)? APB2Periph_GPIOE : APB2Periph_GPIOA;
 
      // Enable the GPIO hardware Clocks
-     HwClockEnable(PeripheralName);
-     HwClockEnable(Bsp::Peripheral::APB2Periph_AFIO);
-
-     GPIO_InitStructure.GPIO_Pin   = m_Pin;
-     GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
-     GPIO_InitStructure.GPIO_Mode  = m_Mode;
-     GPIO_Init( m_Port, &GPIO_InitStructure );
-
-     // Initially Set the GPIO to Low
-     GPIO_WriteBit(m_Port, m_Pin,(BitAction)GpioOutput::LOW);
+     __HAL_RCC_AFIO_CLK_ENABLE();
+     
+     if(PeripheralName == APB2Periph_GPIOA )
+         __HAL_RCC_GPIOA_CLK_ENABLE();
+     else if(PeripheralName == APB2Periph_GPIOB )
+         __HAL_RCC_GPIOB_CLK_ENABLE();
+     else if(PeripheralName == APB2Periph_GPIOC )
+         __HAL_RCC_GPIOC_CLK_ENABLE();
+     else if(PeripheralName == APB2Periph_GPIOD )
+         __HAL_RCC_GPIOD_CLK_ENABLE();
+     else if(PeripheralName == APB2Periph_GPIOE )
+         __HAL_RCC_GPIOE_CLK_ENABLE();
+     else {;}       // Error          
+     
+     GPIO_InitStructure.Pin   = m_Pin;
+     GPIO_InitStructure.Speed = m_Speed;
+     GPIO_InitStructure.Mode  = m_Mode;
+     HAL_GPIO_Init( m_Port, &GPIO_InitStructure );
      return true;
 }
 
-void GpioOutput::ToggleOutput()
-{
-	if ( GpioOutput::LOW == m_eGpioOutputState )
-	{
-		GPIO_WriteBit(m_Port, m_Pin,(BitAction)GpioOutput::LOW);
-		m_eGpioOutputState = GpioOutput::HIGH;
-	}
-	else
-	{
-		GPIO_WriteBit(m_Port, m_Pin,(BitAction)GpioOutput::HIGH);
-		m_eGpioOutputState = GpioOutput::LOW;
-	}
-
-}
 
 
 
