@@ -86,20 +86,6 @@ namespace Peripherals
         virtual    Status_t     HwInit          (){return true;}
         virtual    Status_t     HwDeInit        (){return true;}
         virtual    Status_t     HwConfig        (void* pConfigStruct){return true;};
-       // virtual    Status_t     HwEnable        ();
-       // virtual    Status_t     HwDisable       ();
-       // virtual    Status_t     HwClockEnable   (Peripheral_t Peripheral);
-        //virtual    Status_t     HwClockDisble   (Peripheral_t Peripheral);
-        
-        
-        //    virtual bool RegisterInterrupt  (ISR pISR,IRQn eIRQn, InterruptPriority_t aInterruptPriority); 
-        //    virtual bool HwConfigInterrupt  (IRQn eIRQn, InterruptPriority_t aInterruptPriority, InterruptPriority_t aInterruptSubPriority);
-        //    virtual bool HwEnableInterrupt  (IRQn eIRQn);
-        //    virtual bool HwDisableInterrupt (IRQn eIRQn);
-        //    virtual bool HwClearInterrupt   (IRQn eIRQn){return true;};
-        //    virtual FlagStatus_t HwGetFlagStatus(Flag_t aFlag ){return (FlagStatus_t)true;}
-        //    inline ClockManager*     GetClockManager()    { return ClockManager::GetInstance();}
-        //    inline InterruptManager* GetInterruptManager(){ return InterruptManager::GetInstance();}
         
     };
     

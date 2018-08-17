@@ -4,7 +4,7 @@
 #include <stdio.h>
 
 #include "stm32f1xx_hal.h"
-
+#include "I2C_Drv.hpp"
 
 #ifdef __cplusplus
  extern "C" {
@@ -17,19 +17,31 @@ void _Error_Handler(char *, int);
 #endif
 
 void SystemClock_Config(void);
-void HAL_MspInit(void);
-void Led();
-#include "GpioOutput.hpp"
-#include "GpioInput.hpp"
+
+
 using namespace Peripherals;
 
-Peripherals::GpioOutput LED(GPIOC,GPIO_PIN_13);
-Peripherals::GpioInput  TouchButton(GPIOA, GPIO_PIN_8);
+Peripherals::I2C_Master I2C_1(I2C_Master::I2C1_SCL_B6_SDA_B7);
 
+uint16_t I2C_array[128];
+I2C_HandleTypeDef hi2c1;
 int main(void)
 {	
+    volatile uint32_t status;
   /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
   HAL_Init();
+  
+  /* Configure the system clock */
+  SystemClock_Config();
+  
+  I2C_1.HwInit();
+
+  
+  while(1)
+  {
+        I2C_1.Scan(I2C_array,120);
+  }
+ 
 
 }
 
@@ -83,7 +95,6 @@ void SystemClock_Config(void)
   /* SysTick_IRQn interrupt configuration */
   HAL_NVIC_SetPriority(SysTick_IRQn, 0, 0);
 }
-
 
 
 /**

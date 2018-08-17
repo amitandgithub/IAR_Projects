@@ -2397,6 +2397,9 @@
         </group>
         <group>
             <name>I2C</name>
+            <file>
+                <name>$PROJ_DIR$\..\Drivers\I2C\I2C_Drv.cpp</name>
+            </file>
         </group>
     </group>
     <group>

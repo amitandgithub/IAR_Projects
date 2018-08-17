@@ -1,0 +1,10 @@
+I2C1	Value	Access	
+CR1	0x00000801	ReadWrite	
+CR2	0x00000024	ReadWrite	
+OAR1	0x00004050	ReadWrite	
+OAR2	0x00000000	ReadWrite	
+DR	0x00000008	ReadWrite	
+SR1	0x00000000	ReadWrite	
+SR2	0x00000000	ReadOnly	
+CCR	0x000000B4	ReadWrite	
+TRISE	0x00000025	ReadWrite	

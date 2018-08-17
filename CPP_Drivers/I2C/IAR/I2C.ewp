@@ -227,6 +227,7 @@
                     <state>USE_HAL_DRIVER</state>
                     <state>STM32F103xB</state>
                     <state>USE_FULL_LL_DRIVER</state>
+                    <state>HAL_I2C_MODULE_ENABLED</state>
                 </option>
                 <option>
                     <name>CCPreprocFile</name>
@@ -362,6 +363,7 @@
                     <state>$PROJ_DIR$\..\STM32F1xx_HAL_Driver\CMSIS\Include</state>
                     <state>$PROJ_DIR$\..\Drivers\Gpio\inc</state>
                     <state>$PROJ_DIR$\..\CPP_FW\inc</state>
+                    <state>$PROJ_DIR$\..\Drivers\I2C</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -377,7 +379,7 @@
                 </option>
                 <option>
                     <name>CCOptLevel</name>
-                    <state>1</state>
+                    <state>0</state>
                 </option>
                 <option>
                     <name>CCOptStrategy</name>
@@ -386,7 +388,7 @@
                 </option>
                 <option>
                     <name>CCOptLevelSlave</name>
-                    <state>1</state>
+                    <state>0</state>
                 </option>
                 <option>
                     <name>CompilerMisraRules98</name>
@@ -2095,6 +2097,9 @@
         </group>
         <group>
             <name>I2C</name>
+            <file>
+                <name>$PROJ_DIR$\..\Drivers\I2C\I2C_Drv.cpp</name>
+            </file>
         </group>
     </group>
     <group>

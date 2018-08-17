@@ -249,6 +249,7 @@ __weak void HAL_MspDeInit(void)
   * @param TickPriority: Tick interrupt priority.
   * @retval HAL status
   */
+extern "C" {extern void SysTick_Handler(void);}
 __weak HAL_StatusTypeDef HAL_InitTick(uint32_t TickPriority)
 {
   /*Configure the SysTick to have interrupt in 1ms time basis*/
@@ -256,7 +257,7 @@ __weak HAL_StatusTypeDef HAL_InitTick(uint32_t TickPriority)
 
   /*Configure the SysTick IRQ priority */
   HAL_NVIC_SetPriority(SysTick_IRQn, TickPriority ,0U);
-
+  Peripherals::Interrupt::RegisterInterrupt_Vct_Table(SysTick_Handler,static_cast<Peripherals::Interrupt::IRQn>(SysTick_IRQn),TickPriority,0);
   /* Return function status */
   return HAL_OK;
 }
