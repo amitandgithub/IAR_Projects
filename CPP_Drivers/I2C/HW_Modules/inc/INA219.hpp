@@ -8,7 +8,7 @@
 #ifndef APP_INC_INA219_HPP_
 #define APP_INC_INA219_HPP_
 
-#include <I2C_Drv.hpp>
+#include <I2C_Master.hpp>
 
 namespace Peripherals {
 

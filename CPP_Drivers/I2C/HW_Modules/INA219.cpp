@@ -13,7 +13,7 @@ INA219::INA219(I2C_Master* pI2CDrv, uint8_t INA219Address)
 {
 	m_pI2CDrv = pI2CDrv;
 	m_INA219_Address = INA219Address;
-	//SetCalibration_32V_1A();
+	SetCalibration_32V_1A();
 
 }
 

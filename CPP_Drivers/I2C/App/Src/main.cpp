@@ -4,7 +4,7 @@
 #include <stdio.h>
 
 #include "stm32f1xx_hal.h"
-#include "I2C_Drv.hpp"
+#include "I2C_Master.hpp"
 #include <INA219.hpp>
 
 #ifdef __cplusplus
@@ -38,12 +38,12 @@ int main(void)
   SystemClock_Config();
   
   I2C_1.HwInit();
-  INA219_Obj.SetCalibration_32V_2A();
+  //INA219_Obj.SetCalibration_32V_2A();
   
   while(1)
   {
        // I2C_1.Scan(I2C_array,120);
-      //INA219_Obj.Run(&Power);
+      INA219_Obj.Run(&Power);
   }
  
 

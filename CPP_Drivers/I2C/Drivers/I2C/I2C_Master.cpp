@@ -7,7 +7,7 @@
 ** CREATED: 8/14/2018, by Amit Chaudhary
 ******************/
 
-#include "I2C_Drv.hpp"
+#include "I2C_Master.hpp"
 
 namespace Peripherals
 {

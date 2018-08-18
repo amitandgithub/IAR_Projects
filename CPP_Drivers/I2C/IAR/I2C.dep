@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
     <fileVersion>4</fileVersion>
-    <fileChecksum>2606060047</fileChecksum>
+    <fileChecksum>752215731</fileChecksum>
     <configuration>
         <name>Debug</name>
         <outputs>
@@ -125,7 +125,11 @@
             <file>$PROJ_DIR$\Debug\Obj\INA219.pbi</file>
             <file>$PROJ_DIR$\Debug\Obj\INA219.o</file>
             <file>$PROJ_DIR$\..\HW_Modules\INA219.cpp</file>
+            <file>$PROJ_DIR$\Debug\Obj\I2C_Master.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\I2C_Master.pbi</file>
             <file>$PROJ_DIR$\..\HW_Modules\inc\INA219.hpp</file>
+            <file>$PROJ_DIR$\..\Drivers\I2C\I2C_Master.cpp</file>
+            <file>$PROJ_DIR$\..\Drivers\I2C\I2C_Master.hpp</file>
         </outputs>
         <file>
             <name>$PROJ_DIR$\..\CPP_FW\src\Interrupt.cpp</name>
@@ -173,11 +177,11 @@
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 106 76 92 116 99 24 103 58 0 89 93 83 88 109 68 81 98 19 102 61 90 64 101 17 95 80 77 31 54 28 113 43 48 120</file>
+                    <file> 106 76 92 116 99 24 103 58 0 89 93 83 88 109 68 81 98 19 102 61 90 64 101 17 95 80 77 31 54 28 113 124 48 122</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 83 103 81 76 80 120 116 24 89 101 113 88 109 102 0 99 93 95 31 90 98 92 19 43 58 64 68 77 28 106 61 17 54 48</file>
+                    <file> 83 103 81 76 80 122 116 24 89 101 113 88 109 102 0 99 93 95 31 90 98 92 19 124 58 64 68 77 28 106 61 17 54 48</file>
                 </tool>
             </inputs>
         </file>
@@ -615,7 +619,7 @@
             <inputs>
                 <tool>
                     <name>ILINK</name>
-                    <file> 49 86 72 36 118 55 115 79 114 94 39 65 82 44 87 91 75 104 60 112 84 18 73 105 78</file>
+                    <file> 49 86 72 120 118 55 115 79 114 94 39 65 82 44 87 91 75 104 60 112 84 18 73 105 78</file>
                 </tool>
             </inputs>
         </file>
@@ -634,11 +638,34 @@
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 120 43 48 0 89 93 83 88 109 68 81 76 92 116 99 24 98 19 102 61 90 58 103 64 101 17 95 80 77 31 54 28 113</file>
+                    <file> 122 124 48 0 89 93 83 88 109 68 81 76 92 116 99 24 98 19 102 61 90 58 103 64 101 17 95 80 77 31 54 28 113</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 92 83 0 81 64 58 68 43 48 31 89 93 101 95 80 113 88 109 90 61 102 19 77 28 120 98 76 116 99 24 103 17 54</file>
+                    <file> 92 83 0 81 64 58 68 124 48 31 89 93 101 95 80 113 88 109 90 61 102 19 77 28 122 98 76 116 99 24 103 17 54</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Drivers\I2C\I2C_Master.cpp</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 120</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 121</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 124 48 0 89 93 83 88 109 68 81 76 92 116 99 24 98 19 102 61 90 58 103 64 101 17 95 80 77 31 54 28 113</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 92 83 31 0 81 48 64 58 68 89 93 101 95 80 113 88 109 90 61 102 19 77 28 124 98 76 116 99 24 103 17 54</file>
                 </tool>
             </inputs>
         </file>

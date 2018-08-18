@@ -61,7 +61,7 @@ public:
   
   virtual      Status_t     HwInit          ();
   
-  virtual      Status_t     HwDeInit        (){return 1;}//HAL_I2C_DeInit(&m_hi2c);}
+  virtual      Status_t     HwDeInit        (){return HAL_I2C_DeInit(&m_hi2c);}
   
   virtual      Status_t     HwConfig        (void* pConfigStruct){return 1;}
   
