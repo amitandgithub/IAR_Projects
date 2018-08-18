@@ -364,6 +364,7 @@
                     <state>$PROJ_DIR$\..\Drivers\Gpio\inc</state>
                     <state>$PROJ_DIR$\..\CPP_FW\inc</state>
                     <state>$PROJ_DIR$\..\Drivers\I2C</state>
+                    <state>$PROJ_DIR$\..\HW_Modules\inc</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -2134,6 +2135,9 @@
     </group>
     <group>
         <name>HW_Modules</name>
+        <file>
+            <name>$PROJ_DIR$\..\HW_Modules\INA219.cpp</name>
+        </file>
     </group>
     <group>
         <name>IAR</name>

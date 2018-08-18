@@ -63,9 +63,7 @@ public:
   
   virtual      Status_t     HwDeInit        (){return 1;}//HAL_I2C_DeInit(&m_hi2c);}
   
-  virtual      Status_t     HwConfig        (void* pConfigStruct){return 1;};
-  
-  Status_t     IsDevAvailable  (uint16_t Addrs);
+  virtual      Status_t     HwConfig        (void* pConfigStruct){return 1;}
   
   Status_t     Send            (uint16_t Addrs, uint8_t *pTxBuf, uint16_t Len);
   

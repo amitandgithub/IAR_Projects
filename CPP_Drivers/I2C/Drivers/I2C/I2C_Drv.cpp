@@ -104,56 +104,7 @@ Status_t I2C_Master::HwInit()
     }
     return 0;
 }
-     
-void I2C_Master::HAL_I2C_MspInit(I2C_HandleTypeDef* phi2c)
-{
-    
-    GPIO_InitTypeDef GPIO_InitStruct;
-    
-    if(phi2c->Instance==I2C1)
-    {  
-        if(m_I2CPort == I2C1_SCL_B6_SDA_B7)
-        {
-            /**I2C1 GPIO Configuration    
-            PB6     ------> I2C1_SCL
-            PB7     ------> I2C1_SDA 
-            */
-            GPIO_InitStruct.Pin = GPIO_PIN_6|GPIO_PIN_7;
-            GPIO_InitStruct.Mode = GPIO_MODE_AF_OD;
-            GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
-            HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
-            
-        }
-        else if(m_I2CPort == I2C1_SCL_B8_SDA_B9)
-        {
-            /**I2C1 GPIO Configuration    
-            PB8     ------> I2C1_SCL
-            PB9     ------> I2C1_SDA 
-            */
-            GPIO_InitStruct.Pin = GPIO_PIN_8|GPIO_PIN_9;
-            GPIO_InitStruct.Mode = GPIO_MODE_AF_OD;
-            GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
-            HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);           
-        }        
-        /* Peripheral clock enable */
-        __HAL_RCC_I2C1_CLK_ENABLE();
-    }
-    else if(phi2c->Instance==I2C2)
-    {
-        /**I2C1 GPIO Configuration    
-        PB10     ------> I2C1_SCL
-        PB11     ------> I2C1_SDA 
-        */
-        GPIO_InitStruct.Pin = GPIO_PIN_10|GPIO_PIN_11;
-        GPIO_InitStruct.Mode = GPIO_MODE_AF_OD;
-        GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
-        HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);              
-        /* Peripheral clock enable */
-        __HAL_RCC_I2C2_CLK_ENABLE();        
-    }
-    
-}   
-
+  
 Status_t I2C_Master::Send (uint16_t Addrs, uint8_t *pTxBuf, uint16_t Len)
 {
     return HAL_I2C_Master_Transmit(&m_hi2c, Addrs, pTxBuf, Len, I2C_TIMEOUT_FLAG);

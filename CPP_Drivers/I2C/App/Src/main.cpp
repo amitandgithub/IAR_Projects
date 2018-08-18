@@ -5,6 +5,7 @@
 
 #include "stm32f1xx_hal.h"
 #include "I2C_Drv.hpp"
+#include <INA219.hpp>
 
 #ifdef __cplusplus
  extern "C" {
@@ -22,6 +23,8 @@ void SystemClock_Config(void);
 using namespace Peripherals;
 
 Peripherals::I2C_Master I2C_1(I2C_Master::I2C1_SCL_B6_SDA_B7);
+INA219 INA219_Obj(&I2C_1,0x80);
+INA219::Power_t Power;
 
 uint16_t I2C_array[128];
 I2C_HandleTypeDef hi2c1;
@@ -35,11 +38,12 @@ int main(void)
   SystemClock_Config();
   
   I2C_1.HwInit();
-
+  INA219_Obj.SetCalibration_32V_2A();
   
   while(1)
   {
-        I2C_1.Scan(I2C_array,120);
+       // I2C_1.Scan(I2C_array,120);
+      //INA219_Obj.Run(&Power);
   }
  
 
