@@ -44,9 +44,7 @@ int main(void)
   SystemClock_Config();
   LED.HwInit();
   I2C11_Slave.HwInit();
-  //I2C11_Slave.Reset();
-  //INA219_Obj.SetCalibration_32V_2A();
-  //HAL_I2C_EnableListen_IT(&I2C11_Slave.m_hi2c);
+
   I2C11_Slave.m_RxCallback = I2c_RxCallback;
   I2C11_Slave.m_TxCallback = I2c_TxCallback;
   while(1)
@@ -55,7 +53,7 @@ int main(void)
       
       while(I2C11_Slave.GetState() != HAL_I2C_STATE_READY);
       
-      while(I2C11_Slave.Send(&array[5],9)!= HAL_OK);
+     // while(I2C11_Slave.Send(&array[5],9)!= HAL_OK);
       
       HAL_Delay(100);  
           
@@ -65,7 +63,7 @@ int main(void)
 }
 void I2c_RxCallback()
 {
-   // LED.ToggleOutput();
+    LED.ToggleOutput();
 }
 
 
