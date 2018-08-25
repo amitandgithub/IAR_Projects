@@ -54,6 +54,10 @@ public:
                 Status_t     GetState        (){return m_hi2c.State;}
   
                 Status_t     GetErrorStatus  (){return m_hi2c.ErrorCode;};
+                
+                Status_t     StartListening(){ return HAL_I2C_EnableListen_IT(&m_hi2c); }
+
+                Status_t     StopListening(){ return HAL_I2C_DisableListen_IT(&m_hi2c); }
     
     
  

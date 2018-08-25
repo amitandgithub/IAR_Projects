@@ -8,18 +8,21 @@
 #ifndef APP_INC_INA219_HPP_
 #define APP_INC_INA219_HPP_
 
-#include <I2C_Master.hpp>
+#include <I2C_Master_IT.hpp>
 
 namespace Peripherals {
 
 class INA219 {
 public:
+    typedef I2C_Master_IT      I2C_t;
+    static const uint32_t   INA219_TIMEOUT = 20;
+    static const uint16_t   INA219_ADDR    = 0x40<<1;
 	typedef struct {
 		float Voltage;
 		float Current;
 		float Power;
 	}Power_t;
-	INA219(I2C_Master* pI2CDrv,uint8_t INA219Address);
+	INA219(I2C_t* pI2CDrv,uint8_t INA219Address);
 	virtual ~INA219();
 	void WriteRegister (uint8_t reg, uint16_t value);
 	void ReadRegister  (uint8_t reg, uint16_t *value);
@@ -34,9 +37,11 @@ public:
 	float GetCurrent_mA();
 	float GetPower_mW(void);
 	void Run(Power_t* pPower);
+    void GetPower(Power_t* pPower){ Run(pPower); }
+    uint32_t Xfer(uint8_t *pTxBuf, uint16_t TxLen, uint8_t *pRxBuf, uint16_t RxLen);
 
 private:
-	I2C_Master*         m_pI2CDrv;
+	I2C_t*              m_pI2CDrv;
 	int8_t              m_INA219_Address;
 	uint32_t            ina219_calValue;
 	uint32_t            ina219_currentDivider_mA;

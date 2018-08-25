@@ -47,15 +47,24 @@ int main(void)
 
   I2C11_Slave.m_RxCallback = I2c_RxCallback;
   I2C11_Slave.m_TxCallback = I2c_TxCallback;
+   
   while(1)
   {
-      while(I2C11_Slave.Read(array1,4) != HAL_OK);
-      
+     
+      //I2C11_Slave.StartListening();
+      while(I2C11_Slave.Read(array1,4,I2C_FIRST_FRAME) != HAL_OK);
+      //I2C11_Slave.Read(array1,1,I2C_FIRST_FRAME);
       while(I2C11_Slave.GetState() != HAL_I2C_STATE_READY);
       
-     // while(I2C11_Slave.Send(&array[5],9)!= HAL_OK);
+      //HAL_Delay(100);
       
-      HAL_Delay(100);  
+      while(I2C11_Slave.Send(&array[5],9,I2C_LAST_FRAME)!= HAL_OK);
+      //I2C11_Slave.Send(&array[5],3,I2C_LAST_FRAME);
+        
+       
+      while(I2C11_Slave.GetState() != HAL_I2C_STATE_READY);
+      
+     // HAL_Delay(100);  
           
   }
  
@@ -63,7 +72,7 @@ int main(void)
 }
 void I2c_RxCallback()
 {
-    LED.ToggleOutput();
+    //LED.ToggleOutput();
 }
 
 

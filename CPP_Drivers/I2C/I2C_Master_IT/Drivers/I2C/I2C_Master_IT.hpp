@@ -45,7 +45,8 @@ public:
     
     static      Status_t     Read            (uint16_t DevAddress, uint8_t *pRxBuf, uint16_t Len, uint32_t XferOptions);
   
-                Status_t     Xfer            (uint8_t *pTxBuf, uint16_t TxLen, uint8_t *pRxBuf, uint16_t RxLen);
+                Status_t     Xfer            (uint16_t DevAddress, uint8_t *pTxBuf, uint16_t TxLen, uint8_t *pRxBuf, uint16_t RxLen);
+                
                 Status_t     Abort           ();
   
                 Status_t     Reset           ();

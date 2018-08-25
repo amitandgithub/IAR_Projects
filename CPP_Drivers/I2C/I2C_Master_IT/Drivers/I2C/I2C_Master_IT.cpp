@@ -140,13 +140,6 @@ void I2C_Master_IT::ErrorISR(void)
     HAL_I2C_ER_IRQHandler(&Peripherals::I2C_Master_IT::m_hi2c);
 } 
 
-Status_t I2C_Master_IT::Xfer (uint8_t *pTxBuf, uint16_t TxLen, uint8_t *pRxBuf, uint16_t RxLen)
-{
-    
-    return HAL_OK;
-    
-}
-
 Status_t I2C_Master_IT::Reset ()
 {
     m_hi2c.Instance->CR1 = 1<<15;
@@ -172,6 +165,77 @@ Status_t I2C_Master_IT::Scan(uint16_t *DevAddress, uint16_t len )
    }
    return HAL_ERROR;
   
+}
+
+Status_t I2C_Master_IT::Xfer(uint16_t DevAddress, uint8_t *pTxBuf, uint16_t TxLen, uint8_t *pRxBuf, uint16_t RxLen)
+{    
+#if 0
+    if( (pTxBuf == nullptr) && (TxLen == 0U) && (pRxBuf == nullptr) && (RxLen == 0U) )
+    {
+        return HAL_ERROR;
+    }    
+    else if( ((pTxBuf == nullptr) && (TxLen == 0U) ) && ( (pRxBuf != nullptr) && (RxLen != 0U) ) )
+    {
+        return HAL_I2C_Master_Receive_IT(&m_hi2c, DevAddress, pRxBuf, RxLen);
+    }
+    else if( ((pTxBuf != nullptr) && (TxLen != 0U) ) && ( (pRxBuf == nullptr) && (RxLen == 0U) ) )
+    {
+        return HAL_I2C_Master_Transmit_IT(&m_hi2c, DevAddress, pTxBuf, TxLen);
+    }
+    else if( ((pTxBuf != nullptr) && (TxLen != 0U) ) && ( (pRxBuf != nullptr) && (RxLen != 0U) ) )
+    {
+        if ( HAL_I2C_Master_Sequential_Transmit_IT(&m_hi2c, DevAddress, pTxBuf, TxLen, I2C_FIRST_FRAME) != HAL_OK )
+            return HAL_ERROR;
+        
+        // Because above call is non-blocking we need to wait until TC flag is set.
+        //while (!__HAL_I2C_GET_FLAG(&m_hi2c, I2C_FLAG_BTF));
+        while (HAL_I2C_GetState(&m_hi2c) != HAL_I2C_STATE_READY);
+         //HAL_Delay(50); 
+         
+        if ( HAL_I2C_Master_Sequential_Receive_IT(&m_hi2c, DevAddress, pRxBuf, RxLen, I2C_LAST_FRAME) != HAL_OK )
+            return HAL_ERROR;
+         //HAL_Delay(50); 
+        // Because above call is non-blocking we need to wait until TC flag is set.
+       // while (!__HAL_I2C_GET_FLAG(&m_hi2c, I2C_FLAG_BTF));  
+        while (HAL_I2C_GetState(&m_hi2c) != HAL_I2C_STATE_READY);
+        return;
+    }
+    
+    return HAL_ERROR;
+#else
+    if( (pTxBuf == nullptr) && (TxLen == 0U) && (pRxBuf == nullptr) && (RxLen == 0U) )
+    {
+        return HAL_ERROR;
+    }    
+    else if( ((pTxBuf == nullptr) && (TxLen == 0U) ) && ( (pRxBuf != nullptr) && (RxLen != 0U) ) )
+    {
+        return HAL_I2C_Master_Receive_IT(&m_hi2c, DevAddress, pRxBuf, RxLen);
+    }
+    else if( ((pTxBuf != nullptr) && (TxLen != 0U) ) && ( (pRxBuf == nullptr) && (RxLen == 0U) ) )
+    {
+        return HAL_I2C_Master_Transmit_IT(&m_hi2c, DevAddress, pTxBuf, TxLen);
+    }
+    else if( ((pTxBuf != nullptr) && (TxLen != 0U) ) && ( (pRxBuf != nullptr) && (RxLen != 0U) ) )
+    {
+        if ( HAL_I2C_Master_Transmit(&m_hi2c, DevAddress, pTxBuf, TxLen, 10) != HAL_OK )
+            return HAL_ERROR;
+        
+        // Because above call is non-blocking we need to wait until TC flag is set.
+        //while (!__HAL_I2C_GET_FLAG(&m_hi2c, I2C_FLAG_BTF));
+        while (HAL_I2C_GetState(&m_hi2c) != HAL_I2C_STATE_READY);
+         //HAL_Delay(50); 
+         
+        if ( HAL_I2C_Master_Receive(&m_hi2c, DevAddress, pRxBuf, RxLen, 10) != HAL_OK )
+            return HAL_ERROR;
+         //HAL_Delay(50); 
+        // Because above call is non-blocking we need to wait until TC flag is set.
+       // while (!__HAL_I2C_GET_FLAG(&m_hi2c, I2C_FLAG_BTF));  
+        while (HAL_I2C_GetState(&m_hi2c) != HAL_I2C_STATE_READY);
+        return HAL_OK;
+    }
+    
+    return HAL_ERROR;   
+#endif
 }
 
 

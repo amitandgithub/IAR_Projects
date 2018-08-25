@@ -6,6 +6,7 @@
 #include "stm32f1xx_hal.h"
 #include "I2C_Master.hpp"
 #include "I2C_Master_IT.hpp"
+#include <INA219.hpp>
 
 #include "GpioOutput.hpp"
 #include "GpioInput.hpp"
@@ -31,6 +32,9 @@ Peripherals::GpioOutput LED(GPIOC,GPIO_PIN_13);
 
 Peripherals::I2C_Master_IT I2C1_Master(I2C_Master_IT::I2C1_SCL_B6_SDA_B7);
 
+INA219 INA219_Obj(&I2C1_Master, 0x80);
+INA219::Power_t Power;
+
 uint8_t array[] = "Amit";
 uint8_t array1[10];
 int main(void)
@@ -43,21 +47,35 @@ int main(void)
   SystemClock_Config();
   LED.HwInit();
   I2C1_Master.HwInit();
-
-  I2C1_Master.m_RxCallback = I2c_RxCallback;
-  I2C1_Master.m_TxCallback = I2c_TxCallback;
+  INA219_Obj.SetCalibration_32V_2A();
+ // I2C1_Master.m_RxCallback = I2c_RxCallback;
+ // I2C1_Master.m_TxCallback = I2c_TxCallback;
   while(1)
   {
-      while(I2C1_Master.Send(0x28,array,4) != HAL_OK);
+#if 0
+      while(I2C1_Master.Send(0x28,array,4, I2C_FIRST_FRAME) != HAL_OK);
+     // I2C1_Master.Send(0x28,array,1, I2C_FIRST_FRAME);
+     // HAL_Delay(50); 
       
       while(I2C1_Master.GetState() != HAL_I2C_STATE_READY);
       
-     // while(I2C1_Master.Read(0x28,&array1[5],9)!= HAL_OK);
+      while(I2C1_Master.Read(0x28,array1,9, I2C_LAST_FRAME)!= HAL_OK);
+      //I2C1_Master.Read(0x28,array1,3, I2C_LAST_FRAME);
+     // HAL_Delay(50);
       
-     // while(I2C1_Master.GetState() != HAL_I2C_STATE_READY);
+      while(I2C1_Master.GetState() != HAL_I2C_STATE_READY);
+#elif 0
+      I2C1_Master.Xfer(0x28,array,4,array1,9);      
+      HAL_Delay(50); 
+      while(I2C1_Master.GetState() != HAL_I2C_STATE_READY);
       
-      HAL_Delay(100);  
-          
+#elif 1
+      while(1)
+      {
+        INA219_Obj.Run(&Power);
+        HAL_Delay(300);
+      }
+  #endif        
   }
  
 
@@ -70,7 +88,7 @@ void I2c_RxCallback()
 
 void I2c_TxCallback()
 {
-    LED.ToggleOutput();
+    //LED.ToggleOutput();
 }
 
 
