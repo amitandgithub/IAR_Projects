@@ -8,6 +8,8 @@
 ******************/
 
 #include "I2C_Master_IT.hpp"
+#include "GpioOutput.hpp"
+extern Peripherals::GpioOutput A1;
 
 namespace Peripherals
 {
@@ -171,101 +173,71 @@ Status_t I2C_Master_IT::Scan(uint16_t *DevAddress, uint16_t len )
   
 }
 
+#define DELAY  1100 + 400
+#define DELAY1 1500 + 400
+#define DELAY2 1850 + 400
+
+
 Status_t I2C_Master_IT::Xfer(uint16_t DevAddress, uint8_t *pTxBuf, uint16_t TxLen, uint8_t *pRxBuf, uint16_t RxLen)
-{    
-#if 0
+{  
     if( (pTxBuf == nullptr) && (TxLen == 0U) && (pRxBuf == nullptr) && (RxLen == 0U) )
     {
         return HAL_ERROR;
     }    
     else if( ((pTxBuf == nullptr) && (TxLen == 0U) ) && ( (pRxBuf != nullptr) && (RxLen != 0U) ) )
     {
-        return HAL_I2C_Master_Receive_IT(&m_hi2c, DevAddress, pRxBuf, RxLen);
+       // while(m_TxDone != DONE);
+        
+        if( HAL_I2C_Master_Receive_IT(&m_hi2c, DevAddress, pRxBuf, RxLen) == HAL_OK )
+        {
+            //HAL_Delay(1); 
+            return HAL_OK;
+        }
+        else
+        {
+            return HAL_ERROR;
+        }
     }
     else if( ((pTxBuf != nullptr) && (TxLen != 0U) ) && ( (pRxBuf == nullptr) && (RxLen == 0U) ) )
     {
-        return HAL_I2C_Master_Transmit_IT(&m_hi2c, DevAddress, pTxBuf, TxLen);
+        //while(m_RxDone != DONE);
+        //A1.ToggleOutput();
+        if( HAL_I2C_Master_Transmit_IT(&m_hi2c, DevAddress, pTxBuf, TxLen) == HAL_OK )
+        {
+            //HAL_Delay(1); 
+            for(volatile int i = 0; i<DELAY2;i++); 
+            return HAL_OK;
+        }
+        else
+        {
+            return HAL_ERROR;
+        }
     }
     else if( ((pTxBuf != nullptr) && (TxLen != 0U) ) && ( (pRxBuf != nullptr) && (RxLen != 0U) ) )
     {
-        if ( HAL_I2C_Master_Sequential_Transmit_IT(&m_hi2c, DevAddress, pTxBuf, TxLen, I2C_FIRST_FRAME) != HAL_OK )
-            return HAL_ERROR;
+
+        // Transmit
+        //A1.ToggleOutput();
+        if( HAL_I2C_Master_Sequential_Transmit_IT(&m_hi2c, DevAddress, pTxBuf, TxLen, I2C_FIRST_FRAME) == HAL_OK )
+        {
+            m_TxDone = BUSY;
+            //HAL_Delay(1); 
+            for(volatile int i = 0; i<DELAY;i++);            
+        }
+
         
-        // Because above call is non-blocking we need to wait until TC flag is set.
-        //while (!__HAL_I2C_GET_FLAG(&m_hi2c, I2C_FLAG_BTF));
-        while (HAL_I2C_GetState(&m_hi2c) != HAL_I2C_STATE_READY);
-        //HAL_Delay(50); 
         
-        if ( HAL_I2C_Master_Sequential_Receive_IT(&m_hi2c, DevAddress, pRxBuf, RxLen, I2C_LAST_FRAME) != HAL_OK )
-            return HAL_ERROR;
-        //HAL_Delay(50); 
-        // Because above call is non-blocking we need to wait until TC flag is set.
-        // while (!__HAL_I2C_GET_FLAG(&m_hi2c, I2C_FLAG_BTF));  
-        while (HAL_I2C_GetState(&m_hi2c) != HAL_I2C_STATE_READY);
-        return;
+        // Receive   
+        if( HAL_I2C_Master_Sequential_Receive_IT(&m_hi2c, DevAddress, pRxBuf, RxLen, I2C_LAST_FRAME) == HAL_OK )
+        {
+            m_RxDone = BUSY;
+           // HAL_Delay(1); 
+            for(volatile int i = 0; i<DELAY1;i++);
+        }
+
     }
     
     return HAL_ERROR;
-#else
-    
-    if( (pTxBuf == nullptr) && (TxLen == 0U) && (pRxBuf == nullptr) && (RxLen == 0U) )
-    {
-        return HAL_ERROR;
-    }    
-    else if( ((pTxBuf == nullptr) && (TxLen == 0U) ) && ( (pRxBuf != nullptr) && (RxLen != 0U) ) )
-    {
-        while(m_TxDone != DONE);
-        
-        if( HAL_I2C_Master_Receive_IT(&m_hi2c, DevAddress, pRxBuf, RxLen) == HAL_OK )
-        {
-          //  m_RxDone = BUSY;
-            HAL_Delay(1); 
-            return HAL_OK;
-        }
-        else
-        {
-            return HAL_ERROR;
-        }
-    }
-    else if( ((pTxBuf != nullptr) && (TxLen != 0U) ) && ( (pRxBuf == nullptr) && (RxLen == 0U) ) )
-    {
-        while(m_RxDone != DONE);
-        if( HAL_I2C_Master_Transmit_IT(&m_hi2c, DevAddress, pTxBuf, TxLen) == HAL_OK )
-        {
-           // m_TxDone = BUSY;
-            HAL_Delay(1); 
-            return HAL_OK;
-        }
-        else
-        {
-            return HAL_ERROR;
-        }
-    }
-    else if( ((pTxBuf != nullptr) && (TxLen != 0U) ) && ( (pRxBuf != nullptr) && (RxLen != 0U) ) )
-    {
-        // Transmit
-        //while(m_RxDone != DONE);
-        if( HAL_I2C_Master_Transmit_IT(&m_hi2c, DevAddress, pTxBuf, TxLen) == HAL_OK )
-        {
-            m_TxDone = BUSY;
-            HAL_Delay(1);             
-        }
-
-        
-        
-        // Receive
-       // while(m_TxDone != DONE);        
-        if( HAL_I2C_Master_Receive_IT(&m_hi2c, DevAddress, pRxBuf, RxLen) == HAL_OK )
-        {
-            m_RxDone = BUSY;
-            HAL_Delay(1); 
-        }
-
-        
-    }
-    
-    return HAL_ERROR;   
-#endif
 }
 
 

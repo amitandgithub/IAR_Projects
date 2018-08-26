@@ -26,7 +26,7 @@ void I2c_TxCallback();
 using namespace Peripherals;
 void SystemClock_Config(void);
 
-Peripherals::GpioOutput SCL_6(GPIOB,GPIO_PIN_6);
+Peripherals::GpioOutput A1(GPIOA,GPIO_PIN_1);
 
 
 
@@ -43,7 +43,7 @@ int main(void)
     volatile uint32_t status;
   /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
   HAL_Init();
-  
+  A1.HwInit();
   /* Configure the system clock */
   SystemClock_Config();
   I2C1_Master.HwInit();
@@ -77,7 +77,8 @@ int main(void)
       {
         INA219_Obj.Run(&Power);
          // V = INA219_Obj.GetBusVoltage_V();
-        //HAL_Delay(300);
+        //HAL_Delay(1);
+        //A1.ToggleOutput();
       }
   #endif        
   }
@@ -86,13 +87,15 @@ int main(void)
 }
 void I2c_RxCallback()
 {
-    Peripherals::I2C_Master_IT::m_RxDone =  Peripherals::I2C_Master_IT::DONE;
+    //Peripherals::I2C_Master_IT::m_RxDone =  Peripherals::I2C_Master_IT::DONE;
+    
 }
 
 
 void I2c_TxCallback()
 {
-    Peripherals::I2C_Master_IT::m_TxDone =  Peripherals::I2C_Master_IT::DONE;
+    //Peripherals::I2C_Master_IT::m_TxDone =  Peripherals::I2C_Master_IT::DONE;
+    //A1.ToggleOutput();
 }
 
 
