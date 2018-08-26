@@ -26,7 +26,7 @@ void I2c_TxCallback();
 using namespace Peripherals;
 void SystemClock_Config(void);
 
-Peripherals::GpioOutput LED(GPIOC,GPIO_PIN_13);
+Peripherals::GpioOutput SCL_6(GPIOB,GPIO_PIN_6);
 
 
 
@@ -37,6 +37,7 @@ INA219::Power_t Power;
 
 uint8_t array[] = "Amit";
 uint8_t array1[10];
+float V;
 int main(void)
 {	
     volatile uint32_t status;
@@ -45,11 +46,13 @@ int main(void)
   
   /* Configure the system clock */
   SystemClock_Config();
-  LED.HwInit();
   I2C1_Master.HwInit();
+  I2C1_Master.m_RxCallback = I2c_RxCallback;
+  I2C1_Master.m_TxCallback = I2c_TxCallback;
+  
   INA219_Obj.SetCalibration_32V_2A();
- // I2C1_Master.m_RxCallback = I2c_RxCallback;
- // I2C1_Master.m_TxCallback = I2c_TxCallback;
+
+ // I2C1_Master.Reset();
   while(1)
   {
 #if 0
@@ -73,7 +76,8 @@ int main(void)
       while(1)
       {
         INA219_Obj.Run(&Power);
-        HAL_Delay(300);
+         // V = INA219_Obj.GetBusVoltage_V();
+        //HAL_Delay(300);
       }
   #endif        
   }
@@ -82,13 +86,13 @@ int main(void)
 }
 void I2c_RxCallback()
 {
-    LED.ToggleOutput();
+    Peripherals::I2C_Master_IT::m_RxDone =  Peripherals::I2C_Master_IT::DONE;
 }
 
 
 void I2c_TxCallback()
 {
-    //LED.ToggleOutput();
+    Peripherals::I2C_Master_IT::m_TxDone =  Peripherals::I2C_Master_IT::DONE;
 }
 
 

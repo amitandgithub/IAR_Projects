@@ -51,7 +51,8 @@ int main(void)
   {
        //I2C1_Master.HwInit();
        //I2C1_Master.Scan(I2C_array,10);
-      INA219_Obj.Run(&Power);
+      //INA219_Obj.Run(&Power);
+      INA219_Obj.GetBusVoltage_V();
      
       HAL_Delay(300);
   }

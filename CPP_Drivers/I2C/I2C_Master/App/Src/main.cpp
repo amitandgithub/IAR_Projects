@@ -42,13 +42,14 @@ int main(void)
   SystemClock_Config();
   LED.HwInit();
   I2C1_Master.HwInit();
-  //INA219_Obj.SetCalibration_32V_2A();
+  INA219_Obj.SetCalibration_32V_2A();
   
   while(1)
   {
       //I2C1_Master.HwInit();
        // I2C1_Master.Scan(I2C_array,120);
       //INA219_Obj.Run(&Power);
+#if 0
       while(I2C1_Master.Send(0x28,array,4) != HAL_OK);
       
       while(I2C1_Master.GetState() != HAL_I2C_STATE_READY);
@@ -56,9 +57,11 @@ int main(void)
       while(I2C1_Master.Read(0x28,array1,9) != HAL_OK);
           
       LED.ToggleOutput();
+#elif 1 
+      INA219_Obj.Run(&Power);
+      HAL_Delay(10); 
       
-      HAL_Delay(100); 
-      
+#endif
     //  while (I2C1_Master.GetState() != HAL_I2C_STATE_READY);
        
     //  while(I2C1_Master.Read(0x28,array1,9) != HAL_OK);

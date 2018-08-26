@@ -50,6 +50,8 @@ Status_t I2C_Master::HwInit()
     
     if(m_hi2c.Instance==I2C1)
     {  
+        __HAL_RCC_I2C1_CLK_ENABLE();
+        
         if(m_I2CPort == I2C1_SCL_B6_SDA_B7)
         {
             /**I2C1 GPIO Configuration    
@@ -74,7 +76,7 @@ Status_t I2C_Master::HwInit()
             HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);           
         }        
         /* Peripheral clock enable */
-        __HAL_RCC_I2C1_CLK_ENABLE();
+        
     }
     else if(m_hi2c.Instance==I2C2)
     {
