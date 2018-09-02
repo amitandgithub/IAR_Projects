@@ -39,7 +39,9 @@ public:
 	void Run(Power_t* pPower);
     void GetPower(Power_t* pPower){ Run(pPower); }
     uint32_t Xfer(uint8_t *pTxBuf, uint16_t TxLen, uint8_t *pRxBuf, uint16_t RxLen);
-
+    uint32_t Send(uint8_t* pBuf, uint32_t len){return m_pI2CDrv->Send( m_INA219_Address, pBuf, len);};
+    uint32_t Read(uint8_t* pBuf, uint32_t len){return m_pI2CDrv->Read( m_INA219_Address, pBuf, len);};
+    void        INA_Delay       (uint32_t delay){for(volatile int i = 0; i<delay;i++); };
 private:
 	I2C_t*              m_pI2CDrv;
 	int8_t              m_INA219_Address;

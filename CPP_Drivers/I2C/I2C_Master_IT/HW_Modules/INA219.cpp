@@ -46,7 +46,10 @@ void INA219::WriteRegister (uint8_t reg, uint16_t value)
 	pTxBuf[2] = (value & 0xFF);
 	//m_pI2CDrv->Send( m_INA219_Address, buf, 3) ;
     
-    Xfer(pTxBuf, 3, nullptr, 0);
+   // Xfer(pTxBuf, 3, nullptr, 0);
+    
+    Send(pTxBuf, 3) ;
+    INA_Delay(1100 + 400);
 }
 
 /**************************************************************************/
@@ -63,7 +66,11 @@ void INA219::ReadRegister(uint8_t reg, uint16_t *value)
 	//m_pI2CDrv->Send( m_INA219_Address, buf, 1) ;
 	//m_pI2CDrv->Read( m_INA219_Address, buf, 2);
     
-     Xfer(pTxBuf, 1, pRxBuf, 2);
+    Send( pTxBuf, 1) ;
+    INA_Delay(1100 + 400);
+    Read( pRxBuf, 2);
+    
+    // Xfer(pTxBuf, 1, pRxBuf, 2);
      
 	 *value = ((pRxBuf[0] << 8) | pRxBuf[1]);
 }

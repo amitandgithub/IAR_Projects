@@ -36,7 +36,7 @@ public:
     Status_t    HwInit          ();
   
     Status_t    HwDeInit        (){return HAL_I2C_DeInit(&m_hi2c);}
-  
+    
     Status_t    HwConfig        (void* pConfigStruct);
   
     static      Status_t     Send            (uint16_t DevAddress, uint8_t *pTxBuf, uint16_t Len);

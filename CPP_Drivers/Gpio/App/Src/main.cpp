@@ -4,6 +4,7 @@
 #include <stdio.h>
 
 #include "stm32f1xx_hal.h"
+//#include "GpioOutput_Fast.h"
 
 
 #ifdef __cplusplus
