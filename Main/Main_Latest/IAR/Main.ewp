@@ -227,6 +227,7 @@
                     <state>USE_HAL_DRIVER</state>
                     <state>STM32F103xB</state>
                     <state>USE_FULL_LL_DRIVER</state>
+                    <state>HAL_DMA_MODULE_ENABLED</state>
                     <state>HAL_I2C_MODULE_ENABLED</state>
                     <state>HAL_SPI_MODULE_ENABLED</state>
                 </option>
@@ -2113,6 +2114,9 @@
         <group>
             <name>SPI</name>
             <file>
+                <name>$PROJ_DIR$\..\Drivers\SPI\SPI_IT.cpp</name>
+            </file>
+            <file>
                 <name>$PROJ_DIR$\..\Drivers\SPI\SPI_Poll.cpp</name>
             </file>
             <file>
@@ -2127,6 +2131,9 @@
         </file>
         <file>
             <name>$PROJ_DIR$\..\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_cortex.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_dma.c</name>
         </file>
         <file>
             <name>$PROJ_DIR$\..\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio.c</name>

@@ -9,9 +9,12 @@
 #include "GpioOutput.hpp"
 #include "GpioInput.hpp"
 #include "SPI_Poll.h"
+#include "SPI_IT.h"
+#include "Nokia5110LCD.hpp"
 
 extern void GpioTest();
 extern void I2C_Master_Test();
 extern void I2C_Slave_Test();
 extern void INA219_Test();
 extern void SPI_Poll_Test();
+extern void Nokia5110LCD_Test();

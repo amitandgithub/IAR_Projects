@@ -6,7 +6,7 @@
  */
 
 
-#include"Nokia5110LCD.hpp"
+#include "Nokia5110LCD.hpp"
 
 namespace Peripherals
 {
@@ -154,16 +154,12 @@ bool Nokia5110LCD::HwInit()
 bool Nokia5110LCD::DisplayInit()
 {
 	  //Reset the LCD to a known state
-	  //SPI_Drv_Reset(RESET);
+
 	  m_pResetPinGpio->Off();
 
-	 // DELAY(100000);		// Should be atleast 500ms delay
-	  //SysTickTimer::DelayTicks(1000);
       HAL_Delay(500);
 
 	  m_pResetPinGpio->On();
-
-	  //SPI_Drv_Reset(SET);
 
 	  Write(COMMAND, 0x21); //Tell LCD that extended commands follow
 	  Write(COMMAND, 0xBF); //Set LCD Vop (Contrast): Try 0xB1(good @ 3.3V) or 0xBF if your display is too dark, Amit: 0xBF works fine with 3.3v
@@ -194,17 +190,6 @@ void Nokia5110LCD::Write(DC_t DC, unsigned char data)
  	{
  		m_pDataCommandSelectGpio->Off();
  	}
-#if 0
- 	//SPI_Drv_ChipSelect(LOW);
- 	m_pDisplaySPI->ChipSelect(SpiDriver::Low);
-
- 	//SPI_Drv_SendByte(data);
- 	m_pDisplaySPI->SendByte(data);
-
-
-	//SPI_Drv_ChipSelect(HIGH);
-	m_pDisplaySPI->ChipSelect(SpiDriver::High);
-#endif
     
     m_pSpiDriverLCD->Send(&data,1);
     
@@ -257,7 +242,7 @@ void Nokia5110LCD::DrawBitmap(const char my_array[])
 void Nokia5110LCD::LCDCharacter(const char character)
 {
 	int32_t index;
-	Write(DATA, 0x00); //Blank vertical line padding
+	//Write(DATA, 0x00); //Blank vertical line padding
 
 	for (index = 0 ; index < 5 ; index++)
 		Write(DATA, ASCII[character - 0x20][index]);
@@ -273,36 +258,35 @@ void Nokia5110LCD::DrawString(const char *characters)
     LCDCharacter(*characters++);
 }
 
-void Nokia5110LCD::DrawLine(unsigned char Row, unsigned char Col, const char* Str)
+ void Nokia5110LCD::DrawLine(unsigned char Row, unsigned char Col, const char* Str)
 {
 	uint8_t i=0;
 	GoToXY(Col*SIZE_OF_1_CHAR,Row);
-	DrawString("            ");
+	DrawString("              ");
 
 	GoToXY(Col*SIZE_OF_1_CHAR,Row);
 
-	while (*Str && i<12)
+	while (*Str && i<NO_OF_CHAR_IN_LINE)
 	{
 		LCDCharacter(*Str++);
 		i++;
 	}
+
 }
 void Nokia5110LCD::DrawChar(unsigned char Row, unsigned char Col, const char aChar)
 {
-	GoToXY(Col,Row);
+	GoToXY(Col*SIZE_OF_1_CHAR,Row);
 	LCDCharacter(aChar);
 
 }
-
 void Nokia5110LCD::DrawBuffer(char* pBuffer)
 {
 	GoToXY(0*SIZE_OF_1_CHAR,0);
 
-	for(int i = 0; i < 12*6 ; i++)
+	for(int i = 0; i < NO_OF_CHAR_IN_LINE*6 ; i++)
 	LCDCharacter(pBuffer[i]);
 
 }
-
 
 
 

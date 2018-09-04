@@ -15,7 +15,7 @@
 #include "stm32f1xx_hal.h"
 #include "Peripheral.hpp"
 #include "stm32f1xx_hal_spi.h"
-
+#include "GpioOutput.hpp"
 
 namespace Peripherals
 {
@@ -30,19 +30,19 @@ public:
         SPI2_B12_B13_B14_B15
     }SPIx_t;
     
-  SPIBase(){;}
-  
-  virtual ~SPIBase(){;}
-  
-  virtual       Status_t        HwInit          () = 0;
-  
-  virtual       Status_t        HwDeinit        () = 0;
-  
-  virtual       Status_t        Send            (uint8_t* pTxBuf, uint16_t TxLen) = 0;
-  
-  virtual       Status_t        Read            (uint8_t* pRxBuf, uint16_t RxLen) = 0;  
-  
-  virtual       Status_t        Xfer            (uint8_t* pTxBuf, uint16_t TxLen, uint8_t* pRxBuf, uint16_t RxLen) = 0; 
+    SPIBase(){;}
+    
+    virtual ~SPIBase(){;}
+    
+    virtual       Status_t        HwInit          () = 0;
+    
+    virtual       Status_t        HwDeinit        () = 0;
+    
+    virtual       Status_t        Send            (uint8_t* pTxBuf, uint16_t TxLen, GpioOutput* CS) = 0;
+    
+    virtual       Status_t        Read            (uint8_t* pRxBuf, uint16_t RxLen, GpioOutput* CS) = 0;  
+    
+    virtual       Status_t        Xfer            (uint8_t* pTxBuf, uint8_t* pRxBuf, uint16_t Len, GpioOutput* CS) = 0;
   
   
 };

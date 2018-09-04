@@ -13,7 +13,6 @@
 #define I2C_Slave_hpp
 
 #include "I2C_Base.hpp"
-#include "stm32f1xx_hal.h"
 #include "stm32f1xx_hal_i2c.h"
 #include "Interrupt.hpp"
 

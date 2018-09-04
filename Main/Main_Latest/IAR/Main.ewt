@@ -2410,6 +2410,9 @@
         <group>
             <name>SPI</name>
             <file>
+                <name>$PROJ_DIR$\..\Drivers\SPI\SPI_IT.cpp</name>
+            </file>
+            <file>
                 <name>$PROJ_DIR$\..\Drivers\SPI\SPI_Poll.cpp</name>
             </file>
             <file>
@@ -2424,6 +2427,9 @@
         </file>
         <file>
             <name>$PROJ_DIR$\..\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_cortex.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_dma.c</name>
         </file>
         <file>
             <name>$PROJ_DIR$\..\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio.c</name>

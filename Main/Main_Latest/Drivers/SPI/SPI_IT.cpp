@@ -7,23 +7,27 @@
 ** CREATED: 9/2/2018, by Amit Chaudhary
 ******************/
 
-#include "SPI_Poll.h"
+#include "SPI_IT.h"
 
 namespace Peripherals
 {
-
     
-//SPI_HandleTypeDef SPI_Poll::m_hspi;    
+SPI_HandleTypeDef SPI_IT::m_hspi;    
+SPI_IT::Callback_t SPI_IT::TxDoneCallback;
+SPI_IT::Callback_t SPI_IT::RxDoneCallback;
+SPI_IT::Callback_t SPI_IT::TxRxDoneCallback;
+SPI_IT::Callback_t SPI_IT::TxHalfDoneCallback;
+SPI_IT::Callback_t SPI_IT::RxHalfDoneCallback;
+SPI_IT::Callback_t SPI_IT::TxRxHalfDoneCallback;
 
-
-SPI_Poll::SPI_Poll (SPIx_t spix , uint32_t hz) : m_hz(hz), m_spix(spix)
+SPI_IT::SPI_IT (SPIx_t spix , uint32_t hz) : m_hz(hz), m_spix(spix)
 {
    m_pDefault_CS = nullptr;  
 }
 
 
 
-Status_t SPI_Poll::HwInit ()
+Status_t SPI_IT::HwInit ()
 {
     GPIO_InitTypeDef GPIO_InitStruct;
     
@@ -56,6 +60,8 @@ Status_t SPI_Poll::HwInit ()
         GPIO_InitStruct.Mode    = GPIO_MODE_INPUT;
         GPIO_InitStruct.Pull    = GPIO_NOPULL;
         HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+        Peripherals::Interrupt::RegisterInterrupt_Vct_Table(IRQHandler,static_cast<Peripherals::Interrupt::IRQn>(SPI1_IRQHandler));
         
     }
     else if(m_spix == SPI1_A15_B3_B4_B5)
@@ -64,6 +70,7 @@ Status_t SPI_Poll::HwInit ()
         CS.HwInit();
         m_pDefault_CS = &CS;
         m_hspi.Instance = SPI1;
+        Peripherals::Interrupt::RegisterInterrupt_Vct_Table(IRQHandler,static_cast<Peripherals::Interrupt::IRQn>(SPI1_IRQHandler));
     }
     else if(m_spix == SPI2_B12_B13_B14_B15)
     {
@@ -71,6 +78,7 @@ Status_t SPI_Poll::HwInit ()
         CS.HwInit();
         m_pDefault_CS = &CS;
         m_hspi.Instance = SPI2;
+        Peripherals::Interrupt::RegisterInterrupt_Vct_Table(IRQHandler,static_cast<Peripherals::Interrupt::IRQn>(SPI2_IRQHandler));
     }
     else
     {
@@ -92,13 +100,13 @@ Status_t SPI_Poll::HwInit ()
     if (HAL_SPI_Init(&m_hspi) != HAL_OK)
     {
         return HAL_ERROR;
-    } 
+    }    
     
     return HAL_OK;
     
 }
 
-Status_t SPI_Poll::Send(uint8_t* pTxBuf, uint16_t TxLen, GpioOutput* CS)
+Status_t SPI_IT::Send(uint8_t* pTxBuf, uint16_t TxLen, GpioOutput* CS)
 {
     Status_t Status = 0;
     
@@ -107,13 +115,13 @@ Status_t SPI_Poll::Send(uint8_t* pTxBuf, uint16_t TxLen, GpioOutput* CS)
     if (CS == nullptr)  CS = m_pDefault_CS; 
     
     CS->Off();
-    Status = HAL_SPI_Transmit(&m_hspi,pTxBuf, TxLen, SPI_POLL_DELAY);
+    Status = HAL_SPI_Transmit_IT(&m_hspi,pTxBuf, TxLen);
     CS->On();
     
     return Status;
 }
 
-Status_t SPI_Poll::Read(uint8_t* pRxBuf, uint16_t RxLen, GpioOutput* CS)
+Status_t SPI_IT::Read(uint8_t* pRxBuf, uint16_t RxLen, GpioOutput* CS)
 {
     Status_t Status = 0;
     
@@ -122,13 +130,13 @@ Status_t SPI_Poll::Read(uint8_t* pRxBuf, uint16_t RxLen, GpioOutput* CS)
     if (CS == nullptr)  CS = m_pDefault_CS; 
     
     CS->Off();
-    Status = HAL_SPI_Receive(&m_hspi,pRxBuf, RxLen, SPI_POLL_DELAY);
+    Status = HAL_SPI_Receive_IT(&m_hspi,pRxBuf, RxLen);
     CS->On();
     
     return Status;
 }
 
-Status_t SPI_Poll::Xfer(uint8_t* pTxBuf, uint8_t* pRxBuf, uint16_t Len, GpioOutput* CS)
+Status_t SPI_IT::Xfer(uint8_t* pTxBuf, uint8_t* pRxBuf, uint16_t Len, GpioOutput* CS)
 {
     Status_t Status = 0;
     
@@ -137,20 +145,73 @@ Status_t SPI_Poll::Xfer(uint8_t* pTxBuf, uint8_t* pRxBuf, uint16_t Len, GpioOutp
     if (CS == nullptr)   CS = m_pDefault_CS; 
     
     CS->Off();
-    Status = HAL_SPI_TransmitReceive(&m_hspi,pTxBuf, pRxBuf, Len, SPI_POLL_DELAY);
+    Status = HAL_SPI_TransmitReceive_IT(&m_hspi,pTxBuf, pRxBuf, Len);
     CS->On();
     
     return Status;
 }
 
-
-
-
-
-
-
-
+void SPI_IT::IRQHandler()
+{
+   HAL_SPI_IRQHandler(&m_hspi);
+}
 
 
 
 }
+
+
+extern "C"
+{
+ 
+void HAL_SPI_TxCpltCallback(SPI_HandleTypeDef *hspi)
+{
+      if(Peripherals::SPI_IT::TxDoneCallback != nullptr)
+        Peripherals::SPI_IT::TxDoneCallback();
+}
+
+void HAL_SPI_RxCpltCallback(SPI_HandleTypeDef *hspi)
+{
+      if(Peripherals::SPI_IT::RxDoneCallback != nullptr)
+        Peripherals::SPI_IT::RxDoneCallback();    
+}
+
+void HAL_SPI_TxRxCpltCallback(SPI_HandleTypeDef *hspi)
+{
+      if(Peripherals::SPI_IT::TxRxDoneCallback != nullptr)
+        Peripherals::SPI_IT::TxRxDoneCallback();    
+}
+
+void HAL_SPI_TxHalfCpltCallback(SPI_HandleTypeDef *hspi)
+{
+      if(Peripherals::SPI_IT::TxHalfDoneCallback != nullptr)
+        Peripherals::SPI_IT::TxHalfDoneCallback();    
+    
+}
+
+void HAL_SPI_RxHalfCpltCallback(SPI_HandleTypeDef *hspi)
+{
+      if(Peripherals::SPI_IT::RxHalfDoneCallback != nullptr)
+        Peripherals::SPI_IT::RxHalfDoneCallback();    
+    
+}
+
+void HAL_SPI_TxRxHalfCpltCallback(SPI_HandleTypeDef *hspi)
+{
+      if(Peripherals::SPI_IT::TxRxHalfDoneCallback != nullptr)
+        Peripherals::SPI_IT::TxRxHalfDoneCallback();    
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+

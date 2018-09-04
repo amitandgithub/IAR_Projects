@@ -9,9 +9,10 @@
 #define APP_INC_NOKIA5110LCD_HPP_
 
 
-#include"SPI_Poll.h"
-#include"GpioInput.hpp"
-#include"GpioOutput.hpp"
+//#include"SPI_Poll.h"
+#include "SPI_IT.h"
+#include "GpioInput.hpp"
+#include "GpioOutput.hpp"
 
 
 namespace Peripherals
@@ -22,7 +23,7 @@ namespace Peripherals
 class Nokia5110LCD
 {
 public:
-    typedef Peripherals::SPI_Poll SPIDrv_t;
+    typedef Peripherals::SPI_IT SPIDrv_t;
 	typedef enum
 	{
 		COMMAND = 0,
@@ -36,6 +37,7 @@ public:
 	static const uint8_t LCD_Y  = 48;
 
 	static const uint8_t SIZE_OF_1_CHAR = 6;
+    static const uint8_t NO_OF_CHAR_IN_LINE = 14;
 
 	Nokia5110LCD(SPIDrv_t*   pSpiDriverLCD ,
 				 GpioOutput* pDataCommandSelectGpio,

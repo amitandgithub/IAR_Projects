@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR ELF Linker V8.30.1.114/W32 for ARM                  02/Sep/2018  21:10:29
+# IAR ELF Linker V8.30.1.114/W32 for ARM                  04/Sep/2018  22:20:22
 # Copyright 2007-2018 IAR Systems AB.
 #
 #    Output file  =  
@@ -8,7 +8,7 @@
 #    Map file     =  
 #        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\List\Main.map
 #    Command line =  
-#        -f C:\Users\achaudha\AppData\Local\Temp\EW8AE9.tmp
+#        -f C:\Users\achaudha\AppData\Local\Temp\EW7C.tmp
 #        (C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Obj\GpioInput.o
 #        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Obj\GpioOutput.o
 #        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Obj\I2C_Base.o
@@ -19,11 +19,13 @@
 #        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Obj\main.o
 #        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Obj\Nokia5110LCD.o
 #        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Obj\Peripheral.o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Obj\SPI_IT.o
 #        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Obj\SPI_Poll.o
 #        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Obj\SPIBase.o
 #        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Obj\startup_stm32f103xb.o
 #        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Obj\stm32f1xx_hal.o
 #        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Obj\stm32f1xx_hal_cortex.o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Obj\stm32f1xx_hal_dma.o
 #        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Obj\stm32f1xx_hal_gpio.o
 #        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Obj\stm32f1xx_hal_gpio_ex.o
 #        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Obj\stm32f1xx_hal_i2c.o
@@ -85,7 +87,7 @@ initialize by copy { rw };
   .intvec            ro code   0x800'0000    0xec  startup_stm32f103xb.o [1]
                              - 0x800'00ec    0xec
 
-"P1":                                      0x1148
+"P1":                                      0x1e8c
   .text              ro code   0x800'00ec   0x608  stm32f1xx_hal_rcc.o [1]
   .text              ro code   0x800'06f4     0xc  stm32f1xx_hal.o [1]
   .text              ro code   0x800'0700    0x3c  stm32f1xx_hal.o [1]
@@ -94,85 +96,102 @@ initialize by copy { rw };
   .text              ro code   0x800'07fc   0x14a  stm32f1xx_hal_cortex.o [1]
   .rodata            const     0x800'0946     0x2  stm32f1xx_hal_rcc.o [1]
   .text              ro code   0x800'0948    0x8c  Interrupt.o [1]
-  .text              ro code   0x800'09d4   0x268  stm32f1xx_hal_gpio.o [1]
-  .text              ro code   0x800'0c3c    0xfc  SPI_Poll.o [1]
-  .text              ro code   0x800'0d38     0xc  SPI_Poll.o [1]
-  .text              ro code   0x800'0d44    0x9c  stm32f1xx_hal_spi.o [1]
-  .text              ro code   0x800'0de0     0xe  SPI_Poll.o [1]
-  .text              ro code   0x800'0dee     0xc  SPI_Poll.o [1]
-  .rodata            const     0x800'0dfa     0x1  unwind_debug.o [6]
-  .text              ro code   0x800'0dfc     0xc  SPI_Poll.o [1]
-  .text              ro code   0x800'0e08    0x9a  main.o [1]
-  .text              ro code   0x800'0ea4    0x2a  stm32f1xx_hal.o [1]
-  .text              ro code   0x800'0ed0    0x34  Test.o [1]
-  .text              ro code   0x800'0f04    0x1e  stm32f1xx_hal.o [1]
-  .text              ro code   0x800'0f24    0x58  system_stm32f1xx.o [1]
-  .rodata            const     0x800'0f7c    0x54  main.o [1]
-  .text              ro code   0x800'0fd0    0x30  iarttio.o [6]
-  .text              ro code   0x800'1000     0xc  XShttio.o [2]
-  .rodata            const     0x800'100c    0x2c  SPI_Poll.o [1]
-  .text              ro code   0x800'1038    0x2c  copy_init3.o [5]
-  .text              ro code   0x800'1064    0x28  data_init.o [5]
-  .iar.init_table    const     0x800'108c    0x24  - Linker created -
-  .text              ro code   0x800'10b0    0x1e  cmain.o [5]
-  .text              ro code   0x800'10ce     0x4  low_level_init.o [2]
-  .text              ro code   0x800'10d2     0x4  exit.o [2]
-  .text              ro code   0x800'10d8     0xa  cexit.o [5]
-  .text              ro code   0x800'10e4    0x14  exit.o [6]
-  .rodata            const     0x800'10f8    0x1c  SPI_Poll.o [1]
-  .text              ro code   0x800'1114    0x1c  stm32f1xx_it.o [1]
-  .text              ro code   0x800'1130    0x10  stm32f1xx_hal.o [1]
-  .rodata            const     0x800'1140    0x10  stm32f1xx_hal_rcc.o [1]
-  .rodata            const     0x800'1150    0x10  system_stm32f1xx.o [1]
-  .text              ro code   0x800'1160    0x10  startup_stm32f103xb.o [1]
-  .text              ro code   0x800'1170     0xc  cstartup_M.o [5]
-  Initializer bytes  const     0x800'117c     0xc  <for P2-1>
-  .text              ro code   0x800'1188     0x4  startup_stm32f103xb.o [1]
-  .text              ro code   0x800'118c     0x4  startup_stm32f103xb.o [1]
-  .text              ro code   0x800'1190     0x4  startup_stm32f103xb.o [1]
-  .text              ro code   0x800'1194     0x4  startup_stm32f103xb.o [1]
-  .text              ro code   0x800'1198     0x4  startup_stm32f103xb.o [1]
-  .text              ro code   0x800'119c     0x4  startup_stm32f103xb.o [1]
-  .text              ro code   0x800'11a0     0x4  startup_stm32f103xb.o [1]
-  .text              ro code   0x800'11a4     0x4  startup_stm32f103xb.o [1]
-  .text              ro code   0x800'11a8     0x4  startup_stm32f103xb.o [1]
-  .text              ro code   0x800'11ac     0x4  startup_stm32f103xb.o [1]
-  .text              ro code   0x800'11b0     0x4  startup_stm32f103xb.o [1]
-  .text              ro code   0x800'11b4     0x4  startup_stm32f103xb.o [1]
-  .text              ro code   0x800'11b8     0x4  startup_stm32f103xb.o [1]
-  .text              ro code   0x800'11bc     0x4  startup_stm32f103xb.o [1]
-  .text              ro code   0x800'11c0     0x4  startup_stm32f103xb.o [1]
-  .text              ro code   0x800'11c4     0x4  startup_stm32f103xb.o [1]
-  .text              ro code   0x800'11c8     0x4  startup_stm32f103xb.o [1]
-  .text              ro code   0x800'11cc     0x4  startup_stm32f103xb.o [1]
-  .text              ro code   0x800'11d0     0x4  startup_stm32f103xb.o [1]
-  .text              ro code   0x800'11d4     0x4  startup_stm32f103xb.o [1]
-  .text              ro code   0x800'11d8     0x4  startup_stm32f103xb.o [1]
-  .text              ro code   0x800'11dc     0x4  startup_stm32f103xb.o [1]
-  .text              ro code   0x800'11e0     0x4  startup_stm32f103xb.o [1]
-  .text              ro code   0x800'11e4     0x4  startup_stm32f103xb.o [1]
-  .text              ro code   0x800'11e8     0x4  startup_stm32f103xb.o [1]
-  .text              ro code   0x800'11ec     0x4  startup_stm32f103xb.o [1]
-  .text              ro code   0x800'11f0     0x4  startup_stm32f103xb.o [1]
-  .text              ro code   0x800'11f4     0x4  startup_stm32f103xb.o [1]
-  .text              ro code   0x800'11f8     0x4  startup_stm32f103xb.o [1]
-  .text              ro code   0x800'11fc     0x4  startup_stm32f103xb.o [1]
-  .text              ro code   0x800'1200     0x4  startup_stm32f103xb.o [1]
-  .text              ro code   0x800'1204     0x4  startup_stm32f103xb.o [1]
-  .text              ro code   0x800'1208     0x4  startup_stm32f103xb.o [1]
-  .text              ro code   0x800'120c     0x4  startup_stm32f103xb.o [1]
-  .text              ro code   0x800'1210     0x4  startup_stm32f103xb.o [1]
-  .text              ro code   0x800'1214     0x4  startup_stm32f103xb.o [1]
-  .text              ro code   0x800'1218     0x4  startup_stm32f103xb.o [1]
-  .text              ro code   0x800'121c     0x4  startup_stm32f103xb.o [1]
-  .text              ro code   0x800'1220     0x4  startup_stm32f103xb.o [1]
-  .text              ro code   0x800'1224     0x4  startup_stm32f103xb.o [1]
-  .text              ro code   0x800'1228     0x4  startup_stm32f103xb.o [1]
-  .text              ro code   0x800'122c     0x4  startup_stm32f103xb.o [1]
-  .text              ro code   0x800'1230     0x4  startup_stm32f103xb.o [1]
-  .rodata            const     0x800'1234     0x0  zero_init3.o [5]
-  .rodata            const     0x800'1234     0x0  copy_init3.o [5]
-                             - 0x800'1234  0x1148
+  .text              ro code   0x800'09d4   0x4aa  stm32f1xx_hal_spi.o [1]
+  .text              ro code   0x800'0e7e     0x2  stm32f1xx_hal_spi.o [1]
+  .text              ro code   0x800'0e80    0xd0  stm32f1xx_hal_dma.o [1]
+  .text              ro code   0x800'0f50     0x2  stm32f1xx_hal_spi.o [1]
+  .rodata            const     0x800'0f52     0x1  unwind_debug.o [6]
+  .text              ro code   0x800'0f54   0x210  SPI_IT.o [1]
+  .text              ro code   0x800'1164     0xc  SPI_Poll.o [1]
+  .text              ro code   0x800'1170   0x13c  GpioOutput.o [1]
+  .text              ro code   0x800'12ac   0x280  stm32f1xx_hal_gpio.o [1]
+  .text              ro code   0x800'152c    0x10  SPI_Poll.o [1]
+  .text              ro code   0x800'153c    0x10  SPI_Poll.o [1]
+  .text              ro code   0x800'154c     0xe  SPI_Poll.o [1]
+  .text              ro code   0x800'155a     0xc  SPI_Poll.o [1]
+  .text              ro code   0x800'1568     0xc  SPI_Poll.o [1]
+  .text              ro code   0x800'1574   0x1e4  Nokia5110LCD.o [1]
+  .text              ro code   0x800'1758    0x1e  stm32f1xx_hal.o [1]
+  .rodata            const     0x800'1778   0x1e0  Nokia5110LCD.o [1]
+  .text              ro code   0x800'1958   0x144  Test.o [1]
+  .text              ro code   0x800'1a9c     0xa  cxxabi.o [3]
+  .text              ro code   0x800'1aa8    0x88  cppinit.o [2]
+  .text              ro code   0x800'1b30    0x9a  main.o [1]
+  .text              ro code   0x800'1bcc    0x2a  stm32f1xx_hal.o [1]
+  .text              ro code   0x800'1bf8    0x58  system_stm32f1xx.o [1]
+  .rodata            const     0x800'1c50    0x54  main.o [1]
+  .text              ro code   0x800'1ca4    0x30  iarttio.o [6]
+  .text              ro code   0x800'1cd4     0xc  XShttio.o [2]
+  .rodata            const     0x800'1ce0    0x2c  SPI_IT.o [1]
+  .text              ro code   0x800'1d0c    0x2c  copy_init3.o [5]
+  .text              ro code   0x800'1d38    0x28  data_init.o [5]
+  .iar.init_table    const     0x800'1d60    0x24  - Linker created -
+  .text              ro code   0x800'1d84    0x1e  cmain.o [5]
+  .text              ro code   0x800'1da2     0x4  low_level_init.o [2]
+  .text              ro code   0x800'1da6     0x4  exit.o [2]
+  .text              ro code   0x800'1dac     0xe  cexit.o [5]
+  .text              ro code   0x800'1dbc    0x14  exit.o [6]
+  .rodata            const     0x800'1dd0    0x1c  GpioOutput.o [1]
+  .rodata            const     0x800'1dec    0x1c  SPI_Poll.o [1]
+  .text              ro code   0x800'1e08    0x1c  stm32f1xx_it.o [1]
+  .text              ro code   0x800'1e24    0x10  stm32f1xx_hal.o [1]
+  .text              ro code   0x800'1e34    0x18  Test.o [1]
+  .text              ro code   0x800'1e4c    0x10  Test.o [1]
+  .rodata            const     0x800'1e5c    0x10  Nokia5110LCD.o [1]
+  .rodata            const     0x800'1e6c    0x10  stm32f1xx_hal_rcc.o [1]
+  .rodata            const     0x800'1e7c    0x10  system_stm32f1xx.o [1]
+  .rodata            const     0x800'1e8c    0x10  Test.o [1]
+  .text              ro code   0x800'1e9c    0x10  startup_stm32f103xb.o [1]
+  .text              ro code   0x800'1eac     0xc  cstartup_M.o [5]
+  Initializer bytes  const     0x800'1eb8     0xc  <for P2-1>
+  .rodata            const     0x800'1ec4     0x8  Test.o [1]
+  .text              ro code   0x800'1ecc     0x4  startup_stm32f103xb.o [1]
+  .text              ro code   0x800'1ed0     0x4  startup_stm32f103xb.o [1]
+  .text              ro code   0x800'1ed4     0x4  startup_stm32f103xb.o [1]
+  .text              ro code   0x800'1ed8     0x4  startup_stm32f103xb.o [1]
+  .text              ro code   0x800'1edc     0x4  startup_stm32f103xb.o [1]
+  .text              ro code   0x800'1ee0     0x4  startup_stm32f103xb.o [1]
+  .text              ro code   0x800'1ee4     0x4  startup_stm32f103xb.o [1]
+  .text              ro code   0x800'1ee8     0x4  startup_stm32f103xb.o [1]
+  .text              ro code   0x800'1eec     0x4  startup_stm32f103xb.o [1]
+  .text              ro code   0x800'1ef0     0x4  startup_stm32f103xb.o [1]
+  .text              ro code   0x800'1ef4     0x4  startup_stm32f103xb.o [1]
+  .text              ro code   0x800'1ef8     0x4  startup_stm32f103xb.o [1]
+  .text              ro code   0x800'1efc     0x4  startup_stm32f103xb.o [1]
+  .text              ro code   0x800'1f00     0x4  startup_stm32f103xb.o [1]
+  .text              ro code   0x800'1f04     0x4  startup_stm32f103xb.o [1]
+  .text              ro code   0x800'1f08     0x4  startup_stm32f103xb.o [1]
+  .text              ro code   0x800'1f0c     0x4  startup_stm32f103xb.o [1]
+  .text              ro code   0x800'1f10     0x4  startup_stm32f103xb.o [1]
+  .text              ro code   0x800'1f14     0x4  startup_stm32f103xb.o [1]
+  .text              ro code   0x800'1f18     0x4  startup_stm32f103xb.o [1]
+  .text              ro code   0x800'1f1c     0x4  startup_stm32f103xb.o [1]
+  .text              ro code   0x800'1f20     0x4  startup_stm32f103xb.o [1]
+  .text              ro code   0x800'1f24     0x4  startup_stm32f103xb.o [1]
+  .text              ro code   0x800'1f28     0x4  startup_stm32f103xb.o [1]
+  .text              ro code   0x800'1f2c     0x4  startup_stm32f103xb.o [1]
+  .text              ro code   0x800'1f30     0x4  startup_stm32f103xb.o [1]
+  .text              ro code   0x800'1f34     0x4  startup_stm32f103xb.o [1]
+  .text              ro code   0x800'1f38     0x4  startup_stm32f103xb.o [1]
+  .text              ro code   0x800'1f3c     0x4  startup_stm32f103xb.o [1]
+  .text              ro code   0x800'1f40     0x4  startup_stm32f103xb.o [1]
+  .text              ro code   0x800'1f44     0x4  startup_stm32f103xb.o [1]
+  .text              ro code   0x800'1f48     0x4  startup_stm32f103xb.o [1]
+  .text              ro code   0x800'1f4c     0x4  startup_stm32f103xb.o [1]
+  .text              ro code   0x800'1f50     0x4  startup_stm32f103xb.o [1]
+  .text              ro code   0x800'1f54     0x4  startup_stm32f103xb.o [1]
+  .text              ro code   0x800'1f58     0x4  startup_stm32f103xb.o [1]
+  .text              ro code   0x800'1f5c     0x4  startup_stm32f103xb.o [1]
+  .text              ro code   0x800'1f60     0x4  startup_stm32f103xb.o [1]
+  .text              ro code   0x800'1f64     0x4  startup_stm32f103xb.o [1]
+  .text              ro code   0x800'1f68     0x4  startup_stm32f103xb.o [1]
+  .text              ro code   0x800'1f6c     0x4  startup_stm32f103xb.o [1]
+  .text              ro code   0x800'1f70     0x4  startup_stm32f103xb.o [1]
+  .text              ro code   0x800'1f74     0x4  startup_stm32f103xb.o [1]
+  .text              ro code   0x800'1f78     0x0  cstart_call_dtors.o [5]
+  .rodata            const     0x800'1f78     0x0  zero_init3.o [5]
+  .rodata            const     0x800'1f78     0x0  copy_init3.o [5]
+                             - 0x800'1f78  0x1e8c
 
 Absolute sections:                          0x100
   .noinit            uninit   0x2000'0100   0x100  Interrupt.o [1]
@@ -184,25 +203,45 @@ Absolute sections:                          0x100
     .data            inited   0x2000'0204     0x8  XShttio.o [2]
                             - 0x2000'020c     0xc
 
-"P2", part 2 of 3:                           0x6c
-  .bss               zero     0x2000'020c    0x58  SPI_Poll.o [1]
-  .bss               zero     0x2000'0264     0xc  Test.o [1]
-  .bss               zero     0x2000'0270     0x4  stm32f1xx_hal.o [1]
-  .bss               zero     0x2000'0274     0x1  Test.o [1]
-                            - 0x2000'0275    0x69
+"P2", part 2 of 3:                           0xd8
+  .bss               zero     0x2000'020c    0x58  SPI_IT.o [1]
+  .bss               zero     0x2000'0264    0x10  Test.o [1]
+  .bss               zero     0x2000'0274    0x10  Test.o [1]
+  .bss               zero     0x2000'0284     0xc  SPI_IT.o [1]
+  .bss               zero     0x2000'0290     0xc  SPI_IT.o [1]
+  .bss               zero     0x2000'029c     0xc  SPI_IT.o [1]
+  .bss               zero     0x2000'02a8     0xc  Test.o [1]
+  .bss               zero     0x2000'02b4     0xc  Test.o [1]
+  .bss               zero     0x2000'02c0     0xc  Test.o [1]
+  .bss               zero     0x2000'02cc     0x4  SPI_IT.o [1]
+  .bss               zero     0x2000'02d0     0x4  stm32f1xx_hal.o [1]
+  .bss               zero     0x2000'02d4     0x4  cppinit.o [2]
+  .bss               zero     0x2000'02d8     0x4  cppinit.o [2]
+  .bss               zero     0x2000'02dc     0x1  SPI_IT.o [1]
+  .bss               zero     0x2000'02dd     0x1  SPI_IT.o [1]
+  .bss               zero     0x2000'02de     0x1  SPI_IT.o [1]
+  .bss               zero     0x2000'02df     0x1  Test.o [1]
+  .bss               zero     0x2000'02e0     0x1  Test.o [1]
+  .bss               zero     0x2000'02e1     0x1  Test.o [1]
+  .bss               zero     0x2000'02e2     0x1  Test.o [1]
+  .bss               zero     0x2000'02e3     0x1  Test.o [1]
+                            - 0x2000'02e4    0xd8
 
-"P2", part 3 of 3:                          0x800
-  CSTACK                      0x2000'0278   0x800  <Block>
-    CSTACK           uninit   0x2000'0278   0x800  <Block tail>
-                            - 0x2000'0a78   0x800
+"P2", part 3 of 3:                          0x98c
+  .iar.dynexit                0x2000'02e4   0x18c  <Block>
+    .iar.dynexit     uninit   0x2000'02e4     0xc  cppinit.o [2]
+    .iar.dynexit     uninit   0x2000'02f0   0x180  <Block tail>
+  CSTACK                      0x2000'0470   0x800  <Block>
+    CSTACK           uninit   0x2000'0470   0x800  <Block tail>
+                            - 0x2000'0c70   0x98c
 
 Unused ranges:
 
          From           To    Size
          ----           --    ----
-   0x800'1234   0x800'ffff  0xedcc
+   0x800'1f78   0x800'ffff  0xe088
   0x2000'0000  0x2000'00ff   0x100
-  0x2000'0a78  0x2000'4fff  0x4588
+  0x2000'0c70  0x2000'4fff  0x4390
 
 
 *******************************************************************************
@@ -212,12 +251,12 @@ Unused ranges:
           Address      Size
           -------      ----
 Zero (__iar_zero_init3)
-    1 destination range, total size 0x69:
-          0x2000'020c  0x69
+    1 destination range, total size 0xd8:
+          0x2000'020c  0xd8
 
 Copy (__iar_copy_init3)
     1 source range, total size 0xc:
-           0x800'117c   0xc
+           0x800'1eb8   0xc
     1 destination range, total size 0xc:
           0x2000'0200   0xc
 
@@ -235,31 +274,37 @@ command line/config:
     Total:
 
 C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Obj: [1]
+    GpioOutput.o                316       28
     Interrupt.o                 140                        256
-    SPI_Poll.o                  302       72       88
-    Test.o                       52                13
+    Nokia5110LCD.o              484      496
+    SPI_IT.o                    528       44      131
+    SPI_Poll.o                   82       28
+    Test.o                      364       24       73
     main.o                      154       84
     startup_stm32f103xb.o       424
     stm32f1xx_hal.o             160                 4
     stm32f1xx_hal_cortex.o      330
-    stm32f1xx_hal_gpio.o        616
+    stm32f1xx_hal_dma.o         208
+    stm32f1xx_hal_gpio.o        640
     stm32f1xx_hal_rcc.o       1 544       18
-    stm32f1xx_hal_spi.o         156
+    stm32f1xx_hal_spi.o       1 198
     stm32f1xx_it.o               28
     system_stm32f1xx.o           88       20        4
     ----------------------------------------------------------
-    Total:                    3 994      194      109      256
+    Total:                    6 688      742      212      256
 
 dl7M_tln.a: [2]
     XShttio.o                    12        8        8
+    cppinit.o                   136                20
     exit.o                        4
     low_level_init.o              4
     ----------------------------------------------------------
-    Total:                       20        8        8
+    Total:                      156        8       28
 
 dlpp7M_tl_nc.a: [3]
+    cxxabi.o                     10
     ----------------------------------------------------------
-    Total:
+    Total:                       10
 
 m7M_tl.a: [4]
     ----------------------------------------------------------
@@ -267,14 +312,15 @@ m7M_tl.a: [4]
 
 rt7M_tl.a: [5]
     ABImemcpy.o                 134
-    cexit.o                      10
+    cexit.o                      14
     cmain.o                      30
     copy_init3.o                 44
+    cstart_call_dtors.o
     cstartup_M.o                 12
     data_init.o                  40
     zero_init3.o                 58
     ----------------------------------------------------------
-    Total:                      328
+    Total:                      332
 
 shb_l.a: [6]
     exit.o                       20
@@ -283,10 +329,10 @@ shb_l.a: [6]
     ----------------------------------------------------------
     Total:                       68        1
 
-    Gaps                         11
-    Linker created                        36    2 048
+    Gaps                         13        2
+    Linker created                        36    2 432
 --------------------------------------------------------------
-    Grand Total:              4 421      239    2 165      256
+    Grand Total:              7 267      789    2 672      256
 
 
 *******************************************************************************
@@ -295,19 +341,24 @@ shb_l.a: [6]
 
 Entry                       Address   Size  Type      Object
 -----                       -------   ----  ----      ------
-.iar.init_table$$Base    0x800'108c          --   Gb  - Linker created -
-.iar.init_table$$Limit   0x800'10b0          --   Gb  - Linker created -
-?main                    0x800'10b1         Code  Gb  cmain.o [5]
-AHBPrescTable            0x800'1150   0x10  Data  Gb  system_stm32f1xx.o [1]
-BusFault_Handler         0x800'111b    0x2  Code  Gb  stm32f1xx_it.o [1]
-CSTACK$$Base            0x2000'0278          --   Gb  - Linker created -
-CSTACK$$Limit           0x2000'0a78          --   Gb  - Linker created -
-DebugMon_Handler         0x800'1121    0x2  Code  Gb  stm32f1xx_it.o [1]
-HAL_Delay                0x800'0f05   0x1e  Code  Wk  stm32f1xx_hal.o [1]
-HAL_GPIO_Init            0x800'09d5  0x226  Code  Gb  stm32f1xx_hal_gpio.o [1]
+.iar.dynexit$$Base      0x2000'02e4          --   Gb  - Linker created -
+.iar.dynexit$$Limit     0x2000'0470          --   Gb  - Linker created -
+.iar.init_table$$Base    0x800'1d60          --   Gb  - Linker created -
+.iar.init_table$$Limit   0x800'1d84          --   Gb  - Linker created -
+?main                    0x800'1d85         Code  Gb  cmain.o [5]
+AHBPrescTable            0x800'1e7c   0x10  Data  Gb  system_stm32f1xx.o [1]
+BusFault_Handler         0x800'1e0f    0x2  Code  Gb  stm32f1xx_it.o [1]
+CSTACK$$Base            0x2000'0470          --   Gb  - Linker created -
+CSTACK$$Limit           0x2000'0c70          --   Gb  - Linker created -
+DebugMon_Handler         0x800'1e15    0x2  Code  Gb  stm32f1xx_it.o [1]
+DtorRecArray            0x2000'02e4    0xc  Data  Lc  cppinit.o [2]
+HAL_DMA_Abort_IT         0x800'0e81   0xb4  Code  Gb  stm32f1xx_hal_dma.o [1]
+HAL_Delay                0x800'1759   0x1e  Code  Wk  stm32f1xx_hal.o [1]
+HAL_GPIO_Init            0x800'12ad  0x226  Code  Gb  stm32f1xx_hal_gpio.o [1]
+HAL_GPIO_WritePin        0x800'14d3   0x1a  Code  Gb  stm32f1xx_hal_gpio.o [1]
 HAL_GetTick              0x800'06f5    0xc  Code  Wk  stm32f1xx_hal.o [1]
-HAL_IncTick              0x800'1131   0x10  Code  Wk  stm32f1xx_hal.o [1]
-HAL_Init                 0x800'0ea5   0x24  Code  Gb  stm32f1xx_hal.o [1]
+HAL_IncTick              0x800'1e25   0x10  Code  Wk  stm32f1xx_hal.o [1]
+HAL_Init                 0x800'1bcd   0x24  Code  Gb  stm32f1xx_hal.o [1]
 HAL_InitTick             0x800'0701   0x3c  Code  Wk  stm32f1xx_hal.o [1]
 HAL_NVIC_SetPriority     0x800'08cd   0x2a  Code  Gb  stm32f1xx_hal_cortex.o [1]
 HAL_NVIC_SetPriorityGrouping
@@ -317,15 +368,48 @@ HAL_RCC_GetHCLKFreq      0x800'0687    0x6  Code  Gb  stm32f1xx_hal_rcc.o [1]
 HAL_RCC_GetSysClockFreq
                          0x800'0619   0x6e  Code  Gb  stm32f1xx_hal_rcc.o [1]
 HAL_RCC_OscConfig        0x800'00ed  0x3c0  Code  Gb  stm32f1xx_hal_rcc.o [1]
-HAL_SPI_Init             0x800'0d45   0x9a  Code  Gb  stm32f1xx_hal_spi.o [1]
+HAL_SPI_DeInit           0x800'0a6f   0x38  Code  Gb  stm32f1xx_hal_spi.o [1]
+HAL_SPI_IRQHandler       0x800'0b8b   0xf8  Code  Gb  stm32f1xx_hal_spi.o [1]
+HAL_SPI_Init             0x800'09d5   0x9a  Code  Gb  stm32f1xx_hal_spi.o [1]
+HAL_SPI_Transmit_IT      0x800'0aa7   0xe4  Code  Gb  stm32f1xx_hal_spi.o [1]
+HAL_SPI_TxCpltCallback   0x800'111b   0x12  Code  Gb  SPI_IT.o [1]
 HAL_SYSTICK_CLKSourceConfig
                          0x800'0903   0x1c  Code  Gb  stm32f1xx_hal_cortex.o [1]
 HAL_SYSTICK_Config       0x800'08f7    0xc  Code  Gb  stm32f1xx_hal_cortex.o [1]
 HAL_SYSTICK_IRQHandler   0x800'093d    0x8  Code  Gb  stm32f1xx_hal_cortex.o [1]
-HardFault_Handler        0x800'1117    0x2  Code  Gb  stm32f1xx_it.o [1]
-MemManage_Handler        0x800'1119    0x2  Code  Gb  stm32f1xx_it.o [1]
-NMI_Handler              0x800'1115    0x2  Code  Gb  stm32f1xx_it.o [1]
-PendSV_Handler           0x800'1123    0x2  Code  Gb  stm32f1xx_it.o [1]
+HardFault_Handler        0x800'1e0b    0x2  Code  Gb  stm32f1xx_it.o [1]
+MemManage_Handler        0x800'1e0d    0x2  Code  Gb  stm32f1xx_it.o [1]
+NMI_Handler              0x800'1e09    0x2  Code  Gb  stm32f1xx_it.o [1]
+Nokia5110LCD_Test()      0x800'1959   0xf4  Code  Gb  Test.o [1]
+Nokia5110LCD_Test()::Backlight
+                        0x2000'02c0    0xc  Data  Lc  Test.o [1]
+Nokia5110LCD_Test()::D_C
+                        0x2000'02a8    0xc  Data  Lc  Test.o [1]
+Nokia5110LCD_Test()::LCD
+                        0x2000'0274   0x10  Data  Lc  Test.o [1]
+Nokia5110LCD_Test()::Reset
+                        0x2000'02b4    0xc  Data  Lc  Test.o [1]
+Nokia5110LCD_Test()::SPI_Obj
+                        0x2000'0264   0x10  Data  Lc  Test.o [1]
+Nokia5110LCD_Test()::static guard for Backlight
+                        0x2000'02e2    0x1  Data  Lc  Test.o [1]
+Nokia5110LCD_Test()::static guard for D_C
+                        0x2000'02e0    0x1  Data  Lc  Test.o [1]
+Nokia5110LCD_Test()::static guard for LCD
+                        0x2000'02e3    0x1  Data  Lc  Test.o [1]
+Nokia5110LCD_Test()::static guard for Reset
+                        0x2000'02e1    0x1  Data  Lc  Test.o [1]
+Nokia5110LCD_Test()::static guard for SPI_Obj
+                        0x2000'02df    0x1  Data  Lc  Test.o [1]
+PendSV_Handler           0x800'1e17    0x2  Code  Gb  stm32f1xx_it.o [1]
+Peripherals::GpioOutput::GpioOutput(GPIO_TypeDef *, unsigned short)
+                         0x800'1171   0x22  Code  Gb  GpioOutput.o [1]
+Peripherals::GpioOutput::HwInit()
+                         0x800'1193   0xfc  Code  Gb  GpioOutput.o [1]
+Peripherals::GpioOutput::Off()
+                         0x800'152d   0x10  Code  Gb  SPI_Poll.o [1]
+Peripherals::GpioOutput::On()
+                         0x800'153d   0x10  Code  Gb  SPI_Poll.o [1]
 Peripherals::Interrupt::EnableInterrupt(Peripherals::Interrupt::IRQn)
                          0x800'0949   0x20  Code  Gb  Interrupt.o [1]
 Peripherals::Interrupt::RegisterInterrupt_Vct_Table(void (*)(), Peripherals::Interrupt::IRQn, unsigned char, unsigned char)
@@ -334,37 +418,76 @@ Peripherals::Interrupt::Relocate_Vector_Table()
                          0x800'09a1   0x24  Code  Gb  Interrupt.o [1]
 Peripherals::Interrupt::Vectors_RAM
                         0x2000'0100  0x100  Data  Gb  Interrupt.o [1]
+Peripherals::Nokia5110LCD::Clear()
+                         0x800'1647   0x26  Code  Gb  Nokia5110LCD.o [1]
+Peripherals::Nokia5110LCD::DisplayInit()
+                         0x800'15bb   0x5e  Code  Gb  Nokia5110LCD.o [1]
+Peripherals::Nokia5110LCD::DrawLine(unsigned char, unsigned char, char const *)
+                         0x800'16e9   0x64  Code  Gb  Nokia5110LCD.o [1]
+Peripherals::Nokia5110LCD::DrawString(char const *)
+                         0x800'16cf   0x1a  Code  Gb  Nokia5110LCD.o [1]
+Peripherals::Nokia5110LCD::GoToXY(int, int)
+                         0x800'166d   0x26  Code  Gb  Nokia5110LCD.o [1]
+Peripherals::Nokia5110LCD::HwInit()
+                         0x800'1585   0x36  Code  Gb  Nokia5110LCD.o [1]
+Peripherals::Nokia5110LCD::LCDCharacter(char)
+                         0x800'1693   0x3c  Code  Gb  Nokia5110LCD.o [1]
+Peripherals::Nokia5110LCD::Nokia5110LCD(Peripherals::SPI_IT *, Peripherals::GpioOutput *, Peripherals::GpioOutput *, Peripherals::GpioOutput *)
+                         0x800'1575   0x10  Code  Gb  Nokia5110LCD.o [1]
+Peripherals::Nokia5110LCD::Write(Peripherals::Nokia5110LCD::DC_t, unsigned char)
+                         0x800'1619   0x2e  Code  Gb  Nokia5110LCD.o [1]
 Peripherals::Peripheral::Peripheral()
-                         0x800'0dfd    0xc  Code  Gb  SPI_Poll.o [1]
+                         0x800'1569    0xc  Code  Gb  SPI_Poll.o [1]
 Peripherals::Peripheral::Peripheral() [subobject]
-                         0x800'0def    0xc  Code  Gb  SPI_Poll.o [1]
+                         0x800'155b    0xc  Code  Gb  SPI_Poll.o [1]
 Peripherals::SPIBase::SPIBase()
-                         0x800'0de1    0xe  Code  Gb  SPI_Poll.o [1]
+                         0x800'154d    0xe  Code  Gb  SPI_Poll.o [1]
 Peripherals::SPIBase::SPIBase() [subobject]
-                         0x800'0d39    0xc  Code  Gb  SPI_Poll.o [1]
-Peripherals::SPI_Poll::HwInit()
-                         0x800'0c57   0xc8  Code  Gb  SPI_Poll.o [1]
-Peripherals::SPI_Poll::SPI_Poll(Peripherals::SPIBase::SPIx_t, unsigned int)
-                         0x800'0c3d   0x1a  Code  Gb  SPI_Poll.o [1]
-Peripherals::SPI_Poll::m_hspi
-                        0x2000'020c   0x58  Data  Gb  SPI_Poll.o [1]
-Region$$Table$$Base      0x800'108c          --   Gb  - Linker created -
-Region$$Table$$Limit     0x800'10b0          --   Gb  - Linker created -
-SPI_Poll_Test()          0x800'0ed1   0x26  Code  Gb  Test.o [1]
-SPI_Poll_Test()::SPI_Obj
-                        0x2000'0264    0xc  Data  Lc  Test.o [1]
-SPI_Poll_Test()::static guard for SPI_Obj
-                        0x2000'0274    0x1  Data  Lc  Test.o [1]
-SVC_Handler              0x800'111f    0x2  Code  Gb  stm32f1xx_it.o [1]
-SysTick_Handler          0x800'1125    0xc  Code  Gb  stm32f1xx_it.o [1]
-SystemClock_Config()     0x800'0e19   0x84  Code  Gb  main.o [1]
+                         0x800'1165    0xc  Code  Gb  SPI_Poll.o [1]
+Peripherals::SPI_IT::HwDeinit()
+                         0x800'1e4d   0x10  Code  Gb  Test.o [1]
+Peripherals::SPI_IT::HwInit()
+                         0x800'0f73  0x156  Code  Gb  SPI_IT.o [1]
+Peripherals::SPI_IT::HwInit(){2}::CS
+                        0x2000'0284    0xc  Data  Lc  SPI_IT.o [1]
+Peripherals::SPI_IT::HwInit(){2}::static guard for CS
+                        0x2000'02dc    0x1  Data  Lc  SPI_IT.o [1]
+Peripherals::SPI_IT::HwInit(){6}{7}::CS
+                        0x2000'0290    0xc  Data  Lc  SPI_IT.o [1]
+Peripherals::SPI_IT::HwInit(){6}{7}::static guard for CS
+                        0x2000'02dd    0x1  Data  Lc  SPI_IT.o [1]
+Peripherals::SPI_IT::HwInit(){6}{9}{10}::CS
+                        0x2000'029c    0xc  Data  Lc  SPI_IT.o [1]
+Peripherals::SPI_IT::HwInit(){6}{9}{10}::static guard for CS
+                        0x2000'02de    0x1  Data  Lc  SPI_IT.o [1]
+Peripherals::SPI_IT::IRQHandler()
+                         0x800'1111    0xa  Code  Gb  SPI_IT.o [1]
+Peripherals::SPI_IT::SPI_IT(Peripherals::SPIBase::SPIx_t, unsigned int)
+                         0x800'0f55   0x1e  Code  Gb  SPI_IT.o [1]
+Peripherals::SPI_IT::Send(unsigned char *, unsigned short, Peripherals::GpioOutput *)
+                         0x800'10c9   0x48  Code  Gb  SPI_IT.o [1]
+Peripherals::SPI_IT::TxDoneCallback
+                        0x2000'02cc    0x4  Data  Gb  SPI_IT.o [1]
+Peripherals::SPI_IT::m_hspi
+                        0x2000'020c   0x58  Data  Gb  SPI_IT.o [1]
+Peripherals::SPI_IT::~SPI_IT()
+                         0x800'1e35   0x18  Code  Gb  Test.o [1]
+Region$$Table$$Base      0x800'1d60          --   Gb  - Linker created -
+Region$$Table$$Limit     0x800'1d84          --   Gb  - Linker created -
+SVC_Handler              0x800'1e13    0x2  Code  Gb  stm32f1xx_it.o [1]
+SysTick_Handler          0x800'1e19    0xc  Code  Gb  stm32f1xx_it.o [1]
+SystemClock_Config()     0x800'1b41   0x84  Code  Gb  main.o [1]
 SystemCoreClock         0x2000'0200    0x4  Data  Gb  system_stm32f1xx.o [1]
-SystemInit               0x800'0f25   0x3e  Code  Gb  system_stm32f1xx.o [1]
-UsageFault_Handler       0x800'111d    0x2  Code  Gb  stm32f1xx_it.o [1]
+SystemInit               0x800'1bf9   0x3e  Code  Gb  system_stm32f1xx.o [1]
+UsageFault_Handler       0x800'1e11    0x2  Code  Gb  stm32f1xx_it.o [1]
+Virtual function table for Peripherals::GpioOutput
+                         0x800'1dd0   0x1c  Data  Gb  GpioOutput.o [1]
 Virtual function table for Peripherals::Peripheral
-                         0x800'10f8   0x1c  Data  Gb  SPI_Poll.o [1]
-Virtual function table for Peripherals::SPI_Poll
-                         0x800'100c   0x2c  Data  Gb  SPI_Poll.o [1]
+                         0x800'1dec   0x1c  Data  Gb  SPI_Poll.o [1]
+Virtual function table for Peripherals::SPI_IT
+                         0x800'1ce0   0x2c  Data  Gb  SPI_IT.o [1]
+[local to Nokia5110LCD_cpp]::Peripherals::ASCII
+                         0x800'1778  0x1e0  Data  Lc  Nokia5110LCD.o [1]
 [local to stm32f1xx_hal_cortex_c]::NVIC_EncodePriority(unsigned int, unsigned int, unsigned int)
                          0x800'0851   0x40  Code  Lc  stm32f1xx_hal_cortex.o [1]
 [local to stm32f1xx_hal_cortex_c]::NVIC_GetPriorityGrouping()
@@ -377,27 +500,47 @@ Virtual function table for Peripherals::SPI_Poll
                          0x800'0891   0x30  Code  Lc  stm32f1xx_hal_cortex.o [1]
 [local to stm32f1xx_hal_rcc_c]::RCC_Delay(unsigned int)
                          0x800'068d   0x26  Code  Lc  stm32f1xx_hal_rcc.o [1]
-_Error_Handler           0x800'0ea1    0x2  Code  Gb  main.o [1]
+[local to stm32f1xx_hal_spi_c]::SPI_CheckFlag_BSY(__SPI_HandleTypeDef *, unsigned int, unsigned int)
+                         0x800'0db9   0x2a  Code  Lc  stm32f1xx_hal_spi.o [1]
+[local to stm32f1xx_hal_spi_c]::SPI_CloseTx_ISR(__SPI_HandleTypeDef *)
+                         0x800'0de3   0x96  Code  Lc  stm32f1xx_hal_spi.o [1]
+[local to stm32f1xx_hal_spi_c]::SPI_DMAAbortOnError(__DMA_HandleTypeDef *)
+                         0x800'0c85   0x16  Code  Lc  stm32f1xx_hal_spi.o [1]
+[local to stm32f1xx_hal_spi_c]::SPI_TxISR_16BIT(__SPI_HandleTypeDef *)
+                         0x800'0cdd   0x3a  Code  Lc  stm32f1xx_hal_spi.o [1]
+[local to stm32f1xx_hal_spi_c]::SPI_TxISR_8BIT(__SPI_HandleTypeDef *)
+                         0x800'0ca5   0x38  Code  Lc  stm32f1xx_hal_spi.o [1]
+[local to stm32f1xx_hal_spi_c]::SPI_WaitFlagStateUntilTimeout(__SPI_HandleTypeDef *, unsigned int, unsigned int, unsigned int, unsigned int)
+                         0x800'0d17   0xa2  Code  Lc  stm32f1xx_hal_spi.o [1]
+_Error_Handler           0x800'1bc9    0x2  Code  Gb  main.o [1]
+__aeabi_atexit           0x800'1a9d    0xa  Code  Gb  cxxabi.o [3]
 __aeabi_memcpy4          0x800'073d         Code  Gb  ABImemcpy.o [5]
 __aeabi_memcpy8          0x800'073d         Code  Gb  ABImemcpy.o [5]
-__cmain                  0x800'10b1         Code  Gb  cmain.o [5]
-__exit                   0x800'10e5   0x14  Code  Gb  exit.o [6]
-__iar_close_ttio         0x800'0fd1   0x2e  Code  Gb  iarttio.o [6]
-__iar_copy_init3         0x800'1039   0x2c  Code  Gb  copy_init3.o [5]
-__iar_data_init3         0x800'1065   0x28  Code  Gb  data_init.o [5]
-__iar_debug_exceptions   0x800'0dfa    0x1  Data  Gb  unwind_debug.o [6]
-__iar_lookup_ttioh       0x800'1001    0x4  Code  Gb  XShttio.o [2]
-__iar_program_start      0x800'1171         Code  Gb  cstartup_M.o [5]
+__call_dtors             0x800'1adf    0xc  Code  Gb  cppinit.o [2]
+__call_dtors0            0x800'1aeb   0x36  Code  Gb  cppinit.o [2]
+__cexit_call_dtors       0x800'1daf         Code  Gb  cexit.o [5]
+__cmain                  0x800'1d85         Code  Gb  cmain.o [5]
+__cstart_call_dtors      0x800'1f78         Data  Gb  cstart_call_dtors.o [5]
+__cxa_atexit             0x800'1aa9   0x36  Code  Gb  cppinit.o [2]
+__dso_handle            0x2000'02d8    0x4  Data  Gb  cppinit.o [2]
+__exit                   0x800'1dbd   0x14  Code  Gb  exit.o [6]
+__iar_close_ttio         0x800'1ca5   0x2e  Code  Gb  iarttio.o [6]
+__iar_copy_init3         0x800'1d0d   0x2c  Code  Gb  copy_init3.o [5]
+__iar_data_init3         0x800'1d39   0x28  Code  Gb  data_init.o [5]
+__iar_debug_exceptions   0x800'0f52    0x1  Data  Gb  unwind_debug.o [6]
+__iar_lookup_ttioh       0x800'1cd5    0x4  Code  Gb  XShttio.o [2]
+__iar_program_start      0x800'1ead         Code  Gb  cstartup_M.o [5]
 __iar_ttio_handles      0x2000'0204    0x8  Data  Lc  XShttio.o [2]
 __iar_zero_init3         0x800'07c3   0x3a  Code  Gb  zero_init3.o [5]
-__low_level_init         0x800'10cf    0x4  Code  Gb  low_level_init.o [2]
+__low_level_init         0x800'1da3    0x4  Code  Gb  low_level_init.o [2]
 __vector_table           0x800'0000         Data  Gb  startup_stm32f103xb.o [1]
-_call_main               0x800'10bd         Code  Gb  cmain.o [5]
-_exit                    0x800'10d9         Code  Gb  cexit.o [5]
-_main                    0x800'10cb         Code  Gb  cmain.o [5]
-exit                     0x800'10d3    0x4  Code  Gb  exit.o [2]
-main                     0x800'0e09   0x10  Code  Gb  main.o [1]
-uwTick                  0x2000'0270    0x4  Data  Gb  stm32f1xx_hal.o [1]
+_call_main               0x800'1d91         Code  Gb  cmain.o [5]
+_exit                    0x800'1dad         Code  Gb  cexit.o [5]
+_main                    0x800'1d9f         Code  Gb  cmain.o [5]
+exit                     0x800'1da7    0x4  Code  Gb  exit.o [2]
+main                     0x800'1b31   0x10  Code  Gb  main.o [1]
+next_abi_dtor_rec       0x2000'02d4    0x4  Data  Lc  cppinit.o [2]
+uwTick                  0x2000'02d0    0x4  Data  Gb  stm32f1xx_hal.o [1]
 
 
 [1] = C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Obj
@@ -407,9 +550,9 @@ uwTick                  0x2000'0270    0x4  Data  Gb  stm32f1xx_hal.o [1]
 [5] = rt7M_tl.a
 [6] = shb_l.a
 
-  4 421 bytes of readonly  code memory
-    239 bytes of readonly  data memory
-  2 165 bytes of readwrite data memory (+ 256 absolute)
+  7 267 bytes of readonly  code memory
+    789 bytes of readonly  data memory
+  2 672 bytes of readwrite data memory (+ 256 absolute)
 
 Errors: none
 Warnings: none
