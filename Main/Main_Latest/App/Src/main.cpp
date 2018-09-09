@@ -34,7 +34,11 @@ int main(void)
     {
         //INA219_Test();
         //SPI_Poll_Test();
-        Nokia5110LCD_Test();
+        //Nokia5110LCD_Test();
+        //SPI_DMA_Test();
+        //Nokia5110LCD_SPI1_Test();
+        //Nokia5110LCD_SPI2_Test(); 
+        Nokia5110LCD_Dual_Test();
     }
     
 }

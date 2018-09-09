@@ -388,7 +388,7 @@
                 <option>
                     <name>CCOptStrategy</name>
                     <version>0</version>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>CCOptLevelSlave</name>
@@ -451,7 +451,7 @@
                 <option>
                     <name>CCOptStrategySlave</name>
                     <version>0</version>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>CCGuardCalls</name>
@@ -2114,13 +2114,16 @@
         <group>
             <name>SPI</name>
             <file>
+                <name>$PROJ_DIR$\..\Drivers\SPI\SPI_Base.cpp</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Drivers\SPI\SPI_DMA.cpp</name>
+            </file>
+            <file>
                 <name>$PROJ_DIR$\..\Drivers\SPI\SPI_IT.cpp</name>
             </file>
             <file>
                 <name>$PROJ_DIR$\..\Drivers\SPI\SPI_Poll.cpp</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\Drivers\SPI\SPIBase.cpp</name>
             </file>
         </group>
     </group>

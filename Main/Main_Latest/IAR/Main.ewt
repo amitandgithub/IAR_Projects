@@ -2410,13 +2410,16 @@
         <group>
             <name>SPI</name>
             <file>
+                <name>$PROJ_DIR$\..\Drivers\SPI\SPI_Base.cpp</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\Drivers\SPI\SPI_DMA.cpp</name>
+            </file>
+            <file>
                 <name>$PROJ_DIR$\..\Drivers\SPI\SPI_IT.cpp</name>
             </file>
             <file>
                 <name>$PROJ_DIR$\..\Drivers\SPI\SPI_Poll.cpp</name>
-            </file>
-            <file>
-                <name>$PROJ_DIR$\..\Drivers\SPI\SPIBase.cpp</name>
             </file>
         </group>
     </group>

@@ -126,11 +126,14 @@ Nokia5110LCD::Nokia5110LCD(SPIDrv_t::SPIx_t Spix, GpioOutput::PORT_t ResetPort, 
 Nokia5110LCD::Nokia5110LCD(SPIDrv_t*   pSpiDriverLCD ,
 				 GpioOutput* pDataCommandSelectGpio,
 				 GpioOutput* pResetPinGpio,
-				 GpioOutput* pBackLightGpio): 
+				 GpioOutput* pBackLightGpio,
+                 GpioOutput* pCS): 
                 m_pSpiDriverLCD(pSpiDriverLCD),
                 m_pDataCommandSelectGpio(pDataCommandSelectGpio),
                 m_pResetPinGpio(pResetPinGpio),
-                m_pBackLightGpio(pBackLightGpio)
+                m_pBackLightGpio(pBackLightGpio),
+                m_pCS(pCS),
+                m_Brightness(0x13)
 {
     
     
@@ -144,6 +147,7 @@ bool Nokia5110LCD::HwInit()
 	m_pDataCommandSelectGpio->HwInit();
 	m_pResetPinGpio->HwInit();
 	m_pBackLightGpio->HwInit();
+    if(m_pCS) m_pCS->HwInit();
 
 	//Initialize the Display
 	DisplayInit();
@@ -164,7 +168,7 @@ bool Nokia5110LCD::DisplayInit()
 	  Write(COMMAND, 0x21); //Tell LCD that extended commands follow
 	  Write(COMMAND, 0xBF); //Set LCD Vop (Contrast): Try 0xB1(good @ 3.3V) or 0xBF if your display is too dark, Amit: 0xBF works fine with 3.3v
 	  Write(COMMAND, 0x04); //Set Temp coefficent
-	  Write(COMMAND, 0x13); //LCD bias mode 1:48: Try 0x13 or 0x14 ,Amit: 0x13 works fine with 3.3v
+	  Write(COMMAND, m_Brightness); //LCD bias mode 1:48: Try 0x13 or 0x14 ,Amit: 0x13 works fine with 3.3v, for blue display 0x15 works fine
 
 	  Write(COMMAND, 0x20); //We must send 0x20 before modifying the display control mode
 	  Write(COMMAND, 0x0C); //Set display control, normal mode. 0x0D for inverse
@@ -191,7 +195,7 @@ void Nokia5110LCD::Write(DC_t DC, unsigned char data)
  		m_pDataCommandSelectGpio->Off();
  	}
     
-    m_pSpiDriverLCD->Send(&data,1);
+    m_pSpiDriverLCD->Tx(&data,1,m_pCS);
     
 }
 

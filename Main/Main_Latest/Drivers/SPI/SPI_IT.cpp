@@ -2,7 +2,7 @@
 ** FILE: SPI.cpp
 **
 ** DESCRIPTION:
-**  SPI implementation in polling mode
+**  SPI implementation in Interrupt mode
 **
 ** CREATED: 9/2/2018, by Amit Chaudhary
 ******************/
@@ -12,13 +12,7 @@
 namespace Peripherals
 {
     
-SPI_HandleTypeDef SPI_IT::m_hspi;    
-SPI_IT::Callback_t SPI_IT::TxDoneCallback;
-SPI_IT::Callback_t SPI_IT::RxDoneCallback;
-SPI_IT::Callback_t SPI_IT::TxRxDoneCallback;
-SPI_IT::Callback_t SPI_IT::TxHalfDoneCallback;
-SPI_IT::Callback_t SPI_IT::RxHalfDoneCallback;
-SPI_IT::Callback_t SPI_IT::TxRxHalfDoneCallback;
+SPI_HandleTypeDef  SPI_IT::m_hspi;    
 
 SPI_IT::SPI_IT (SPIx_t spix , uint32_t hz) : m_hz(hz), m_spix(spix)
 {
@@ -106,7 +100,7 @@ Status_t SPI_IT::HwInit ()
     
 }
 
-Status_t SPI_IT::Send(uint8_t* pTxBuf, uint16_t TxLen, GpioOutput* CS)
+Status_t SPI_IT::Tx(uint8_t* pTxBuf, uint16_t TxLen, GpioOutput* CS)
 {
     Status_t Status = 0;
     
@@ -121,7 +115,7 @@ Status_t SPI_IT::Send(uint8_t* pTxBuf, uint16_t TxLen, GpioOutput* CS)
     return Status;
 }
 
-Status_t SPI_IT::Read(uint8_t* pRxBuf, uint16_t RxLen, GpioOutput* CS)
+Status_t SPI_IT::Rx(uint8_t* pRxBuf, uint16_t RxLen, GpioOutput* CS)
 {
     Status_t Status = 0;
     
@@ -136,7 +130,7 @@ Status_t SPI_IT::Read(uint8_t* pRxBuf, uint16_t RxLen, GpioOutput* CS)
     return Status;
 }
 
-Status_t SPI_IT::Xfer(uint8_t* pTxBuf, uint8_t* pRxBuf, uint16_t Len, GpioOutput* CS)
+Status_t SPI_IT::TxRx(uint8_t* pTxBuf, uint8_t* pRxBuf, uint16_t Len, GpioOutput* CS)
 {
     Status_t Status = 0;
     
@@ -159,59 +153,4 @@ void SPI_IT::IRQHandler()
 
 
 }
-
-
-extern "C"
-{
- 
-void HAL_SPI_TxCpltCallback(SPI_HandleTypeDef *hspi)
-{
-      if(Peripherals::SPI_IT::TxDoneCallback != nullptr)
-        Peripherals::SPI_IT::TxDoneCallback();
-}
-
-void HAL_SPI_RxCpltCallback(SPI_HandleTypeDef *hspi)
-{
-      if(Peripherals::SPI_IT::RxDoneCallback != nullptr)
-        Peripherals::SPI_IT::RxDoneCallback();    
-}
-
-void HAL_SPI_TxRxCpltCallback(SPI_HandleTypeDef *hspi)
-{
-      if(Peripherals::SPI_IT::TxRxDoneCallback != nullptr)
-        Peripherals::SPI_IT::TxRxDoneCallback();    
-}
-
-void HAL_SPI_TxHalfCpltCallback(SPI_HandleTypeDef *hspi)
-{
-      if(Peripherals::SPI_IT::TxHalfDoneCallback != nullptr)
-        Peripherals::SPI_IT::TxHalfDoneCallback();    
-    
-}
-
-void HAL_SPI_RxHalfCpltCallback(SPI_HandleTypeDef *hspi)
-{
-      if(Peripherals::SPI_IT::RxHalfDoneCallback != nullptr)
-        Peripherals::SPI_IT::RxHalfDoneCallback();    
-    
-}
-
-void HAL_SPI_TxRxHalfCpltCallback(SPI_HandleTypeDef *hspi)
-{
-      if(Peripherals::SPI_IT::TxRxHalfDoneCallback != nullptr)
-        Peripherals::SPI_IT::TxRxHalfDoneCallback();    
-}
-
-}
-
-
-
-
-
-
-
-
-
-
-
 

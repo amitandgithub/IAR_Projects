@@ -94,20 +94,76 @@ void SPI_Poll_Test()
     LED.HwInit();
     while(1)
     {
-        SPI_Obj.Send(array,4);
+        SPI_Obj.Tx(array,4);
         HAL_Delay(1);
     }    
 }
 
-void Nokia5110LCD_Test()
+void SPI_Int_Test()
 {
-    #define DEL 300
+    static uint8_t array[4] = {0xA5,0xA5,0xA5,0xA5};
+    Peripherals::GpioOutput LED(GPIOB,GPIO_PIN_0);
     static Peripherals::SPI_IT SPI_Obj(Peripherals::SPI_Poll::SPI1_A4_A5_A6_A7, 100000);
+    SPI_Obj.HwInit();
+    LED.HwInit();
+    while(1)
+    {
+        SPI_Obj.Tx(array,4);
+        HAL_Delay(1);
+    }    
+}
+Peripherals::GpioOutput CS_A4(GPIOA,GPIO_PIN_4);
+void SPI1_DMA_Test()
+{
+    static uint8_t array[4] = {0xA5,0xA5,0xA5,0xA5};
+    static Peripherals::SPI_DMA SPI_Obj(Peripherals::SPI_Poll::SPI1_A4_A5_A6_A7, 100000);
+    SPI_Obj.HwInit();
+    SPI_Obj.SPI1_TxDoneCallback = SPI1_DMA_Tx_Complete_Callback;
+    CS_A4.HwInit();
+    while(1)
+    {
+        SPI_Obj.Tx(array,4,&CS_A4);
+        //HAL_Delay(1);
+    }    
+}
+
+void SPI1_DMA_Tx_Complete_Callback()
+{
+    CS_A4.On();
+}
+
+
+Peripherals::GpioOutput CS_B12(GPIOB,GPIO_PIN_12);
+void SPI2_DMA_Test()
+{
+    static uint8_t array[4] = {0xA5,0xA5,0xA5,0xA5};
+    static Peripherals::SPI_DMA SPI_Obj(Peripherals::SPI_Poll::SPI2_B12_B13_B14_B15, 100000);
+    SPI_Obj.HwInit();
+    SPI_Obj.SPI2_TxDoneCallback = SPI2_DMA_Tx_Complete_Callback;
+    CS_B12.HwInit();
+    while(1)
+    {
+        SPI_Obj.Tx(array,4,&CS_B12);
+        //HAL_Delay(1);
+    }    
+}
+
+void SPI2_DMA_Tx_Complete_Callback()
+{
+    CS_B12.On();
+}
+
+
+void Nokia5110LCD_SPI1_Test()
+{
+    #define DEL 200
+    static Peripherals::SPI_DMA SPI_Obj(Peripherals::SPI_Poll::SPI1_A4_A5_A6_A7, 100000);
     static Peripherals::GpioOutput D_C(GPIOB,GPIO_PIN_1);
     static Peripherals::GpioOutput Reset(GPIOB,GPIO_PIN_0);
     static Peripherals::GpioOutput Backlight(GPIOB,GPIO_PIN_10);
     static Peripherals::Nokia5110LCD LCD(&SPI_Obj,&D_C,&Reset,&Backlight);
     LCD.HwInit();
+    LCD.SetBrigntness(0x14);
     while(1)
     {
         LCD.DrawLine(0,0,"Amit Chaudhary");
@@ -124,6 +180,84 @@ void Nokia5110LCD_Test()
     }    
 }
 
+void Nokia5110LCD_SPI2_Test()
+{
+    #define DEL 200
+    static Peripherals::SPI_DMA SPI_Obj(Peripherals::SPI_Poll::SPI2_B12_B13_B14_B15, 100000); // Nokia LCD with SPI 2
+    static Peripherals::GpioOutput D_C(GPIOA,GPIO_PIN_9);
+    static Peripherals::GpioOutput Reset(GPIOA,GPIO_PIN_10);
+    static Peripherals::GpioOutput Backlight(GPIOB,GPIO_PIN_10);
+    static Peripherals::Nokia5110LCD LCD(&SPI_Obj,&D_C,&Reset,&Backlight);
+    LCD.HwInit();
+    SPI_Obj.SPI2_TxDoneCallback = SPI2_DMA_Tx_Complete_Callback;
+    while(1)
+    {
+        LCD.DrawLine(0,0,"Avni Chaudhary");
+        HAL_Delay(DEL);
+        LCD.DrawLine(1,0,"IS");
+        HAL_Delay(DEL);
+        LCD.DrawLine(2,2,"A");
+        HAL_Delay(DEL);
+        LCD.DrawLine(3,3,"Good");
+        HAL_Delay(DEL);
+        LCD.DrawLine(4,7,"Girl");
+        HAL_Delay(DEL);
+        LCD.Clear();
+    }    
+}
 
+void Nokia5110LCD_Dual_Test()
+{
+    #define DEL_DUAL 100
+    
+    /* LCD on SPI 1*/
+    static Peripherals::SPI_DMA SPI_Obj1(Peripherals::SPI_Poll::SPI1_A4_A5_A6_A7, 100000);
+    static Peripherals::GpioOutput D_C1(GPIOB,GPIO_PIN_1);
+    static Peripherals::GpioOutput Reset1(GPIOB,GPIO_PIN_0);
+    static Peripherals::GpioOutput Backlight1(GPIOB,GPIO_PIN_10);
+    static Peripherals::Nokia5110LCD LCD1(&SPI_Obj1,&D_C1,&Reset1,&Backlight1);
+    LCD1.HwInit();
+    LCD1.SetBrigntness(0x15);
+    
+    /* LCD on SPI 2*/
+    static Peripherals::SPI_DMA SPI_Obj2(Peripherals::SPI_Poll::SPI2_B12_B13_B14_B15, 100000); // Nokia LCD with SPI 2
+    static Peripherals::GpioOutput CS2(GPIOA,GPIO_PIN_15);
+    static Peripherals::GpioOutput D_C2(GPIOA,GPIO_PIN_9);
+    static Peripherals::GpioOutput Reset2(GPIOA,GPIO_PIN_10);
+    static Peripherals::GpioOutput Backlight2(GPIOB,GPIO_PIN_10);
+    static Peripherals::Nokia5110LCD LCD2(&SPI_Obj2,&D_C2,&Reset2,&Backlight2);
+    LCD2.HwInit();
+    
+    
+    
+    while(1)
+    {
+        LCD1.DrawLine(0,0,"Amit Chaudhary");
+        HAL_Delay(DEL_DUAL);
+        LCD1.DrawLine(1,0,"IS");
+        HAL_Delay(DEL_DUAL);
+        LCD1.DrawLine(2,2,"A");
+        HAL_Delay(DEL_DUAL);
+        LCD1.DrawLine(3,3,"Good");
+        HAL_Delay(DEL_DUAL);
+        LCD1.DrawLine(4,7,"Boy");
+        HAL_Delay(DEL_DUAL);
+        
+        
+        LCD2.DrawLine(0,0,"Avni Chaudhary");
+        HAL_Delay(DEL_DUAL);
+        LCD2.DrawLine(1,0,"IS");
+        HAL_Delay(DEL_DUAL);
+        LCD2.DrawLine(2,2,"A");
+        HAL_Delay(DEL_DUAL);
+        LCD2.DrawLine(3,3,"Good");
+        HAL_Delay(DEL_DUAL);
+        LCD2.DrawLine(4,7,"Girl");
+        HAL_Delay(DEL_DUAL);
+        
+        LCD1.Clear();
+        LCD2.Clear();
+    }    
+}
 
 

@@ -98,7 +98,7 @@ Status_t SPI_Poll::HwInit ()
     
 }
 
-Status_t SPI_Poll::Send(uint8_t* pTxBuf, uint16_t TxLen, GpioOutput* CS)
+Status_t SPI_Poll::Tx(uint8_t* pTxBuf, uint16_t TxLen, GpioOutput* CS)
 {
     Status_t Status = 0;
     
@@ -113,7 +113,7 @@ Status_t SPI_Poll::Send(uint8_t* pTxBuf, uint16_t TxLen, GpioOutput* CS)
     return Status;
 }
 
-Status_t SPI_Poll::Read(uint8_t* pRxBuf, uint16_t RxLen, GpioOutput* CS)
+Status_t SPI_Poll::Rx(uint8_t* pRxBuf, uint16_t RxLen, GpioOutput* CS)
 {
     Status_t Status = 0;
     
@@ -128,7 +128,7 @@ Status_t SPI_Poll::Read(uint8_t* pRxBuf, uint16_t RxLen, GpioOutput* CS)
     return Status;
 }
 
-Status_t SPI_Poll::Xfer(uint8_t* pTxBuf, uint8_t* pRxBuf, uint16_t Len, GpioOutput* CS)
+Status_t SPI_Poll::TxRx(uint8_t* pTxBuf, uint8_t* pRxBuf, uint16_t Len, GpioOutput* CS)
 {
     Status_t Status = 0;
     

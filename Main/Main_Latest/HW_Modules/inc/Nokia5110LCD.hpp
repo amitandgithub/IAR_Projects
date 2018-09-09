@@ -9,8 +9,9 @@
 #define APP_INC_NOKIA5110LCD_HPP_
 
 
-//#include"SPI_Poll.h"
+#include "SPI_Poll.h"
 #include "SPI_IT.h"
+#include "SPI_DMA.h"
 #include "GpioInput.hpp"
 #include "GpioOutput.hpp"
 
@@ -23,7 +24,9 @@ namespace Peripherals
 class Nokia5110LCD
 {
 public:
-    typedef Peripherals::SPI_IT SPIDrv_t;
+    //typedef Peripherals::SPI_Poll SPIDrv_t;
+    //typedef Peripherals::SPI_IT SPIDrv_t;
+    typedef Peripherals::SPI_DMA SPIDrv_t;
 	typedef enum
 	{
 		COMMAND = 0,
@@ -42,7 +45,8 @@ public:
 	Nokia5110LCD(SPIDrv_t*   pSpiDriverLCD ,
 				 GpioOutput* pDataCommandSelectGpio,
 				 GpioOutput* pResetPinGpio,
-				 GpioOutput* pBackLightGpio);
+                 GpioOutput* pBackLightGpio,
+				 GpioOutput* pCS = nullptr);
     
     Nokia5110LCD(SPIDrv_t::SPIx_t Spix,
 				 GpioOutput::PORT_t ResetPort, GpioOutput::PIN_t ResetPin,
@@ -62,6 +66,7 @@ public:
 	void LCDCharacter(const char character);
 	void DrawChar(unsigned char Row, unsigned char Col, const char aChar);
 	void DrawBuffer(char* pBuffer);
+    void SetBrigntness(uint8_t Brightness = 0x13){m_Brightness = Brightness;HwInit();}
 
 private:
 //    SPIDrv_t   SpiDriverLCD(SPIDrv_t::SPIx_t Spix, uint32_t hz);
@@ -72,6 +77,8 @@ private:
 	GpioOutput* m_pDataCommandSelectGpio;
 	GpioOutput* m_pResetPinGpio;
 	GpioOutput* m_pBackLightGpio;
+    GpioOutput* m_pCS;
+    uint8_t     m_Brightness;
 };
 
 

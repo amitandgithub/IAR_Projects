@@ -13,12 +13,12 @@
 #define SPI_h
 
 
-#include "SPIBase.h"
+#include "SPI_Base.h"
 
 namespace Peripherals
 {
     
-class SPI_Poll : public SPIBase
+class SPI_Poll : public SPI_Base
 {
 public:
     static const uint32_t SPI_POLL_DELAY = 0xFFUL;
@@ -31,11 +31,11 @@ public:
     
     virtual       Status_t        HwDeinit        (){ return HAL_SPI_DeInit(&m_hspi);}
     
-    virtual       Status_t        Send            (uint8_t* pTxBuf, uint16_t TxLen, GpioOutput* CS = nullptr);
+    virtual       Status_t        Tx            (uint8_t* pTxBuf, uint16_t TxLen, GpioOutput* CS = nullptr);
     
-    virtual       Status_t        Read            (uint8_t* pRxBuf, uint16_t RxLen, GpioOutput* CS = nullptr);  
+    virtual       Status_t        Rx            (uint8_t* pRxBuf, uint16_t RxLen, GpioOutput* CS = nullptr);  
     
-    virtual       Status_t        Xfer            (uint8_t* pTxBuf, uint8_t* pRxBuf, uint16_t Len, GpioOutput* CS); 
+    virtual       Status_t        TxRx          (uint8_t* pTxBuf, uint8_t* pRxBuf, uint16_t Len, GpioOutput* CS); 
     
 private: 
     GpioOutput* m_pDefault_CS;

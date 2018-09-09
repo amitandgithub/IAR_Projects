@@ -2,7 +2,7 @@
 ** CLASS: SPI 
 **
 ** DESCRIPTION:
-**  SPI implementation in polling mode
+**  SPI implementation in Interrupt mode
 **
 ** CREATED: 9/2/2018, by Amit Chaudhary
 **
@@ -13,18 +13,16 @@
 #define SPI_IT_h
 
 
-#include "SPIBase.h"
+#include "SPI_Base.h"
 #include "Interrupt.hpp"
 
 namespace Peripherals
 {
     
-class SPI_IT : public SPIBase, public Interrupt 
+class SPI_IT : public SPI_Base, public Interrupt 
 {
 public:
-    typedef void (*Callback_t) ();
-     
-    static const uint32_t SPI_POLL_DELAY = 0xFFUL;
+
     
     SPI_IT (SPIx_t spix = SPI1_A4_A5_A6_A7, uint32_t hz = 100000UL);
     
@@ -34,22 +32,16 @@ public:
     
     virtual       Status_t        HwDeinit        (){ return HAL_SPI_DeInit(&m_hspi);}
     
-    virtual       Status_t        Send            (uint8_t* pTxBuf, uint16_t TxLen, GpioOutput* CS = nullptr);
+    virtual       Status_t        Tx              (uint8_t* pTxBuf, uint16_t TxLen, GpioOutput* CS = nullptr);
     
-    virtual       Status_t        Read            (uint8_t* pRxBuf, uint16_t RxLen, GpioOutput* CS = nullptr);  
+    virtual       Status_t        Rx              (uint8_t* pRxBuf, uint16_t RxLen, GpioOutput* CS = nullptr);  
     
-    virtual       Status_t        Xfer            (uint8_t* pTxBuf, uint8_t* pRxBuf, uint16_t Len, GpioOutput* CS);  
+    virtual       Status_t        TxRx            (uint8_t* pTxBuf, uint8_t* pRxBuf, uint16_t Len, GpioOutput* CS);  
     
-    static     void            IRQHandler      ();
-
-public:
-    static Callback_t TxDoneCallback;
-    static Callback_t RxDoneCallback;
-    static Callback_t TxRxDoneCallback;
-    static Callback_t TxHalfDoneCallback;
-    static Callback_t RxHalfDoneCallback;
-    static Callback_t TxRxHalfDoneCallback;
-    
+                  Status_t       Post             (Transaction_t aTransaction);
+                  
+private:
+    static        void           IRQHandler       ();
 private: 
     GpioOutput* m_pDefault_CS;
     SPIx_t m_spix;
