@@ -10,7 +10,23 @@
 
 namespace Peripherals
 {
-        
+SPI_Base::Transaction_t* SPI_Base::m_pCurentTransaction_SPI1;
+SPI_Base::Transaction_t* SPI_Base::m_pCurentTransaction_SPI2;
+    
+SPI_Base* SPI_Base::m_pSPI1_Obj;
+SPI_Base* SPI_Base::m_pSPI2_Obj; 
+
+SPI_Base::Queue1 SPI_Base::SPI1_Q;
+SPI_Base::Queue2 SPI_Base::SPI2_Q;
+
+SPI_Base::Queue1* SPI_Base::m_pSPI1_Q = &SPI_Base::SPI1_Q;
+SPI_Base::Queue2* SPI_Base::m_pSPI2_Q = &SPI_Base::SPI2_Q;
+
+
+
+uint32_t SPI_Base::SPI1_Status ;
+uint32_t SPI_Base::SPI2_Status ;
+
 SPI_Base::Callback_t                            SPI_Base::SPI1_TxDoneCallback;
 SPI_Base::Callback_t                            SPI_Base::SPI1_RxDoneCallback;
 SPI_Base::Callback_t                            SPI_Base::SPI1_TxRxDoneCallback;
@@ -25,10 +41,212 @@ SPI_Base::Callback_t                            SPI_Base::SPI2_TxHalfDoneCallbac
 SPI_Base::Callback_t                            SPI_Base::SPI2_RxHalfDoneCallback;
 SPI_Base::Callback_t                            SPI_Base::SPI2_TxRxHalfDoneCallback;
 
+DMA_HandleTypeDef* SPI_Base::m_phdma_spi1_rx;
+DMA_HandleTypeDef* SPI_Base::m_phdma_spi1_tx;
+DMA_HandleTypeDef* SPI_Base::m_phdma_spi2_rx;
+DMA_HandleTypeDef* SPI_Base::m_phdma_spi2_tx;
+
+DMA_HandleTypeDef SPI_Base::m_hdma_spi1_rx;
+DMA_HandleTypeDef SPI_Base::m_hdma_spi1_tx;
+DMA_HandleTypeDef SPI_Base::m_hdma_spi2_rx;
+DMA_HandleTypeDef SPI_Base::m_hdma_spi2_tx;
+
 Peripherals::GpioOutput* SPI_Base::m_pChipSelect_SPI1;
 Peripherals::GpioOutput* SPI_Base::m_pChipSelect_SPI2;
+
 SPI_HandleTypeDef  SPI_Base::m_hspi_1; 
 SPI_HandleTypeDef  SPI_Base::m_hspi_2; 
+
+SPI_HandleTypeDef* SPI_Base::m_phspi_1;
+SPI_HandleTypeDef* SPI_Base::m_phspi_2;
+
+Status_t SPI_Base::SPI_Init (SPIx_t SPIx, HZ_t HZ, SPI_HandleTypeDef* phSPI)
+{
+      GPIO_InitTypeDef GPIO_InitStruct;  
+      
+      if( (phSPI == nullptr) )
+         return HAL_ERROR;
+        
+    /* SPI1 parameter configuration*/
+    if(SPIx == SPI1_A4_A5_A6_A7)
+    {   
+        m_pChipSelect_SPI1->HwInit(); 
+       
+        m_phspi_1->Instance = SPI1;
+        
+        __HAL_RCC_GPIOA_CLK_ENABLE();
+        
+        /* Peripheral clock enable */
+        __HAL_RCC_SPI1_CLK_ENABLE();
+        
+        
+        /**SPI1 GPIO Configuration    
+        PA4     ------> SPI1_NSS
+        PA5     ------> SPI1_SCK
+        PA6     ------> SPI1_MISO
+        PA7     ------> SPI1_MOSI 
+        */
+        GPIO_InitStruct.Pin     = GPIO_PIN_5|GPIO_PIN_7;
+        GPIO_InitStruct.Mode    = GPIO_MODE_AF_PP;
+        GPIO_InitStruct.Speed   = GPIO_SPEED_FREQ_HIGH;
+        HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+        
+        GPIO_InitStruct.Pin     = GPIO_PIN_6;
+        GPIO_InitStruct.Mode    = GPIO_MODE_INPUT;
+        GPIO_InitStruct.Pull    = GPIO_NOPULL;
+        HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+ 
+        m_phspi_1->Init.Mode                = phSPI->Init.Mode ;
+        m_phspi_1->Init.Direction           = phSPI->Init.Direction;
+        m_phspi_1->Init.DataSize            = phSPI->Init.DataSize;
+        m_phspi_1->Init.CLKPolarity         = phSPI->Init.CLKPolarity;
+        m_phspi_1->Init.CLKPhase            = phSPI->Init.CLKPhase;
+        m_phspi_1->Init.NSS                 = phSPI->Init.NSS;
+        m_phspi_1->Init.BaudRatePrescaler   = phSPI->Init.BaudRatePrescaler;
+        m_phspi_1->Init.FirstBit            = phSPI->Init.FirstBit;
+        m_phspi_1->Init.TIMode              = phSPI->Init.TIMode;
+        m_phspi_1->Init.CRCCalculation      = phSPI->Init.CRCCalculation;
+        m_phspi_1->Init.CRCPolynomial       = phSPI->Init.CRCPolynomial;
+        
+        if (HAL_SPI_Init(m_phspi_1) != HAL_OK)
+        {
+            return HAL_ERROR;
+        }    
+        
+    }
+    else if(SPIx == SPI1_A15_B3_B4_B5)
+    {   
+        m_pChipSelect_SPI1->HwInit(); 
+       
+        m_phspi_1->Instance = SPI1;
+        
+        __HAL_RCC_GPIOA_CLK_ENABLE();
+        __HAL_RCC_GPIOB_CLK_ENABLE();
+        
+        /* Peripheral clock enable */
+        __HAL_RCC_SPI1_CLK_ENABLE();
+        
+        
+        /**SPI1 GPIO Configuration    
+        PA15     ------> SPI1_NSS
+        PB3     ------> SPI1_SCK
+        PB4     ------> SPI1_MISO
+        PB5     ------> SPI1_MOSI 
+        */
+        GPIO_InitStruct.Pin = GPIO_PIN_3|GPIO_PIN_5;
+        GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+        GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
+        HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+        
+        GPIO_InitStruct.Pin = GPIO_PIN_4;
+        GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+        GPIO_InitStruct.Pull = GPIO_NOPULL;
+        HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+ 
+        m_phspi_1->Init.Mode                = phSPI->Init.Mode ;
+        m_phspi_1->Init.Direction           = phSPI->Init.Direction;
+        m_phspi_1->Init.DataSize            = phSPI->Init.DataSize;
+        m_phspi_1->Init.CLKPolarity         = phSPI->Init.CLKPolarity;
+        m_phspi_1->Init.CLKPhase            = phSPI->Init.CLKPhase;
+        m_phspi_1->Init.NSS                 = phSPI->Init.NSS;
+        m_phspi_1->Init.BaudRatePrescaler   = phSPI->Init.BaudRatePrescaler;
+        m_phspi_1->Init.FirstBit            = phSPI->Init.FirstBit;
+        m_phspi_1->Init.TIMode              = phSPI->Init.TIMode;
+        m_phspi_1->Init.CRCCalculation      = phSPI->Init.CRCCalculation;
+        m_phspi_1->Init.CRCPolynomial       = phSPI->Init.CRCPolynomial;
+        
+        if (HAL_SPI_Init(m_phspi_1) != HAL_OK)
+        {
+            return HAL_ERROR;
+        }    
+        
+    }
+    else if(SPIx == SPI2_B12_B13_B14_B15)
+    {   
+        m_pChipSelect_SPI2->HwInit(); 
+       
+        m_phspi_2->Instance = SPI2;
+        
+        __HAL_RCC_GPIOB_CLK_ENABLE();
+        
+        /* Peripheral clock enable */
+        __HAL_RCC_SPI2_CLK_ENABLE();
+        
+        
+        /**SPI1 GPIO Configuration    
+        PA4     ------> SPI1_NSS
+        PA5     ------> SPI1_SCK
+        PA6     ------> SPI1_MISO
+        PA7     ------> SPI1_MOSI 
+        */
+        GPIO_InitStruct.Pin     = GPIO_PIN_5|GPIO_PIN_7;
+        GPIO_InitStruct.Mode    = GPIO_MODE_AF_PP;
+        GPIO_InitStruct.Speed   = GPIO_SPEED_FREQ_HIGH;
+        HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+        
+        GPIO_InitStruct.Pin     = GPIO_PIN_6;
+        GPIO_InitStruct.Mode    = GPIO_MODE_INPUT;
+        GPIO_InitStruct.Pull    = GPIO_NOPULL;
+        HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+ 
+        m_phspi_2->Init.Mode                = phSPI->Init.Mode ;
+        m_phspi_2->Init.Direction           = phSPI->Init.Direction;
+        m_phspi_2->Init.DataSize            = phSPI->Init.DataSize;
+        m_phspi_2->Init.CLKPolarity         = phSPI->Init.CLKPolarity;
+        m_phspi_2->Init.CLKPhase            = phSPI->Init.CLKPhase;
+        m_phspi_2->Init.NSS                 = phSPI->Init.NSS;
+        m_phspi_2->Init.BaudRatePrescaler   = phSPI->Init.BaudRatePrescaler;
+        m_phspi_2->Init.FirstBit            = phSPI->Init.FirstBit;
+        m_phspi_2->Init.TIMode              = phSPI->Init.TIMode;
+        m_phspi_2->Init.CRCCalculation      = phSPI->Init.CRCCalculation;
+        m_phspi_2->Init.CRCPolynomial       = phSPI->Init.CRCPolynomial;
+        
+        if (HAL_SPI_Init(m_phspi_2) != HAL_OK)
+        {
+            return HAL_ERROR;
+        }    
+        
+    }
+    else
+    {
+        return HAL_ERROR;
+    }
+
+    return HAL_OK;
+    
+}
+
+
+void SPI_Base::SPI1__IRQHandler()
+{
+   HAL_SPI_IRQHandler(m_phspi_1);
+}
+
+void SPI_Base::SPI2__IRQHandler()
+{
+   HAL_SPI_IRQHandler(m_phspi_2);
+}
+
+/* IRQ handler for SP1 DMA RX */
+void SPI_Base::DMA_Ch2_IRQHandler()
+{
+   HAL_DMA_IRQHandler(m_phspi_1->hdmarx);
+}
+/* IRQ handler for SP1 DMA TX */
+void SPI_Base::DMA_Ch3_IRQHandler()
+{
+   HAL_DMA_IRQHandler(m_phspi_1->hdmatx);
+}
+/* IRQ handler for SP2 DMA RX */
+void SPI_Base::DMA_Ch4_IRQHandler()
+{
+   HAL_DMA_IRQHandler(m_phspi_2->hdmarx);
+}
+/* IRQ handler for SP2 DMA TX */
+void SPI_Base::DMA_Ch5_IRQHandler()
+{
+   HAL_DMA_IRQHandler(m_phspi_2->hdmatx);
+}
 
 }
 
@@ -37,19 +255,60 @@ SPI_HandleTypeDef  SPI_Base::m_hspi_2;
 extern "C"
 {
  /* Transmit complete callback*/
+    
+using SPI_Base = Peripherals::SPI_Base;
+
 void HAL_SPI_TxCpltCallback(SPI_HandleTypeDef *hspi)
 {
+    // 721 Cycles total
     if(hspi->Instance == SPI1)
     {
-        Peripherals::SPI_Base::m_pChipSelect_SPI1->On();
-        if(Peripherals::SPI_Base::SPI1_TxDoneCallback != nullptr)
-            Peripherals::SPI_Base::SPI1_TxDoneCallback();
+        
+        SPI_Base::m_pChipSelect_SPI1->On();
+        
+        SPI_Base::SPI1_Status &= ~SPI_Base::SPI_BUSY;
+        
+        if(SPI_Base::m_pCurentTransaction_SPI1) 
+        {
+            SPI_Base::m_pCurentTransaction_SPI1->TxnStatus.Event |= SPI_Base::SPI_TX_COMPLETE; 
+            SPI_Base::m_pCurentTransaction_SPI1->TxnStatus.TimeUnits = 1;
+            SPI_Base::m_pCurentTransaction_SPI1->TxnStatus.TimeValue = 200;            
+        }
+            
+        if(SPI_Base::m_pSPI1_Q->IsQueueEmpty() == false)                          // 28 cycles
+        {
+            SPI_Base::m_pSPI1_Q->Read(SPI_Base::m_pCurentTransaction_SPI1);       // 77 cycles
+            SPI_Base::m_pSPI1_Obj->Xfer(SPI_Base::m_pCurentTransaction_SPI1);     // 518 cycles
+        }
+        
+        if(SPI_Base::SPI1_TxDoneCallback != nullptr)
+            SPI_Base::SPI1_TxDoneCallback(); 
+       
+        
     }
     else if(hspi->Instance == SPI2)
     {
-        Peripherals::SPI_Base::m_pChipSelect_SPI2->On();
-        if(Peripherals::SPI_Base::SPI2_TxDoneCallback != nullptr)
-            Peripherals::SPI_Base::SPI2_TxDoneCallback();   
+        SPI_Base::SPI2_Status &= ~SPI_Base::SPI_BUSY;
+        
+        SPI_Base::m_pChipSelect_SPI2->On();
+        
+        if(SPI_Base::m_pCurentTransaction_SPI2) 
+        {
+            SPI_Base::m_pCurentTransaction_SPI2->TxnStatus.Event |= SPI_Base::SPI_TX_COMPLETE; 
+            SPI_Base::m_pCurentTransaction_SPI2->TxnStatus.TimeUnits = 1;
+            SPI_Base::m_pCurentTransaction_SPI2->TxnStatus.TimeValue = 200;            
+        }
+         
+        if(SPI_Base::m_pSPI2_Q->IsQueueEmpty() == false)
+        {
+            SPI_Base::m_pSPI2_Q->Read(SPI_Base::m_pCurentTransaction_SPI2);
+            SPI_Base::m_pSPI2_Obj->Xfer(SPI_Base::m_pCurentTransaction_SPI2);
+        }
+        
+        if(SPI_Base::SPI2_TxDoneCallback != nullptr)
+            SPI_Base::SPI2_TxDoneCallback();
+        
+       
     }
 
 }
@@ -58,13 +317,22 @@ void HAL_SPI_RxCpltCallback(SPI_HandleTypeDef *hspi)
 {
     if(hspi->Instance == SPI1)
     {
-        if(Peripherals::SPI_Base::SPI1_RxDoneCallback != nullptr)
-            Peripherals::SPI_Base::SPI1_RxDoneCallback();
+        
+        SPI_Base::m_pChipSelect_SPI1->On();
+        SPI_Base::SPI1_Status &= ~SPI_Base::SPI_BUSY;
+        if(SPI_Base::SPI1_RxDoneCallback != nullptr)
+            SPI_Base::SPI1_RxDoneCallback();
+        
+        
     }
     else if(hspi->Instance == SPI2)
     {
-        if(Peripherals::SPI_Base::SPI2_RxDoneCallback != nullptr)
-            Peripherals::SPI_Base::SPI2_RxDoneCallback();   
+         SPI_Base::m_pChipSelect_SPI2->On();
+          SPI_Base::SPI2_Status &= ~SPI_Base::SPI_BUSY;
+        if(SPI_Base::SPI2_RxDoneCallback != nullptr)
+            SPI_Base::SPI2_RxDoneCallback(); 
+        
+       
     }    
 }
  /* Transmit and Receive complete callback*/
@@ -72,15 +340,21 @@ void HAL_SPI_TxRxCpltCallback(SPI_HandleTypeDef *hspi)
 {
     if(hspi->Instance == SPI1)
     {
-        Peripherals::SPI_Base::m_pChipSelect_SPI1->On();
-        if(Peripherals::SPI_Base::SPI1_TxRxDoneCallback != nullptr)
-            Peripherals::SPI_Base::SPI1_TxRxDoneCallback();
+        SPI_Base::m_pChipSelect_SPI1->On();
+        SPI_Base::SPI1_Status &= ~SPI_Base::SPI_BUSY;
+        if(SPI_Base::SPI1_TxRxDoneCallback != nullptr)
+            SPI_Base::SPI1_TxRxDoneCallback();
+        
+        
     }
     else if(hspi->Instance == SPI2)
     {
-        Peripherals::SPI_Base::m_pChipSelect_SPI2->On();
-        if(Peripherals::SPI_Base::SPI2_TxRxDoneCallback != nullptr)
-            Peripherals::SPI_Base::SPI2_TxRxDoneCallback();   
+        SPI_Base::m_pChipSelect_SPI2->On();
+        SPI_Base::SPI2_Status &= ~SPI_Base::SPI_BUSY;
+        if(SPI_Base::SPI2_TxRxDoneCallback != nullptr)
+            SPI_Base::SPI2_TxRxDoneCallback();   
+        
+       
     }   
 }
 
@@ -89,13 +363,13 @@ void HAL_SPI_TxHalfCpltCallback(SPI_HandleTypeDef *hspi)
 {
     if(hspi->Instance == SPI1)
     {
-        if(Peripherals::SPI_Base::SPI1_TxHalfDoneCallback != nullptr)
-            Peripherals::SPI_Base::SPI1_TxHalfDoneCallback();
+        if(SPI_Base::SPI1_TxHalfDoneCallback != nullptr)
+            SPI_Base::SPI1_TxHalfDoneCallback();
     }
     else if(hspi->Instance == SPI2)
     {
-        if(Peripherals::SPI_Base::SPI2_TxHalfDoneCallback != nullptr)
-            Peripherals::SPI_Base::SPI2_TxHalfDoneCallback();   
+        if(SPI_Base::SPI2_TxHalfDoneCallback != nullptr)
+            SPI_Base::SPI2_TxHalfDoneCallback();   
     }
 
 }
@@ -104,13 +378,13 @@ void HAL_SPI_RxHalfCpltCallback(SPI_HandleTypeDef *hspi)
 {
     if(hspi->Instance == SPI1)
     {
-        if(Peripherals::SPI_Base::SPI1_RxHalfDoneCallback != nullptr)
-            Peripherals::SPI_Base::SPI1_RxHalfDoneCallback();
+        if(SPI_Base::SPI1_RxHalfDoneCallback != nullptr)
+            SPI_Base::SPI1_RxHalfDoneCallback();
     }
     else if(hspi->Instance == SPI2)
     {
-        if(Peripherals::SPI_Base::SPI2_RxHalfDoneCallback != nullptr)
-            Peripherals::SPI_Base::SPI2_RxHalfDoneCallback();   
+        if(SPI_Base::SPI2_RxHalfDoneCallback != nullptr)
+            SPI_Base::SPI2_RxHalfDoneCallback();   
     }    
 }
  /* Transmit and Receive Half complete callback*/
@@ -118,13 +392,13 @@ void HAL_SPI_TxRxHalfCpltCallback(SPI_HandleTypeDef *hspi)
 {
     if(hspi->Instance == SPI1)
     {
-        if(Peripherals::SPI_Base::SPI1_TxRxHalfDoneCallback != nullptr)
-            Peripherals::SPI_Base::SPI1_TxRxHalfDoneCallback();
+        if(SPI_Base::SPI1_TxRxHalfDoneCallback != nullptr)
+            SPI_Base::SPI1_TxRxHalfDoneCallback();
     }
     else if(hspi->Instance == SPI2)
     {
-        if(Peripherals::SPI_Base::SPI2_TxRxHalfDoneCallback != nullptr)
-            Peripherals::SPI_Base::SPI2_TxRxHalfDoneCallback();   
+        if(SPI_Base::SPI2_TxRxHalfDoneCallback != nullptr)
+            SPI_Base::SPI2_TxRxHalfDoneCallback();   
     }   
 }
 

@@ -24,29 +24,34 @@ class SPI_IT : public SPI_Base, public Interrupt
 public:
 
     
-    SPI_IT (SPIx_t spix = SPI1_A4_A5_A6_A7, uint32_t hz = 100000UL);
+    SPI_IT (SPIx_t spix, GpioOutput* CS, HZ_t hz = 100000UL,SPI_HandleTypeDef* phspi_x = nullptr);
     
     virtual ~SPI_IT (){HwDeinit();};
     
     virtual       Status_t        HwInit          ();
     
-    virtual       Status_t        HwDeinit        (){ return HAL_SPI_DeInit(&m_hspi);}
+    virtual       Status_t        HwDeinit        (){ return HAL_SPI_DeInit(&SPI_Base::m_hspi_1);}
     
-    virtual       Status_t        Tx              (uint8_t* pTxBuf, uint16_t TxLen, GpioOutput* CS = nullptr);
+    virtual       Status_t        Tx              (uint8_t* pTxBuf, uint16_t TxLen);
     
-    virtual       Status_t        Rx              (uint8_t* pRxBuf, uint16_t RxLen, GpioOutput* CS = nullptr);  
+    virtual       Status_t        Rx              (uint8_t* pRxBuf, uint16_t RxLen);  
     
-    virtual       Status_t        TxRx            (uint8_t* pTxBuf, uint8_t* pRxBuf, uint16_t Len, GpioOutput* CS);  
+    virtual       Status_t        TxRx            (uint8_t* pTxBuf, uint8_t* pRxBuf, uint16_t Len);
     
-                  Status_t       Post             (Transaction_t aTransaction);
+    virtual       Status_t        Xfer            (Transaction_t* aTransaction);
+    
+                  Status_t        Post            (Transaction_t aTransaction);
                   
-private:
-    static        void           IRQHandler       ();
+                  Status_t        Post            (Transaction_t* pTransaction); 
+                  
+                  void            Run             ();
+                  
+                  uint32_t        GetStatus       ();
+                  
 private: 
-    GpioOutput* m_pDefault_CS;
+
     SPIx_t m_spix;
     uint32_t m_hz;
-    static SPI_HandleTypeDef m_hspi;
   
 };
 

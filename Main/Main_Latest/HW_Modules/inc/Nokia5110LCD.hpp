@@ -19,7 +19,7 @@
 namespace Peripherals
 {
 
-
+#define DUAL_BUFFER
 
 class Nokia5110LCD
 {
@@ -32,8 +32,8 @@ public:
 		COMMAND = 0,
 		DATA
 	}DC_t;
-
-	static const uint8_t NORMAL  = 0x0C;
+    
+    static const uint8_t NORMAL  = 0x0C;
 	static const uint8_t INVERSE = 0x0D;
 
 	static const uint8_t LCD_X  = 84;
@@ -41,12 +41,14 @@ public:
 
 	static const uint8_t SIZE_OF_1_CHAR = 6;
     static const uint8_t NO_OF_CHAR_IN_LINE = 14;
+    static const uint16_t DISPLAY_BUF_SIZE = (LCD_X*LCD_Y)/8;
+    static const uint8_t TOTAL_ROWS = 6;
 
 	Nokia5110LCD(SPIDrv_t*   pSpiDriverLCD ,
+                 GpioOutput* pCS,
 				 GpioOutput* pDataCommandSelectGpio,
 				 GpioOutput* pResetPinGpio,
-                 GpioOutput* pBackLightGpio,
-				 GpioOutput* pCS = nullptr);
+                 GpioOutput* pBackLightGpio);
     
     Nokia5110LCD(SPIDrv_t::SPIx_t Spix,
 				 GpioOutput::PORT_t ResetPort, GpioOutput::PIN_t ResetPin,
@@ -60,13 +62,20 @@ public:
 	void Write(DC_t DC, unsigned char data);
 	void GoToXY(int x, int y);
 	void Clear();
+    void ClearBuffer();
 	void DrawLine(unsigned char Row, unsigned char Col, const char* Str);
 	void DrawString(const char *characters);
 	void DrawBitmap(const char my_array[]);
 	void LCDCharacter(const char character);
 	void DrawChar(unsigned char Row, unsigned char Col, const char aChar);
 	void DrawBuffer(char* pBuffer);
-    void SetBrigntness(uint8_t Brightness = 0x13){m_Brightness = Brightness;HwInit();}
+    void SetBrigntness(uint8_t Brightness = 0x13){m_Brightness = Brightness;DisplayInit();}
+    void PowerDown();
+    void DrawCharBuf(unsigned char Row, unsigned char Col, const char aChar, uint8_t format = NORMAL);
+    void DrawStrBuf (unsigned char Row, unsigned char Col, const char* Str, uint8_t format = NORMAL);
+    void DrawBitmapBuf(const char* Str, uint8_t format);
+    uint32_t Refresh();
+    void Run(){Refresh();};
 
 private:
 //    SPIDrv_t   SpiDriverLCD(SPIDrv_t::SPIx_t Spix, uint32_t hz);
@@ -79,53 +88,19 @@ private:
 	GpioOutput* m_pBackLightGpio;
     GpioOutput* m_pCS;
     uint8_t     m_Brightness;
+    uint8_t     m_BufferA[DISPLAY_BUF_SIZE];
+    Peripherals::SPI_Base::Transaction_t m_CurrentTransaction;
+
+    
+#if defined(DUAL_BUFFER)
+    uint8_t     m_BufferB[DISPLAY_BUF_SIZE];
+    uint8_t     *m_pSysBuf;
+    uint8_t     *m_pAppBuf;
+#endif
+    
 };
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #endif /* APP_INC_NOKIA5110LCD_HPP_ */

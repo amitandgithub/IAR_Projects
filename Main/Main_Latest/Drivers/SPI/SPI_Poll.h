@@ -23,26 +23,25 @@ class SPI_Poll : public SPI_Base
 public:
     static const uint32_t SPI_POLL_DELAY = 0xFFUL;
     
-    SPI_Poll (SPIx_t spix = SPI1_A4_A5_A6_A7, uint32_t hz = 100000UL);
+    SPI_Poll (SPIx_t spix, GpioOutput* CS, HZ_t hz = 100000UL,SPI_HandleTypeDef* phspi_x = nullptr);
     
     virtual ~SPI_Poll (){HwDeinit();};
     
     virtual       Status_t        HwInit          ();
     
-    virtual       Status_t        HwDeinit        (){ return HAL_SPI_DeInit(&m_hspi);}
+    virtual       Status_t        HwDeinit        (){ return 1;}
     
-    virtual       Status_t        Tx            (uint8_t* pTxBuf, uint16_t TxLen, GpioOutput* CS = nullptr);
+    virtual       Status_t        Tx            (uint8_t* pTxBuf, uint16_t TxLen);
     
-    virtual       Status_t        Rx            (uint8_t* pRxBuf, uint16_t RxLen, GpioOutput* CS = nullptr);  
+    virtual       Status_t        Rx            (uint8_t* pRxBuf, uint16_t RxLen);  
     
-    virtual       Status_t        TxRx          (uint8_t* pTxBuf, uint8_t* pRxBuf, uint16_t Len, GpioOutput* CS); 
+    virtual       Status_t        TxRx          (uint8_t* pTxBuf, uint8_t* pRxBuf, uint16_t Len); 
+    
+    virtual       Status_t        Xfer          (Transaction_t* aTransaction){return HAL_OK;};
     
 private: 
-    GpioOutput* m_pDefault_CS;
-    SPIx_t m_spix;
-    uint32_t m_hz;
-    SPI_HandleTypeDef m_hspi;
-  
+    SPIx_t          m_spix;
+    HZ_t            m_hz;  
 };
 
 }

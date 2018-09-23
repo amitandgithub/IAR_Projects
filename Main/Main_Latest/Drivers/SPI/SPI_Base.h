@@ -16,6 +16,9 @@
 #include "Peripheral.hpp"
 #include "stm32f1xx_hal_spi.h"
 #include "GpioOutput.hpp"
+#include "Queue.h"
+
+using namespace Utils;
 
 namespace Peripherals
 {
@@ -24,13 +27,16 @@ class SPI_Base : public Peripheral
 {
 public:
     typedef enum 
-    {
+    {        
         SPI_TX_COMPLETE         = 0x01,
         SPI_RX_COMPLETE         = 0x02,
         SPI_TXRX_COMPLETE       = 0x04,
         SPI_TX_HALF_COMPLETE    = 0x08,
-        SPI_RX_HALF_COMPLETE    = 0x10,
+        SPI_RX_HALF_COMPLETE    = 0x11,
         SPI_TXRX_HALF_COMPLETE  = 0x20,
+        SPI_BUSY                = 0x40,
+        SPI_READY               = 0x80,
+        SPI_INIT_DONE           = 0x10
     }SPI_Completetion_Status_t;
     
     typedef enum 
@@ -45,8 +51,8 @@ public:
     typedef struct
     {
         uint32_t            Event       :14;
-        uint32_t            TimeUnits   :2;
-        uint16_t            Time        :16;        
+        uint32_t            TimeUnits   : 2;
+        uint16_t            TimeValue   :16;        
     }TxnStatus_t;
     
     typedef struct
@@ -60,6 +66,9 @@ public:
         TxnStatus_t     TxnStatus; 
     }Transaction_t;
     
+    using Queue1 = Queue<Transaction_t*,200> ;
+    using Queue2 = Queue<Transaction_t*,10> ;
+    
     typedef void (*Callback_t) ();
      
     static const uint32_t SPI_POLL_DELAY = 0xFFUL;
@@ -68,22 +77,70 @@ public:
     
     virtual ~SPI_Base(){;}
     
-    virtual       Status_t        HwInit          () = 0;
+    virtual       Status_t       HwInit             () = 0;
     
-    virtual       Status_t        HwDeinit        () = 0;
+    virtual       Status_t       HwDeinit           () = 0;
     
-    virtual       Status_t        Tx            (uint8_t* pTxBuf, uint16_t TxLen, GpioOutput* CS) = 0;
+    virtual       Status_t       Tx                 (uint8_t* pTxBuf, uint16_t TxLen) = 0;
     
-    virtual       Status_t        Rx            (uint8_t* pRxBuf, uint16_t RxLen, GpioOutput* CS) = 0;  
+    virtual       Status_t       Rx                 (uint8_t* pRxBuf, uint16_t RxLen) = 0;  
     
-    virtual       Status_t        TxRx          (uint8_t* pTxBuf, uint8_t* pRxBuf, uint16_t Len, GpioOutput* CS) = 0;
+    virtual       Status_t       TxRx               (uint8_t* pTxBuf, uint8_t* pRxBuf, uint16_t Len) = 0;
+    
+    virtual       Status_t       Xfer               (Transaction_t* aTransaction) = 0;
+    
+    //static       Status_t        Post               (Transaction_t aTransaction){return 1;};
+    
+    static       Status_t        SPI_Init           (SPIx_t SPIx, HZ_t HZ, SPI_HandleTypeDef* phSPI);
+    
+    static        void           SPI1__IRQHandler   ();
+    
+    static        void           SPI2__IRQHandler   ();
+    
+    static        void           DMA_Ch2_IRQHandler (); 
+    
+    static        void           DMA_Ch3_IRQHandler (); 
+    
+    static        void           DMA_Ch4_IRQHandler (); 
+    
+    static        void           DMA_Ch5_IRQHandler (); 
+    
+    
   
 public:
+    static Transaction_t* m_pCurentTransaction_SPI1;
+    static Transaction_t* m_pCurentTransaction_SPI2;
+    
+    static SPI_Base* m_pSPI1_Obj;
+    static SPI_Base* m_pSPI2_Obj;
+    
+    static Queue1* m_pSPI1_Q;
+    static Queue2* m_pSPI2_Q;
+    
+    static Queue1 SPI1_Q;
+    static Queue2 SPI2_Q;
+    
+    static uint32_t SPI1_Status;
+    static uint32_t SPI2_Status;
+    
     static SPI_HandleTypeDef m_hspi_1;
     static SPI_HandleTypeDef m_hspi_2;
+    
+    static DMA_HandleTypeDef* m_phdma_spi1_rx;
+    static DMA_HandleTypeDef* m_phdma_spi1_tx;
+    static DMA_HandleTypeDef* m_phdma_spi2_rx;
+    static DMA_HandleTypeDef* m_phdma_spi2_tx; 
+    
+    static DMA_HandleTypeDef m_hdma_spi1_rx;
+    static DMA_HandleTypeDef m_hdma_spi1_tx;
+    static DMA_HandleTypeDef m_hdma_spi2_rx;
+    static DMA_HandleTypeDef m_hdma_spi2_tx;
+    static SPI_HandleTypeDef* m_phspi_1;
+    static SPI_HandleTypeDef* m_phspi_2;
+    
     static Peripherals::GpioOutput* m_pChipSelect_SPI1;
     static Peripherals::GpioOutput* m_pChipSelect_SPI2;
-    
+
     static Callback_t                   SPI1_TxDoneCallback;
     static Callback_t                   SPI1_RxDoneCallback;
     static Callback_t                   SPI1_TxRxDoneCallback;

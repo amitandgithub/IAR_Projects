@@ -368,6 +368,7 @@
                     <state>$PROJ_DIR$\..\Drivers\I2C</state>
                     <state>$PROJ_DIR$\..\HW_Modules\inc</state>
                     <state>$PROJ_DIR$\..\Drivers\SPI</state>
+                    <state>$PROJ_DIR$\..\Utils\inc</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
