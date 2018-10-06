@@ -24,7 +24,10 @@ class SPI_IT : public SPI_Base, public Interrupt
 public:
 
     
-    SPI_IT (SPIx_t spix, GpioOutput* CS, HZ_t hz = 100000UL,SPI_HandleTypeDef* phspi_x = nullptr);
+    SPI_IT (SPIx_t spix, GpioOutput* CS, HZ_t hz = 100000UL,
+             SPI_HandleTypeDef* phspi_x = nullptr, 
+             DMA_HandleTypeDef* phdma_spi1_rx_x = nullptr,
+             DMA_HandleTypeDef* phdma_spi1_tx_x = nullptr);
     
     virtual ~SPI_IT (){HwDeinit();};
     
@@ -40,13 +43,16 @@ public:
     
     virtual       Status_t        Xfer            (Transaction_t* aTransaction);
     
-                  Status_t        Post            (Transaction_t aTransaction);
+    virtual       Status_t        Post            (Transaction_t* pTransaction);
                   
-                  Status_t        Post            (Transaction_t* pTransaction); 
+    virtual       Status_t        Post            (Transaction_t aTransaction);
                   
                   void            Run             ();
                   
-                  uint32_t        GetStatus       ();
+                  SPIx_t          GetSPIx         (){return m_spix;};
+                  
+    
+
                   
 private: 
 

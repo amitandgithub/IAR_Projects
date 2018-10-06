@@ -47,13 +47,15 @@ public:
     
     virtual       Status_t        Xfer            (Transaction_t* aTransaction);
     
-                  Status_t        Post            (Transaction_t aTransaction);
+    virtual       Status_t        Post            (Transaction_t aTransaction);
                   
-                  Status_t        Post            (Transaction_t* pTransaction); 
+    virtual       Status_t        Post            (Transaction_t* pTransaction); 
                   
                   void            Run             ();
+             
+                  SPIx_t           GetSPIx         (){return m_spix;};
                   
-                  uint32_t       GetStatus        ();
+
 
 private: 
     SPIx_t m_spix;

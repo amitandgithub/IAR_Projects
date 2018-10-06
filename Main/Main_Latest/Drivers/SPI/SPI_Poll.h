@@ -37,7 +37,13 @@ public:
     
     virtual       Status_t        TxRx          (uint8_t* pTxBuf, uint8_t* pRxBuf, uint16_t Len); 
     
-    virtual       Status_t        Xfer          (Transaction_t* aTransaction){return HAL_OK;};
+    virtual       Status_t        Xfer          (Transaction_t* aTransaction);
+    
+    virtual       Status_t        Post          (Transaction_t* pTransaction);
+    
+    virtual       Status_t        Post          (Transaction_t aTransaction);
+    
+                  SPIx_t          GetSPIx         (){return m_spix;};
     
 private: 
     SPIx_t          m_spix;

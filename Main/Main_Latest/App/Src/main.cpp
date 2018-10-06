@@ -37,10 +37,12 @@ int main(void)
         //Nokia5110LCD_Test();
         //SPI1_DMA_Test();
         //SPI2_DMA_Test();
-        Nokia5110LCD_SPI1_Test();
+        //Nokia5110LCD_SPI1_Test();
         //Nokia5110LCD_SPI2_Test(); 
         //Nokia5110LCD_Dual_Test();
         //Queue_Test();
+        //Hw_Button_Test();
+        Hw_ButtonIntr_Test();
     }
     
 }

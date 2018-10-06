@@ -383,19 +383,6 @@ void SPI_DMA::Run()
     
 }
 
-uint32_t SPI_DMA::GetStatus()
-{
-    if( m_spix == SPI1_A4_A5_A6_A7 )
-    {
-        return SPI_Base::SPI1_Status;
-    }
-    
-    return SPI_Base::SPI2_Status;
-}
-
-
-
-
 }// Namespace Peripherals
 
 

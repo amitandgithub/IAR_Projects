@@ -9105,3 +9105,949 @@ Sat Sep 22, 2018 20:02:27: 13432 bytes downloaded into FLASH (10.63 Kbytes/sec)
 Sat Sep 22, 2018 20:02:27: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
 Sat Sep 22, 2018 20:02:27: Hardware reset with strategy 0 was performed
 Sat Sep 22, 2018 20:02:27: Target reset
+
+
+ << Logging to file resumes >> 
+
+Sun Sep 23, 2018 08:06:37: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Sun Sep 23, 2018 08:06:37: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sun Sep 23, 2018 08:06:38: ST-Link firmware too old
+Sun Sep 23, 2018 08:06:38: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Sun Sep 23, 2018 08:06:38: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 08:06:38: Initial reset was performed
+Sun Sep 23, 2018 08:06:38: 736 bytes downloaded (11.59 Kbytes/sec)
+Sun Sep 23, 2018 08:06:38: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Sun Sep 23, 2018 08:06:38: Target reset
+Sun Sep 23, 2018 08:06:39: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sun Sep 23, 2018 08:06:39: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Sun Sep 23, 2018 08:06:39: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 08:06:39: 13364 bytes downloaded into FLASH (10.31 Kbytes/sec)
+Sun Sep 23, 2018 08:06:39: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Sun Sep 23, 2018 08:06:39: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 08:06:39: Target reset
+
+
+ << Logging to file resumes >> 
+
+Sun Sep 23, 2018 08:08:02: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Sun Sep 23, 2018 08:08:02: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sun Sep 23, 2018 08:08:02: ST-Link firmware too old
+Sun Sep 23, 2018 08:08:02: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Sun Sep 23, 2018 08:08:02: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 08:08:02: Initial reset was performed
+Sun Sep 23, 2018 08:08:02: 736 bytes downloaded (11.41 Kbytes/sec)
+Sun Sep 23, 2018 08:08:02: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Sun Sep 23, 2018 08:08:02: Target reset
+Sun Sep 23, 2018 08:08:03: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sun Sep 23, 2018 08:08:03: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Sun Sep 23, 2018 08:08:03: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 08:08:03: 13376 bytes downloaded into FLASH (10.59 Kbytes/sec)
+Sun Sep 23, 2018 08:08:03: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Sun Sep 23, 2018 08:08:03: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 08:08:03: Target reset
+
+
+ << Logging to file resumes >> 
+
+Sun Sep 23, 2018 09:51:11: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Sun Sep 23, 2018 09:51:11: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sun Sep 23, 2018 09:51:11: ST-Link firmware too old
+Sun Sep 23, 2018 09:51:11: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Sun Sep 23, 2018 09:51:11: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 09:51:11: Initial reset was performed
+Sun Sep 23, 2018 09:51:12: 736 bytes downloaded (11.59 Kbytes/sec)
+Sun Sep 23, 2018 09:51:12: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Sun Sep 23, 2018 09:51:12: Target reset
+Sun Sep 23, 2018 09:51:13: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sun Sep 23, 2018 09:51:13: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Sun Sep 23, 2018 09:51:13: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 09:51:13: 13380 bytes downloaded into FLASH (10.85 Kbytes/sec)
+Sun Sep 23, 2018 09:51:13: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Sun Sep 23, 2018 09:51:13: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 09:51:13: Target reset
+Sun Sep 23, 2018 09:51:38: Breakpoint hit: Code @ SPI_Base.cpp:278.9, type: default (auto) 
+Sun Sep 23, 2018 09:52:30: Breakpoint hit: Code @ SPI_Base.cpp:278.9, type: default (auto) 
+Sun Sep 23, 2018 09:52:33: Breakpoint hit: Code @ SPI_Base.cpp:278.9, type: default (auto) 
+Sun Sep 23, 2018 09:52:35: Breakpoint hit: Code @ SPI_Base.cpp:278.9, type: default (auto) 
+Sun Sep 23, 2018 09:52:36: Breakpoint hit: Code @ SPI_Base.cpp:278.9, type: default (auto) 
+Sun Sep 23, 2018 09:52:37: Breakpoint hit: Code @ SPI_Base.cpp:278.9, type: default (auto) 
+Sun Sep 23, 2018 09:52:38: Breakpoint hit: Code @ SPI_Base.cpp:278.9, type: default (auto) 
+Sun Sep 23, 2018 09:52:41: Breakpoint hit: Code @ SPI_Base.cpp:278.9, type: default (auto) 
+Sun Sep 23, 2018 09:53:34: Breakpoint hit: Code @ SPI_Base.cpp:274.13, type: default (auto) 
+Sun Sep 23, 2018 09:53:44: Breakpoint hit: Code @ SPI_Base.cpp:278.9, type: default (auto) 
+
+
+ << Logging to file resumes >> 
+
+Sun Sep 23, 2018 09:54:04: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Sun Sep 23, 2018 09:54:04: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sun Sep 23, 2018 09:54:04: ST-Link firmware too old
+Sun Sep 23, 2018 09:54:04: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Sun Sep 23, 2018 09:54:04: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 09:54:04: Initial reset was performed
+Sun Sep 23, 2018 09:54:04: 736 bytes downloaded (11.59 Kbytes/sec)
+Sun Sep 23, 2018 09:54:04: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Sun Sep 23, 2018 09:54:04: Target reset
+Sun Sep 23, 2018 09:54:05: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sun Sep 23, 2018 09:54:05: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Sun Sep 23, 2018 09:54:05: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 09:54:05: 13372 bytes downloaded into FLASH (10.71 Kbytes/sec)
+Sun Sep 23, 2018 09:54:05: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Sun Sep 23, 2018 09:54:05: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 09:54:05: Target reset
+Sun Sep 23, 2018 09:54:10: Breakpoint hit: Code @ SPI_Base.cpp:278.9, type: default (auto) 
+Sun Sep 23, 2018 09:55:19: Breakpoint hit: Code @ SPI_Base.cpp:314.1, type: default (auto) 
+Sun Sep 23, 2018 09:55:51: Breakpoint hit: Code @ SPI_Base.cpp:314.1, type: default (auto) 
+Sun Sep 23, 2018 10:15:38: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 10:15:38: Target reset
+
+
+ << Logging to file resumes >> 
+
+Sun Sep 23, 2018 11:44:44: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Sun Sep 23, 2018 11:44:44: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sun Sep 23, 2018 11:44:44: ST-Link firmware too old
+Sun Sep 23, 2018 11:44:44: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Sun Sep 23, 2018 11:44:44: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 11:44:44: Initial reset was performed
+Sun Sep 23, 2018 11:44:44: 736 bytes downloaded (11.41 Kbytes/sec)
+Sun Sep 23, 2018 11:44:44: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Sun Sep 23, 2018 11:44:44: Target reset
+Sun Sep 23, 2018 11:44:45: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sun Sep 23, 2018 11:44:45: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Sun Sep 23, 2018 11:44:45: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 11:44:45: 13492 bytes downloaded into FLASH (10.95 Kbytes/sec)
+Sun Sep 23, 2018 11:44:45: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Sun Sep 23, 2018 11:44:45: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 11:44:45: Target reset
+
+
+ << Logging to file resumes >> 
+
+Sun Sep 23, 2018 11:46:31: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Sun Sep 23, 2018 11:46:31: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sun Sep 23, 2018 11:46:31: ST-Link firmware too old
+Sun Sep 23, 2018 11:46:31: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Sun Sep 23, 2018 11:46:31: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 11:46:31: Initial reset was performed
+Sun Sep 23, 2018 11:46:31: 736 bytes downloaded (7.65 Kbytes/sec)
+Sun Sep 23, 2018 11:46:31: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Sun Sep 23, 2018 11:46:31: Target reset
+Sun Sep 23, 2018 11:46:32: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sun Sep 23, 2018 11:46:32: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Sun Sep 23, 2018 11:46:32: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 11:46:32: 13544 bytes downloaded into FLASH (10.85 Kbytes/sec)
+Sun Sep 23, 2018 11:46:32: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Sun Sep 23, 2018 11:46:32: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 11:46:32: Target reset
+
+
+ << Logging to file resumes >> 
+
+Sun Sep 23, 2018 11:48:16: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Sun Sep 23, 2018 11:48:16: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sun Sep 23, 2018 11:48:16: ST-Link firmware too old
+Sun Sep 23, 2018 11:48:16: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Sun Sep 23, 2018 11:48:16: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 11:48:16: Initial reset was performed
+Sun Sep 23, 2018 11:48:16: 736 bytes downloaded (15.29 Kbytes/sec)
+Sun Sep 23, 2018 11:48:16: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Sun Sep 23, 2018 11:48:16: Target reset
+Sun Sep 23, 2018 11:48:17: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sun Sep 23, 2018 11:48:17: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Sun Sep 23, 2018 11:48:17: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 11:48:17: 13540 bytes downloaded into FLASH (10.99 Kbytes/sec)
+Sun Sep 23, 2018 11:48:17: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Sun Sep 23, 2018 11:48:17: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 11:48:17: Target reset
+
+
+ << Logging to file resumes >> 
+
+Sun Sep 23, 2018 11:49:04: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Sun Sep 23, 2018 11:49:04: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sun Sep 23, 2018 11:49:04: ST-Link firmware too old
+Sun Sep 23, 2018 11:49:04: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Sun Sep 23, 2018 11:49:04: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 11:49:04: Initial reset was performed
+Sun Sep 23, 2018 11:49:05: 736 bytes downloaded (11.59 Kbytes/sec)
+Sun Sep 23, 2018 11:49:05: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Sun Sep 23, 2018 11:49:05: Target reset
+Sun Sep 23, 2018 11:49:06: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sun Sep 23, 2018 11:49:06: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Sun Sep 23, 2018 11:49:06: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 11:49:06: 13540 bytes downloaded into FLASH (10.99 Kbytes/sec)
+Sun Sep 23, 2018 11:49:06: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Sun Sep 23, 2018 11:49:06: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 11:49:06: Target reset
+
+
+ << Logging to file resumes >> 
+
+Sun Sep 23, 2018 11:52:09: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Sun Sep 23, 2018 11:52:09: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sun Sep 23, 2018 11:52:09: ST-Link firmware too old
+Sun Sep 23, 2018 11:52:09: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Sun Sep 23, 2018 11:52:09: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 11:52:09: Initial reset was performed
+Sun Sep 23, 2018 11:52:09: 736 bytes downloaded (11.41 Kbytes/sec)
+Sun Sep 23, 2018 11:52:09: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Sun Sep 23, 2018 11:52:09: Target reset
+Sun Sep 23, 2018 11:52:10: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sun Sep 23, 2018 11:52:10: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Sun Sep 23, 2018 11:52:10: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 11:52:10: 13544 bytes downloaded into FLASH (10.99 Kbytes/sec)
+Sun Sep 23, 2018 11:52:10: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Sun Sep 23, 2018 11:52:10: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 11:52:10: Target reset
+
+
+ << Logging to file resumes >> 
+
+Sun Sep 23, 2018 11:58:23: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Sun Sep 23, 2018 11:58:23: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sun Sep 23, 2018 11:58:24: ST-Link firmware too old
+Sun Sep 23, 2018 11:58:24: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Sun Sep 23, 2018 11:58:24: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 11:58:24: Initial reset was performed
+Sun Sep 23, 2018 11:58:24: 736 bytes downloaded (9.21 Kbytes/sec)
+Sun Sep 23, 2018 11:58:24: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Sun Sep 23, 2018 11:58:24: Target reset
+Sun Sep 23, 2018 11:58:25: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sun Sep 23, 2018 11:58:25: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Sun Sep 23, 2018 11:58:25: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 11:58:25: 13512 bytes downloaded into FLASH (10.97 Kbytes/sec)
+Sun Sep 23, 2018 11:58:25: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Sun Sep 23, 2018 11:58:25: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 11:58:25: Target reset
+
+
+ << Logging to file resumes >> 
+
+Sun Sep 23, 2018 12:01:07: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Sun Sep 23, 2018 12:01:07: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sun Sep 23, 2018 12:01:07: ST-Link firmware too old
+Sun Sep 23, 2018 12:01:07: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Sun Sep 23, 2018 12:01:07: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 12:01:07: Initial reset was performed
+Sun Sep 23, 2018 12:01:07: 736 bytes downloaded (9.21 Kbytes/sec)
+Sun Sep 23, 2018 12:01:07: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Sun Sep 23, 2018 12:01:07: Target reset
+Sun Sep 23, 2018 12:01:08: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sun Sep 23, 2018 12:01:08: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Sun Sep 23, 2018 12:01:08: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 12:01:09: 13540 bytes downloaded into FLASH (10.99 Kbytes/sec)
+Sun Sep 23, 2018 12:01:09: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Sun Sep 23, 2018 12:01:09: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 12:01:09: Target reset
+
+
+ << Logging to file resumes >> 
+
+Sun Sep 23, 2018 12:01:46: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Sun Sep 23, 2018 12:01:46: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sun Sep 23, 2018 12:01:46: ST-Link firmware too old
+Sun Sep 23, 2018 12:01:46: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Sun Sep 23, 2018 12:01:46: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 12:01:46: Initial reset was performed
+Sun Sep 23, 2018 12:01:46: 736 bytes downloaded (15.29 Kbytes/sec)
+Sun Sep 23, 2018 12:01:46: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Sun Sep 23, 2018 12:01:46: Target reset
+Sun Sep 23, 2018 12:01:47: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sun Sep 23, 2018 12:01:47: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Sun Sep 23, 2018 12:01:47: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 12:01:47: 13540 bytes downloaded into FLASH (10.99 Kbytes/sec)
+Sun Sep 23, 2018 12:01:47: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Sun Sep 23, 2018 12:01:47: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 12:01:47: Target reset
+
+
+ << Logging to file resumes >> 
+
+Sun Sep 23, 2018 12:02:56: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Sun Sep 23, 2018 12:02:56: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sun Sep 23, 2018 12:02:56: ST-Link firmware too old
+Sun Sep 23, 2018 12:02:56: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Sun Sep 23, 2018 12:02:56: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 12:02:56: Initial reset was performed
+Sun Sep 23, 2018 12:02:56: 736 bytes downloaded (11.59 Kbytes/sec)
+Sun Sep 23, 2018 12:02:56: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Sun Sep 23, 2018 12:02:56: Target reset
+Sun Sep 23, 2018 12:02:57: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sun Sep 23, 2018 12:02:57: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Sun Sep 23, 2018 12:02:57: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 12:02:57: 13540 bytes downloaded into FLASH (10.99 Kbytes/sec)
+Sun Sep 23, 2018 12:02:57: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Sun Sep 23, 2018 12:02:57: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 12:02:57: Target reset
+
+
+ << Logging to file resumes >> 
+
+Sun Sep 23, 2018 12:04:26: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Sun Sep 23, 2018 12:04:26: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sun Sep 23, 2018 12:04:27: ST-Link firmware too old
+Sun Sep 23, 2018 12:04:27: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Sun Sep 23, 2018 12:04:27: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 12:04:27: Initial reset was performed
+Sun Sep 23, 2018 12:04:27: 736 bytes downloaded (11.59 Kbytes/sec)
+Sun Sep 23, 2018 12:04:27: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Sun Sep 23, 2018 12:04:27: Target reset
+Sun Sep 23, 2018 12:04:28: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sun Sep 23, 2018 12:04:28: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Sun Sep 23, 2018 12:04:28: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 12:04:28: 13544 bytes downloaded into FLASH (10.07 Kbytes/sec)
+Sun Sep 23, 2018 12:04:28: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Sun Sep 23, 2018 12:04:28: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 12:04:28: Target reset
+
+
+ << Logging to file resumes >> 
+
+Sun Sep 23, 2018 12:05:00: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Sun Sep 23, 2018 12:05:00: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sun Sep 23, 2018 12:05:00: ST-Link firmware too old
+Sun Sep 23, 2018 12:05:00: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Sun Sep 23, 2018 12:05:00: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 12:05:00: Initial reset was performed
+Sun Sep 23, 2018 12:05:00: 736 bytes downloaded (11.41 Kbytes/sec)
+Sun Sep 23, 2018 12:05:00: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Sun Sep 23, 2018 12:05:00: Target reset
+Sun Sep 23, 2018 12:05:01: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sun Sep 23, 2018 12:05:01: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Sun Sep 23, 2018 12:05:01: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 12:05:01: 13536 bytes downloaded into FLASH (10.85 Kbytes/sec)
+Sun Sep 23, 2018 12:05:01: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Sun Sep 23, 2018 12:05:01: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 12:05:02: Target reset
+
+
+ << Logging to file resumes >> 
+
+Sun Sep 23, 2018 12:05:44: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Sun Sep 23, 2018 12:05:44: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sun Sep 23, 2018 12:05:44: ST-Link firmware too old
+Sun Sep 23, 2018 12:05:44: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Sun Sep 23, 2018 12:05:44: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 12:05:44: Initial reset was performed
+Sun Sep 23, 2018 12:05:44: 736 bytes downloaded (11.41 Kbytes/sec)
+Sun Sep 23, 2018 12:05:44: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Sun Sep 23, 2018 12:05:44: Target reset
+Sun Sep 23, 2018 12:05:45: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sun Sep 23, 2018 12:05:45: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Sun Sep 23, 2018 12:05:45: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 12:05:45: 13564 bytes downloaded into FLASH (11.01 Kbytes/sec)
+Sun Sep 23, 2018 12:05:45: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Sun Sep 23, 2018 12:05:45: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 12:05:45: Target reset
+
+
+ << Logging to file resumes >> 
+
+Sun Sep 23, 2018 12:07:13: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Sun Sep 23, 2018 12:07:13: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sun Sep 23, 2018 12:07:13: ST-Link firmware too old
+Sun Sep 23, 2018 12:07:13: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Sun Sep 23, 2018 12:07:13: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 12:07:13: Initial reset was performed
+Sun Sep 23, 2018 12:07:13: 736 bytes downloaded (11.59 Kbytes/sec)
+Sun Sep 23, 2018 12:07:13: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Sun Sep 23, 2018 12:07:14: Target reset
+Sun Sep 23, 2018 12:07:15: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sun Sep 23, 2018 12:07:15: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Sun Sep 23, 2018 12:07:15: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 12:07:15: 13568 bytes downloaded into FLASH (10.87 Kbytes/sec)
+Sun Sep 23, 2018 12:07:15: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Sun Sep 23, 2018 12:07:15: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 12:07:15: Target reset
+
+
+ << Logging to file resumes >> 
+
+Sun Sep 23, 2018 12:08:21: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Sun Sep 23, 2018 12:08:21: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sun Sep 23, 2018 12:08:21: ST-Link firmware too old
+Sun Sep 23, 2018 12:08:21: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Sun Sep 23, 2018 12:08:21: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 12:08:21: Initial reset was performed
+Sun Sep 23, 2018 12:08:21: 736 bytes downloaded (15.29 Kbytes/sec)
+Sun Sep 23, 2018 12:08:21: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Sun Sep 23, 2018 12:08:21: Target reset
+Sun Sep 23, 2018 12:08:22: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sun Sep 23, 2018 12:08:22: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Sun Sep 23, 2018 12:08:22: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 12:08:22: 13540 bytes downloaded into FLASH (10.99 Kbytes/sec)
+Sun Sep 23, 2018 12:08:22: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Sun Sep 23, 2018 12:08:22: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 12:08:22: Target reset
+
+
+ << Logging to file resumes >> 
+
+Sun Sep 23, 2018 12:09:06: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Sun Sep 23, 2018 12:09:06: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sun Sep 23, 2018 12:09:06: ST-Link firmware too old
+Sun Sep 23, 2018 12:09:06: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Sun Sep 23, 2018 12:09:06: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 12:09:06: Initial reset was performed
+Sun Sep 23, 2018 12:09:07: 736 bytes downloaded (9.21 Kbytes/sec)
+Sun Sep 23, 2018 12:09:07: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Sun Sep 23, 2018 12:09:07: Target reset
+Sun Sep 23, 2018 12:09:08: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sun Sep 23, 2018 12:09:08: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Sun Sep 23, 2018 12:09:08: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 12:09:08: 13540 bytes downloaded into FLASH (10.85 Kbytes/sec)
+Sun Sep 23, 2018 12:09:08: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Sun Sep 23, 2018 12:09:08: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 12:09:08: Target reset
+
+
+ << Logging to file resumes >> 
+
+Sun Sep 23, 2018 12:10:26: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Sun Sep 23, 2018 12:10:26: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sun Sep 23, 2018 12:10:27: ST-Link firmware too old
+Sun Sep 23, 2018 12:10:27: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Sun Sep 23, 2018 12:10:27: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 12:10:27: Initial reset was performed
+Sun Sep 23, 2018 12:10:27: 736 bytes downloaded (11.41 Kbytes/sec)
+Sun Sep 23, 2018 12:10:27: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Sun Sep 23, 2018 12:10:27: Target reset
+Sun Sep 23, 2018 12:10:28: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sun Sep 23, 2018 12:10:28: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Sun Sep 23, 2018 12:10:28: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 12:10:28: 13544 bytes downloaded into FLASH (10.85 Kbytes/sec)
+Sun Sep 23, 2018 12:10:28: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Sun Sep 23, 2018 12:10:28: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 12:10:28: Target reset
+
+
+ << Logging to file resumes >> 
+
+Sun Sep 23, 2018 12:11:20: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Sun Sep 23, 2018 12:11:20: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sun Sep 23, 2018 12:11:20: ST-Link firmware too old
+Sun Sep 23, 2018 12:11:20: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Sun Sep 23, 2018 12:11:20: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 12:11:20: Initial reset was performed
+Sun Sep 23, 2018 12:11:21: 736 bytes downloaded (11.59 Kbytes/sec)
+Sun Sep 23, 2018 12:11:21: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Sun Sep 23, 2018 12:11:21: Target reset
+Sun Sep 23, 2018 12:11:22: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sun Sep 23, 2018 12:11:22: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Sun Sep 23, 2018 12:11:22: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 12:11:22: 13544 bytes downloaded into FLASH (10.85 Kbytes/sec)
+Sun Sep 23, 2018 12:11:22: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Sun Sep 23, 2018 12:11:22: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 12:11:22: Target reset
+
+
+ << Logging to file resumes >> 
+
+Sun Sep 23, 2018 12:11:50: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Sun Sep 23, 2018 12:11:50: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sun Sep 23, 2018 12:11:50: ST-Link firmware too old
+Sun Sep 23, 2018 12:11:50: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Sun Sep 23, 2018 12:11:50: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 12:11:50: Initial reset was performed
+Sun Sep 23, 2018 12:11:50: 736 bytes downloaded (11.41 Kbytes/sec)
+Sun Sep 23, 2018 12:11:50: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Sun Sep 23, 2018 12:11:50: Target reset
+Sun Sep 23, 2018 12:11:51: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sun Sep 23, 2018 12:11:51: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Sun Sep 23, 2018 12:11:51: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 12:11:51: 13544 bytes downloaded into FLASH (10.58 Kbytes/sec)
+Sun Sep 23, 2018 12:11:51: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Sun Sep 23, 2018 12:11:51: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 12:11:51: Target reset
+
+
+ << Logging to file resumes >> 
+
+Sun Sep 23, 2018 12:12:38: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Sun Sep 23, 2018 12:12:38: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sun Sep 23, 2018 12:12:38: ST-Link firmware too old
+Sun Sep 23, 2018 12:12:38: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Sun Sep 23, 2018 12:12:38: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 12:12:38: Initial reset was performed
+Sun Sep 23, 2018 12:12:38: 736 bytes downloaded (15.29 Kbytes/sec)
+Sun Sep 23, 2018 12:12:38: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Sun Sep 23, 2018 12:12:38: Target reset
+Sun Sep 23, 2018 12:12:39: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sun Sep 23, 2018 12:12:39: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Sun Sep 23, 2018 12:12:39: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 12:12:40: 13544 bytes downloaded into FLASH (10.85 Kbytes/sec)
+Sun Sep 23, 2018 12:12:40: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Sun Sep 23, 2018 12:12:40: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 12:12:40: Target reset
+
+
+ << Logging to file resumes >> 
+
+Sun Sep 23, 2018 12:13:02: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Sun Sep 23, 2018 12:13:02: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sun Sep 23, 2018 12:13:02: ST-Link firmware too old
+Sun Sep 23, 2018 12:13:02: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Sun Sep 23, 2018 12:13:02: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 12:13:02: Initial reset was performed
+Sun Sep 23, 2018 12:13:02: 736 bytes downloaded (11.41 Kbytes/sec)
+Sun Sep 23, 2018 12:13:02: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Sun Sep 23, 2018 12:13:02: Target reset
+Sun Sep 23, 2018 12:13:03: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sun Sep 23, 2018 12:13:03: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Sun Sep 23, 2018 12:13:03: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 12:13:03: 13544 bytes downloaded into FLASH (10.99 Kbytes/sec)
+Sun Sep 23, 2018 12:13:03: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Sun Sep 23, 2018 12:13:03: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 12:13:03: Target reset
+
+
+ << Logging to file resumes >> 
+
+Sun Sep 23, 2018 12:13:24: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Sun Sep 23, 2018 12:13:24: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sun Sep 23, 2018 12:13:24: ST-Link firmware too old
+Sun Sep 23, 2018 12:13:24: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Sun Sep 23, 2018 12:13:24: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 12:13:24: Initial reset was performed
+Sun Sep 23, 2018 12:13:24: 736 bytes downloaded (9.10 Kbytes/sec)
+Sun Sep 23, 2018 12:13:24: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Sun Sep 23, 2018 12:13:24: Target reset
+Sun Sep 23, 2018 12:13:25: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sun Sep 23, 2018 12:13:25: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Sun Sep 23, 2018 12:13:25: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 12:13:25: 13544 bytes downloaded into FLASH (9.96 Kbytes/sec)
+Sun Sep 23, 2018 12:13:25: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Sun Sep 23, 2018 12:13:25: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 12:13:25: Target reset
+
+
+ << Logging to file resumes >> 
+
+Sun Sep 23, 2018 15:39:13: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Sun Sep 23, 2018 15:39:13: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sun Sep 23, 2018 15:39:13: ST-Link firmware too old
+Sun Sep 23, 2018 15:39:13: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Sun Sep 23, 2018 15:39:13: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 15:39:13: Initial reset was performed
+Sun Sep 23, 2018 15:39:13: 736 bytes downloaded (15.29 Kbytes/sec)
+Sun Sep 23, 2018 15:39:13: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Sun Sep 23, 2018 15:39:13: Target reset
+Sun Sep 23, 2018 15:39:14: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sun Sep 23, 2018 15:39:14: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Sun Sep 23, 2018 15:39:14: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 15:39:15: 12564 bytes downloaded into FLASH (10.61 Kbytes/sec)
+Sun Sep 23, 2018 15:39:15: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Sun Sep 23, 2018 15:39:15: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 15:39:15: Target reset
+
+
+ << Logging to file resumes >> 
+
+Sun Sep 23, 2018 15:40:16: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Sun Sep 23, 2018 15:40:16: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sun Sep 23, 2018 15:40:16: ST-Link firmware too old
+Sun Sep 23, 2018 15:40:16: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Sun Sep 23, 2018 15:40:16: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 15:40:16: Initial reset was performed
+Sun Sep 23, 2018 15:40:17: 736 bytes downloaded (11.41 Kbytes/sec)
+Sun Sep 23, 2018 15:40:17: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Sun Sep 23, 2018 15:40:17: Target reset
+Sun Sep 23, 2018 15:40:17: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sun Sep 23, 2018 15:40:17: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Sun Sep 23, 2018 15:40:17: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 15:40:18: 10896 bytes downloaded into FLASH (10.02 Kbytes/sec)
+Sun Sep 23, 2018 15:40:18: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Sun Sep 23, 2018 15:40:18: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 15:40:18: Target reset
+Sun Sep 23, 2018 15:42:51: Breakpoint hit: Code @ SPI_Poll.cpp:195.5, type: default (auto) 
+Sun Sep 23, 2018 15:43:26: Breakpoint hit: Code @ SPI_Poll.cpp:195.5, type: default (auto) 
+Sun Sep 23, 2018 15:43:35: Breakpoint hit: Code @ SPI_Poll.cpp:195.5, type: default (auto) 
+
+
+ << Logging to file resumes >> 
+
+Sun Sep 23, 2018 15:48:17: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Sun Sep 23, 2018 15:48:17: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sun Sep 23, 2018 15:48:18: ST-Link firmware too old
+Sun Sep 23, 2018 15:48:18: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Sun Sep 23, 2018 15:48:18: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 15:48:18: Initial reset was performed
+Sun Sep 23, 2018 15:48:18: 736 bytes downloaded (15.29 Kbytes/sec)
+Sun Sep 23, 2018 15:48:18: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Sun Sep 23, 2018 15:48:18: Target reset
+Sun Sep 23, 2018 15:48:19: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sun Sep 23, 2018 15:48:19: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Sun Sep 23, 2018 15:48:19: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 15:48:19: 10896 bytes downloaded into FLASH (10.47 Kbytes/sec)
+Sun Sep 23, 2018 15:48:19: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Sun Sep 23, 2018 15:48:19: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 15:48:19: Target reset
+
+
+ << Logging to file resumes >> 
+
+Sun Sep 23, 2018 15:49:11: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Sun Sep 23, 2018 15:49:11: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sun Sep 23, 2018 15:49:11: ST-Link firmware too old
+Sun Sep 23, 2018 15:49:11: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Sun Sep 23, 2018 15:49:11: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 15:49:11: Initial reset was performed
+Sun Sep 23, 2018 15:49:11: 736 bytes downloaded (15.29 Kbytes/sec)
+Sun Sep 23, 2018 15:49:11: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Sun Sep 23, 2018 15:49:11: Target reset
+Sun Sep 23, 2018 15:49:12: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sun Sep 23, 2018 15:49:12: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Sun Sep 23, 2018 15:49:12: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 15:49:12: 10904 bytes downloaded into FLASH (10.33 Kbytes/sec)
+Sun Sep 23, 2018 15:49:12: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Sun Sep 23, 2018 15:49:12: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 15:49:12: Target reset
+
+
+ << Logging to file resumes >> 
+
+Sun Sep 23, 2018 15:49:39: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Sun Sep 23, 2018 15:49:39: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sun Sep 23, 2018 15:49:39: ST-Link firmware too old
+Sun Sep 23, 2018 15:49:39: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Sun Sep 23, 2018 15:49:39: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 15:49:39: Initial reset was performed
+Sun Sep 23, 2018 15:49:39: 736 bytes downloaded (11.59 Kbytes/sec)
+Sun Sep 23, 2018 15:49:39: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Sun Sep 23, 2018 15:49:39: Target reset
+Sun Sep 23, 2018 15:49:40: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sun Sep 23, 2018 15:49:40: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Sun Sep 23, 2018 15:49:40: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 15:49:40: 10896 bytes downloaded into FLASH (10.31 Kbytes/sec)
+Sun Sep 23, 2018 15:49:40: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Sun Sep 23, 2018 15:49:40: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 15:49:40: Target reset
+
+
+ << Logging to file resumes >> 
+
+Sun Sep 23, 2018 16:36:58: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Sun Sep 23, 2018 16:36:58: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sun Sep 23, 2018 16:36:58: ST-Link firmware too old
+Sun Sep 23, 2018 16:36:58: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Sun Sep 23, 2018 16:36:58: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 16:36:58: Initial reset was performed
+Sun Sep 23, 2018 16:36:58: 736 bytes downloaded (11.41 Kbytes/sec)
+Sun Sep 23, 2018 16:36:58: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Sun Sep 23, 2018 16:36:58: Target reset
+Sun Sep 23, 2018 16:36:59: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sun Sep 23, 2018 16:36:59: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Sun Sep 23, 2018 16:36:59: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 16:36:59: 10988 bytes downloaded into FLASH (10.41 Kbytes/sec)
+Sun Sep 23, 2018 16:36:59: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Sun Sep 23, 2018 16:36:59: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 16:36:59: Target reset
+
+
+ << Logging to file resumes >> 
+
+Sun Sep 23, 2018 16:48:19: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Sun Sep 23, 2018 16:48:19: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sun Sep 23, 2018 16:48:19: ST-Link firmware too old
+Sun Sep 23, 2018 16:48:19: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Sun Sep 23, 2018 16:48:19: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 16:48:19: Initial reset was performed
+Sun Sep 23, 2018 16:48:20: 736 bytes downloaded (9.21 Kbytes/sec)
+Sun Sep 23, 2018 16:48:20: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Sun Sep 23, 2018 16:48:20: Target reset
+Sun Sep 23, 2018 16:48:20: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sun Sep 23, 2018 16:48:20: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Sun Sep 23, 2018 16:48:20: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 16:48:21: 10900 bytes downloaded into FLASH (9.87 Kbytes/sec)
+Sun Sep 23, 2018 16:48:21: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Sun Sep 23, 2018 16:48:21: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 16:48:21: Target reset
+
+
+ << Logging to file resumes >> 
+
+Sun Sep 23, 2018 16:49:41: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Sun Sep 23, 2018 16:49:41: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sun Sep 23, 2018 16:49:41: ST-Link firmware too old
+Sun Sep 23, 2018 16:49:41: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Sun Sep 23, 2018 16:49:41: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 16:49:41: Initial reset was performed
+Sun Sep 23, 2018 16:49:41: 736 bytes downloaded (9.21 Kbytes/sec)
+Sun Sep 23, 2018 16:49:41: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Sun Sep 23, 2018 16:49:41: Target reset
+Sun Sep 23, 2018 16:49:42: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sun Sep 23, 2018 16:49:42: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Sun Sep 23, 2018 16:49:42: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 16:49:42: 10900 bytes downloaded into FLASH (9.73 Kbytes/sec)
+Sun Sep 23, 2018 16:49:42: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Sun Sep 23, 2018 16:49:42: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 16:49:42: Target reset
+
+
+ << Logging to file resumes >> 
+
+Sun Sep 23, 2018 16:53:00: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Sun Sep 23, 2018 16:53:00: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sun Sep 23, 2018 16:53:00: ST-Link firmware too old
+Sun Sep 23, 2018 16:53:00: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Sun Sep 23, 2018 16:53:00: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 16:53:00: Initial reset was performed
+Sun Sep 23, 2018 16:53:00: 736 bytes downloaded (11.41 Kbytes/sec)
+Sun Sep 23, 2018 16:53:00: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Sun Sep 23, 2018 16:53:00: Target reset
+Sun Sep 23, 2018 16:53:01: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sun Sep 23, 2018 16:53:01: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Sun Sep 23, 2018 16:53:01: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 16:53:01: 10900 bytes downloaded into FLASH (10.17 Kbytes/sec)
+Sun Sep 23, 2018 16:53:01: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Sun Sep 23, 2018 16:53:01: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 16:53:01: Target reset
+Sun Sep 23, 2018 16:53:17: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 16:53:17: Target reset
+
+
+ << Logging to file resumes >> 
+
+Sun Sep 23, 2018 17:12:24: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Sun Sep 23, 2018 17:12:24: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sun Sep 23, 2018 17:12:25: ST-Link firmware too old
+Sun Sep 23, 2018 17:12:25: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Sun Sep 23, 2018 17:12:25: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 17:12:25: Initial reset was performed
+Sun Sep 23, 2018 17:12:25: 736 bytes downloaded (11.59 Kbytes/sec)
+Sun Sep 23, 2018 17:12:25: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Sun Sep 23, 2018 17:12:25: Target reset
+Sun Sep 23, 2018 17:12:26: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sun Sep 23, 2018 17:12:26: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Sun Sep 23, 2018 17:12:26: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 17:12:26: 10900 bytes downloaded into FLASH (10.32 Kbytes/sec)
+Sun Sep 23, 2018 17:12:26: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Sun Sep 23, 2018 17:12:26: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 17:12:26: Target reset
+
+
+ << Logging to file resumes >> 
+
+Sun Sep 23, 2018 17:13:04: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Sun Sep 23, 2018 17:13:04: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sun Sep 23, 2018 17:13:04: ST-Link firmware too old
+Sun Sep 23, 2018 17:13:04: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Sun Sep 23, 2018 17:13:04: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 17:13:04: Initial reset was performed
+Sun Sep 23, 2018 17:13:04: 736 bytes downloaded (11.59 Kbytes/sec)
+Sun Sep 23, 2018 17:13:04: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Sun Sep 23, 2018 17:13:04: Target reset
+Sun Sep 23, 2018 17:13:05: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sun Sep 23, 2018 17:13:05: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Sun Sep 23, 2018 17:13:05: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 17:13:05: 10900 bytes downloaded into FLASH (10.48 Kbytes/sec)
+Sun Sep 23, 2018 17:13:05: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Sun Sep 23, 2018 17:13:05: Hardware reset with strategy 0 was performed
+Sun Sep 23, 2018 17:13:05: Target reset
+Sun Sep 23, 2018 20:02:12: Failed to shut down the session
+Sun Sep 23, 2018 20:03:28: Fatal error: ST-Link USB communication error   Session aborted!
+
+
+ << Logging to file resumes >> 
+
+Wed Sep 26, 2018 19:44:12: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Wed Sep 26, 2018 19:44:12: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Wed Sep 26, 2018 19:44:12: ST-Link firmware too old
+Wed Sep 26, 2018 19:44:12: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Wed Sep 26, 2018 19:44:12: Hardware reset with strategy 0 was performed
+Wed Sep 26, 2018 19:44:12: Initial reset was performed
+Wed Sep 26, 2018 19:44:12: 736 bytes downloaded (11.59 Kbytes/sec)
+Wed Sep 26, 2018 19:44:12: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Wed Sep 26, 2018 19:44:12: Target reset
+Wed Sep 26, 2018 19:44:13: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Wed Sep 26, 2018 19:44:13: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Wed Sep 26, 2018 19:44:13: Hardware reset with strategy 0 was performed
+Wed Sep 26, 2018 19:44:13: 10900 bytes downloaded into FLASH (10.17 Kbytes/sec)
+Wed Sep 26, 2018 19:44:13: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Wed Sep 26, 2018 19:44:13: Hardware reset with strategy 0 was performed
+Wed Sep 26, 2018 19:44:13: Target reset
+
+
+ << Logging to file resumes >> 
+
+Wed Sep 26, 2018 19:48:29: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Wed Sep 26, 2018 19:48:29: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Wed Sep 26, 2018 19:48:29: ST-Link firmware too old
+Wed Sep 26, 2018 19:48:29: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Wed Sep 26, 2018 19:48:29: Hardware reset with strategy 0 was performed
+Wed Sep 26, 2018 19:48:29: Initial reset was performed
+Wed Sep 26, 2018 19:48:29: 736 bytes downloaded (11.59 Kbytes/sec)
+Wed Sep 26, 2018 19:48:29: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Wed Sep 26, 2018 19:48:29: Target reset
+Wed Sep 26, 2018 19:48:30: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Wed Sep 26, 2018 19:48:30: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Wed Sep 26, 2018 19:48:30: Hardware reset with strategy 0 was performed
+Wed Sep 26, 2018 19:48:30: 10492 bytes downloaded into FLASH (10.08 Kbytes/sec)
+Wed Sep 26, 2018 19:48:30: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Wed Sep 26, 2018 19:48:30: Hardware reset with strategy 0 was performed
+Wed Sep 26, 2018 19:48:30: Target reset
+
+
+ << Logging to file resumes >> 
+
+Wed Sep 26, 2018 19:50:47: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Wed Sep 26, 2018 19:50:47: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Wed Sep 26, 2018 19:50:47: ST-Link firmware too old
+Wed Sep 26, 2018 19:50:47: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Wed Sep 26, 2018 19:50:47: Hardware reset with strategy 0 was performed
+Wed Sep 26, 2018 19:50:47: Initial reset was performed
+Wed Sep 26, 2018 19:50:47: 736 bytes downloaded (11.41 Kbytes/sec)
+Wed Sep 26, 2018 19:50:47: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Wed Sep 26, 2018 19:50:47: Target reset
+Wed Sep 26, 2018 19:50:48: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Wed Sep 26, 2018 19:50:48: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Wed Sep 26, 2018 19:50:48: Hardware reset with strategy 0 was performed
+Wed Sep 26, 2018 19:50:48: 13160 bytes downloaded into FLASH (11.26 Kbytes/sec)
+Wed Sep 26, 2018 19:50:48: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Wed Sep 26, 2018 19:50:48: Hardware reset with strategy 0 was performed
+Wed Sep 26, 2018 19:50:48: Target reset
+Wed Sep 26, 2018 19:52:23: Breakpoint hit: Code @ SPI_Base.cpp:316.9, type: default (auto) 
+Wed Sep 26, 2018 19:52:46: Breakpoint hit: Code @ SPI_Base.cpp:316.9, type: default (auto) 
+
+
+ << Logging to file resumes >> 
+
+Wed Sep 26, 2018 19:54:03: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Wed Sep 26, 2018 19:54:03: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Wed Sep 26, 2018 19:54:03: ST-Link firmware too old
+Wed Sep 26, 2018 19:54:03: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Wed Sep 26, 2018 19:54:03: Hardware reset with strategy 0 was performed
+Wed Sep 26, 2018 19:54:03: Initial reset was performed
+Wed Sep 26, 2018 19:54:03: 736 bytes downloaded (15.29 Kbytes/sec)
+Wed Sep 26, 2018 19:54:03: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Wed Sep 26, 2018 19:54:03: Target reset
+Wed Sep 26, 2018 19:54:04: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Wed Sep 26, 2018 19:54:04: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Wed Sep 26, 2018 19:54:04: Hardware reset with strategy 0 was performed
+Wed Sep 26, 2018 19:54:04: 13160 bytes downloaded into FLASH (10.54 Kbytes/sec)
+Wed Sep 26, 2018 19:54:04: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Wed Sep 26, 2018 19:54:04: Hardware reset with strategy 0 was performed
+Wed Sep 26, 2018 19:54:04: Target reset
+Wed Sep 26, 2018 19:54:25: Hardware reset with strategy 0 was performed
+Wed Sep 26, 2018 19:54:25: Target reset
+
+
+ << Logging to file resumes >> 
+
+Wed Sep 26, 2018 19:54:58: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Wed Sep 26, 2018 19:54:58: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Wed Sep 26, 2018 19:54:58: ST-Link firmware too old
+Wed Sep 26, 2018 19:54:58: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Wed Sep 26, 2018 19:54:58: Hardware reset with strategy 0 was performed
+Wed Sep 26, 2018 19:54:58: Initial reset was performed
+Wed Sep 26, 2018 19:54:58: 736 bytes downloaded (15.29 Kbytes/sec)
+Wed Sep 26, 2018 19:54:58: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Wed Sep 26, 2018 19:54:58: Target reset
+Wed Sep 26, 2018 19:54:59: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Wed Sep 26, 2018 19:54:59: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Wed Sep 26, 2018 19:54:59: Hardware reset with strategy 0 was performed
+Wed Sep 26, 2018 19:54:59: 13160 bytes downloaded into FLASH (11.11 Kbytes/sec)
+Wed Sep 26, 2018 19:54:59: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Wed Sep 26, 2018 19:54:59: Hardware reset with strategy 0 was performed
+Wed Sep 26, 2018 19:54:59: Target reset
+Wed Sep 26, 2018 19:55:11: Hardware reset with strategy 0 was performed
+Wed Sep 26, 2018 19:55:11: Target reset
+Wed Sep 26, 2018 20:01:07: Hardware reset with strategy 0 was performed
+Wed Sep 26, 2018 20:01:13: Failed to shut down the session
+Wed Sep 26, 2018 20:01:13: Fatal error: Check that all cables are connected and power is OK   Session aborted!
+
+
+ << Logging to file resumes >> 
+
+Wed Sep 26, 2018 20:02:46: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Wed Sep 26, 2018 20:02:46: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Wed Sep 26, 2018 20:02:48: Fatal error: ST-Link Connection error   Session aborted!
+Wed Sep 26, 2018 20:02:48: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+
+
+ << Logging to file resumes >> 
+
+Wed Sep 26, 2018 20:02:57: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Wed Sep 26, 2018 20:02:57: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Wed Sep 26, 2018 20:02:57: ST-Link firmware too old
+Wed Sep 26, 2018 20:02:57: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Wed Sep 26, 2018 20:02:57: Hardware reset with strategy 0 was performed
+Wed Sep 26, 2018 20:02:57: Initial reset was performed
+Wed Sep 26, 2018 20:02:58: 736 bytes downloaded (9.21 Kbytes/sec)
+Wed Sep 26, 2018 20:02:58: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Wed Sep 26, 2018 20:02:58: Target reset
+Wed Sep 26, 2018 20:02:58: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Wed Sep 26, 2018 20:02:58: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Wed Sep 26, 2018 20:02:58: Hardware reset with strategy 0 was performed
+Wed Sep 26, 2018 20:02:58: 7304 bytes downloaded into FLASH (8.77 Kbytes/sec)
+Wed Sep 26, 2018 20:02:58: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Wed Sep 26, 2018 20:02:58: Hardware reset with strategy 0 was performed
+Wed Sep 26, 2018 20:02:58: Target reset
+Wed Sep 26, 2018 20:58:27: Breakpoint hit: Code @ Test.cpp:34.5, type: default (auto) 
+Thu Sep 27, 2018 07:16:55: Fatal error: ST-Link USB communication error   Session aborted!
+
+
+ << Logging to file resumes >> 
+
+Fri Sep 28, 2018 21:01:15: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Fri Sep 28, 2018 21:01:15: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Fri Sep 28, 2018 21:01:15: ST-Link firmware too old
+Fri Sep 28, 2018 21:01:15: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Fri Sep 28, 2018 21:01:15: Hardware reset with strategy 0 was performed
+Fri Sep 28, 2018 21:01:15: Initial reset was performed
+Fri Sep 28, 2018 21:01:15: 736 bytes downloaded (15.29 Kbytes/sec)
+Fri Sep 28, 2018 21:01:15: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Fri Sep 28, 2018 21:01:15: Target reset
+Fri Sep 28, 2018 21:01:16: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Fri Sep 28, 2018 21:01:16: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Fri Sep 28, 2018 21:01:16: Hardware reset with strategy 0 was performed
+Fri Sep 28, 2018 21:01:16: 7112 bytes downloaded into FLASH (9.88 Kbytes/sec)
+Fri Sep 28, 2018 21:01:16: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Fri Sep 28, 2018 21:01:16: Hardware reset with strategy 0 was performed
+Fri Sep 28, 2018 21:01:16: Target reset
+Fri Sep 28, 2018 21:01:31: Breakpoint hit: Code @ Test.cpp:34.5, type: default (auto) 
+Fri Sep 28, 2018 21:01:35: Breakpoint hit: Code @ Test.cpp:34.5, type: default (auto) 
+Fri Sep 28, 2018 21:01:44: Breakpoint hit: Code @ Test.cpp:34.5, type: default (auto) 
+Fri Sep 28, 2018 21:01:59: Breakpoint hit: Code @ Test.cpp:34.5, type: default (auto) 
+
+
+ << Logging to file resumes >> 
+
+Fri Sep 28, 2018 21:13:04: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Fri Sep 28, 2018 21:13:04: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Fri Sep 28, 2018 21:13:04: ST-Link firmware too old
+Fri Sep 28, 2018 21:13:04: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Fri Sep 28, 2018 21:13:04: Hardware reset with strategy 0 was performed
+Fri Sep 28, 2018 21:13:04: Initial reset was performed
+Fri Sep 28, 2018 21:13:04: 736 bytes downloaded (15.29 Kbytes/sec)
+Fri Sep 28, 2018 21:13:04: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Fri Sep 28, 2018 21:13:04: Target reset
+Fri Sep 28, 2018 21:13:05: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Fri Sep 28, 2018 21:13:05: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Fri Sep 28, 2018 21:13:05: Hardware reset with strategy 0 was performed
+Fri Sep 28, 2018 21:13:05: 7268 bytes downloaded into FLASH (9.46 Kbytes/sec)
+Fri Sep 28, 2018 21:13:05: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Fri Sep 28, 2018 21:13:05: Hardware reset with strategy 0 was performed
+Fri Sep 28, 2018 21:13:05: Target reset
+
+
+ << Logging to file resumes >> 
+
+Fri Sep 28, 2018 21:15:02: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Fri Sep 28, 2018 21:15:02: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Fri Sep 28, 2018 21:15:02: ST-Link firmware too old
+Fri Sep 28, 2018 21:15:02: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Fri Sep 28, 2018 21:15:02: Hardware reset with strategy 0 was performed
+Fri Sep 28, 2018 21:15:02: Initial reset was performed
+Fri Sep 28, 2018 21:15:02: 736 bytes downloaded (15.63 Kbytes/sec)
+Fri Sep 28, 2018 21:15:02: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Fri Sep 28, 2018 21:15:02: Target reset
+Fri Sep 28, 2018 21:15:03: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Fri Sep 28, 2018 21:15:03: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Fri Sep 28, 2018 21:15:03: Hardware reset with strategy 0 was performed
+Fri Sep 28, 2018 21:15:03: 7268 bytes downloaded into FLASH (9.46 Kbytes/sec)
+Fri Sep 28, 2018 21:15:03: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Fri Sep 28, 2018 21:15:03: Hardware reset with strategy 0 was performed
+Fri Sep 28, 2018 21:15:03: Target reset
+Sat Sep 29, 2018 08:30:04: Fatal error: ST-Link USB communication error   Session aborted!

@@ -55,6 +55,14 @@ public:
         uint16_t            TimeValue   :16;        
     }TxnStatus_t;
     
+    enum 
+    {        
+        SPI_TIME_NANO_SEC       = 0x01,
+        SPI_TIME_MICRO_SEC      = 0x02,
+        SPI_TIME_MILLI_SEC      = 0x03,
+        SPI_TIME_SEC            = 0x04
+    };
+    
     typedef struct
     {
         uint8_t*        TxBuf;
@@ -89,9 +97,15 @@ public:
     
     virtual       Status_t       Xfer               (Transaction_t* aTransaction) = 0;
     
-    //static       Status_t        Post               (Transaction_t aTransaction){return 1;};
+    virtual       Status_t       Post               (Transaction_t aTransaction);
+    
+    virtual       Status_t       Post               (Transaction_t* pTransaction);
     
     static       Status_t        SPI_Init           (SPIx_t SPIx, HZ_t HZ, SPI_HandleTypeDef* phSPI);
+    
+//    static       Status_t        TxDirect           (SPIx_t SPIx, uint8_t* pTxBuf, uint16_t TxLen);
+    
+    static       uint32_t        GetStatus          (SPIx_t SPIx);
     
     static        void           SPI1__IRQHandler   ();
     

@@ -248,6 +248,51 @@ void SPI_Base::DMA_Ch5_IRQHandler()
    HAL_DMA_IRQHandler(m_phspi_2->hdmatx);
 }
 
+uint32_t SPI_Base::GetStatus(SPIx_t SPIx)
+{
+    if( SPIx == SPI1_A4_A5_A6_A7 )
+    {
+        return SPI_Base::SPI1_Status;
+    }
+    
+    return SPI_Base::SPI2_Status;
+}
+
+//Status_t SPI_Base::TxDirect(SPIx_t SPIx, uint8_t* pTxBuf, uint16_t TxLen)
+//{    
+//
+//    if(SPIx == SPI1_A4_A5_A6_A7 )
+//    {
+//        while(TxLen--)
+//        {
+//            while(SPI1->SR & SPI_FLAG_TXE != SPI_FLAG_TXE);
+//            SPI1->DR = *pTxBuf;
+//        }
+//
+//    }
+//    else if(SPIx == SPI1_A4_A5_A6_A7)
+//    {
+//        while(TxLen--)
+//        {
+//            while(SPI2->SR & SPI_FLAG_TXE != SPI_FLAG_TXE);
+//            SPI2->DR = *pTxBuf;
+//        }        
+//    }
+//    else
+//    {
+//        while(1);
+//    }
+//    return HAL_OK;
+//
+//        //while(__HAL_SPI_GET_FLAG(hspi, SPI_FLAG_TXE) != true);
+//        
+//    
+//    
+//}
+
+
+
+
 }
 
 
@@ -271,8 +316,8 @@ void HAL_SPI_TxCpltCallback(SPI_HandleTypeDef *hspi)
         if(SPI_Base::m_pCurentTransaction_SPI1) 
         {
             SPI_Base::m_pCurentTransaction_SPI1->TxnStatus.Event |= SPI_Base::SPI_TX_COMPLETE; 
-            SPI_Base::m_pCurentTransaction_SPI1->TxnStatus.TimeUnits = 1;
-            SPI_Base::m_pCurentTransaction_SPI1->TxnStatus.TimeValue = 200;            
+            SPI_Base::m_pCurentTransaction_SPI1->TxnStatus.TimeUnits = SPI_Base::SPI_TIME_MILLI_SEC;
+            SPI_Base::m_pCurentTransaction_SPI1->TxnStatus.TimeValue = 0;//HAL_GetTick() - SPI_Base::m_pCurentTransaction_SPI1->TxnStatus.TimeValue;            
         }
             
         if(SPI_Base::m_pSPI1_Q->IsQueueEmpty() == false)                          // 28 cycles

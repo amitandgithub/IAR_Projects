@@ -140,7 +140,69 @@ Status_t SPI_Poll::TxRx(uint8_t* pTxBuf, uint8_t* pRxBuf, uint16_t Len)
     return Status;
 }
 
+Status_t SPI_Poll::Xfer(Transaction_t* pTransaction)
+{
+    Status_t Status = HAL_ERROR;
+    if(pTransaction == nullptr)
+    {
+        return HAL_ERROR;           
+    }    
+    else if ( (pTransaction->TxBuf == nullptr) && (pTransaction->TxLen == 0) && (pTransaction->RxBuf == nullptr)  && (pTransaction->RxLen == 0))
+    {
+        return HAL_ERROR;
+    }
+    
+    if( m_spix == SPI1_A4_A5_A6_A7 )
+    {
+        m_pChipSelect_SPI1 = pTransaction->pCS;
+    }
+    else if( m_spix == SPI2_B12_B13_B14_B15 )
+    {
+        m_pChipSelect_SPI2 = pTransaction->pCS;
+    }
+    
+    if( ((pTransaction->TxBuf != nullptr) || (pTransaction->TxLen != 0)) && ((pTransaction->RxBuf == nullptr)  || (pTransaction->RxLen == 0)) )
+    {        
+         Status = Tx(pTransaction->TxBuf,pTransaction->TxLen);       
+    }
+    else if( ((pTransaction->TxBuf == nullptr) || (pTransaction->TxLen == 0)) && ((pTransaction->RxBuf != nullptr)  || (pTransaction->RxLen != 0)) )
+    {        
+         Status = Rx(pTransaction->RxBuf,pTransaction->RxLen);   
+    }
+    else if((pTransaction->TxBuf != nullptr) && (pTransaction->TxLen != 0) && (pTransaction->RxBuf != nullptr)  && (pTransaction->RxLen != 0))
+    {    
+        if(pTransaction->TxLen == pTransaction->RxLen)
+        {
+            Status =  TxRx(pTransaction->TxBuf, pTransaction->RxBuf, pTransaction->TxLen);   
+        }
+        else
+        {
+            Status = Tx(pTransaction->TxBuf,pTransaction->TxLen);
+            
+            Status = Rx(pTransaction->RxBuf,pTransaction->RxLen); 
+        }
+    }    
+    return Status;    
+}
 
+Status_t SPI_Poll::Post(Transaction_t* pTransaction)
+{
+    
+    if( m_spix == SPI1_A4_A5_A6_A7 )
+    {
+        m_pCurentTransaction_SPI1 = pTransaction;
+       
+        return Xfer(m_pCurentTransaction_SPI1);
+    }    
+    else
+    {
+        m_pCurentTransaction_SPI2 = pTransaction;
+        
+        return Xfer(m_pCurentTransaction_SPI2);
+    
+    }
+    
+}
 
 
 

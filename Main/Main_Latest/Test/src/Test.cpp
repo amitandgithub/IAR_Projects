@@ -6,7 +6,7 @@
 using namespace Peripherals;
 using namespace Utils;
 
-void GpioTest()
+void Gpio_Output_Test()
 {
     Peripherals::GpioOutput LED(GPIOC,GPIO_PIN_13);
     LED.HwInit();
@@ -14,6 +14,48 @@ void GpioTest()
     {
         LED.ToggleOutput();
         HAL_Delay(100);
+    }
+}
+Peripherals::GpioOutput LED(GPIOC,GPIO_PIN_13);
+
+void Gpio_Intput_Test()
+{
+    Peripherals::GpioOutput LED(GPIOC,GPIO_PIN_13);
+    LED.HwInit();
+    while(1)
+    {
+        LED.ToggleOutput();
+        HAL_Delay(100);
+    }
+}
+
+void LED_Toggle()
+{
+    LED.ToggleOutput();
+}
+void Hw_Button_Test()
+{
+    static Peripherals::HwButton HwButton_A8(GPIOA, GPIO_PIN_8);
+    HwButton_A8.HwInit();
+    HwButton_A8.RegisterEventHandler(HwButton::Click,LED_Toggle);
+    LED.HwInit();
+    while(1)
+    {
+        HwButton_A8.RunStateMachine();
+        HAL_Delay(10);
+    }
+}
+
+void Hw_ButtonIntr_Test()
+{
+    static Peripherals::HwButtonIntr HwButton_A8(GPIOA, GPIO_PIN_8);
+    HwButton_A8.HwInit();
+    HwButton_A8.RegisterEventHandler(HwButtonIntr::LongPress,LED_Toggle);
+    LED.HwInit();
+    while(1)
+    {
+        HwButton_A8.RunStateMachine();
+        HAL_Delay(10);
     }
 }
 
@@ -164,16 +206,16 @@ void SPI2_DMA_Test()
     }
 }
 
-#define Nokia5110LCD_SPI1_TEST 1
+#define Nokia5110LCD_SPI1_Dual_Display_TEST 0
 
-#if Nokia5110LCD_SPI1_TEST
+#if Nokia5110LCD_SPI1_Dual_Display_TEST
 uint32_t i,j;
-void Nokia5110LCD_SPI1_Test()
+#define DEL 80
+void Nokia5110LCD_SPI1_Dual_Display_Test()
 {
     uint8_t Txcomplete=0,Txcomplete1=0;
-    #define DEL 1
     static Peripherals::GpioOutput      CS(GPIOA,GPIO_PIN_4);
-    static Peripherals::SPI_DMA         SPI_Obj(Peripherals::SPI_Base::SPI1_A4_A5_A6_A7,&CS, 100000);
+    static Peripherals::SPI_Poll        SPI_Obj(Peripherals::SPI_Base::SPI1_A4_A5_A6_A7,&CS, 100000);
     static Peripherals::GpioOutput      D_C(GPIOB,GPIO_PIN_1);
     static Peripherals::GpioOutput      Backlight(GPIOB,GPIO_PIN_10);
     static Peripherals::GpioOutput      Reset(GPIOB,GPIO_PIN_0);
@@ -190,27 +232,30 @@ void Nokia5110LCD_SPI1_Test()
     LCD.SetBrigntness(0x15);
     LCD1.SetBrigntness(0x13);
    
-    
     while(1)
     {
 #if 1
-        if(Txcomplete1 == 0)
+        if(Txcomplete == 0)
         {
-            LCD.DrawStrBuf(0,0,"Avni Chaudhary",0xc);
+            LCD.InvertRowBuf(i%6);
+            LCD.DrawStrBuf(0,0,"Avni Chaudhary");
             LCD.DrawStrBuf(1,0,"IS");
             LCD.DrawCharBuf(2,2,i++);
-            LCD.DrawStrBuf(3,3,"Good",0xc);
-            LCD.DrawStrBuf(4,7,"Girl");
+            LCD.DrawStrBuf(3,3,"Good");
+            LCD.DrawStrBuf(4,7,"Girl");            
+            LCD.InvertRowBuf(i%6);
         }
 
 //#elif 0     
         if(Txcomplete1 == 0)
         {
-            LCD1.DrawStrBuf(0,0,"Amit Chaudhary",0xc);
+            LCD1.InvertRowBuf(j%6);
+            LCD1.DrawStrBuf(0,0,"Amit Chaudhary");
             LCD1.DrawStrBuf(1,0,"IS");
             LCD1.DrawCharBuf(2,2,j++);
-            LCD1.DrawStrBuf(3,3,"Good",0xc);
+            LCD1.DrawStrBuf(3,3,"Good");
             LCD1.DrawStrBuf(4,7,"Boy");
+            LCD1.InvertRowBuf(j%6);
         }
         
         Txcomplete1 = LCD1.Refresh();
@@ -225,6 +270,46 @@ void Nokia5110LCD_SPI1_Test()
        // HAL_Delay(DEL);
        // LCD.ClearBuffer();
        // LCD.Refresh();
+        
+        
+    }    
+}
+#endif
+
+#define Nokia5110LCD_SPI1_TEST 1
+
+#if Nokia5110LCD_SPI1_TEST
+uint32_t i,j;
+#define DEL 80
+void Nokia5110LCD_SPI1_Test()
+{
+    uint8_t Txcomplete=0;
+    static Peripherals::GpioOutput      CS(GPIOA,GPIO_PIN_4);
+    static Peripherals::SPI_DMA         SPI_Obj(Peripherals::SPI_Base::SPI1_A4_A5_A6_A7,&CS, 100000);
+    static Peripherals::GpioOutput      D_C(GPIOB,GPIO_PIN_1);
+    static Peripherals::GpioOutput      Backlight(GPIOB,GPIO_PIN_10);
+    static Peripherals::GpioOutput      Reset(GPIOB,GPIO_PIN_0);
+    static Peripherals::Nokia5110LCD    LCD(&SPI_Obj,&CS,&D_C,&Reset,&Backlight);
+    
+    LCD.HwInit();
+    LCD.SetBrigntness(0x13);
+   
+    while(1)
+    {
+        if(Txcomplete == 0)
+        {
+            LCD.InvertRowBuf(i%6);
+            LCD.DrawStrBuf(0,0,"Avni Chaudhary");
+            LCD.DrawStrBuf(1,0,"IS");
+            LCD.DrawCharBuf(2,2,i++);
+            LCD.DrawStrBuf(3,3,"Good");
+            LCD.DrawStrBuf(4,7,"Girl");            
+            LCD.InvertRowBuf(i%6);
+        }
+        
+        Txcomplete = LCD.Refresh();
+        HAL_Delay(DEL);
+
         
         
     }    

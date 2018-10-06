@@ -18,7 +18,7 @@
  */
 
 
-#include "Nokia5110LCD.hpp"
+#include "Nokia5110LCD.h"
 
 namespace Peripherals
 {
@@ -159,7 +159,7 @@ Nokia5110LCD::Nokia5110LCD(SPIDrv_t*   pSpiDriverLCD ,
 
 bool Nokia5110LCD::HwInit()
 {
-    if( (m_pSpiDriverLCD->GetStatus() & Peripherals::SPI_Base::SPI_INIT_DONE) != Peripherals::SPI_Base::SPI_INIT_DONE )
+    if( (m_pSpiDriverLCD->GetStatus(m_pSpiDriverLCD->GetSPIx()) & Peripherals::SPI_Base::SPI_INIT_DONE) != Peripherals::SPI_Base::SPI_INIT_DONE )
     {
        m_pSpiDriverLCD->HwInit(); 
     }
@@ -216,6 +216,7 @@ void Nokia5110LCD::Write(DC_t DC, unsigned char data)
  	}
     
     m_pSpiDriverLCD->Tx(&data,1);
+    //m_pSpiDriverLCD->TxDirect(m_pSpiDriverLCD->GetSPIx(), &data,1);
     
 }
 
@@ -382,7 +383,6 @@ void Nokia5110LCD::DrawBitmapBuf(const char* Str, uint8_t format)
 uint32_t Nokia5110LCD::Refresh()
 {
    static uint32_t Status;
-   static uint32_t Error=0,Sucess=0;
 
 
        m_pDataCommandSelectGpio->On();
@@ -404,7 +404,7 @@ uint32_t Nokia5110LCD::Refresh()
        m_CurrentTransaction.TxBuf = m_pSysBuf;       
        m_CurrentTransaction.TxLen = DISPLAY_BUF_SIZE;
        m_CurrentTransaction.pCS = m_pCS;
-       m_CurrentTransaction.TxnStatus.TimeValue = 0;
+       m_CurrentTransaction.TxnStatus.TimeValue = HAL_GetTick();
        m_CurrentTransaction.TxnStatus.Event &=  ~(SPI_Base::SPI_TX_COMPLETE);     
        
        Status =  m_pSpiDriverLCD->Post(&m_CurrentTransaction); 
@@ -413,7 +413,7 @@ uint32_t Nokia5110LCD::Refresh()
      m_CurrentTransaction.TxLen = DISPLAY_BUF_SIZE;
      m_CurrentTransaction.pCS = m_pCS;
      m_CurrentTransaction.TxnStatus.TimeValue = 0;
-     
+     m_CurrentTransaction.TxnStatus.Event &=  ~(SPI_Base::SPI_TX_COMPLETE);  
 //     while((m_CurrentTransaction.TxnStatus.Event & SPI_Base::SPI_TX_COMPLETE) == SPI_Base::SPI_TX_COMPLETE);
      
      Status = m_pSpiDriverLCD->Post(&m_CurrentTransaction);
@@ -477,6 +477,24 @@ void Nokia5110LCD::PowerDown( )
     m_pSpiDriverLCD->Tx(&cmd,1);
 
 }
+
+void Nokia5110LCD::InvertRowBuf(unsigned char Row)
+{
+    uint32_t i;
+    
+    for(i = 0; (i<84) ; i++)
+    {
+#if defined(DUAL_BUFFER)
+        m_pAppBuf[Row*84 + i] = ~m_pAppBuf[Row*84 + i];
+#else
+        m_BufferA[Row*84 + i] = ~m_BufferA[Row*84 + i];
+#endif
+    }
+    
+
+                      
+}
+
 
 
 }

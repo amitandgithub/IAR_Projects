@@ -5,16 +5,22 @@
 #include "stm32f1xx_hal.h"
 #include "I2C_Master.hpp"
 #include "I2C_Slave.hpp"
-#include <INA219.hpp>
+#include <INA219.h>
 #include "GpioOutput.hpp"
 #include "GpioInput.hpp"
 #include "SPI_Poll.h"
 #include "SPI_IT.h"
 #include "SPI_DMA.h"
-#include "Nokia5110LCD.hpp"
+#include "Nokia5110LCD.h"
 #include "Queue.h"
+#include "HwButton.h"
+#include "HwButtonIntr.h"
 
-extern void GpioTest();
+extern void Gpio_Output_Test();
+extern void Gpio_Intput_Test();
+extern void LED_Toggle();
+extern void Hw_Button_Test();
+extern void Hw_ButtonIntr_Test();
 extern void I2C_Master_Test();
 extern void I2C_Slave_Test();
 extern void INA219_Test();
@@ -28,3 +34,4 @@ extern void Nokia5110LCD_SPI1_Test();
 extern void Nokia5110LCD_SPI2_Test(); 
 extern void Nokia5110LCD_Dual_Test();
 extern void Queue_Test();
+void Nokia5110LCD_SPI1_Dual_Display_Test();

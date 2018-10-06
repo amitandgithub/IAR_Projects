@@ -2167,6 +2167,12 @@
     <group>
         <name>HW_Modules</name>
         <file>
+            <name>$PROJ_DIR$\..\HW_Modules\HwButton.cpp</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\HW_Modules\HwButtonIntr.cpp</name>
+        </file>
+        <file>
             <name>$PROJ_DIR$\..\HW_Modules\INA219.cpp</name>
         </file>
         <file>

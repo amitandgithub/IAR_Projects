@@ -16,7 +16,6 @@ HwButtonIntr::BtnStates  HwButtonIntr::m_CurrentState = HwButtonIntr::IdleState;
 
 HwButtonIntr::HwButtonIntr(PORT Port, u16 Pin,IntOnWhichEdge eIntOnWhichEdge, EXTIMode eEXTIMode) :
 		           GpioInput(Port, Pin, ISR, eIntOnWhichEdge, eEXTIMode )
-				   //Queue(aQMem,  QSIZE)
 {
 	m_Pin = Pin;
 	m_Events                = 0UL;

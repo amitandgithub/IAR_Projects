@@ -5,7 +5,7 @@
  *      Author: Amit Chaudhary
  */
 
-#include <INA219.hpp>
+#include <INA219.h>
 
 namespace Peripherals {
 
