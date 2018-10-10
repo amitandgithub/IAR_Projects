@@ -2408,6 +2408,12 @@
             </file>
         </group>
         <group>
+            <name>RTC</name>
+            <file>
+                <name>$PROJ_DIR$\..\Drivers\RTC\RTC_Module.cpp</name>
+            </file>
+        </group>
+        <group>
             <name>SPI</name>
             <file>
                 <name>$PROJ_DIR$\..\Drivers\SPI\SPI_Base.cpp</name>
@@ -2451,6 +2457,9 @@
         </file>
         <file>
             <name>$PROJ_DIR$\..\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc_ex.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rtc.c</name>
         </file>
         <file>
             <name>$PROJ_DIR$\..\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_spi.c</name>
@@ -2503,5 +2512,11 @@
     </group>
     <group>
         <name>Utils</name>
+        <file>
+            <name>$PROJ_DIR$\..\Utils\src\printf.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Utils\src\Utils.c</name>
+        </file>
     </group>
 </project>

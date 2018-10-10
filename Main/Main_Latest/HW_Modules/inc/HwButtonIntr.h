@@ -25,7 +25,7 @@ public:
 
 	typedef void(*BtnHandler)(void);
     typedef void(*HwButtonISR)(void);
-	typedef enum
+	typedef enum : uint8_t
 	{
 		Idle = 0,
 		Pressed,
@@ -49,7 +49,7 @@ public:
 		UnSupportedTime = 6100,
 	};
 
-	typedef enum
+	typedef enum : uint8_t
 	{
 		IdleState = 0,
 		PressedState,
@@ -77,22 +77,18 @@ private:
 	inline static void ISR();
     
 private:	
-	uint32_t        m_Events;
-	uint32_t        m_HighEdgeDetectedTime;
-	bool       m_PreviousInputPinState;
-	static BtnStates  m_CurrentState;
-	bool       m_EdgeDetected;
-	BtnHandler PressedHandler;
-	BtnHandler ReleasedHandler;
-	BtnHandler ClickHandler;
-	BtnHandler DoubleClickHandler;
-	BtnHandler LongPressHandler;
-	BtnHandler LongLongPressHandler;
-	HwButtonISR m_HwButtonISR;
-	static PIN_t m_Pin;
-
-
-
+	uint8_t             m_Events;
+	uint32_t            m_HighEdgeDetectedTime;
+	bool                m_PreviousInputPinState;
+    BtnHandler          PressedHandler;
+	BtnHandler          ReleasedHandler;
+	BtnHandler          ClickHandler;
+	BtnHandler          DoubleClickHandler;
+	BtnHandler          LongPressHandler;
+	BtnHandler          LongLongPressHandler;
+	HwButtonISR         m_HwButtonISR;
+    static BtnStates    m_CurrentState;
+	static PIN_t        m_Pin;
 
 };
 

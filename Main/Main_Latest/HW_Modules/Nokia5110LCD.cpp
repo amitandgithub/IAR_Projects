@@ -444,6 +444,7 @@ void Nokia5110LCD::DrawBuffer(char* pBuffer)
 
 void Nokia5110LCD::ClearBuffer()
 {
+#if 0
     uint32_t i,Row,Chars;
     
 	GoToXY(0*SIZE_OF_1_CHAR,0);
@@ -462,6 +463,17 @@ void Nokia5110LCD::ClearBuffer()
                 }              
            }  
        }
+#endif
+       
+#if defined(DUAL_BUFFER)
+       //m_pAppBuf[Row*84 + Chars*6 + i] = 0x00;
+       for(uint32_t count = 0; count< DISPLAY_BUF_SIZE; count++)
+           m_pAppBuf[count] = 0;
+#else
+      // m_BufferA[Row*84 + Chars*6 + i] = 0x00;
+       for(uint32_t count = 0; count< DISPLAY_BUF_SIZE; count++)
+           m_BufferA[count] = 0;
+#endif
 
 }
 

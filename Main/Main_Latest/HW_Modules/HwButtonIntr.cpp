@@ -21,7 +21,6 @@ HwButtonIntr::HwButtonIntr(PORT_t Port, PIN_t Pin, Intr_Event_Edge_t eIntOnWhich
 	m_Events                = 0UL;
 	m_HighEdgeDetectedTime  = 0UL;
 	m_PreviousInputPinState = false;
-	m_EdgeDetected          = false;
 
 	PressedHandler          = nullptr;
 	ReleasedHandler         = nullptr;
@@ -196,27 +195,33 @@ uint32_t HwButtonIntr::GetTicksSince(uint32_t LastTick)
 void HwButtonIntr::ISR()
 {
 
-	// Masks the further interrupt requests until this is serviced
-	 EXTI->IMR &= ~m_Pin;
-
-	 if( (EXTI->RTSR) & m_Pin ) // Interrupt triggered because of Rising edge
+	/* Masks the further interrupt requests until this is serviced */
+	 EXTI->IMR &= ~m_Pin;    
+    
+     /* Interrupt triggered because of Rising edge */
+	 if( (EXTI->RTSR) & m_Pin ) 
 	 {
 		 m_CurrentState = HwButtonIntr::PressedState;
-
-		 // Configure Interrupt for the next falling edge
+         
+		 /* Configure Interrupt for the next falling edge */
 		 EXTI->FTSR |= m_Pin;
-		 EXTI->RTSR &= ~m_Pin; // Clear Rising edge interrupt configuration
+         /* Clear Rising edge interrupt configuration */
+		 EXTI->RTSR &= ~m_Pin; 
 
 	 }
-	 else					 // Interrupt triggered because of Falling edge
-	 {
+     /* Interrupt triggered because of Falling edge */
+	 else					 
+	 {         
 		 m_CurrentState = HwButtonIntr::ReleasedState;
-		 // Configure Interrupt for the next Rising edge
+         
+		 /* Configure Interrupt for the next Rising edge */
 		 EXTI->RTSR |= m_Pin;
-		 EXTI->FTSR &= ~m_Pin; // Clear Rising edge interrupt configuration
+         
+         /* Interrupt triggered because of Falling edge */
+		 EXTI->FTSR &= ~m_Pin;
 	 }
 
-	// Enable the further interrupt requests
+	/* Enable the further interrupt requests */
 	 EXTI->IMR |= m_Pin;
 }
 

@@ -230,6 +230,7 @@
                     <state>HAL_DMA_MODULE_ENABLED</state>
                     <state>HAL_I2C_MODULE_ENABLED</state>
                     <state>HAL_SPI_MODULE_ENABLED</state>
+                    <state>HAL_RTC_MODULE_ENABLED</state>
                 </option>
                 <option>
                     <name>CCPreprocFile</name>
@@ -369,6 +370,7 @@
                     <state>$PROJ_DIR$\..\HW_Modules\inc</state>
                     <state>$PROJ_DIR$\..\Drivers\SPI</state>
                     <state>$PROJ_DIR$\..\Utils\inc</state>
+                    <state>$PROJ_DIR$\..\Drivers\RTC</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -389,7 +391,7 @@
                 <option>
                     <name>CCOptStrategy</name>
                     <version>0</version>
-                    <state>1</state>
+                    <state>0</state>
                 </option>
                 <option>
                     <name>CCOptLevelSlave</name>
@@ -452,7 +454,7 @@
                 <option>
                     <name>CCOptStrategySlave</name>
                     <version>0</version>
-                    <state>1</state>
+                    <state>0</state>
                 </option>
                 <option>
                     <name>CCGuardCalls</name>
@@ -2113,6 +2115,12 @@
             </file>
         </group>
         <group>
+            <name>RTC</name>
+            <file>
+                <name>$PROJ_DIR$\..\Drivers\RTC\RTC_Module.cpp</name>
+            </file>
+        </group>
+        <group>
             <name>SPI</name>
             <file>
                 <name>$PROJ_DIR$\..\Drivers\SPI\SPI_Base.cpp</name>
@@ -2156,6 +2164,9 @@
         </file>
         <file>
             <name>$PROJ_DIR$\..\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc_ex.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rtc.c</name>
         </file>
         <file>
             <name>$PROJ_DIR$\..\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_spi.c</name>
@@ -2208,5 +2219,11 @@
     </group>
     <group>
         <name>Utils</name>
+        <file>
+            <name>$PROJ_DIR$\..\Utils\src\printf.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Utils\src\Utils.c</name>
+        </file>
     </group>
 </project>

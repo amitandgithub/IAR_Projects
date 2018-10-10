@@ -76,6 +76,8 @@ public:
     void DrawBitmapBuf(const char* Str, uint8_t format);
     void InvertRowBuf(unsigned char Row);
     uint32_t Refresh();
+    void BackLightON(){m_pBackLightGpio->On();};
+    void BackLightOFF(){m_pBackLightGpio->Off();};
     void Run(){Refresh();};
 
 private:

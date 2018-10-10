@@ -15,6 +15,9 @@
 #include "Queue.h"
 #include "HwButton.h"
 #include "HwButtonIntr.h"
+#include "RTC_Module.h"
+#include "Utils.h"
+#include "printf.h"
 
 extern void Gpio_Output_Test();
 extern void Gpio_Intput_Test();
@@ -34,4 +37,6 @@ extern void Nokia5110LCD_SPI1_Test();
 extern void Nokia5110LCD_SPI2_Test(); 
 extern void Nokia5110LCD_Dual_Test();
 extern void Queue_Test();
-void Nokia5110LCD_SPI1_Dual_Display_Test();
+extern void Nokia5110LCD_SPI1_Dual_Display_Test();
+extern void RTC_Test();
+extern void Printf_Test();

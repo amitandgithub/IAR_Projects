@@ -50,10 +50,12 @@ template<typename T, uint32_t QSize>
 Queue<T,QSize>::Queue()
 {
 
+    /*
     for(uint32_t i=0;i<Q_Size;i++)
     {
         m_QueueMem[i] = 0;
     }
+    */
     
 	m_WriteHead = 0;
 	m_ReadHead  = 0;

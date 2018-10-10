@@ -276,7 +276,7 @@ void Nokia5110LCD_SPI1_Dual_Display_Test()
 }
 #endif
 
-#define Nokia5110LCD_SPI1_TEST 1
+#define Nokia5110LCD_SPI1_TEST 0
 
 #if Nokia5110LCD_SPI1_TEST
 uint32_t i,j;
@@ -413,7 +413,7 @@ void Nokia5110LCD_Dual_Test()
 }
 #endif
 
-#define Queue_TEST 1
+#define Queue_TEST 0
 
 #if Queue_TEST
 
@@ -438,5 +438,96 @@ void Queue_Test()
            //printf("Read -> Status(%d)  Data = 0x%x\n",status, Data);           
         } 
     }   
+}
+#endif
+
+
+#define RTC_TEST 1
+
+#if RTC_TEST
+
+void RTC_Test()
+{
+    static Peripherals::RTC_Module rtc;
+    static uint32_t TimeCounter;
+    static char TimeCounterStr[10];
+
+    static char TimeStr[10];
+    uint8_t Txcomplete=0;
+    static Peripherals::GpioOutput      CS(GPIOA,GPIO_PIN_4);
+    static Peripherals::SPI_DMA         SPI_Obj(Peripherals::SPI_Base::SPI1_A4_A5_A6_A7,&CS, 100000);
+    static Peripherals::GpioOutput      D_C(GPIOB,GPIO_PIN_1);
+    static Peripherals::GpioOutput      Backlight(GPIOA,GPIO_PIN_1);
+    static Peripherals::GpioOutput      Reset(GPIOB,GPIO_PIN_0);
+    static Peripherals::Nokia5110LCD    LCD(&SPI_Obj,&CS,&D_C,&Reset,&Backlight);
+    
+    LCD.HwInit();
+    LCD.SetBrigntness(0x13);
+    LCD.BackLightON();
+    rtc.HwInit();
+    
+    while(1) 
+    {
+        //rtc.GetTime(&RTC_Time);
+        
+        rtc.GetTime(TimeStr);
+        TimeCounter = rtc.GetTimeCounter();
+        intToStr(TimeCounter, TimeCounterStr, 10);
+        if(Txcomplete == 0)
+        {
+            LCD.DrawStrBuf(0,0,TimeStr);
+            LCD.DrawStrBuf(1,0,TimeCounterStr);
+            LCD.DrawStrBuf(2,0,"Avni Chaudhary");
+        }
+        
+        Txcomplete = LCD.Refresh();        
+        HAL_Delay(300);
+        LCD.ClearBuffer();
+    }   
+}
+#endif
+
+#define PRINTF_TEST 1
+
+#if PRINTF_TEST
+
+static Peripherals::GpioOutput      CS(GPIOA,GPIO_PIN_4);
+static Peripherals::SPI_DMA         SPI_Obj(Peripherals::SPI_Base::SPI1_A4_A5_A6_A7,&CS, 100000);
+static Peripherals::GpioOutput      D_C(GPIOB,GPIO_PIN_1);
+static Peripherals::GpioOutput      Backlight(GPIOA,GPIO_PIN_1);
+static Peripherals::GpioOutput      Reset(GPIOB,GPIO_PIN_0);
+static Peripherals::Nokia5110LCD    LCD(&SPI_Obj,&CS,&D_C,&Reset,&Backlight);
+void putc ( void* p, char c);
+
+void Printf_Test()
+{
+    uint8_t Txcomplete=0;
+
+    
+    LCD.HwInit();
+    LCD.SetBrigntness(0x13);
+    LCD.BackLightON();
+    
+    init_printf(nullptr,putc);
+    Printf((char*)"Hello World");
+    
+    while(1) 
+    {
+        if(Txcomplete == 0)
+        {
+            Printf("%c",'A');
+            LCD.DrawStrBuf(0,0,"Avni Chaudhary");
+        }
+        
+        Txcomplete = LCD.Refresh();        
+        HAL_Delay(300);
+        LCD.ClearBuffer();
+    }   
+}
+
+
+void putc ( void* p, char c)
+{
+    LCD.DrawCharBuf(1,0,c);
 }
 #endif
