@@ -11,7 +11,7 @@ namespace App
 {
 
 
-Bsp::HwButtonIntr HwButton_A2(GPIOA, GPIO_Pin_3,Bsp::GpioInput::EXTI_Trigger_Rising, Bsp::GpioInput::EXTI_Mode_Interrupt);
+Bsp::HwButtonIntr HwButton_A2(GPIOA, GPIO_Pin_8,Bsp::GpioInput::EXTI_Trigger_Rising, Bsp::GpioInput::EXTI_Mode_Interrupt);
 
 Nokia5110LCD NokiaLCD( SpiDriver::SPI_1_A7_A6_A5_A4,
 		       GPIOB,GPIO_Pin_0,        // Reset Pin on B0

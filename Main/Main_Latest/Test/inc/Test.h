@@ -18,6 +18,13 @@
 #include "RTC_Module.h"
 #include "Utils.h"
 #include "printf.h"
+#include "UI.h"
+#include "DisplayBuffer.h"
+#include "Screen.h"
+#include "ControlScreen.h"
+
+using namespace Peripherals;
+using namespace Utils;
 
 extern void Gpio_Output_Test();
 extern void Gpio_Intput_Test();
@@ -40,3 +47,10 @@ extern void Queue_Test();
 extern void Nokia5110LCD_SPI1_Dual_Display_Test();
 extern void RTC_Test();
 extern void Printf_Test();
+extern void UI_Test();
+extern void ClickEvent(void);
+extern void LongPressEvent(void);
+extern void LongLongPressEvent(void);
+extern void Display_Buffer_Test();
+extern void ScreenTouchHandler(void);
+extern void ScreenLongTouchHandler(void);

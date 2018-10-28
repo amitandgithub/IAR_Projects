@@ -1,10 +1,5 @@
 
-
-
 #include"Test.h"
-
-using namespace Peripherals;
-using namespace Utils;
 
 void Gpio_Output_Test()
 {
@@ -442,7 +437,7 @@ void Queue_Test()
 #endif
 
 
-#define RTC_TEST 1
+#define RTC_TEST 0
 
 #if RTC_TEST
 
@@ -487,7 +482,7 @@ void RTC_Test()
 }
 #endif
 
-#define PRINTF_TEST 1
+#define PRINTF_TEST 0
 
 #if PRINTF_TEST
 
@@ -515,7 +510,7 @@ void Printf_Test()
     {
         if(Txcomplete == 0)
         {
-            Printf("%c",'A');
+            Printf((char*)"%c",'A');
             LCD.DrawStrBuf(0,0,"Avni Chaudhary");
         }
         
@@ -530,4 +525,133 @@ void putc ( void* p, char c)
 {
     LCD.DrawCharBuf(1,0,c);
 }
+#endif
+
+
+
+#define UI_TEST 1
+
+#if UI_TEST
+
+ static Screen::Event_t gEvent = Screen::MaxEvents;
+
+void UI_Test()
+{
+    static Peripherals::HwButton HwButton_A8(GPIOA, GPIO_PIN_8);
+
+    
+    static Peripherals::GpioOutput      CS(GPIOA,GPIO_PIN_4);
+    static Peripherals::SPI_DMA         SPI_Obj(Peripherals::SPI_Base::SPI1_A4_A5_A6_A7,&CS, 100000);
+    static Peripherals::GpioOutput      D_C(GPIOB,GPIO_PIN_1);
+    static Peripherals::GpioOutput      Backlight(GPIOA,GPIO_PIN_1);
+    static Peripherals::GpioOutput      Reset(GPIOB,GPIO_PIN_0);
+    static Peripherals::Nokia5110LCD    LCD(&SPI_Obj,&CS,&D_C,&Reset,&Backlight);
+    
+    static UI MyUI(&LCD);
+    static Screen HomeScreen( (char *)
+                   " <Live Power> "
+                   "              "
+                   "              "
+                   "              "
+                   "              "
+                   "              "
+                   );
+    static ControlScreen Menu( (char *)
+                   "Line0         "
+                   "Line1         "
+                   "Line2         "
+                   "Line3         "
+                   "Line4         "
+                   "              "
+                   );
+   
+    
+    HwButton_A8.HwInit();
+    HwButton_A8.RegisterEventHandler(HwButton::Click,ClickEvent);
+    HwButton_A8.RegisterEventHandler(HwButton::LongPress,LongPressEvent);
+    HwButton_A8.RegisterEventHandler(HwButton::LongLongPress,LongLongPressEvent);
+    MyUI.Init();
+    MyUI.AddScreen(&HomeScreen);
+    MyUI.AddScreen(&Menu);
+    LCD.BackLightON();
+    
+    //HomeScreen.SetScreenHandler(ScreenTouchHandler,ScreenLongTouchHandler,nullptr);
+    //HomeScreen.ScroolText(0,DisplayBuffer::SPEED_NORMAL,DisplayBuffer::LEFT);
+    Menu.SetScreenHandler(ScreenTouchHandler,nullptr,nullptr);
+   // Menu.AddHandler(5,ScreenTouchHandler,nullptr);
+    while(1) 
+    {
+        //PowerMonitorScreen.DrawStr(0,0,"Amit Chaudhary");
+        HwButton_A8.RunStateMachine();
+        MyUI.EventHamdler(gEvent);
+        MyUI.Run();
+        //AL_Delay(100);
+    }   
+}
+
+
+void ClickEvent(void)
+{
+	gEvent = Screen::Touch;
+}
+void LongPressEvent(void)
+{
+	gEvent = Screen::LongTouch;
+}
+void LongLongPressEvent(void)
+{
+	gEvent = Screen::LongLongTouch;
+}
+
+void ScreenTouchHandler(void)
+{
+	Peripherals::UI::GoToNextScreen();
+}
+
+void ScreenLongTouchHandler(void)
+{
+	Peripherals::UI::GoToPreviousScreen();
+}
+
+#endif
+
+#define DISPLAY_BUFFER_TEST 1
+
+#if DISPLAY_BUFFER_TEST
+
+
+void Display_Buffer_Test()
+{
+    uint8_t Txcomplete=0;
+    static Peripherals::GpioOutput      CS(GPIOA,GPIO_PIN_4);
+    static Peripherals::SPI_DMA         SPI_Obj(Peripherals::SPI_Base::SPI1_A4_A5_A6_A7,&CS, 100000);
+    static Peripherals::GpioOutput      D_C(GPIOB,GPIO_PIN_1);
+    static Peripherals::GpioOutput      Backlight(GPIOA,GPIO_PIN_1);
+    static Peripherals::GpioOutput      Reset(GPIOB,GPIO_PIN_0);
+    static Peripherals::Nokia5110LCD    LCD(&SPI_Obj,&CS,&D_C,&Reset,&Backlight);
+    static Screen MyScreen((char *)
+                       "Amit          "
+                       "Amit          "
+                       "Amit          "
+                       "Amit          "
+                       "Amit          "
+                       "Amit          "
+                       );
+    LCD.HwInit();
+    LCD.SetBrigntness(0x13);
+    LCD.BackLightON();
+    while(1) 
+    {
+        LCD.DisplayBuf(MyScreen.GetBuffer());
+        
+        if(Txcomplete == 0)
+        {
+            Txcomplete = LCD.Refresh();
+        }
+               
+        HAL_Delay(100);
+       // LCD.ClearBuffer();
+    }   
+}
+
 #endif

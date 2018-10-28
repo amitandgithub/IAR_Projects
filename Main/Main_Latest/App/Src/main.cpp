@@ -29,9 +29,7 @@ int main(void)
     
     /* Configure the system clock */
     SystemClock_Config();
-    
 
-    
     while(1)
     {
         //INA219_Test();
@@ -45,8 +43,10 @@ int main(void)
         //Queue_Test();
         //Hw_Button_Test();
         //Hw_ButtonIntr_Test();
-        RTC_Test();
+       //RTC_Test();
         //Printf_Test();
+        UI_Test();
+        //Display_Buffer_Test();
     }
     
 }

@@ -2417,9 +2417,6 @@
             <name>$PROJ_DIR$\HAL\src\Led.cpp</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\HAL\src\Line.cpp</name>
-        </file>
-        <file>
             <name>$PROJ_DIR$\HAL\src\Menu.cpp</name>
         </file>
         <file>

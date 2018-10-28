@@ -145,7 +145,13 @@ Nokia5110LCD::Nokia5110LCD(SPIDrv_t*   pSpiDriverLCD ,
                 m_pResetPinGpio(pResetPinGpio),
                 m_pBackLightGpio(pBackLightGpio),
                 m_pCS(pCS),
-                m_Brightness(0x13)
+                m_Brightness(0x13),
+                m_pCurrentBuffer(nullptr)
+                    
+#ifdef WITH_DISPLAY_BUFFER
+                ,m_DisplayBuffer()
+#endif                    
+                    
 #if defined(DUAL_BUFFER)
                 ,m_pAppBuf(m_BufferA),
                  m_pSysBuf(m_BufferB)
@@ -153,6 +159,13 @@ Nokia5110LCD::Nokia5110LCD(SPIDrv_t*   pSpiDriverLCD ,
 
 {
     
+    m_CurrentTransaction.TxBuf = 0;
+    m_CurrentTransaction.RxBuf = 0;
+    m_CurrentTransaction.TxLen = 0;
+    m_CurrentTransaction.RxLen = 0;
+    m_CurrentTransaction.hz = 0;
+    m_CurrentTransaction.pCS = 0;
+    m_CurrentTransaction.TxnStatus.Event = SPI_Base::SPI_TX_COMPLETE;
     
     
 }
@@ -171,7 +184,9 @@ bool Nokia5110LCD::HwInit()
     //m_pCS->On();
 	//Initialize the Display
 	DisplayInit();
-
+#ifdef WITH_DISPLAY_BUFFER
+    m_DisplayBuffer.Clear();
+#endif
 	return true;
 }
 
@@ -193,7 +208,7 @@ bool Nokia5110LCD::DisplayInit()
 	  Write(COMMAND, 0x20); //We must send 0x20 before modifying the display control mode
 	  Write(COMMAND, 0x0C); //Set display control, normal mode. 0x0D for inverse
 
-	  Clear();
+	  ClearDisplay();
 
 
 	return true;
@@ -239,7 +254,7 @@ void Nokia5110LCD::SetMode(uint8_t LCDMode)
 }
 
 //Clears the LCD by writing zeros to the entire screen
-void Nokia5110LCD::Clear()
+void Nokia5110LCD::ClearDisplay()
 {
 	int32_t index;
 	for (index = 0 ; index < (LCD_X * LCD_Y / 8) ; index++)
@@ -254,12 +269,12 @@ void Nokia5110LCD::GoToXY(int x, int y)
 }
 
 //This takes a large array of bits and sends them to the LCD
-void Nokia5110LCD::DrawBitmap(const char my_array[])
-{
-	int index;
-	for (index = 0 ; index < (LCD_X * LCD_Y / 8) ; index++)
-		Write(DATA, my_array[index]);
-}
+//void Nokia5110LCD::DrawBitmap(const char my_array[])
+//{
+//	int index;
+//	for (index = 0 ; index < (LCD_X * LCD_Y / 8) ; index++)
+//		Write(DATA, my_array[index]);
+//}
 //This function takes in a character, looks it up in the font table/array
 //And writes it to the screen
 //Each character is 8 bits tall and 5 bits wide. We pad one blank column of
@@ -283,7 +298,13 @@ void Nokia5110LCD::DrawString(const char *characters)
     LCDCharacter(*characters++);
 }
 
- void Nokia5110LCD::DrawLine(unsigned char Row, unsigned char Col, const char* Str)
+void Nokia5110LCD::DisplayChar(unsigned char Row, unsigned char Col, const char aChar)
+{
+	GoToXY(Col*SIZE_OF_1_CHAR,Row);
+	LCDCharacter(aChar);
+
+}
+ void Nokia5110LCD::DisplayStr(unsigned char Row, unsigned char Col, const char* Str)
 {
 	uint8_t i=0;
 	GoToXY(Col*SIZE_OF_1_CHAR,Row);
@@ -298,215 +319,54 @@ void Nokia5110LCD::DrawString(const char *characters)
 	}
 
 }
-void Nokia5110LCD::DrawCharBuf(unsigned char Row, unsigned char Col, const char aChar, uint8_t format)
+void Nokia5110LCD::DisplayBuf(char* pBuffer)
 {
-    uint32_t i;
-    
-    if(format == INVERSE)
-    {
-        for(i = 0; i<SIZE_OF_1_CHAR; i++)
-        {
-            
-#if defined(DUAL_BUFFER)
-            m_pAppBuf[Row*84 + Col*6 + i ] = ~ASCII[aChar - 0x20][i];
-#else 
-             m_BufferA[Row*84 + Col*6 + i ] = ~ASCII[aChar - 0x20][i];
-#endif
-        }        
-    }
-    else
-    {
-        for(i = 0; i<SIZE_OF_1_CHAR; i++)
-        {
-            
-#if defined(DUAL_BUFFER)
-            m_pAppBuf[Row*84 + Col*6 + i ] = ASCII[aChar - 0x20][i];
-#else 
-            m_BufferA[Row*84 + Col*6 + i ] = ASCII[aChar - 0x20][i];
-#endif
-        }
-    }
-}
-
-void Nokia5110LCD::DrawStrBuf(unsigned char Row, unsigned char Col, const char* Str, uint8_t format)
-{
-    uint32_t i;
-    
-    for(i = 0; (i<NO_OF_CHAR_IN_LINE) && (Str[i] != '\0') ; i++)
-    {
-        DrawCharBuf(Row, Col+i, Str[i],format);
-    }
-  
-}
-
-void Nokia5110LCD::DrawBitmapBuf(const char* Str, uint8_t format)
-{
-    uint32_t i,Row,Chars;
-        
-    if(format == INVERSE)
-    {
-       for(Row = 0; Row < TOTAL_ROWS; Row++)
-       {
-           for(Chars = 0; Chars < NO_OF_CHAR_IN_LINE; Chars++)
-           {
-                for(i = 0; i < SIZE_OF_1_CHAR; i++)
-                {
-#if defined(DUAL_BUFFER)
-                     m_pAppBuf[Row*84 + Chars*6 + i] = ~ASCII[Str[Row*84  + Chars*6 + i] - 0x20][i];
-#else
-                      m_BufferA[Row*84 + Chars*6 + i] = ~ASCII[Str[Row*84  + Chars*6 + i] - 0x20][i];
-#endif
-                }              
-           }  
-       }
-      
-    }
-    else
-    {
-       for(Row = 0; Row < TOTAL_ROWS; Row++)
-       {
-           for(Chars = 0; Chars < NO_OF_CHAR_IN_LINE; Chars++)
-           {
-                for(i = 0; i < SIZE_OF_1_CHAR; i++)
-                {
-#if defined(DUAL_BUFFER)
-                    m_pAppBuf[Row*84 + Chars*6 + i] = ASCII[Str[Row*84  + Chars*6 + i] - 0x20][i];
-#else
-                    m_BufferA[Row*84 + Chars*6 + i] = ASCII[Str[Row*84  + Chars*6 + i] - 0x20][i];
-#endif
-                }              
-           }  
-       }
-    }
-        
-}
-uint32_t Nokia5110LCD::Refresh()
-{
-   static uint32_t Status;
-
-
-       m_pDataCommandSelectGpio->On();
-       
-#if defined ( DUAL_BUFFER )
-       
-       uint8_t* pTempBuf;
-       
-       __disable_irq();
-       
-       pTempBuf = m_pAppBuf;
-       
-       m_pAppBuf = m_pSysBuf;
-       
-       m_pSysBuf = pTempBuf;
-       
-       __enable_irq();       
-       
-       m_CurrentTransaction.TxBuf = m_pSysBuf;       
-       m_CurrentTransaction.TxLen = DISPLAY_BUF_SIZE;
-       m_CurrentTransaction.pCS = m_pCS;
-       m_CurrentTransaction.TxnStatus.TimeValue = HAL_GetTick();
-       m_CurrentTransaction.TxnStatus.Event &=  ~(SPI_Base::SPI_TX_COMPLETE);     
-       
-       Status =  m_pSpiDriverLCD->Post(&m_CurrentTransaction); 
-#else     
-     m_CurrentTransaction.TxBuf = m_BufferA;     
-     m_CurrentTransaction.TxLen = DISPLAY_BUF_SIZE;
-     m_CurrentTransaction.pCS = m_pCS;
-     m_CurrentTransaction.TxnStatus.TimeValue = 0;
-     m_CurrentTransaction.TxnStatus.Event &=  ~(SPI_Base::SPI_TX_COMPLETE);  
-//     while((m_CurrentTransaction.TxnStatus.Event & SPI_Base::SPI_TX_COMPLETE) == SPI_Base::SPI_TX_COMPLETE);
-     
-     Status = m_pSpiDriverLCD->Post(&m_CurrentTransaction);
-     
-#endif
-     
-     return Status;
-
-
-    
-}
-
-void Nokia5110LCD::DrawChar(unsigned char Row, unsigned char Col, const char aChar)
-{
-	GoToXY(Col*SIZE_OF_1_CHAR,Row);
-	LCDCharacter(aChar);
-
-}
-
-void Nokia5110LCD::DrawBuffer(char* pBuffer)
-{
-	GoToXY(0*SIZE_OF_1_CHAR,0);
-
-	for(int i = 0; i < NO_OF_CHAR_IN_LINE*6 ; i++)
-	LCDCharacter(pBuffer[i]);
-
-}
-
-void Nokia5110LCD::ClearBuffer()
-{
-#if 0
-    uint32_t i,Row,Chars;
     
 	GoToXY(0*SIZE_OF_1_CHAR,0);
-
-       for(Row = 0; Row < TOTAL_ROWS; Row++)
-       {
-           for(Chars = 0; Chars < NO_OF_CHAR_IN_LINE; Chars++)
-           {
-                for(i = 0; i < SIZE_OF_1_CHAR; i++)
-                {
-#if defined(DUAL_BUFFER)
-                     m_pAppBuf[Row*84 + Chars*6 + i] = 0x00;
-#else
-                     m_BufferA[Row*84 + Chars*6 + i] = 0x00;
-#endif
-                }              
-           }  
-       }
-#endif
-       
-#if defined(DUAL_BUFFER)
-       //m_pAppBuf[Row*84 + Chars*6 + i] = 0x00;
-       for(uint32_t count = 0; count< DISPLAY_BUF_SIZE; count++)
-           m_pAppBuf[count] = 0;
-#else
-      // m_BufferA[Row*84 + Chars*6 + i] = 0x00;
-       for(uint32_t count = 0; count< DISPLAY_BUF_SIZE; count++)
-           m_BufferA[count] = 0;
-#endif
-
+    
+	for(int i = 0; i < (LCD_X * LCD_Y / 8) ; i++)
+        Write(DATA, pBuffer[i]);
 }
 
+void Nokia5110LCD::DisplayBitmap(char* pBuffer)
+{   
+    m_pCurrentBuffer = pBuffer;
+}
 
-
-void Nokia5110LCD::PowerDown( )
+void Nokia5110LCD::PowerDown()
 {
     uint8_t cmd = 0x08 | 0x04;
     
-    Clear();
+    ClearDisplay();
     
     m_pDataCommandSelectGpio->Off();         
     m_pSpiDriverLCD->Tx(&cmd,1);
 
 }
 
-void Nokia5110LCD::InvertRowBuf(unsigned char Row)
+Status_t Nokia5110LCD::Refresh( )
 {
-    uint32_t i;
-    
-    for(i = 0; (i<84) ; i++)
-    {
-#if defined(DUAL_BUFFER)
-        m_pAppBuf[Row*84 + i] = ~m_pAppBuf[Row*84 + i];
-#else
-        m_BufferA[Row*84 + i] = ~m_BufferA[Row*84 + i];
-#endif
+    if ( (m_CurrentTransaction.TxnStatus.Event & SPI_Base::SPI_TX_COMPLETE) == SPI_Base::SPI_TX_COMPLETE)
+    {    
+        GoToXY(0*SIZE_OF_1_CHAR,0);
+        
+        m_pDataCommandSelectGpio->On();
+        
+        m_CurrentTransaction.TxBuf = (uint8_t*)m_pCurrentBuffer; 
+
+        m_CurrentTransaction.TxLen = DISPLAY_BUF_SIZE;
+        m_CurrentTransaction.pCS = m_pCS;
+        m_CurrentTransaction.TxnStatus.TimeValue = HAL_GetTick() & 0x0000FFFF;
+        m_CurrentTransaction.TxnStatus.Event &=  ~(SPI_Base::SPI_TX_COMPLETE);  
+        //while((m_CurrentTransaction.TxnStatus.Event & SPI_Base::SPI_TX_COMPLETE) == SPI_Base::SPI_TX_COMPLETE);
+        
+        return m_pSpiDriverLCD->Post(&m_CurrentTransaction);
+        
     }
+    return HAL_BUSY;
     
 
-                      
 }
-
 
 
 }
