@@ -21,6 +21,8 @@ void _Error_Handler(char *, int);
 void SystemClock_Config(void);
 void putc ( void* p, char c);
 
+
+
 int main(void)
 {	
     
@@ -45,8 +47,9 @@ int main(void)
         //Hw_ButtonIntr_Test();
        //RTC_Test();
         //Printf_Test();
-        UI_Test();
+        //UI_Test();
         //Display_Buffer_Test();
+        SD_Test();
     }
     
 }

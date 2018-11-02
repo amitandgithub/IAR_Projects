@@ -21,7 +21,7 @@ namespace Peripherals
 class SPI_Poll : public SPI_Base
 {
 public:
-    static const uint32_t SPI_POLL_DELAY = 0xFFUL;
+    static const uint32_t SPI_POLL_DELAY = 0x1000UL;
     
     SPI_Poll (SPIx_t spix, GpioOutput* CS, HZ_t hz = 100000UL,SPI_HandleTypeDef* phspi_x = nullptr);
     

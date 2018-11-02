@@ -16,6 +16,7 @@ GpioOutput::GpioOutput(PORT_t Port, PIN_t Pin)
 	m_Pin  = Pin;
 	m_Mode = OUTPUT_PP;
     m_Speed = HIGH;
+    m_PULL =  GPIO_NOPULL;
 }
 GpioOutput::GpioOutput(PORT_t Port, PIN_t Pin, MODE_t aMODE)
 {
@@ -23,6 +24,7 @@ GpioOutput::GpioOutput(PORT_t Port, PIN_t Pin, MODE_t aMODE)
 	m_Pin  = Pin;
 	m_Mode = aMODE;
     m_Speed = HIGH;
+    m_PULL =  GPIO_NOPULL;
 }
 GpioOutput::GpioOutput(PORT_t Port, PIN_t Pin, MODE_t aMODE, SPEED_t SPEED)
 {
@@ -30,7 +32,18 @@ GpioOutput::GpioOutput(PORT_t Port, PIN_t Pin, MODE_t aMODE, SPEED_t SPEED)
 	m_Pin  = Pin;
 	m_Mode = aMODE;
     m_Speed = SPEED;
+    m_PULL =  GPIO_NOPULL;
 }
+
+GpioOutput::GpioOutput(PORT_t Port, PIN_t Pin, MODE_t aMODE, SPEED_t SPEED, PULL_t PULL)
+{
+	m_Port = Port;
+	m_Pin  = Pin;
+	m_Mode = aMODE;
+    m_Speed = SPEED;
+    m_PULL = PULL;
+}
+
 Status_t GpioOutput::HwInit()
 {
 	GPIO_InitTypeDef GPIO_InitStructure;
@@ -59,6 +72,7 @@ Status_t GpioOutput::HwInit()
      GPIO_InitStructure.Pin   = m_Pin;
      GPIO_InitStructure.Speed = m_Speed;
      GPIO_InitStructure.Mode  = m_Mode;
+     GPIO_InitStructure.Pull  = m_PULL;
      HAL_GPIO_Init( m_Port, &GPIO_InitStructure );
      return true;
 }

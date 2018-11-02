@@ -67,6 +67,8 @@ Status_t SPI_Base::SPI_Init (SPIx_t SPIx, HZ_t HZ, SPI_HandleTypeDef* phSPI)
       if( (phSPI == nullptr) )
          return HAL_ERROR;
         
+      phSPI->Init.BaudRatePrescaler = SetFrequency(HZ);
+      
     /* SPI1 parameter configuration*/
     if(SPIx == SPI1_A4_A5_A6_A7)
     {   
@@ -93,7 +95,7 @@ Status_t SPI_Base::SPI_Init (SPIx_t SPIx, HZ_t HZ, SPI_HandleTypeDef* phSPI)
         
         GPIO_InitStruct.Pin     = GPIO_PIN_6;
         GPIO_InitStruct.Mode    = GPIO_MODE_INPUT;
-        GPIO_InitStruct.Pull    = GPIO_NOPULL;
+        GPIO_InitStruct.Pull    = GPIO_PULLUP;
         HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
  
         m_phspi_1->Init.Mode                = phSPI->Init.Mode ;
@@ -140,7 +142,7 @@ Status_t SPI_Base::SPI_Init (SPIx_t SPIx, HZ_t HZ, SPI_HandleTypeDef* phSPI)
         
         GPIO_InitStruct.Pin = GPIO_PIN_4;
         GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
-        GPIO_InitStruct.Pull = GPIO_NOPULL;
+        GPIO_InitStruct.Pull = GPIO_PULLUP;
         HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
  
         m_phspi_1->Init.Mode                = phSPI->Init.Mode ;
@@ -179,15 +181,15 @@ Status_t SPI_Base::SPI_Init (SPIx_t SPIx, HZ_t HZ, SPI_HandleTypeDef* phSPI)
         PA6     ------> SPI1_MISO
         PA7     ------> SPI1_MOSI 
         */
-        GPIO_InitStruct.Pin     = GPIO_PIN_5|GPIO_PIN_7;
+        GPIO_InitStruct.Pin     = GPIO_PIN_13|GPIO_PIN_15;
         GPIO_InitStruct.Mode    = GPIO_MODE_AF_PP;
         GPIO_InitStruct.Speed   = GPIO_SPEED_FREQ_HIGH;
-        HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+        HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
         
-        GPIO_InitStruct.Pin     = GPIO_PIN_6;
+        GPIO_InitStruct.Pin     = GPIO_PIN_14;
         GPIO_InitStruct.Mode    = GPIO_MODE_INPUT;
-        GPIO_InitStruct.Pull    = GPIO_NOPULL;
-        HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+        GPIO_InitStruct.Pull    = GPIO_PULLUP;
+        HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
  
         m_phspi_2->Init.Mode                = phSPI->Init.Mode ;
         m_phspi_2->Init.Direction           = phSPI->Init.Direction;
@@ -214,8 +216,30 @@ Status_t SPI_Base::SPI_Init (SPIx_t SPIx, HZ_t HZ, SPI_HandleTypeDef* phSPI)
 
     return HAL_OK;
     
-}
+}     
 
+uint32_t SPI_Base::SetFrequency(HZ_t HZ)
+{
+    const uint8_t MIN = 8, MAX = 1;
+    const uint32_t SysClockFreq = HAL_RCC_GetSysClockFreq();
+    const uint32_t Freq_LUT[]     = { SPI_BAUDRATEPRESCALER_2, SPI_BAUDRATEPRESCALER_2,
+                                      SPI_BAUDRATEPRESCALER_4,SPI_BAUDRATEPRESCALER_8,
+                                      SPI_BAUDRATEPRESCALER_16,SPI_BAUDRATEPRESCALER_32,
+                                      SPI_BAUDRATEPRESCALER_64,SPI_BAUDRATEPRESCALER_128,
+                                      SPI_BAUDRATEPRESCALER_256};
+    
+    if(HZ >= SysClockFreq)
+        return Freq_LUT[MAX];    
+    
+    for( uint32_t i = 0; i <= 8U; i++ )
+    {
+        if( (SysClockFreq/(1<<i)) < HZ )
+        {
+            return Freq_LUT[i];
+        }
+    }
+    return Freq_LUT[MIN];
+}
 
 void SPI_Base::SPI1__IRQHandler()
 {
@@ -290,7 +314,25 @@ uint32_t SPI_Base::GetStatus(SPIx_t SPIx)
 //    
 //}
 
-
+uint8_t SPI_Base::Poll_TxRx(uint8_t data, SPIx_t SPIx) 
+{
+    /* RXNE always happens after TXE, so if this function is used
+    * we don't need to check for TXE */
+    SPI_TypeDef* SPI_X;
+    
+    if( ( SPIx == SPI1_A4_A5_A6_A7) || ( SPIx == SPI1_A15_B3_B4_B5) )
+    {
+        SPI_X = SPI1;
+    }
+    else
+    {
+        SPI_X = SPI2;
+    }
+    SPI_X->DR = data;
+    while ((SPI_X->SR & SPI_FLAG_RXNE) == 0);
+    
+    return SPI_X->DR;
+}
 
 
 }

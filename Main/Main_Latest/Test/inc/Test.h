@@ -1,5 +1,5 @@
 
-
+#include<cstdint>
 #include <stddef.h>
 #include <stdio.h>
 #include "stm32f1xx_hal.h"
@@ -22,6 +22,8 @@
 #include "DisplayBuffer.h"
 #include "Screen.h"
 #include "ControlScreen.h"
+#include "SD.h"
+#include "ff.h"	
 
 using namespace Peripherals;
 using namespace Utils;
@@ -54,3 +56,5 @@ extern void LongLongPressEvent(void);
 extern void Display_Buffer_Test();
 extern void ScreenTouchHandler(void);
 extern void ScreenLongTouchHandler(void);
+extern void SD_Test();
+extern void SD1_Test();

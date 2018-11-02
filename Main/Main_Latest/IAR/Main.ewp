@@ -372,6 +372,7 @@
                     <state>$PROJ_DIR$\..\Utils\inc</state>
                     <state>$PROJ_DIR$\..\Drivers\RTC</state>
                     <state>$PROJ_DIR$\..\SW_Modules\inc</state>
+                    <state>$PROJ_DIR$\..\HW_Modules\SD\inc</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -2178,6 +2179,21 @@
     </group>
     <group>
         <name>HW_Modules</name>
+        <group>
+            <name>SD_Card</name>
+            <file>
+                <name>$PROJ_DIR$\..\HW_Modules\SD\src\diskio.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\HW_Modules\SD\src\fat_sd_spi.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\HW_Modules\SD\src\ff.c</name>
+            </file>
+            <file>
+                <name>$PROJ_DIR$\..\HW_Modules\SD\src\SD.cpp</name>
+            </file>
+        </group>
         <file>
             <name>$PROJ_DIR$\..\HW_Modules\HwButton.cpp</name>
         </file>

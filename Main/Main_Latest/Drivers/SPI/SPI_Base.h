@@ -22,7 +22,7 @@ using namespace Utils;
 
 namespace Peripherals
 {
-    
+
 class SPI_Base : public Peripheral
 {
 public:
@@ -81,9 +81,13 @@ public:
      
     static const uint32_t SPI_POLL_DELAY = 0xFFUL;
     
-    SPI_Base(){;}
+    SPI_Base(){;} 
     
     virtual ~SPI_Base(){;}
+    
+    static        uint8_t        Poll_TxRx          (uint8_t data, SPIx_t SPIx);
+    
+    static        uint32_t       SetFrequency       (HZ_t HZ);
     
     virtual       Status_t       HwInit             () = 0;
     

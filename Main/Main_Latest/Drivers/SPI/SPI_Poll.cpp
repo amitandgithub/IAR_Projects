@@ -126,15 +126,15 @@ Status_t SPI_Poll::TxRx(uint8_t* pTxBuf, uint8_t* pRxBuf, uint16_t Len)
     
     if(m_spix == SPI1_A4_A5_A6_A7)
     {
-        m_pChipSelect_SPI1->Off();
+        //m_pChipSelect_SPI1->Off();
         Status = HAL_SPI_TransmitReceive(m_phspi_1,pTxBuf, pRxBuf, Len, SPI_POLL_DELAY);
-        m_pChipSelect_SPI1->On();
+       // m_pChipSelect_SPI1->On();
     }
     else if(m_spix == SPI2_B12_B13_B14_B15)
     {
-        m_pChipSelect_SPI2->Off();
+       // m_pChipSelect_SPI2->Off();
         Status = HAL_SPI_TransmitReceive(m_phspi_2,pTxBuf, pRxBuf, Len, SPI_POLL_DELAY);
-        m_pChipSelect_SPI2->On();
+        //m_pChipSelect_SPI2->On();
     }
     
     return Status;

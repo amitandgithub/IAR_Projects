@@ -94,7 +94,7 @@
 /** @defgroup HAL_Private_Variables HAL Private Variables
   * @{
   */
-__IO uint32_t uwTick;
+__IO uint64_t uwTick;
 /**
   * @}
   */

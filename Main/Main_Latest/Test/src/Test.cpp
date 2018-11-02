@@ -541,7 +541,7 @@ void UI_Test()
 
     
     static Peripherals::GpioOutput      CS(GPIOA,GPIO_PIN_4);
-    static Peripherals::SPI_DMA         SPI_Obj(Peripherals::SPI_Base::SPI1_A4_A5_A6_A7,&CS, 100000);
+    static Peripherals::SPI_DMA         SPI_Obj(Peripherals::SPI_Base::SPI1_A4_A5_A6_A7,&CS, 9000000);
     static Peripherals::GpioOutput      D_C(GPIOB,GPIO_PIN_1);
     static Peripherals::GpioOutput      Backlight(GPIOA,GPIO_PIN_1);
     static Peripherals::GpioOutput      Reset(GPIOB,GPIO_PIN_0);
@@ -655,3 +655,115 @@ void Display_Buffer_Test()
 }
 
 #endif
+
+#define SD_TEST 1
+
+#if SD_TEST
+
+
+void SD_Test()
+{
+    static Peripherals::GpioOutput CS(GPIOB,GPIO_PIN_12,Peripherals::GpioOutput::AF_PP, Peripherals::GpioOutput::HIGH, Peripherals::GpioOutput::PULL_UP);
+    static Peripherals::SPI_Poll SPI_Obj(Peripherals::SPI_Poll::SPI2_B12_B13_B14_B15, &CS, 25000000);
+    
+    SD SD_Card(&SPI_Obj,&CS);
+    
+    static volatile uint32_t Puts_Delay,Printf_Delay;
+    static char name[1*1024] = {69,};
+    FATFS fs;
+    FIL fil;
+    FRESULT fr;
+	fr = SD_Card.mount(&fs, "", 1); // 1861648
+	if (fr != FR_OK) 
+	{
+		while(1);
+	}
+	/* Opens an existing file. If not exist, creates a new file. */
+	fr = SD_Card.open(&fil, "Test_1_Nov18.txt", FA_WRITE | FA_OPEN_ALWAYS); // 736438
+    
+	if (fr == FR_OK) 
+	{
+		/* Seek to end of the file to append data */
+		fr = f_lseek(&fil, f_size(&fil)); // 220
+        
+		if (fr != FR_OK) SD_Card.close(&fil);
+                    
+        Printf_Delay = HAL_GetTick();
+		SD_Card.print(&fil,name); // 2843, 10k @9404506
+        Printf_Delay = HAL_GetTick() - Printf_Delay; // 10k @ 256 prescalar for 132 ms 
+        
+		SD_Card.close(&fil); // 1143384
+
+		
+		fr = SD_Card.mount(0, "", 0); // 117
+		if (fr != FR_OK) 
+		{
+			while(1);
+		}
+	}
+	else
+	{
+		//while(1);
+	} 
+}
+
+#endif
+
+#define SD1_TEST 1
+// 10kb data takes 4210 cpu cycles
+#if SD1_TEST
+
+
+void SD1_Test()
+{
+    static volatile uint32_t Puts_Delay,Printf_Delay;
+    static char name[1*1024] = {69,};
+    FATFS fs;
+    FIL fil;
+    FRESULT fr;
+   	//uint8_t str_size;
+	memset((void*)name,'X',sizeof(name));
+    name[sizeof(name) -1] = '\n';
+	fr = f_mount(&fs, "", 1); // 1861648
+	if (fr != FR_OK) 
+	{
+		while(1);
+	}
+	/* Opens an existing file. If not exist, creates a new file. */
+	fr = f_open(&fil, "Test_1_Nov18.txt", FA_WRITE | FA_OPEN_ALWAYS); // 736438
+	//Bsp::SysTickTimer::DelayTicks(100);
+	if (fr == FR_OK) 
+	{
+		/* Seek to end of the file to append data */
+		fr = f_lseek(&fil, f_size(&fil)); // 220
+		//Bsp::SysTickTimer::DelayTicks(100);
+		if (fr != FR_OK) f_close(&fil);
+        
+        Puts_Delay = HAL_GetTick();
+		f_puts(name, &fil); // 757425, 365671,10k @10857026
+        Puts_Delay = HAL_GetTick() - Puts_Delay; // 10k @ 256 prescalar for 125 ms 
+            
+        Printf_Delay = HAL_GetTick();
+		f_printf(&fil,name); // 2843, 10k @9404506
+        Printf_Delay = HAL_GetTick() - Printf_Delay; // 10k @ 256 prescalar for 132 ms 
+        
+		f_close(&fil); // 1143384
+
+		
+		fr = f_mount(0, "", 0); // 117
+		if (fr != FR_OK) 
+		{
+			//while(1);
+		}
+	}
+	else
+	{
+		//while(1);
+	}
+
+    //HAL_Delay(1); // 137917
+
+}   
+
+#endif
+

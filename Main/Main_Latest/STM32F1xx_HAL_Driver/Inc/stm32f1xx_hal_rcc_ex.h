@@ -45,7 +45,6 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f1xx_hal_def.h"
-
 /** @addtogroup STM32F1xx_HAL_Driver
   * @{
   */
@@ -1873,7 +1872,7 @@ typedef struct
 /** @addtogroup RCCEx_Exported_Functions_Group1
   * @{
   */
-
+                      
 HAL_StatusTypeDef HAL_RCCEx_PeriphCLKConfig(RCC_PeriphCLKInitTypeDef  *PeriphClkInit);
 void              HAL_RCCEx_GetPeriphCLKConfig(RCC_PeriphCLKInitTypeDef  *PeriphClkInit);
 uint32_t          HAL_RCCEx_GetPeriphCLKFreq(uint32_t PeriphClk);

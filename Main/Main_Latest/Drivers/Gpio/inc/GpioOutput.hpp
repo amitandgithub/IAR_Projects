@@ -56,12 +56,14 @@ namespace Peripherals
             EXTI_Mode_Event     = 0x04
         }EXTIMode;
         
-        typedef enum
+        enum
         {
             NO_PULL      = GPIO_NOPULL,
             PULL_UP      = GPIO_PULLUP,
             PULL_DOWN    = GPIO_PULLDOWN
-        }PULL_t;
+        };
+        
+        typedef uint32_t PULL_t;
         
         typedef enum
         {
@@ -77,6 +79,8 @@ namespace Peripherals
         GpioOutput(PORT_t Port, PIN_t Pin, MODE_t aMODE);
         
         GpioOutput(PORT_t Port, PIN_t Pin, MODE_t aMODE, SPEED_t SPEED);
+        
+        GpioOutput(PORT_t Port, PIN_t Pin, MODE_t aMODE, SPEED_t SPEED, PULL_t PULL);
         
         virtual ~GpioOutput(void){};
         
@@ -97,6 +101,7 @@ namespace Peripherals
         PIN_t        m_Pin;
         MODE_t       m_Mode;
         SPEED_t      m_Speed;
+        PULL_t       m_PULL;
         
     };    
     
