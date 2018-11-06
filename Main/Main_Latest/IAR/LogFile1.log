@@ -17391,3 +17391,1392 @@ Fri Nov 02, 2018 16:19:31: Breakpoint hit: Code @ Test.cpp:708.1, type: default 
 Fri Nov 02, 2018 16:19:32: Breakpoint hit: Code @ Test.cpp:708.1, type: default (auto) 
 Fri Nov 02, 2018 16:19:32: Breakpoint hit: Code @ Test.cpp:708.1, type: default (auto) 
 Fri Nov 02, 2018 18:25:32: Breakpoint hit: Code @ Test.cpp:708.1, type: default (auto) 
+
+
+ << Logging to file resumes >> 
+
+Sat Nov 03, 2018 12:58:22: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Sat Nov 03, 2018 12:58:22: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 12:58:22: ST-Link firmware too old
+Sat Nov 03, 2018 12:58:22: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Sat Nov 03, 2018 12:58:22: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 12:58:22: Initial reset was performed
+Sat Nov 03, 2018 12:58:22: 736 bytes downloaded (15.29 Kbytes/sec)
+Sat Nov 03, 2018 12:58:22: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Sat Nov 03, 2018 12:58:22: Target reset
+Sat Nov 03, 2018 12:58:23: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 12:58:23: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Sat Nov 03, 2018 12:58:23: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 12:58:24: 18722 bytes downloaded into FLASH (11.25 Kbytes/sec)
+Sat Nov 03, 2018 12:58:24: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Sat Nov 03, 2018 12:58:24: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 12:58:24: Target reset
+
+
+ << Logging to file resumes >> 
+
+Sat Nov 03, 2018 13:00:18: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Sat Nov 03, 2018 13:00:18: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 13:00:18: ST-Link firmware too old
+Sat Nov 03, 2018 13:00:18: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Sat Nov 03, 2018 13:00:18: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 13:00:18: Initial reset was performed
+Sat Nov 03, 2018 13:00:19: 736 bytes downloaded (23.19 Kbytes/sec)
+Sat Nov 03, 2018 13:00:19: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Sat Nov 03, 2018 13:00:19: Target reset
+Sat Nov 03, 2018 13:00:20: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 13:00:20: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Sat Nov 03, 2018 13:00:20: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 13:00:20: 18722 bytes downloaded into FLASH (11.59 Kbytes/sec)
+Sat Nov 03, 2018 13:00:20: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Sat Nov 03, 2018 13:00:20: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 13:00:20: Target reset
+Sat Nov 03, 2018 13:00:28: Breakpoint hit: Code @ Test.cpp:711.1, type: default (auto) 
+Sat Nov 03, 2018 13:01:21: BP Moved from 711:1 to 713:1
+Sat Nov 03, 2018 13:01:21: Beware! Breakpoints were moved!
+
+
+ << Logging to file resumes >> 
+
+Sat Nov 03, 2018 13:01:23: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Sat Nov 03, 2018 13:01:23: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 13:01:23: ST-Link firmware too old
+Sat Nov 03, 2018 13:01:23: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Sat Nov 03, 2018 13:01:23: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 13:01:23: Initial reset was performed
+Sat Nov 03, 2018 13:01:23: 736 bytes downloaded (23.19 Kbytes/sec)
+Sat Nov 03, 2018 13:01:23: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Sat Nov 03, 2018 13:01:23: Target reset
+Sat Nov 03, 2018 13:01:24: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 13:01:24: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Sat Nov 03, 2018 13:01:25: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 13:01:25: 18862 bytes downloaded into FLASH (11.34 Kbytes/sec)
+Sat Nov 03, 2018 13:01:25: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Sat Nov 03, 2018 13:01:25: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 13:01:25: Target reset
+Sat Nov 03, 2018 13:01:31: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:01:49: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:01:51: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:01:52: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:02:00: Breakpoint hit: Code @ Test.cpp:696.9, type: default (auto) 
+Sat Nov 03, 2018 13:02:13: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:02:14: Breakpoint hit: Code @ Test.cpp:696.9, type: default (auto) 
+Sat Nov 03, 2018 13:02:15: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+
+
+ << Logging to file resumes >> 
+
+Sat Nov 03, 2018 13:04:12: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Sat Nov 03, 2018 13:04:12: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 13:04:12: ST-Link firmware too old
+Sat Nov 03, 2018 13:04:12: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Sat Nov 03, 2018 13:04:12: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 13:04:12: Initial reset was performed
+Sat Nov 03, 2018 13:04:12: 736 bytes downloaded (23.19 Kbytes/sec)
+Sat Nov 03, 2018 13:04:12: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Sat Nov 03, 2018 13:04:12: Target reset
+Sat Nov 03, 2018 13:04:13: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 13:04:13: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Sat Nov 03, 2018 13:04:13: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 13:04:14: 18862 bytes downloaded into FLASH (11.22 Kbytes/sec)
+Sat Nov 03, 2018 13:04:14: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Sat Nov 03, 2018 13:04:14: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 13:04:14: Target reset
+Sat Nov 03, 2018 13:04:17: Breakpoint hit: Code @ Test.cpp:696.9, type: default (auto) 
+Sat Nov 03, 2018 13:04:20: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:04:21: Breakpoint hit: Code @ Test.cpp:696.9, type: default (auto) 
+Sat Nov 03, 2018 13:04:22: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:04:26: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:04:28: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+
+
+ << Logging to file resumes >> 
+
+Sat Nov 03, 2018 13:06:48: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Sat Nov 03, 2018 13:06:48: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 13:06:48: ST-Link firmware too old
+Sat Nov 03, 2018 13:06:48: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Sat Nov 03, 2018 13:06:48: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 13:06:48: Initial reset was performed
+Sat Nov 03, 2018 13:06:48: 736 bytes downloaded (15.29 Kbytes/sec)
+Sat Nov 03, 2018 13:06:48: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Sat Nov 03, 2018 13:06:48: Target reset
+Sat Nov 03, 2018 13:06:49: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 13:06:49: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Sat Nov 03, 2018 13:06:49: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 13:06:49: 18862 bytes downloaded into FLASH (11.22 Kbytes/sec)
+Sat Nov 03, 2018 13:06:49: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Sat Nov 03, 2018 13:06:49: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 13:06:49: Target reset
+Sat Nov 03, 2018 13:06:53: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:06:57: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+
+
+ << Logging to file resumes >> 
+
+Sat Nov 03, 2018 13:07:10: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Sat Nov 03, 2018 13:07:10: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 13:07:10: ST-Link firmware too old
+Sat Nov 03, 2018 13:07:10: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Sat Nov 03, 2018 13:07:10: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 13:07:10: Initial reset was performed
+Sat Nov 03, 2018 13:07:10: 736 bytes downloaded (15.29 Kbytes/sec)
+Sat Nov 03, 2018 13:07:10: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Sat Nov 03, 2018 13:07:10: Target reset
+Sat Nov 03, 2018 13:07:11: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 13:07:11: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Sat Nov 03, 2018 13:07:11: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 13:07:11: 18862 bytes downloaded into FLASH (11.78 Kbytes/sec)
+Sat Nov 03, 2018 13:07:11: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Sat Nov 03, 2018 13:07:11: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 13:07:11: Target reset
+Sat Nov 03, 2018 13:07:14: Breakpoint hit: Code @ SPI_Base.cpp:238.13, type: default (auto) 
+
+
+ << Logging to file resumes >> 
+
+Sat Nov 03, 2018 13:08:18: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Sat Nov 03, 2018 13:08:18: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 13:08:18: ST-Link firmware too old
+Sat Nov 03, 2018 13:08:18: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Sat Nov 03, 2018 13:08:18: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 13:08:18: Initial reset was performed
+Sat Nov 03, 2018 13:08:18: 736 bytes downloaded (22.46 Kbytes/sec)
+Sat Nov 03, 2018 13:08:18: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Sat Nov 03, 2018 13:08:18: Target reset
+Sat Nov 03, 2018 13:08:19: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 13:08:19: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Sat Nov 03, 2018 13:08:19: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 13:08:19: 19006 bytes downloaded into FLASH (11.21 Kbytes/sec)
+Sat Nov 03, 2018 13:08:19: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Sat Nov 03, 2018 13:08:19: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 13:08:19: Target reset
+Sat Nov 03, 2018 13:08:23: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:08:32: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:08:35: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:08:38: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:08:40: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:08:41: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:08:43: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:08:44: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:08:45: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:08:46: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:08:48: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:08:49: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:08:51: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:08:52: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:08:53: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+
+
+ << Logging to file resumes >> 
+
+Sat Nov 03, 2018 13:09:39: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Sat Nov 03, 2018 13:09:39: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 13:09:39: ST-Link firmware too old
+Sat Nov 03, 2018 13:09:39: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Sat Nov 03, 2018 13:09:39: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 13:09:39: Initial reset was performed
+Sat Nov 03, 2018 13:09:39: 736 bytes downloaded (22.46 Kbytes/sec)
+Sat Nov 03, 2018 13:09:39: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Sat Nov 03, 2018 13:09:39: Target reset
+Sat Nov 03, 2018 13:09:40: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 13:09:40: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Sat Nov 03, 2018 13:09:40: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 13:09:40: 19010 bytes downloaded into FLASH (11.21 Kbytes/sec)
+Sat Nov 03, 2018 13:09:40: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Sat Nov 03, 2018 13:09:40: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 13:09:40: Target reset
+Sat Nov 03, 2018 13:09:44: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:09:50: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:09:53: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:09:55: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:09:58: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:10:00: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:10:03: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:10:05: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:10:07: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+
+
+ << Logging to file resumes >> 
+
+Sat Nov 03, 2018 13:10:26: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Sat Nov 03, 2018 13:10:26: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 13:10:26: ST-Link firmware too old
+Sat Nov 03, 2018 13:10:26: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Sat Nov 03, 2018 13:10:26: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 13:10:26: Initial reset was performed
+Sat Nov 03, 2018 13:10:26: 736 bytes downloaded (15.29 Kbytes/sec)
+Sat Nov 03, 2018 13:10:26: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Sat Nov 03, 2018 13:10:26: Target reset
+Sat Nov 03, 2018 13:10:28: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 13:10:28: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Sat Nov 03, 2018 13:10:28: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 13:10:28: 19006 bytes downloaded into FLASH (11.21 Kbytes/sec)
+Sat Nov 03, 2018 13:10:28: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Sat Nov 03, 2018 13:10:28: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 13:10:28: Target reset
+Sat Nov 03, 2018 13:10:31: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:10:34: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:10:35: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:10:36: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:10:37: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:10:38: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:10:39: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:10:40: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:10:41: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:10:42: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:10:42: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:10:43: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:10:44: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:10:45: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:10:46: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:10:47: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:10:48: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:10:48: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:10:49: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:10:50: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:10:51: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+
+
+ << Logging to file resumes >> 
+
+Sat Nov 03, 2018 13:11:18: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Sat Nov 03, 2018 13:11:18: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 13:11:18: ST-Link firmware too old
+Sat Nov 03, 2018 13:11:18: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Sat Nov 03, 2018 13:11:18: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 13:11:18: Initial reset was performed
+Sat Nov 03, 2018 13:11:18: 736 bytes downloaded (15.29 Kbytes/sec)
+Sat Nov 03, 2018 13:11:18: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Sat Nov 03, 2018 13:11:18: Target reset
+Sat Nov 03, 2018 13:11:19: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 13:11:19: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Sat Nov 03, 2018 13:11:19: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 13:11:19: 18862 bytes downloaded into FLASH (11.34 Kbytes/sec)
+Sat Nov 03, 2018 13:11:19: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Sat Nov 03, 2018 13:11:19: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 13:11:19: Target reset
+Sat Nov 03, 2018 13:11:22: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:11:26: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:11:27: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:11:28: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:11:29: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:11:30: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:11:32: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:11:33: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:11:34: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:11:35: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:11:37: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:11:38: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:11:39: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:11:41: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+
+
+ << Logging to file resumes >> 
+
+Sat Nov 03, 2018 13:12:18: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Sat Nov 03, 2018 13:12:18: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 13:12:18: ST-Link firmware too old
+Sat Nov 03, 2018 13:12:18: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Sat Nov 03, 2018 13:12:18: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 13:12:18: Initial reset was performed
+Sat Nov 03, 2018 13:12:18: 736 bytes downloaded (15.29 Kbytes/sec)
+Sat Nov 03, 2018 13:12:18: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Sat Nov 03, 2018 13:12:18: Target reset
+Sat Nov 03, 2018 13:12:20: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 13:12:20: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Sat Nov 03, 2018 13:12:20: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 13:12:20: 18722 bytes downloaded into FLASH (11.25 Kbytes/sec)
+Sat Nov 03, 2018 13:12:20: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Sat Nov 03, 2018 13:12:20: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 13:12:20: Target reset
+Sat Nov 03, 2018 13:12:24: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:12:28: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:12:29: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:12:32: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:12:33: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:12:34: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:12:35: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:12:36: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+
+
+ << Logging to file resumes >> 
+
+Sat Nov 03, 2018 13:12:49: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Sat Nov 03, 2018 13:12:49: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 13:12:49: ST-Link firmware too old
+Sat Nov 03, 2018 13:12:49: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Sat Nov 03, 2018 13:12:49: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 13:12:49: Initial reset was performed
+Sat Nov 03, 2018 13:12:49: 736 bytes downloaded (22.46 Kbytes/sec)
+Sat Nov 03, 2018 13:12:49: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Sat Nov 03, 2018 13:12:49: Target reset
+Sat Nov 03, 2018 13:12:51: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 13:12:51: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Sat Nov 03, 2018 13:12:51: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 13:12:51: 18862 bytes downloaded into FLASH (11.34 Kbytes/sec)
+Sat Nov 03, 2018 13:12:51: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Sat Nov 03, 2018 13:12:51: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 13:12:51: Target reset
+Sat Nov 03, 2018 13:12:59: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:13:01: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:13:02: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:13:03: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:13:05: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:13:06: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:13:07: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:13:09: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:13:11: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:13:13: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:13:14: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:13:16: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:13:17: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:13:18: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:13:20: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:13:21: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:13:22: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:13:23: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:13:24: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:13:32: Breakpoint hit: Code @ Test.cpp:700.3, type: default (auto) 
+Sat Nov 03, 2018 13:13:34: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:13:35: Breakpoint hit: Code @ Test.cpp:700.3, type: default (auto) 
+Sat Nov 03, 2018 13:13:37: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:13:39: Breakpoint hit: Code @ Test.cpp:700.3, type: default (auto) 
+Sat Nov 03, 2018 13:13:40: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:13:42: Breakpoint hit: Code @ Test.cpp:700.3, type: default (auto) 
+Sat Nov 03, 2018 13:13:43: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:13:44: Breakpoint hit: Code @ Test.cpp:700.3, type: default (auto) 
+Sat Nov 03, 2018 13:13:45: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:13:46: Breakpoint hit: Code @ Test.cpp:700.3, type: default (auto) 
+Sat Nov 03, 2018 13:13:46: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:13:47: Breakpoint hit: Code @ Test.cpp:700.3, type: default (auto) 
+Sat Nov 03, 2018 13:13:48: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:13:49: Breakpoint hit: Code @ Test.cpp:700.3, type: default (auto) 
+
+
+ << Logging to file resumes >> 
+
+Sat Nov 03, 2018 13:15:09: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Sat Nov 03, 2018 13:15:09: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 13:15:09: ST-Link firmware too old
+Sat Nov 03, 2018 13:15:09: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Sat Nov 03, 2018 13:15:09: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 13:15:09: Initial reset was performed
+Sat Nov 03, 2018 13:15:09: 736 bytes downloaded (15.29 Kbytes/sec)
+Sat Nov 03, 2018 13:15:09: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Sat Nov 03, 2018 13:15:09: Target reset
+Sat Nov 03, 2018 13:15:11: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 13:15:11: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Sat Nov 03, 2018 13:15:11: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 13:15:11: 18842 bytes downloaded into FLASH (11.32 Kbytes/sec)
+Sat Nov 03, 2018 13:15:11: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Sat Nov 03, 2018 13:15:11: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 13:15:11: Target reset
+Sat Nov 03, 2018 13:15:15: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:15:18: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:15:19: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:15:20: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:15:21: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:15:22: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+
+
+ << Logging to file resumes >> 
+
+Sat Nov 03, 2018 13:15:29: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Sat Nov 03, 2018 13:15:29: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 13:15:29: ST-Link firmware too old
+Sat Nov 03, 2018 13:15:29: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Sat Nov 03, 2018 13:15:29: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 13:15:29: Initial reset was performed
+Sat Nov 03, 2018 13:15:30: 736 bytes downloaded (15.29 Kbytes/sec)
+Sat Nov 03, 2018 13:15:30: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Sat Nov 03, 2018 13:15:30: Target reset
+Sat Nov 03, 2018 13:15:31: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 13:15:31: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Sat Nov 03, 2018 13:15:31: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 13:15:31: 18848 bytes downloaded into FLASH (11.33 Kbytes/sec)
+Sat Nov 03, 2018 13:15:31: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Sat Nov 03, 2018 13:15:31: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 13:15:31: Target reset
+Sat Nov 03, 2018 13:15:34: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:15:35: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:15:36: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:15:37: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:15:38: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:15:39: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:15:39: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:15:40: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:15:43: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:15:44: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:15:44: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:15:45: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:15:45: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:15:46: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:15:47: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:15:47: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:15:48: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:15:49: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:15:49: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+
+
+ << Logging to file resumes >> 
+
+Sat Nov 03, 2018 13:18:03: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Sat Nov 03, 2018 13:18:03: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 13:18:03: ST-Link firmware too old
+Sat Nov 03, 2018 13:18:03: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Sat Nov 03, 2018 13:18:03: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 13:18:03: Initial reset was performed
+Sat Nov 03, 2018 13:18:03: 736 bytes downloaded (23.19 Kbytes/sec)
+Sat Nov 03, 2018 13:18:03: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Sat Nov 03, 2018 13:18:03: Target reset
+Sat Nov 03, 2018 13:18:05: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 13:18:05: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Sat Nov 03, 2018 13:18:05: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 13:18:05: 18862 bytes downloaded into FLASH (11.22 Kbytes/sec)
+Sat Nov 03, 2018 13:18:05: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Sat Nov 03, 2018 13:18:05: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 13:18:05: Target reset
+Sat Nov 03, 2018 13:18:09: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:18:12: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:18:13: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:22:08: Breakpoint hit: Code @ fat_sd_spi.c:868.2, type: default (auto) 
+Sat Nov 03, 2018 13:22:38: Breakpoint hit: Code @ Test.cpp:697.3, type: default (auto) 
+Sat Nov 03, 2018 13:23:04: Breakpoint hit: Code @ fat_sd_spi.c:868.2, type: default (auto) 
+Sat Nov 03, 2018 13:25:02: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+
+
+ << Logging to file resumes >> 
+
+Sat Nov 03, 2018 13:30:16: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Sat Nov 03, 2018 13:30:16: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 13:30:16: ST-Link firmware too old
+Sat Nov 03, 2018 13:30:16: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Sat Nov 03, 2018 13:30:16: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 13:30:16: Initial reset was performed
+Sat Nov 03, 2018 13:30:16: 736 bytes downloaded (15.29 Kbytes/sec)
+Sat Nov 03, 2018 13:30:16: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Sat Nov 03, 2018 13:30:16: Target reset
+Sat Nov 03, 2018 13:30:18: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 13:30:18: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Sat Nov 03, 2018 13:30:18: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 13:30:18: 17782 bytes downloaded into FLASH (11.45 Kbytes/sec)
+Sat Nov 03, 2018 13:30:18: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Sat Nov 03, 2018 13:30:18: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 13:30:18: Target reset
+
+
+ << Logging to file resumes >> 
+
+Sat Nov 03, 2018 13:32:47: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Sat Nov 03, 2018 13:32:47: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 13:32:47: ST-Link firmware too old
+Sat Nov 03, 2018 13:32:47: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Sat Nov 03, 2018 13:32:47: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 13:32:47: Initial reset was performed
+Sat Nov 03, 2018 13:32:47: 736 bytes downloaded (23.19 Kbytes/sec)
+Sat Nov 03, 2018 13:32:47: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Sat Nov 03, 2018 13:32:47: Target reset
+Sat Nov 03, 2018 13:32:48: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 13:32:48: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Sat Nov 03, 2018 13:32:48: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 13:32:49: 17794 bytes downloaded into FLASH (11.35 Kbytes/sec)
+Sat Nov 03, 2018 13:32:49: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Sat Nov 03, 2018 13:32:49: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 13:32:49: Target reset
+
+
+ << Logging to file resumes >> 
+
+Sat Nov 03, 2018 13:34:03: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Sat Nov 03, 2018 13:34:03: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 13:34:03: ST-Link firmware too old
+Sat Nov 03, 2018 13:34:03: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Sat Nov 03, 2018 13:34:03: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 13:34:03: Initial reset was performed
+Sat Nov 03, 2018 13:34:03: 736 bytes downloaded (23.19 Kbytes/sec)
+Sat Nov 03, 2018 13:34:03: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Sat Nov 03, 2018 13:34:03: Target reset
+Sat Nov 03, 2018 13:34:04: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 13:34:04: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Sat Nov 03, 2018 13:34:04: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 13:34:04: 17794 bytes downloaded into FLASH (11.46 Kbytes/sec)
+Sat Nov 03, 2018 13:34:04: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Sat Nov 03, 2018 13:34:04: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 13:34:04: Target reset
+Sat Nov 03, 2018 13:34:08: Breakpoint hit: Code @ SD.cpp:29.5, type: default (auto) 
+Sat Nov 03, 2018 13:34:59: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 13:34:59: Target reset
+
+
+ << Logging to file resumes >> 
+
+Sat Nov 03, 2018 13:35:02: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Sat Nov 03, 2018 13:35:02: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 13:35:02: ST-Link firmware too old
+Sat Nov 03, 2018 13:35:02: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Sat Nov 03, 2018 13:35:02: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 13:35:02: Initial reset was performed
+Sat Nov 03, 2018 13:35:02: 736 bytes downloaded (23.19 Kbytes/sec)
+Sat Nov 03, 2018 13:35:02: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Sat Nov 03, 2018 13:35:02: Target reset
+Sat Nov 03, 2018 13:35:04: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 13:35:04: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Sat Nov 03, 2018 13:35:04: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 13:35:04: 17794 bytes downloaded into FLASH (11.47 Kbytes/sec)
+Sat Nov 03, 2018 13:35:04: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Sat Nov 03, 2018 13:35:04: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 13:35:04: Target reset
+Sat Nov 03, 2018 13:35:07: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:35:17: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:35:18: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:35:19: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:35:21: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:35:24: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:35:25: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:35:26: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:35:28: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:35:29: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+
+
+ << Logging to file resumes >> 
+
+Sat Nov 03, 2018 13:36:18: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Sat Nov 03, 2018 13:36:18: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 13:36:18: ST-Link firmware too old
+Sat Nov 03, 2018 13:36:18: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Sat Nov 03, 2018 13:36:18: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 13:36:18: Initial reset was performed
+Sat Nov 03, 2018 13:36:18: 736 bytes downloaded (15.29 Kbytes/sec)
+Sat Nov 03, 2018 13:36:18: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Sat Nov 03, 2018 13:36:19: Target reset
+Sat Nov 03, 2018 13:36:20: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 13:36:20: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Sat Nov 03, 2018 13:36:20: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 13:36:20: 17938 bytes downloaded into FLASH (11.56 Kbytes/sec)
+Sat Nov 03, 2018 13:36:20: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Sat Nov 03, 2018 13:36:20: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 13:36:20: Target reset
+Sat Nov 03, 2018 13:36:25: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:36:30: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:36:32: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:36:33: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:36:35: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:36:36: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:36:37: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:36:38: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:36:39: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:36:40: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:36:42: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+
+
+ << Logging to file resumes >> 
+
+Sat Nov 03, 2018 13:44:56: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Sat Nov 03, 2018 13:44:56: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 13:44:57: ST-Link firmware too old
+Sat Nov 03, 2018 13:44:57: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Sat Nov 03, 2018 13:44:57: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 13:44:57: Initial reset was performed
+Sat Nov 03, 2018 13:44:57: 736 bytes downloaded (15.29 Kbytes/sec)
+Sat Nov 03, 2018 13:44:57: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Sat Nov 03, 2018 13:44:57: Target reset
+Sat Nov 03, 2018 13:44:58: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 13:44:58: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Sat Nov 03, 2018 13:44:58: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 13:44:58: 17906 bytes downloaded into FLASH (11.54 Kbytes/sec)
+Sat Nov 03, 2018 13:44:58: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Sat Nov 03, 2018 13:44:58: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 13:44:58: Target reset
+
+
+ << Logging to file resumes >> 
+
+Sat Nov 03, 2018 13:46:12: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Sat Nov 03, 2018 13:46:12: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 13:46:12: ST-Link firmware too old
+Sat Nov 03, 2018 13:46:12: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Sat Nov 03, 2018 13:46:12: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 13:46:12: Initial reset was performed
+Sat Nov 03, 2018 13:46:12: 736 bytes downloaded (23.19 Kbytes/sec)
+Sat Nov 03, 2018 13:46:12: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Sat Nov 03, 2018 13:46:12: Target reset
+Sat Nov 03, 2018 13:46:14: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 13:46:14: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Sat Nov 03, 2018 13:46:14: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 13:46:14: 19006 bytes downloaded into FLASH (11.42 Kbytes/sec)
+Sat Nov 03, 2018 13:46:14: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Sat Nov 03, 2018 13:46:14: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 13:46:14: Target reset
+
+
+ << Logging to file resumes >> 
+
+Sat Nov 03, 2018 13:47:00: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Sat Nov 03, 2018 13:47:00: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 13:47:00: ST-Link firmware too old
+Sat Nov 03, 2018 13:47:00: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Sat Nov 03, 2018 13:47:00: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 13:47:00: Initial reset was performed
+Sat Nov 03, 2018 13:47:00: 736 bytes downloaded (23.19 Kbytes/sec)
+Sat Nov 03, 2018 13:47:00: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Sat Nov 03, 2018 13:47:00: Target reset
+Sat Nov 03, 2018 13:47:01: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 13:47:01: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Sat Nov 03, 2018 13:47:01: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 13:47:02: 19006 bytes downloaded into FLASH (11.42 Kbytes/sec)
+Sat Nov 03, 2018 13:47:02: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Sat Nov 03, 2018 13:47:02: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 13:47:02: Target reset
+Sat Nov 03, 2018 13:47:06: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:47:11: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:47:14: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:47:16: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:47:17: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:47:18: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:47:20: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:47:21: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:47:22: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:47:23: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:47:24: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:47:25: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:47:26: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+
+
+ << Logging to file resumes >> 
+
+Sat Nov 03, 2018 13:48:46: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Sat Nov 03, 2018 13:48:46: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 13:48:46: ST-Link firmware too old
+Sat Nov 03, 2018 13:48:46: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Sat Nov 03, 2018 13:48:46: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 13:48:46: Initial reset was performed
+Sat Nov 03, 2018 13:48:46: 736 bytes downloaded (15.29 Kbytes/sec)
+Sat Nov 03, 2018 13:48:46: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Sat Nov 03, 2018 13:48:46: Target reset
+Sat Nov 03, 2018 13:48:47: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 13:48:47: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Sat Nov 03, 2018 13:48:47: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 13:48:48: 17926 bytes downloaded into FLASH (11.56 Kbytes/sec)
+Sat Nov 03, 2018 13:48:48: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Sat Nov 03, 2018 13:48:48: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 13:48:48: Target reset
+
+
+ << Logging to file resumes >> 
+
+Sat Nov 03, 2018 13:49:21: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Sat Nov 03, 2018 13:49:21: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 13:49:21: ST-Link firmware too old
+Sat Nov 03, 2018 13:49:21: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Sat Nov 03, 2018 13:49:21: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 13:49:21: Initial reset was performed
+Sat Nov 03, 2018 13:49:21: 736 bytes downloaded (15.29 Kbytes/sec)
+Sat Nov 03, 2018 13:49:21: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Sat Nov 03, 2018 13:49:21: Target reset
+Sat Nov 03, 2018 13:49:23: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 13:49:23: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Sat Nov 03, 2018 13:49:23: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 13:49:23: 17938 bytes downloaded into FLASH (11.56 Kbytes/sec)
+Sat Nov 03, 2018 13:49:23: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Sat Nov 03, 2018 13:49:23: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 13:49:23: Target reset
+Sat Nov 03, 2018 13:49:27: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:49:29: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:49:30: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:49:31: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:49:31: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:49:32: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:49:33: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:49:34: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:49:35: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 13:49:35: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+
+
+ << Logging to file resumes >> 
+
+Sat Nov 03, 2018 20:21:25: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Sat Nov 03, 2018 20:21:25: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 20:21:25: ST-Link firmware too old
+Sat Nov 03, 2018 20:21:25: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Sat Nov 03, 2018 20:21:25: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 20:21:25: Initial reset was performed
+Sat Nov 03, 2018 20:21:25: 736 bytes downloaded (23.19 Kbytes/sec)
+Sat Nov 03, 2018 20:21:25: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Sat Nov 03, 2018 20:21:25: Target reset
+Sat Nov 03, 2018 20:21:27: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 20:21:27: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Sat Nov 03, 2018 20:21:27: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 20:21:27: 17938 bytes downloaded into FLASH (11.43 Kbytes/sec)
+Sat Nov 03, 2018 20:21:27: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Sat Nov 03, 2018 20:21:27: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 20:21:27: Target reset
+Sat Nov 03, 2018 20:21:39: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:21:40: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:21:41: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:21:42: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:21:43: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:21:44: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:21:45: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:21:45: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:21:46: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:21:47: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:21:48: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+
+
+ << Logging to file resumes >> 
+
+Sat Nov 03, 2018 20:21:56: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Sat Nov 03, 2018 20:21:56: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 20:21:56: ST-Link firmware too old
+Sat Nov 03, 2018 20:21:56: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Sat Nov 03, 2018 20:21:56: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 20:21:56: Initial reset was performed
+Sat Nov 03, 2018 20:21:56: 736 bytes downloaded (22.46 Kbytes/sec)
+Sat Nov 03, 2018 20:21:56: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Sat Nov 03, 2018 20:21:56: Target reset
+Sat Nov 03, 2018 20:21:57: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 20:21:57: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Sat Nov 03, 2018 20:21:57: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 20:21:57: 17794 bytes downloaded into FLASH (11.35 Kbytes/sec)
+Sat Nov 03, 2018 20:21:57: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Sat Nov 03, 2018 20:21:57: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 20:21:57: Target reset
+Sat Nov 03, 2018 20:22:01: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:22:02: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:22:03: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:22:03: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:22:04: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:22:05: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:22:05: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:22:06: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:22:07: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:22:08: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:22:09: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:22:10: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:22:10: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:22:11: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:22:12: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:22:13: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:22:13: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:22:14: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:22:15: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:22:15: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:22:16: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:22:17: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:22:18: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:22:18: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:22:19: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:22:20: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:22:20: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+
+
+ << Logging to file resumes >> 
+
+Sat Nov 03, 2018 20:28:46: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Sat Nov 03, 2018 20:28:46: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 20:28:46: ST-Link firmware too old
+Sat Nov 03, 2018 20:28:46: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Sat Nov 03, 2018 20:28:46: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 20:28:46: Initial reset was performed
+Sat Nov 03, 2018 20:28:46: 736 bytes downloaded (23.19 Kbytes/sec)
+Sat Nov 03, 2018 20:28:46: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Sat Nov 03, 2018 20:28:46: Target reset
+Sat Nov 03, 2018 20:28:48: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 20:28:48: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Sat Nov 03, 2018 20:28:48: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 20:28:48: 17818 bytes downloaded into FLASH (11.37 Kbytes/sec)
+Sat Nov 03, 2018 20:28:48: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Sat Nov 03, 2018 20:28:48: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 20:28:48: Target reset
+Sat Nov 03, 2018 20:28:54: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:28:57: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:28:58: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:29:00: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:29:01: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:29:02: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:29:03: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:29:04: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:29:05: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:29:06: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:29:07: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:29:08: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:29:09: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:29:09: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:29:10: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:29:11: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:29:11: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:29:12: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:29:13: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:29:13: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:29:14: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:29:14: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:29:15: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:29:16: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:29:16: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+
+
+ << Logging to file resumes >> 
+
+Sat Nov 03, 2018 20:29:19: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Sat Nov 03, 2018 20:29:19: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 20:29:19: ST-Link firmware too old
+Sat Nov 03, 2018 20:29:19: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Sat Nov 03, 2018 20:29:19: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 20:29:19: Initial reset was performed
+Sat Nov 03, 2018 20:29:19: 736 bytes downloaded (23.19 Kbytes/sec)
+Sat Nov 03, 2018 20:29:19: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Sat Nov 03, 2018 20:29:19: Target reset
+Sat Nov 03, 2018 20:29:20: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 20:29:20: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Sat Nov 03, 2018 20:29:20: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 20:29:21: 17818 bytes downloaded into FLASH (11.25 Kbytes/sec)
+Sat Nov 03, 2018 20:29:21: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Sat Nov 03, 2018 20:29:21: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 20:29:21: Target reset
+Sat Nov 03, 2018 20:29:32: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 20:29:32: Target reset
+Sat Nov 03, 2018 20:29:34: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:29:35: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:29:36: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:29:37: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:29:38: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:29:39: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:29:39: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:29:40: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:29:41: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:29:41: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:29:42: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:29:42: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:29:43: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:29:43: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:29:44: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:29:44: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:29:45: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:29:45: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:29:45: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:29:46: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:29:46: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:29:46: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:29:46: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:29:47: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+
+
+ << Logging to file resumes >> 
+
+Sat Nov 03, 2018 20:30:19: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Sat Nov 03, 2018 20:30:19: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 20:30:19: ST-Link firmware too old
+Sat Nov 03, 2018 20:30:19: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Sat Nov 03, 2018 20:30:19: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 20:30:19: Initial reset was performed
+Sat Nov 03, 2018 20:30:19: 736 bytes downloaded (15.29 Kbytes/sec)
+Sat Nov 03, 2018 20:30:19: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Sat Nov 03, 2018 20:30:19: Target reset
+Sat Nov 03, 2018 20:30:20: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 20:30:20: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Sat Nov 03, 2018 20:30:20: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 20:30:20: 17818 bytes downloaded into FLASH (11.37 Kbytes/sec)
+Sat Nov 03, 2018 20:30:20: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Sat Nov 03, 2018 20:30:20: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 20:30:20: Target reset
+Sat Nov 03, 2018 20:30:24: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:30:26: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:30:27: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:30:28: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:30:28: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:30:29: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:30:30: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:30:30: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:30:31: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:30:32: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:30:32: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:30:33: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:30:34: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+
+
+ << Logging to file resumes >> 
+
+Sat Nov 03, 2018 20:31:38: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Sat Nov 03, 2018 20:31:38: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 20:31:38: ST-Link firmware too old
+Sat Nov 03, 2018 20:31:38: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Sat Nov 03, 2018 20:31:38: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 20:31:38: Initial reset was performed
+Sat Nov 03, 2018 20:31:38: 736 bytes downloaded (22.46 Kbytes/sec)
+Sat Nov 03, 2018 20:31:38: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Sat Nov 03, 2018 20:31:38: Target reset
+Sat Nov 03, 2018 20:31:40: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 20:31:40: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Sat Nov 03, 2018 20:31:40: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 20:31:40: 17818 bytes downloaded into FLASH (11.37 Kbytes/sec)
+Sat Nov 03, 2018 20:31:40: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Sat Nov 03, 2018 20:31:40: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 20:31:40: Target reset
+
+
+ << Logging to file resumes >> 
+
+Sat Nov 03, 2018 20:33:46: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Sat Nov 03, 2018 20:33:46: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 20:33:46: ST-Link firmware too old
+Sat Nov 03, 2018 20:33:46: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Sat Nov 03, 2018 20:33:46: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 20:33:46: Initial reset was performed
+Sat Nov 03, 2018 20:33:46: 736 bytes downloaded (23.19 Kbytes/sec)
+Sat Nov 03, 2018 20:33:46: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Sat Nov 03, 2018 20:33:46: Target reset
+Sat Nov 03, 2018 20:33:47: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 20:33:47: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Sat Nov 03, 2018 20:33:47: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 20:33:47: 17718 bytes downloaded into FLASH (11.41 Kbytes/sec)
+Sat Nov 03, 2018 20:33:47: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Sat Nov 03, 2018 20:33:47: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 20:33:47: Target reset
+Sat Nov 03, 2018 20:33:51: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:33:52: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:33:53: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:33:55: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:33:56: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:33:57: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:33:57: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:33:58: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+
+
+ << Logging to file resumes >> 
+
+Sat Nov 03, 2018 20:34:14: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Sat Nov 03, 2018 20:34:14: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 20:34:14: ST-Link firmware too old
+Sat Nov 03, 2018 20:34:14: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Sat Nov 03, 2018 20:34:14: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 20:34:14: Initial reset was performed
+Sat Nov 03, 2018 20:34:14: 736 bytes downloaded (15.29 Kbytes/sec)
+Sat Nov 03, 2018 20:34:14: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Sat Nov 03, 2018 20:34:14: Target reset
+Sat Nov 03, 2018 20:34:15: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 20:34:15: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Sat Nov 03, 2018 20:34:15: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 20:34:16: 17937 bytes downloaded into FLASH (11.56 Kbytes/sec)
+Sat Nov 03, 2018 20:34:16: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Sat Nov 03, 2018 20:34:16: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 20:34:16: Target reset
+Sat Nov 03, 2018 20:34:24: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:34:27: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:34:28: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:34:30: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:34:31: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:34:32: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:34:33: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:34:34: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:34:35: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:34:36: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:34:37: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:34:38: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:34:38: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:34:39: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:34:40: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:34:41: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:34:42: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:34:43: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:34:43: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:34:44: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:34:45: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:34:46: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:34:47: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:34:49: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:34:50: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:34:52: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:34:53: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:43:32: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac(119,25): Error: Operation error. 
+Sat Nov 03, 2018 20:43:32: Error while calling macro execConfigureTraceSWO
+Sat Nov 03, 2018 20:43:50: Fatal error: Check that all cables are connected and power is OK   Session aborted!
+
+
+ << Logging to file resumes >> 
+
+Sat Nov 03, 2018 20:43:51: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Sat Nov 03, 2018 20:43:51: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 20:43:51: ST-Link firmware too old
+Sat Nov 03, 2018 20:43:51: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Sat Nov 03, 2018 20:43:51: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 20:43:51: Initial reset was performed
+Sat Nov 03, 2018 20:43:51: 736 bytes downloaded (23.19 Kbytes/sec)
+Sat Nov 03, 2018 20:43:51: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Sat Nov 03, 2018 20:43:51: Target reset
+Sat Nov 03, 2018 20:43:53: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 20:43:53: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Sat Nov 03, 2018 20:43:53: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 20:43:53: 17937 bytes downloaded into FLASH (11.55 Kbytes/sec)
+Sat Nov 03, 2018 20:43:53: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Sat Nov 03, 2018 20:43:53: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 20:43:53: Target reset
+
+
+ << Logging to file resumes >> 
+
+Sat Nov 03, 2018 20:46:37: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Sat Nov 03, 2018 20:46:37: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 20:46:37: ST-Link firmware too old
+Sat Nov 03, 2018 20:46:37: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Sat Nov 03, 2018 20:46:37: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 20:46:37: Initial reset was performed
+Sat Nov 03, 2018 20:46:37: 736 bytes downloaded (15.63 Kbytes/sec)
+Sat Nov 03, 2018 20:46:37: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Sat Nov 03, 2018 20:46:37: Target reset
+Sat Nov 03, 2018 20:46:38: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 20:46:38: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Sat Nov 03, 2018 20:46:38: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 20:46:38: 18013 bytes downloaded into FLASH (11.25 Kbytes/sec)
+Sat Nov 03, 2018 20:46:38: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Sat Nov 03, 2018 20:46:38: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 20:46:38: Target reset
+
+
+ << Logging to file resumes >> 
+
+Sat Nov 03, 2018 20:55:25: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Sat Nov 03, 2018 20:55:25: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 20:55:25: ST-Link firmware too old
+Sat Nov 03, 2018 20:55:25: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Sat Nov 03, 2018 20:55:25: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 20:55:25: Initial reset was performed
+Sat Nov 03, 2018 20:55:26: 736 bytes downloaded (23.19 Kbytes/sec)
+Sat Nov 03, 2018 20:55:26: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Sat Nov 03, 2018 20:55:26: Target reset
+Sat Nov 03, 2018 20:55:27: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 20:55:27: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Sat Nov 03, 2018 20:55:27: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 20:55:27: 18061 bytes downloaded into FLASH (11.51 Kbytes/sec)
+Sat Nov 03, 2018 20:55:27: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Sat Nov 03, 2018 20:55:27: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 20:55:27: Target reset
+Sat Nov 03, 2018 20:56:03: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 20:56:03: Target reset
+
+
+ << Logging to file resumes >> 
+
+Sat Nov 03, 2018 20:56:24: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Sat Nov 03, 2018 20:56:24: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 20:56:24: ST-Link firmware too old
+Sat Nov 03, 2018 20:56:24: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Sat Nov 03, 2018 20:56:24: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 20:56:24: Initial reset was performed
+Sat Nov 03, 2018 20:56:24: 736 bytes downloaded (15.63 Kbytes/sec)
+Sat Nov 03, 2018 20:56:24: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Sat Nov 03, 2018 20:56:24: Target reset
+Sat Nov 03, 2018 20:56:25: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 20:56:25: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Sat Nov 03, 2018 20:56:25: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 20:56:26: 18061 bytes downloaded into FLASH (11.28 Kbytes/sec)
+Sat Nov 03, 2018 20:56:26: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Sat Nov 03, 2018 20:56:26: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 20:56:26: Target reset
+
+
+ << Logging to file resumes >> 
+
+Sat Nov 03, 2018 20:56:37: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Sat Nov 03, 2018 20:56:37: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 20:56:37: ST-Link firmware too old
+Sat Nov 03, 2018 20:56:37: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Sat Nov 03, 2018 20:56:37: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 20:56:37: Initial reset was performed
+Sat Nov 03, 2018 20:56:37: 736 bytes downloaded (15.29 Kbytes/sec)
+Sat Nov 03, 2018 20:56:37: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Sat Nov 03, 2018 20:56:37: Target reset
+Sat Nov 03, 2018 20:56:39: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 20:56:39: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Sat Nov 03, 2018 20:56:39: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 20:56:39: 18061 bytes downloaded into FLASH (11.52 Kbytes/sec)
+Sat Nov 03, 2018 20:56:39: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Sat Nov 03, 2018 20:56:39: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 20:56:39: Target reset
+Sat Nov 03, 2018 20:57:05: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 20:57:05: Target reset
+Sat Nov 03, 2018 20:57:06: Breakpoint hit: Code @ SD.cpp:25.6, type: default (auto) 
+
+
+ << Logging to file resumes >> 
+
+Sat Nov 03, 2018 20:58:04: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Sat Nov 03, 2018 20:58:04: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 20:58:04: ST-Link firmware too old
+Sat Nov 03, 2018 20:58:04: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Sat Nov 03, 2018 20:58:04: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 20:58:04: Initial reset was performed
+Sat Nov 03, 2018 20:58:04: 736 bytes downloaded (15.29 Kbytes/sec)
+Sat Nov 03, 2018 20:58:04: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Sat Nov 03, 2018 20:58:04: Target reset
+Sat Nov 03, 2018 20:58:06: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 20:58:06: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Sat Nov 03, 2018 20:58:06: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 20:58:06: 18069 bytes downloaded into FLASH (11.30 Kbytes/sec)
+Sat Nov 03, 2018 20:58:06: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Sat Nov 03, 2018 20:58:06: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 20:58:06: Target reset
+Sat Nov 03, 2018 20:58:10: Breakpoint hit: Code @ SD.cpp:25.6, type: default (auto) 
+Sat Nov 03, 2018 20:58:24: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:58:28: Breakpoint hit: Code @ SD.cpp:25.6, type: default (auto) 
+Sat Nov 03, 2018 20:58:31: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:58:33: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:58:34: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:58:41: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:58:43: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:58:46: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:58:48: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:58:50: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:58:51: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:58:52: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:58:53: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:58:54: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:58:55: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:58:56: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:58:57: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:58:57: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:58:58: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:58:59: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:59:00: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:59:00: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:59:01: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:59:02: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:59:03: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:59:03: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:59:04: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+
+
+ << Logging to file resumes >> 
+
+Sat Nov 03, 2018 20:59:20: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Sat Nov 03, 2018 20:59:20: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 20:59:20: ST-Link firmware too old
+Sat Nov 03, 2018 20:59:20: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Sat Nov 03, 2018 20:59:20: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 20:59:20: Initial reset was performed
+Sat Nov 03, 2018 20:59:20: 736 bytes downloaded (23.19 Kbytes/sec)
+Sat Nov 03, 2018 20:59:20: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Sat Nov 03, 2018 20:59:20: Target reset
+Sat Nov 03, 2018 20:59:21: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 20:59:21: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Sat Nov 03, 2018 20:59:21: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 20:59:21: 17850 bytes downloaded into FLASH (11.50 Kbytes/sec)
+Sat Nov 03, 2018 20:59:21: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Sat Nov 03, 2018 20:59:21: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 20:59:21: Target reset
+Sat Nov 03, 2018 20:59:25: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:59:28: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:59:29: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:59:30: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:59:30: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:59:31: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:59:32: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:59:33: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:59:34: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:59:35: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 20:59:36: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+
+
+ << Logging to file resumes >> 
+
+Sat Nov 03, 2018 21:00:00: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Sat Nov 03, 2018 21:00:00: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 21:00:00: ST-Link firmware too old
+Sat Nov 03, 2018 21:00:00: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Sat Nov 03, 2018 21:00:00: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 21:00:00: Initial reset was performed
+Sat Nov 03, 2018 21:00:00: 736 bytes downloaded (23.19 Kbytes/sec)
+Sat Nov 03, 2018 21:00:00: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Sat Nov 03, 2018 21:00:00: Target reset
+Sat Nov 03, 2018 21:00:02: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 21:00:02: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Sat Nov 03, 2018 21:00:02: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 21:00:02: 18874 bytes downloaded into FLASH (11.45 Kbytes/sec)
+Sat Nov 03, 2018 21:00:02: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Sat Nov 03, 2018 21:00:02: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 21:00:02: Target reset
+Sat Nov 03, 2018 21:00:05: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 21:00:08: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 21:00:11: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 21:00:11: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 21:00:12: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 21:00:14: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 21:00:15: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+
+
+ << Logging to file resumes >> 
+
+Sat Nov 03, 2018 21:00:29: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Sat Nov 03, 2018 21:00:29: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 21:00:29: ST-Link firmware too old
+Sat Nov 03, 2018 21:00:29: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Sat Nov 03, 2018 21:00:29: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 21:00:29: Initial reset was performed
+Sat Nov 03, 2018 21:00:29: 736 bytes downloaded (15.63 Kbytes/sec)
+Sat Nov 03, 2018 21:00:29: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Sat Nov 03, 2018 21:00:30: Target reset
+Sat Nov 03, 2018 21:00:31: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 21:00:31: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Sat Nov 03, 2018 21:00:31: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 21:00:31: 17850 bytes downloaded into FLASH (11.38 Kbytes/sec)
+Sat Nov 03, 2018 21:00:31: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Sat Nov 03, 2018 21:00:31: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 21:00:31: Target reset
+Sat Nov 03, 2018 21:00:35: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 21:00:38: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 21:00:42: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 21:00:45: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 21:00:46: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 21:00:48: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 21:00:49: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 21:00:51: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 21:00:53: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 21:00:54: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 21:00:56: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 21:00:57: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 21:00:59: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+Sat Nov 03, 2018 21:01:00: Breakpoint hit: Code @ Test.cpp:713.1, type: default (auto) 
+
+
+ << Logging to file resumes >> 
+
+Sat Nov 03, 2018 21:21:51: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Sat Nov 03, 2018 21:21:51: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 21:21:51: ST-Link firmware too old
+Sat Nov 03, 2018 21:21:51: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Sat Nov 03, 2018 21:21:51: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 21:21:51: Initial reset was performed
+Sat Nov 03, 2018 21:21:51: 736 bytes downloaded (15.29 Kbytes/sec)
+Sat Nov 03, 2018 21:21:51: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Sat Nov 03, 2018 21:21:51: Target reset
+Sat Nov 03, 2018 21:21:52: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 21:21:52: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Sat Nov 03, 2018 21:21:52: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 21:21:53: 17806 bytes downloaded into FLASH (11.47 Kbytes/sec)
+Sat Nov 03, 2018 21:21:53: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Sat Nov 03, 2018 21:21:53: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 21:21:53: Target reset
+Sat Nov 03, 2018 21:22:58: BP Moved from 713:1 to 717:1
+Sat Nov 03, 2018 21:22:58: Beware! Breakpoints were moved!
+
+
+ << Logging to file resumes >> 
+
+Sat Nov 03, 2018 21:23:01: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Sat Nov 03, 2018 21:23:01: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 21:23:01: ST-Link firmware too old
+Sat Nov 03, 2018 21:23:01: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Sat Nov 03, 2018 21:23:01: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 21:23:01: Initial reset was performed
+Sat Nov 03, 2018 21:23:01: 736 bytes downloaded (23.19 Kbytes/sec)
+Sat Nov 03, 2018 21:23:01: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Sat Nov 03, 2018 21:23:01: Target reset
+Sat Nov 03, 2018 21:23:02: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 21:23:02: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Sat Nov 03, 2018 21:23:02: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 21:23:03: 17830 bytes downloaded into FLASH (11.37 Kbytes/sec)
+Sat Nov 03, 2018 21:23:03: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Sat Nov 03, 2018 21:23:03: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 21:23:03: Target reset
+
+
+ << Logging to file resumes >> 
+
+Sat Nov 03, 2018 21:23:28: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Sat Nov 03, 2018 21:23:28: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 21:23:28: ST-Link firmware too old
+Sat Nov 03, 2018 21:23:28: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Sat Nov 03, 2018 21:23:28: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 21:23:28: Initial reset was performed
+Sat Nov 03, 2018 21:23:28: 736 bytes downloaded (15.29 Kbytes/sec)
+Sat Nov 03, 2018 21:23:28: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Sat Nov 03, 2018 21:23:28: Target reset
+Sat Nov 03, 2018 21:23:29: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 21:23:29: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Sat Nov 03, 2018 21:23:29: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 21:23:30: 17806 bytes downloaded into FLASH (11.47 Kbytes/sec)
+Sat Nov 03, 2018 21:23:30: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Sat Nov 03, 2018 21:23:30: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 21:23:30: Target reset
+Sat Nov 03, 2018 21:23:56: Breakpoint hit: Code @ Test.cpp:12.9, type: default (auto) 
+Sat Nov 03, 2018 21:24:07: Breakpoint hit: Code @ Test.cpp:12.9, type: default (auto) 
+
+
+ << Logging to file resumes >> 
+
+Sat Nov 03, 2018 21:31:00: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Sat Nov 03, 2018 21:31:00: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 21:31:00: ST-Link firmware too old
+Sat Nov 03, 2018 21:31:00: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Sat Nov 03, 2018 21:31:00: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 21:31:00: Initial reset was performed
+Sat Nov 03, 2018 21:31:00: 736 bytes downloaded (15.29 Kbytes/sec)
+Sat Nov 03, 2018 21:31:00: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Sat Nov 03, 2018 21:31:00: Target reset
+Sat Nov 03, 2018 21:31:02: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 21:31:02: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Sat Nov 03, 2018 21:31:02: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 21:31:02: 17806 bytes downloaded into FLASH (11.48 Kbytes/sec)
+Sat Nov 03, 2018 21:31:02: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Sat Nov 03, 2018 21:31:02: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 21:31:02: Target reset
+Sat Nov 03, 2018 21:31:06: Breakpoint hit: Code @ Test.cpp:12.9, type: default (auto) 
+Sat Nov 03, 2018 21:31:10: Breakpoint hit: Code @ Test.cpp:12.9, type: default (auto) 
+Sat Nov 03, 2018 21:31:12: Breakpoint hit: Code @ Test.cpp:12.9, type: default (auto) 
+Sat Nov 03, 2018 21:31:14: Breakpoint hit: Code @ Test.cpp:12.9, type: default (auto) 
+Sat Nov 03, 2018 21:31:15: Breakpoint hit: Code @ Test.cpp:12.9, type: default (auto) 
+Sat Nov 03, 2018 21:31:16: Breakpoint hit: Code @ Test.cpp:12.9, type: default (auto) 
+Sat Nov 03, 2018 21:31:16: Breakpoint hit: Code @ Test.cpp:12.9, type: default (auto) 
+Sat Nov 03, 2018 21:31:18: Breakpoint hit: Code @ Test.cpp:12.9, type: default (auto) 
+Sat Nov 03, 2018 21:31:19: Breakpoint hit: Code @ Test.cpp:12.9, type: default (auto) 
+Sat Nov 03, 2018 21:31:20: Breakpoint hit: Code @ Test.cpp:12.9, type: default (auto) 
+Sat Nov 03, 2018 21:31:22: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 21:31:22: Target reset
+Sat Nov 03, 2018 21:31:24: Breakpoint hit: Code @ Test.cpp:12.9, type: default (auto) 
+Sat Nov 03, 2018 21:31:58: Breakpoint hit: Code @ Test.cpp:12.9, type: default (auto) 
+Sat Nov 03, 2018 21:32:10: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 21:32:10: Target reset
+Sat Nov 03, 2018 21:32:12: Breakpoint hit: Code @ Test.cpp:12.9, type: default (auto) 
+
+
+ << Logging to file resumes >> 
+
+Sat Nov 03, 2018 21:33:20: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Sat Nov 03, 2018 21:33:20: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 21:33:20: ST-Link firmware too old
+Sat Nov 03, 2018 21:33:20: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Sat Nov 03, 2018 21:33:20: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 21:33:20: Initial reset was performed
+Sat Nov 03, 2018 21:33:20: 736 bytes downloaded (22.46 Kbytes/sec)
+Sat Nov 03, 2018 21:33:20: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Sat Nov 03, 2018 21:33:20: Target reset
+Sat Nov 03, 2018 21:33:22: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sat Nov 03, 2018 21:33:22: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Sat Nov 03, 2018 21:33:22: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 21:33:22: 17806 bytes downloaded into FLASH (11.24 Kbytes/sec)
+Sat Nov 03, 2018 21:33:22: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Sat Nov 03, 2018 21:33:22: Hardware reset with strategy 0 was performed
+Sat Nov 03, 2018 21:33:22: Target reset
+Sat Nov 03, 2018 21:33:25: Breakpoint hit: Code @ Test.cpp:12.9, type: default (auto) 
+Sat Nov 03, 2018 21:33:27: Breakpoint hit: Code @ Test.cpp:12.9, type: default (auto) 
+Sat Nov 03, 2018 21:33:28: Breakpoint hit: Code @ Test.cpp:12.9, type: default (auto) 
+
+
+ << Logging to file resumes >> 
+
+Sun Nov 04, 2018 18:28:31: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Sun Nov 04, 2018 18:28:31: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sun Nov 04, 2018 18:28:31: ST-Link firmware too old
+Sun Nov 04, 2018 18:28:31: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Sun Nov 04, 2018 18:28:31: Hardware reset with strategy 0 was performed
+Sun Nov 04, 2018 18:28:31: Initial reset was performed
+Sun Nov 04, 2018 18:28:31: 736 bytes downloaded (15.29 Kbytes/sec)
+Sun Nov 04, 2018 18:28:31: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Sun Nov 04, 2018 18:28:31: Target reset
+Sun Nov 04, 2018 18:28:33: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Sun Nov 04, 2018 18:28:33: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out to flash memory.
+Sun Nov 04, 2018 18:28:33: Hardware reset with strategy 0 was performed
+Sun Nov 04, 2018 18:28:33: 17842 bytes downloaded into FLASH (10.83 Kbytes/sec)
+Sun Nov 04, 2018 18:28:33: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
+Sun Nov 04, 2018 18:28:33: Hardware reset with strategy 0 was performed
+Sun Nov 04, 2018 18:28:33: Target reset

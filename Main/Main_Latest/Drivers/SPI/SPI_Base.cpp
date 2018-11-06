@@ -222,10 +222,10 @@ uint32_t SPI_Base::SetFrequency(HZ_t HZ)
 {
     const uint8_t MIN = 8, MAX = 1;
     const uint32_t SysClockFreq = HAL_RCC_GetSysClockFreq();
-    const uint32_t Freq_LUT[]     = { SPI_BAUDRATEPRESCALER_2, SPI_BAUDRATEPRESCALER_2,
-                                      SPI_BAUDRATEPRESCALER_4,SPI_BAUDRATEPRESCALER_8,
-                                      SPI_BAUDRATEPRESCALER_16,SPI_BAUDRATEPRESCALER_32,
-                                      SPI_BAUDRATEPRESCALER_64,SPI_BAUDRATEPRESCALER_128,
+    const uint32_t Freq_LUT[]     = { SPI_BAUDRATEPRESCALER_2,  SPI_BAUDRATEPRESCALER_2,
+                                      SPI_BAUDRATEPRESCALER_4,  SPI_BAUDRATEPRESCALER_8,
+                                      SPI_BAUDRATEPRESCALER_16, SPI_BAUDRATEPRESCALER_32,
+                                      SPI_BAUDRATEPRESCALER_64, SPI_BAUDRATEPRESCALER_128,
                                       SPI_BAUDRATEPRESCALER_256};
     
     if(HZ >= SysClockFreq)
@@ -314,8 +314,9 @@ uint32_t SPI_Base::GetStatus(SPIx_t SPIx)
 //    
 //}
 
-uint8_t SPI_Base::Poll_TxRx(uint8_t data, SPIx_t SPIx) 
+inline uint8_t SPI_Base::Poll_TxRx(SPI_TypeDef* SPIx,uint8_t data) 
 {
+#if 0
     /* RXNE always happens after TXE, so if this function is used
     * we don't need to check for TXE */
     SPI_TypeDef* SPI_X;
@@ -332,6 +333,19 @@ uint8_t SPI_Base::Poll_TxRx(uint8_t data, SPIx_t SPIx)
     while ((SPI_X->SR & SPI_FLAG_RXNE) == 0);
     
     return SPI_X->DR;
+    
+#endif
+    if(SPIx)
+    {
+        SPIx->CR1 |=  SPI_CR1_SPE;
+        
+        SPIx->DR = data;
+        
+        while ((SPIx->SR & SPI_FLAG_RXNE) == 0);
+        
+        return SPIx->DR;
+    }
+    return 0xFF;
 }
 
 

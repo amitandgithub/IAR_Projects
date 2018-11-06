@@ -85,7 +85,7 @@ public:
     
     virtual ~SPI_Base(){;}
     
-    static        uint8_t        Poll_TxRx          (uint8_t data, SPIx_t SPIx);
+                  uint8_t        Poll_TxRx          (SPI_TypeDef* SPIx,uint8_t data);
     
     static        uint32_t       SetFrequency       (HZ_t HZ);
     
