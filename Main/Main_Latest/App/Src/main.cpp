@@ -34,7 +34,7 @@ int main(void)
 
     while(1)
     {
-        Gpio_Output_Test();
+        //Gpio_Output_Test();
         //INA219_Test();
         //SPI_Poll_Test();
         //Nokia5110LCD_Test();

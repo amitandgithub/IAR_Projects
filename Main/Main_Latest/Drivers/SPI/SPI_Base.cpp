@@ -282,59 +282,8 @@ uint32_t SPI_Base::GetStatus(SPIx_t SPIx)
     return SPI_Base::SPI2_Status;
 }
 
-//Status_t SPI_Base::TxDirect(SPIx_t SPIx, uint8_t* pTxBuf, uint16_t TxLen)
-//{    
-//
-//    if(SPIx == SPI1_A4_A5_A6_A7 )
-//    {
-//        while(TxLen--)
-//        {
-//            while(SPI1->SR & SPI_FLAG_TXE != SPI_FLAG_TXE);
-//            SPI1->DR = *pTxBuf;
-//        }
-//
-//    }
-//    else if(SPIx == SPI1_A4_A5_A6_A7)
-//    {
-//        while(TxLen--)
-//        {
-//            while(SPI2->SR & SPI_FLAG_TXE != SPI_FLAG_TXE);
-//            SPI2->DR = *pTxBuf;
-//        }        
-//    }
-//    else
-//    {
-//        while(1);
-//    }
-//    return HAL_OK;
-//
-//        //while(__HAL_SPI_GET_FLAG(hspi, SPI_FLAG_TXE) != true);
-//        
-//    
-//    
-//}
-
-inline uint8_t SPI_Base::Poll_TxRx(SPI_TypeDef* SPIx,uint8_t data) 
+uint8_t SPI_Base::Poll_TxRx(SPI_TypeDef* SPIx,uint8_t data) 
 {
-#if 0
-    /* RXNE always happens after TXE, so if this function is used
-    * we don't need to check for TXE */
-    SPI_TypeDef* SPI_X;
-    
-    if( ( SPIx == SPI1_A4_A5_A6_A7) || ( SPIx == SPI1_A15_B3_B4_B5) )
-    {
-        SPI_X = SPI1;
-    }
-    else
-    {
-        SPI_X = SPI2;
-    }
-    SPI_X->DR = data;
-    while ((SPI_X->SR & SPI_FLAG_RXNE) == 0);
-    
-    return SPI_X->DR;
-    
-#endif
     if(SPIx)
     {
         SPIx->CR1 |=  SPI_CR1_SPE;

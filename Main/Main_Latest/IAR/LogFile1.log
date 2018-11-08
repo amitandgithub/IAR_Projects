@@ -18780,3 +18780,70 @@ Sun Nov 04, 2018 18:28:33: 17842 bytes downloaded into FLASH (10.83 Kbytes/sec)
 Sun Nov 04, 2018 18:28:33: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest\IAR\Debug\Exe\Main.out
 Sun Nov 04, 2018 18:28:33: Hardware reset with strategy 0 was performed
 Sun Nov 04, 2018 18:28:33: Target reset
+
+
+ << Logging to file resumes >> 
+
+Mon Nov 05, 2018 20:25:26: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Mon Nov 05, 2018 20:25:26: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Mon Nov 05, 2018 20:25:26: ST-Link firmware too old
+Mon Nov 05, 2018 20:25:26: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Mon Nov 05, 2018 20:25:26: Hardware reset with strategy 0 was performed
+Mon Nov 05, 2018 20:25:26: Initial reset was performed
+Mon Nov 05, 2018 20:25:26: 736 bytes downloaded (15.29 Kbytes/sec)
+Mon Nov 05, 2018 20:25:26: Loaded debugee: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxxRAM10K.out
+Mon Nov 05, 2018 20:25:26: Target reset
+Mon Nov 05, 2018 20:25:27: Unloaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32F10xxx.mac
+Mon Nov 05, 2018 20:25:27: Downloaded C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest - PollTxRx\IAR\Debug\Exe\Main.out to flash memory.
+Mon Nov 05, 2018 20:25:27: Hardware reset with strategy 0 was performed
+Mon Nov 05, 2018 20:25:28: 17750 bytes downloaded into FLASH (11.10 Kbytes/sec)
+Mon Nov 05, 2018 20:25:28: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest - PollTxRx\IAR\Debug\Exe\Main.out
+Mon Nov 05, 2018 20:25:28: Hardware reset with strategy 0 was performed
+Mon Nov 05, 2018 20:25:28: Target reset
+Mon Nov 05, 2018 20:26:09: Breakpoint hit: Code @ Test.cpp:720.1, type: default (auto) 
+Mon Nov 05, 2018 20:26:14: Breakpoint hit: Code @ Test.cpp:720.1, type: default (auto) 
+Mon Nov 05, 2018 20:26:17: Breakpoint hit: Code @ Test.cpp:720.1, type: default (auto) 
+Mon Nov 05, 2018 20:26:19: Breakpoint hit: Code @ Test.cpp:720.1, type: default (auto) 
+Mon Nov 05, 2018 20:26:20: Breakpoint hit: Code @ Test.cpp:720.1, type: default (auto) 
+Mon Nov 05, 2018 20:26:22: Breakpoint hit: Code @ Test.cpp:720.1, type: default (auto) 
+Mon Nov 05, 2018 20:26:23: Breakpoint hit: Code @ Test.cpp:720.1, type: default (auto) 
+Mon Nov 05, 2018 20:26:24: Breakpoint hit: Code @ Test.cpp:720.1, type: default (auto) 
+Mon Nov 05, 2018 20:26:25: Breakpoint hit: Code @ Test.cpp:720.1, type: default (auto) 
+Mon Nov 05, 2018 20:26:26: Breakpoint hit: Code @ Test.cpp:720.1, type: default (auto) 
+Mon Nov 05, 2018 20:26:27: Breakpoint hit: Code @ Test.cpp:720.1, type: default (auto) 
+Mon Nov 05, 2018 20:26:28: Breakpoint hit: Code @ Test.cpp:720.1, type: default (auto) 
+Mon Nov 05, 2018 20:26:29: Breakpoint hit: Code @ Test.cpp:720.1, type: default (auto) 
+Mon Nov 05, 2018 20:26:30: Breakpoint hit: Code @ Test.cpp:720.1, type: default (auto) 
+Mon Nov 05, 2018 20:26:31: Breakpoint hit: Code @ Test.cpp:720.1, type: default (auto) 
+Mon Nov 05, 2018 20:26:32: Breakpoint hit: Code @ Test.cpp:720.1, type: default (auto) 
+Mon Nov 05, 2018 20:28:20: Breakpoint hit: Code @ Test.cpp:720.1, type: default (auto) 
+Mon Nov 05, 2018 20:29:17: Breakpoint hit: Code @ SPI_Base.cpp:338.5, type: default (auto) 
+
+
+ << Logging to file resumes >> 
+
+Tue Nov 06, 2018 12:07:47: Loaded macro file: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32F1xx.dmac
+Tue Nov 06, 2018 12:07:47: ST-Link firmware too old
+Tue Nov 06, 2018 12:07:47: Connected to ST-Link/V2 [SWD mode 1800 kHz] [Access port: 0] Firmware V2.J29.S7 (Probe no: 22201487)
+Tue Nov 06, 2018 12:07:47: 0 bytes with download suppressed
+Tue Nov 06, 2018 12:07:47: Loaded debugee: C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest - PollTxRx\IAR\Debug\Exe\Main.out
+Tue Nov 06, 2018 12:07:47: Breakpoint hit: Code @ Test.cpp:720.1, type: default (auto) 
+Tue Nov 06, 2018 12:08:03: Breakpoint hit: Code @ Test.cpp:720.1, type: default (auto) 
+Tue Nov 06, 2018 12:08:05: Breakpoint hit: Code @ Test.cpp:720.1, type: default (auto) 
+Tue Nov 06, 2018 12:08:06: Breakpoint hit: Code @ Test.cpp:720.1, type: default (auto) 
+Tue Nov 06, 2018 12:08:07: Breakpoint hit: Code @ Test.cpp:720.1, type: default (auto) 
+Tue Nov 06, 2018 12:08:08: Breakpoint hit: Code @ Test.cpp:720.1, type: default (auto) 
+Tue Nov 06, 2018 12:08:09: Breakpoint hit: Code @ Test.cpp:720.1, type: default (auto) 
+Tue Nov 06, 2018 12:08:10: Breakpoint hit: Code @ Test.cpp:720.1, type: default (auto) 
+Tue Nov 06, 2018 12:08:22: Breakpoint hit: Code @ Test.cpp:720.1, type: default (auto) 
+Tue Nov 06, 2018 12:08:23: Breakpoint hit: Code @ Test.cpp:720.1, type: default (auto) 
+Tue Nov 06, 2018 12:08:25: Breakpoint hit: Code @ Test.cpp:720.1, type: default (auto) 
+Tue Nov 06, 2018 12:08:26: Breakpoint hit: Code @ Test.cpp:720.1, type: default (auto) 
+Tue Nov 06, 2018 12:08:32: Breakpoint hit: Code @ Test.cpp:720.1, type: default (auto) 
+Tue Nov 06, 2018 12:08:33: Breakpoint hit: Code @ Test.cpp:720.1, type: default (auto) 
+Tue Nov 06, 2018 12:08:34: Breakpoint hit: Code @ Test.cpp:720.1, type: default (auto) 
+Tue Nov 06, 2018 12:08:36: Breakpoint hit: Code @ Test.cpp:720.1, type: default (auto) 
+Tue Nov 06, 2018 12:08:37: Breakpoint hit: Code @ Test.cpp:720.1, type: default (auto) 
+Tue Nov 06, 2018 12:08:38: Breakpoint hit: Code @ Test.cpp:720.1, type: default (auto) 
+Tue Nov 06, 2018 12:08:39: Breakpoint hit: Code @ Test.cpp:720.1, type: default (auto) 
+Tue Nov 06, 2018 12:08:40: Breakpoint hit: Code @ Test.cpp:720.1, type: default (auto) 
