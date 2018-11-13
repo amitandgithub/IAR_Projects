@@ -17,8 +17,8 @@ namespace Peripherals
 unsigned char UI::ActiveScreen = 0; 
 unsigned char UI::TotalRegisteredScreens = 0;
 unsigned char UI::PreviousActiveScreen = 0;
-
 UI::ScreenHandle_t UI::TotalAddeedScreens = 0;
+Screen* UI::m_Screens[NO_OF_SCREENS_IN_UI];
 
 UI::UI(Nokia5110LCD* pNokiaLCD): LCD(pNokiaLCD)
 {
@@ -93,8 +93,7 @@ void UI::EventHamdler(Screen::Event_t& rEvent)
         rEvent = Screen::MaxEvents;
 	}
 }
-//static uint32_t Display_Busy;
-//static uint32_t Display_OK;
+
 void UI::DisplayScreen()
 { 
   if(m_Screens[ActiveScreen % TotalAddeedScreens]) 
@@ -107,18 +106,19 @@ void UI::DisplayScreen()
       LCD->DisplayBitmap( m_Screens[0]->GetBuffer() );
   }
   LCD->Refresh();
-  
-  //HAL_Delay(6);
-//  if(LCD->Refresh() != HAL_OK)
-//  {
-//     Display_Busy++; 
-//  }
-//  else
-//  {
-//      Display_OK++;
-//  }
+
 }
 
+void UI::GoToScreen(Screen* pScreen )
+{ 
+    for(uint8_t i=0; i<= TotalAddeedScreens ; i++)
+    {
+        if(m_Screens[i] == pScreen)
+        {
+            GoToScreen(i);
+        }
+    }
+}
 
 
 

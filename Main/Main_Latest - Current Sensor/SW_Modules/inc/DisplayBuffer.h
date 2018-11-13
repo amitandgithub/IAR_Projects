@@ -73,7 +73,8 @@ public:
     ~DisplayBuffer  (){};
     
     void        DrawChar        (unsigned char Row, unsigned char Col, const char aChar, uint8_t format = NORMAL);
-    void        DrawStr         (unsigned char Row, unsigned char Col, const char* Str, uint8_t format = NORMAL);
+    //void        DrawStr         (unsigned char Row, unsigned char Col, const char* Str, uint8_t format = NORMAL);
+    void        DrawStr         (unsigned char Row, unsigned char Col, const char* Str, uint8_t Len = NO_OF_CHAR_IN_LINE, uint8_t format = NORMAL);
     void        DrawBuffer      (const char* Str, uint8_t format = NORMAL);
     void        DrawBitmap      (const char* Str);
     void        InvertRow       (unsigned char Row);

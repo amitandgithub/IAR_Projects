@@ -75,8 +75,10 @@ public:
 	
     void SetBrigntness(uint8_t Brightness = 0x13){m_Brightness = Brightness;DisplayInit();}
     void PowerDown();
-    void BackLightON(){m_pBackLightGpio->On();};
-    void BackLightOFF(){m_pBackLightGpio->Off();};
+    void BackLightON(){m_pBackLightGpio->On();}
+    void BackLightOFF(){m_pBackLightGpio->Off();}
+    void BackLightToggle(){m_pBackLightGpio->ToggleOutput();}
+    bool GetBackLightState(){ return (m_pBackLightGpio->ReadOutputValue() ? true : false); }
     Status_t Refresh();
     void Run(){Refresh();}
     

@@ -95,3 +95,55 @@ float power(float x, int y)
             return (temp*temp)/x;
     }
 }
+
+
+void mem_cpy (void* dst, const void* src, uint32_t cnt) 
+{
+	uint8_t *d = (uint8_t*)dst;
+	const uint8_t *s = (const uint8_t*)src;
+
+#if _WORD_ACCESS == 1
+	while (cnt >= sizeof (int)) {
+		*(int*)d = *(int*)s;
+		d += sizeof (int); s += sizeof (int);
+		cnt -= sizeof (int);
+	}
+#endif
+	while (cnt--)
+		*d++ = *s++;
+}
+
+int mem_cmp (const void* dst, const void* src, uint32_t cnt) 
+{
+	const uint8_t *d = (const uint8_t *)dst, *s = (const uint8_t *)src;
+	int r = 0;
+
+	while (cnt-- && (r = *d++ - *s++) == 0) ;
+	return r;
+}
+
+//int a2d(char ch)
+//{
+//	if (ch>='0' && ch<='9') 
+//		return ch-'0';
+//	else if (ch>='a' && ch<='f')
+//		return ch-'a'+10;
+//	else if (ch>='A' && ch<='F')
+//		return ch-'A'+10;
+//	else return -1;
+//}
+//
+//char a2i(char ch, char** src,int base,int* nump)
+//{
+//	char* p= *src;
+//	int num=0;
+//	int digit;
+//	while ((digit=a2d(ch))>=0) {
+//		if (digit>base) break;
+//		num=num*base+digit;
+//		ch=*p++;
+//    }
+//	*src=p;
+//	*nump=num;
+//	return ch;
+//}

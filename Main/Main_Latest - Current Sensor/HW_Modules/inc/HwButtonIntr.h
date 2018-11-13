@@ -42,8 +42,8 @@ public:
 		ClickTimeHigh         = 400,
 		DoubleClickTimeLow    = 400,
 		DoubleClickTimeHigh   = 1000,
-		LongPressTimeLow      = 700,
-		LongPressTimeHigh     = 1500,// about 1-2 sec
+		LongPressTimeLow      = 300,
+		LongPressTimeHigh     = 400,// about 1-2 sec
 		LongLongPressTimeLow  = 2000, // more than 5 sec
 		LongLongPressTimeHigh = 6000,
 		UnSupportedTime = 6100,

@@ -23,8 +23,16 @@ namespace Peripherals
 class RTC_Module : public Peripheral
 {
 public:
+    static const char DATE_SPACER = ' ';
     typedef RTC_TimeTypeDef RTC_Time_t;
     typedef RTC_DateTypeDef RTC_Date_t;
+    
+    typedef struct 
+    {
+        char Weekday[3] ;
+        char Month[3] ;
+        char Year[2] ;
+    }DateStr_t;
     
     RTC_Module();
     
@@ -43,8 +51,14 @@ public:
                   Status_t       SetTime            (RTC_Time_t* pRTC_Time, uint32_t Format = RTC_FORMAT_BIN);
     
                   Status_t       GetDate            (RTC_Date_t* pRTC_Date, uint32_t Format = RTC_FORMAT_BIN);
+                  
+                  Status_t       GetDate            (char * pStr, uint32_t Format = RTC_FORMAT_BIN);
 
                   Status_t       SetDate            (RTC_Date_t* pRTC_Date, uint32_t Format = RTC_FORMAT_BIN);
+                  
+                  void           DateToStr          (RTC_Date_t* Date, char* pStr);
+                  
+                  void           SetTimeCounter     (uint32_t Curent_Counter);
 private:
     static RTC_HandleTypeDef hrtc;
 };

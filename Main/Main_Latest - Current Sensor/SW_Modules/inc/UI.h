@@ -31,11 +31,13 @@ public:
     
     ScreenHandle_t AddScreen(Screen* pScreen );
     
-    //void AddScreen(Screen* pScreen, unsigned char Slot )    { m_Screens[Slot%NO_OF_SCREENS_IN_UI] = pScreen; TotalAddeedScreens++; }
-    
     static ScreenHandle_t GetActiveScreen()                 {return ActiveScreen; }
     
     static void SetActiveScreen(ScreenHandle_t ScreenNo)    { PreviousActiveScreen = ActiveScreen; ActiveScreen = ScreenNo; }
+    
+    static void GoToScreen(ScreenHandle_t ScreenNo){ PreviousActiveScreen = ActiveScreen; ActiveScreen = ScreenNo; };
+    
+    static void GoToScreen(Screen* pScreen );
     
     static void GoToPreviousScreen();
     
@@ -48,7 +50,7 @@ public:
     void EventHamdler(Screen::Event_t& rEvent);
 
 private:
-        Screen* m_Screens[NO_OF_SCREENS_IN_UI];
+        static Screen* m_Screens[NO_OF_SCREENS_IN_UI];
         static ScreenHandle_t ActiveScreen;
         static unsigned char PreviousActiveScreen;
         static unsigned char TotalRegisteredScreens;

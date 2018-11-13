@@ -258,16 +258,16 @@ void DisplayBuffer::DrawChar(unsigned char Line, unsigned char Char, const char 
 //        }
 //    }
 //}
-void DisplayBuffer::DrawStr(unsigned char Row, unsigned char Col, const char* Str, uint8_t format)
-{
-    uint32_t i;
-    
-    for(i = 0; (i<NO_OF_CHAR_IN_LINE) && (Str[i] != '\0') ; i++)
-    {
-        DrawChar(Row, Col+i, Str[i],format);
-    }
-  
-}
+//void DisplayBuffer::DrawStr(unsigned char Row, unsigned char Col, const char* Str, uint8_t format)
+//{
+//    uint32_t i;
+//    
+//    for(i = 0; (i<NO_OF_CHAR_IN_LINE) && (Str[i] != '\0') ; i++)
+//    {
+//        DrawChar(Row, Col+i, Str[i],format);
+//    }
+//  
+//}
 
 void DisplayBuffer::DrawBuffer(const char* Str, uint8_t format)
 {
@@ -334,8 +334,19 @@ void DisplayBuffer::ScroolText(unsigned char Row, Speed_t Speed, Dir_t Direction
     (void)Speed;
     (void)Direction;
 }
+  
+void DisplayBuffer::DrawStr(unsigned char Row, unsigned char Col, const char* Str, uint8_t len, uint8_t format)
+{
+    uint32_t i;
     
+    for(i = 0; (i<len) && (Str[i] != '\0') ; i++)
+    {
+        DrawChar(Row, Col+i, Str[i],format);
+    }
     
+}
+
+
     
 
     

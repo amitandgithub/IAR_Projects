@@ -131,7 +131,7 @@ DRESULT disk_ioctl (
  * [4:0]   - second/2 0..29
  * so... midnight 2009 is 0x3a000000
  */
-DWORD get_fattime()
+__WEAK DWORD get_fattime()
 {
 	int time = 300;
 	int y = 2016, m = 4, d = 4;

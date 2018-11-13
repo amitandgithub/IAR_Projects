@@ -8,29 +8,11 @@
 #define FAT_SD_CS_PORT GPIOB
 #define FAT_SD_CS_PIN  GPIO_PIN_12
 
-void spi_cs_low() 
-{
-//#if SPI_HAL
-    Peripherals::SD::spi_cs_low();
-//#elif SPI_BM
-//    FAT_SD_CS_PORT->BSRR = (uint32_t)FAT_SD_CS_PIN << 16U;
-//#endif
-}
+void spi_cs_low() {Peripherals::SD::spi_cs_low();}
 
-void spi_cs_high()
-{
-//#if SPI_HAL
-    Peripherals::SD::spi_cs_high();
-//#elif SPI_BM
-//    FAT_SD_CS_PORT->BSRR = FAT_SD_CS_PIN;
-//#endif
-}
+void spi_cs_high() {Peripherals::SD::spi_cs_high();}
 
-
-void spi_init(void)
-{
-    Peripherals::SD::HwInit();
-}
+void spi_init(void){Peripherals::SD::HwInit();}
 
 
 void spi_set_speed(uint32_t speed)
@@ -38,166 +20,19 @@ void spi_set_speed(uint32_t speed)
     Peripherals::SD::spi_set_speed(speed);
 }
 
-uint8_t spi_txrx(uint8_t data)
+inline uint8_t spi_txrx(uint8_t data)
 {
     return  Peripherals::SD::spi_txrx(data);
 }
 
-
-#if 0
-#define FAT_SD_SPI hspi1
-
-
-#ifndef CPP_CLASS
-SPI_HandleTypeDef hspi1;
-    #define spi_cs_low() HAL_GPIO_WritePin(FAT_SD_CS, GPIO_PIN_RESET)
-    #define spi_cs_high() HAL_GPIO_WritePin(FAT_SD_CS, GPIO_PIN_SET)
-
-#else
-
-static Peripherals::GpioOutput CS(GPIOB,GPIO_PIN_12,Peripherals::GpioOutput::AF_PP, Peripherals::GpioOutput::HIGH, Peripherals::GpioOutput::PULL_UP);
-static Peripherals::SPI_Poll SPI_Obj(Peripherals::SPI_Poll::SPI2_B12_B13_B14_B15, &CS, 100000);
-    
-    #define spi_cs_low() CS.Off();
-    #define spi_cs_high() CS.On();
-
-#endif
-
-void HAL_SPI_MspInit(SPI_HandleTypeDef* hspi)
+DWORD get_fattime()
 {
-#ifndef CPP_CLASS
-  GPIO_InitTypeDef GPIO_InitStruct;
-  if(hspi->Instance==SPI1)
-  {
-  /* USER CODE BEGIN SPI1_MspInit 0 */
-
-  /* USER CODE END SPI1_MspInit 0 */
-    /* Peripheral clock enable */
-    __HAL_RCC_SPI1_CLK_ENABLE();
-  
-    /**SPI1 GPIO Configuration    
-    PA4     ------> SPI1_NSS
-    PA5     ------> SPI1_SCK
-    PA6     ------> SPI1_MISO
-    PA7     ------> SPI1_MOSI 
-    */
-    GPIO_InitStruct.Pin = GPIO_PIN_4|GPIO_PIN_5|GPIO_PIN_7;
-    GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
-    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
-    HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
-
-    GPIO_InitStruct.Pin = GPIO_PIN_6;
-    GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
-    GPIO_InitStruct.Pull = GPIO_NOPULL;
-    HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
-
-  /* USER CODE BEGIN SPI1_MspInit 1 */
-
-  /* USER CODE END SPI1_MspInit 1 */
-  }
-  else if(hspi->Instance==SPI2)
-  {
-
-      __HAL_RCC_GPIOB_CLK_ENABLE();
-      
-    /* Peripheral clock enable */
-    __HAL_RCC_SPI2_CLK_ENABLE();
-  
-    /**SPI1 GPIO Configuration    
-    PA4     ------> SPI1_NSS
-    PA5     ------> SPI1_SCK
-    PA6     ------> SPI1_MISO
-    PA7     ------> SPI1_MOSI 
-    */
-    GPIO_InitStruct.Pin = GPIO_PIN_12|GPIO_PIN_13|GPIO_PIN_15;
-    GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
-    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
-    HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
-
-    GPIO_InitStruct.Pin = GPIO_PIN_14;
-    GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
-    GPIO_InitStruct.Pull = GPIO_PULLDOWN;
-    HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
-  }
-#else
-
-#endif
-
+	int time = 300;
+	int y = 2016, m = 4, d = 4;
+	time %= 86400;
+	return (y-1980)<<25 | m<<21 | d<<16 |
+		(time/3600)<<11 | (time/60%60)<<5 | (time/2%30);
 }
-
-
-/* SPI1 init function */
-static void SPI1_Init(void)
-{
-#ifndef CPP_CLASS
-  /* SPI2 parameter configuration*/
-  hspi1.Instance = SPI2;
-  hspi1.Init.Mode = SPI_MODE_MASTER;
-  hspi1.Init.Direction = SPI_DIRECTION_2LINES;
-  hspi1.Init.DataSize = SPI_DATASIZE_8BIT;
-  hspi1.Init.CLKPolarity = SPI_POLARITY_LOW;
-  hspi1.Init.CLKPhase = SPI_PHASE_1EDGE;
-  hspi1.Init.NSS = SPI_NSS_HARD_OUTPUT;
-  hspi1.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_256;
-  hspi1.Init.FirstBit = SPI_FIRSTBIT_MSB;
-  hspi1.Init.TIMode = SPI_TIMODE_DISABLE;
-  hspi1.Init.CRCCalculation = SPI_CRCCALCULATION_DISABLE;
-  hspi1.Init.CRCPolynomial = 10;
-  if (HAL_SPI_Init(&hspi1) != HAL_OK)
-  {
-    while(1);
-  }
-#else
-    SPI_Obj.HwInit();
-    CS.HwInit();
-#endif
-}
-
-
-
-
-static void spi_init(void)
-{
-    SPI1_Init();
-	/* Configure spi using CubeMX!!! */
-	spi_set_speed(SD_SPEED_400KHZ);
-}
-
-
-
-
-
-static void spi_set_speed(enum sd_speed speed)
-{
-#ifndef CPP_CLASS 
-	int prescaler = SPI_BAUDRATEPRESCALER_256;
-
-	if (speed == SD_SPEED_400KHZ)
-		prescaler = SPI_BAUDRATEPRESCALER_256;
-	else if (speed == SD_SPEED_25MHZ)
-		prescaler = SPI_BAUDRATEPRESCALER_4;
-
-	FAT_SD_SPI.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_256;// prescaler;
-	HAL_SPI_Init(&FAT_SD_SPI);
-#else
-  
-#endif
-}
-
-static uint8_t spi_txrx(uint8_t data)
-{
-	uint8_t out = 0;
-    
-#ifndef CPP_CLASS  
-	HAL_SPI_TransmitReceive(&FAT_SD_SPI, &data, &out, sizeof(data), 0x1000);	
-#else
-    SPI_Obj.TxRx(&data, &out, sizeof(data));
-#endif
-    return out;
-}
-
-#endif
-
 /* crc helpers */
 static uint8_t crc7_one(uint8_t t, uint8_t data)
 {
