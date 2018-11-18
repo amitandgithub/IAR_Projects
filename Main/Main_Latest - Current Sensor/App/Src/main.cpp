@@ -19,7 +19,7 @@ void _Error_Handler(char *, int);
 void SystemClock_Config(void);
 void putc ( void* p, char c);
 
-
+ 
 
 int main(void)
 {	
@@ -30,8 +30,7 @@ int main(void)
     /* Configure the system clock */
     SystemClock_Config();
     
-    // Application Initialize
-    
+    // Application Initialize    
     App::Init_Power_Monitor();
 
     while(1)

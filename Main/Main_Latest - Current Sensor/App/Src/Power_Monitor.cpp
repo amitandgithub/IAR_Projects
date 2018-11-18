@@ -28,6 +28,7 @@ Peripherals::Nokia5110LCD    LCD(&SPI_Obj,&CS,&D_C,&Reset,&Backlight);
 
 /* Globals for Touch Button task*/
 Peripherals::HwButton HwButton_A8(GPIOA, GPIO_PIN_8);
+Peripherals::GpioOutput LED(GPIOC, GPIO_PIN_13);
 
 /* Globals for UI task*/
 Screen::Event_t gEvent = Screen::MaxEvents;
@@ -36,7 +37,7 @@ Peripherals::UI MyUI(&LCD);
 
 /* Globals for RTC task*/
 Peripherals::RTC_Module rtc;
-char TimeStr[12];
+char TimeStr[15];
 
 #ifdef SD_CARD
 /* Globals for SD_CARD task*/
@@ -69,10 +70,9 @@ ControlScreen Menu( (char *)
 
 void Init_Power_Monitor()
 {        
-    std::time_t result = std::time(nullptr);
+
     rtc.HwInit();
-    rtc.SetTimeCounter((uint32_t)result);
-    
+    LED.HwInit();
     HwButton_A8.HwInit();
     HwButton_A8.RegisterEventHandler(HwButton::Click,HwButton_ClickEvent);
     HwButton_A8.RegisterEventHandler(HwButton::LongPress,HwButton_LongPressEvent);
@@ -83,6 +83,7 @@ void Init_Power_Monitor()
     
     MyUI.Init();
     MyUI.AddScreen(&HomeScreen);
+    HomeScreen.SetScreenHandler(ScreenTouchHandler,Reset_ScreenTouchHandler,nullptr);
     MyUI.AddScreen(&Menu);
     Menu.SetScreenHandler(ScreenTouchHandler,ScreenLongTouchHandler,nullptr);
     Menu.AddHandler( 0, LivePower_ScreenTouchHandler,   nullptr);
@@ -130,7 +131,7 @@ void Run_Power_Monitor()
     rtc.GetDate(TimeStr);
     HomeScreen.DrawStr(DATE_ROW,0,TimeStr);
     
-    rtc.GetTime(TimeStr);
+    rtc.CounterToTime(TimeStr);
     HomeScreen.DrawStr(TIMER_ROW,4,TimeStr);
     
     HwButton_A8.RunStateMachine();
@@ -148,12 +149,11 @@ void Run_Power_Monitor()
         {
             I_Count = 0;           
             
-            I_Samples += (I_Samples*POWER_SAMPLE_FREQ)/1000.0;
-            V_Samples += (V_Samples*POWER_SAMPLE_FREQ)/1000.0;
+            I_Samples = (I_Samples*POWER_SAMPLE_FREQ)/1000.0;
+            V_Samples = (V_Samples*POWER_SAMPLE_FREQ)/1000.0;
             
             mAH += I_Samples / 3600.0;
             
-           // mWH += (I_Samples*V_Samples)/ (60*60*100.0);
             mWH = mAH*V_Samples/1000.0;
             
             I_Samples = 0;
@@ -178,7 +178,7 @@ void Run_Power_Monitor()
     
     len_W = ftoa(mWH, &PowerStr[len_I + len_V + len_C], 2);
     HomeScreen.DrawStr(W_ROW,4,&PowerStr[len_I + len_V + len_C]);
-    HomeScreen.DrawStr(W_ROW, 4 + len_W, "mWH");    
+    HomeScreen.DrawStr(W_ROW, 4 + len_W, "WH");    
     PowerStr[len_I + len_V + len_C + len_W++] = '\n';
  
     MyUI.EventHamdler(gEvent);
@@ -250,7 +250,9 @@ void BackLight_ScreenTouchHandler()
 
 void Reset_Power_Readings()
 {
-    
+    mAH = 0;
+    mWH = 0;
+    rtc.HwInit();    
 }
 
 #ifdef SD_CARD

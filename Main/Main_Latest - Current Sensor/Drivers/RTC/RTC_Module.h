@@ -16,6 +16,7 @@
 #include "stm32f1xx_hal_rtc.h"
 #include "Peripheral.hpp"
 #include "Utils.h"
+#include <ctime>
 
 namespace Peripherals
 {
@@ -59,6 +60,10 @@ public:
                   void           DateToStr          (RTC_Date_t* Date, char* pStr);
                   
                   void           SetTimeCounter     (uint32_t Curent_Counter);
+                  
+                  void           CounterToTime      (char* pStr);
+                  
+                  void           InitDateAndTime();
 private:
     static RTC_HandleTypeDef hrtc;
 };
