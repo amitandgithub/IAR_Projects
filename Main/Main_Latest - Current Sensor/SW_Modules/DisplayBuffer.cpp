@@ -339,10 +339,16 @@ void DisplayBuffer::DrawStr(unsigned char Row, unsigned char Col, const char* St
 {
     uint32_t i;
     
-    for(i = 0; (i<len) && (Str[i] != '\0') ; i++)
+    for(i = 0; ((Col+i)<NO_OF_CHAR_IN_LINE) && (i<len) && (Str[i] != '\0'); i++)
     {
         DrawChar(Row, Col+i, Str[i],format);
     }
+    
+//    for(i = i; i<NO_OF_CHAR_IN_LINE ; i++)
+//    {
+//        DrawChar(Row, Col+i, ' ',format);
+//    }
+    
     
 }
 

@@ -163,17 +163,17 @@ void Run_Power_Monitor()
     
     len_I = ftoa(Power.Current, &PowerStr[0], 2);
     HomeScreen.DrawStr(I_ROW,4,&PowerStr[0]);
-    HomeScreen.DrawStr(I_ROW, 4 + len_I, "mA");
+    HomeScreen.DrawStr(I_ROW, 4 + len_I, "mA       ");
     PowerStr[len_I++] = ',';
     
     len_V = ftoa(Power.Voltage, &PowerStr[len_I], 2);
     HomeScreen.DrawStr(V_ROW,4,&PowerStr[len_I]);
-    HomeScreen.DrawChar(V_ROW, 4 + len_V, 'V');
+    HomeScreen.DrawStr(V_ROW, 4 + len_V, "V      ");
     PowerStr[len_I + len_V++] = ',';
     
     len_C = ftoa(mAH, &PowerStr[len_I + len_V], 2);
     HomeScreen.DrawStr(C_ROW,4,&PowerStr[len_I + len_V]);
-    HomeScreen.DrawStr(C_ROW, 4 + len_C, "mAH");    
+    HomeScreen.DrawStr(C_ROW, 4 + len_C, "mAH    ");    
     PowerStr[len_I + len_V + len_C++] = ',';
     
     len_W = ftoa(mWH, &PowerStr[len_I + len_V + len_C], 2);
