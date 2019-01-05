@@ -42,11 +42,6 @@ int main(void)
     
 }
 
-//void putc ( void* p, char c)
-//{
-//
-//}
-
 /**
   * @brief System Clock Configuration
   * @retval None
