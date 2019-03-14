@@ -9,6 +9,9 @@
 ** FILE: GpioOutput.h
 **
 ******************/
+
+
+
 #ifndef Gpio_h
 #define Gpio_h
 
@@ -17,57 +20,24 @@
 namespace HAL
 {
   
-typedef enum
-{
-    HAL_STATUS_SUCCESS = 0U,
-    HAL_STATUS_ERROR
-        
-}HAL_Status_t;
+
   
 class Gpio
 {
 public:
    
-typedef GPIO_TypeDef* Port_t;
-//typedef uint32_t Mode_t; 
+typedef GPIO_TypeDef*const Port_t;
 typedef void(*Callback_t)(); 
 static const uint8_t PINS_PER_PORT = 16U;
-
-typedef HAL_Status_t Status_t;
   
-//typedef enum : uint16_t
-//{
-//    INPUT_FLOATING,
-//    INPUT_PULLUP,
-//    INPUT_PULLDOWN,
-//    ANALOG1,
-//    OUTPUT_OPENDRAIN_SLOW,
-//    OUTPUT_OPENDRAIN_MEDIUM,
-//    OUTPUT_OPENDRAIN_FAST,
-//    OUTPUT_PUSH_PULL_SLOW,
-//    OUTPUT_PUSH_PULL_MEDIUM,
-//    OUTPUT_PUSH_PULL_FAST,
-//    AF_OPENDRAIN,
-//    AF_PUSH_PULL,
-//    
-//    INPUT  = 1U<<0U,
-//    OUTPUT = 1U<<1U,
-//    FLOATING = 1U<<2U,
-//    PULLUP = 1U<<3U,
-//    PULLDOWN = 1U<<4U,
-//    ANALOG = 1U<<5U,
-//    PUSH_PULL = 1U<<6U,
-//    OPENDRAIN = 1U<<7U,
-//    AF = 1U<<8U
-//    
-//}Mode_t;
+typedef enum
+{    
+    GPIO_SUCCESS,
+    GPIO_ERROR,
+    GPIO_ERROR_INVALID_PARAMS,   
+    
+}GpioStatus_t;
 
-typedef enum : uint8_t
-{
-    PUSH_PULL           = 1U<<0U,
-    OPEN_DRAIN          = 1U<<1U,
-    ALTERNATE_FUNCTION  = 1U<<2U    
-}GpioOutput_Params_t;
 
 typedef enum : uint8_t
 {
@@ -267,10 +237,16 @@ constexpr Gpio(Pin_t  Pin);
 
 ~Gpio(){};
 
+GpioStatus_t ClockEnable();
+
+GpioStatus_t ClockDisable();
+
 constexpr Port_t  getPort(Pin_t  pin);
 
 constexpr uint8_t getPin(Pin_t  pin);
 
+constexpr uint32_t get_LL_pin(const uint16_t _pin)const;  
+ 
 typedef enum : uint8_t
 {
     PIN,
@@ -279,25 +255,13 @@ typedef enum : uint8_t
     CALLBACK    
 }ParamID_t; 
 
+protected:
     const Port_t  _GPIOx;
-    const uint16_t _pin;  
-    
-    constexpr uint32_t get_LL_pin();
-    constexpr uint32_t get_LL_mode();
-    constexpr uint32_t get_LL_speed();
-    constexpr uint32_t get_LL_output_type();
-    constexpr uint32_t get_LL_pull();
-   // constexpr void get_GPIO_InitTypeDef(LL_GPIO_InitTypeDef* pLL_GPIO_Init);
-    
-    Status_t set(ParamID_t aParamID, void* pParamValue);
-    Status_t get(ParamID_t aParamID, void* pParamValue); 
-    
-    
-    
+    const uint16_t _pin;
     
 };
 
-constexpr Gpio::Gpio(Pin_t  Pin ) : _GPIOx(getPort(Pin)), _pin((uint8_t)getPin(Pin))
+constexpr Gpio::Gpio(Pin_t  Pin ) : _GPIOx(getPort(Pin)), _pin((uint16_t)(1U<<getPin(Pin)))
 {
 
 }
@@ -324,12 +288,64 @@ constexpr Gpio::Port_t Gpio::getPort(Pin_t  pin)
 #endif 
     };
 
-    return GPIOArray[pin/PINS_PER_PORT];
+    return GPIOArray[(pin/PINS_PER_PORT)];
 }
 constexpr uint8_t Gpio::getPin(Pin_t  pin)
 {
     return (uint8_t)pin%PINS_PER_PORT;
 }
+
+
+constexpr uint32_t Gpio::get_LL_pin(const uint16_t _pin) const
+{
+    constexpr uint32_t LL_PINS[16] = 
+    {
+        LL_GPIO_PIN_0,
+        LL_GPIO_PIN_1,
+        LL_GPIO_PIN_2,
+        LL_GPIO_PIN_3,
+        LL_GPIO_PIN_4,
+        LL_GPIO_PIN_5,
+        LL_GPIO_PIN_6,
+        LL_GPIO_PIN_7,
+        LL_GPIO_PIN_8,
+        LL_GPIO_PIN_9,
+        LL_GPIO_PIN_10,
+        LL_GPIO_PIN_11,
+        LL_GPIO_PIN_12,
+        LL_GPIO_PIN_13,
+        LL_GPIO_PIN_14,
+        LL_GPIO_PIN_15        
+    };
+    
+    return LL_PINS[POSITION_VAL(_pin) % PINS_PER_PORT];                                
+}
+
+
+//constexpr uint32_t Gpio::get_LL_pin()
+//{
+//    return  (   _pin == (1U<<0) ? LL_GPIO_PIN_0 :
+//                                _pin == (1U<<1) ? LL_GPIO_PIN_1 :  
+//                                _pin == (1U<<2) ? LL_GPIO_PIN_2 :
+//                                _pin == (1U<<3) ? LL_GPIO_PIN_3 :
+//                                _pin == (1U<<4) ? LL_GPIO_PIN_4 :
+//                                _pin == (1U<<5) ? LL_GPIO_PIN_5 :
+//                                _pin == (1U<<6) ? LL_GPIO_PIN_6 :
+//                                _pin == (1U<<7) ? LL_GPIO_PIN_7 :
+//                                _pin == (1U<<8) ? LL_GPIO_PIN_8 :
+//                                _pin == (1U<<9) ? LL_GPIO_PIN_9 :
+//                                _pin == (1U<<10) ? LL_GPIO_PIN_10 :
+//                                _pin == (1U<<11) ? LL_GPIO_PIN_11 :
+//                                _pin == (1U<<12) ? LL_GPIO_PIN_12 :
+//                                _pin == (1U<<13) ? LL_GPIO_PIN_13 :
+//                                _pin == (1U<<14) ? LL_GPIO_PIN_14 :
+//                                _pin == (1U<<15) ? LL_GPIO_PIN_15 :                                     
+//                                 LL_GPIO_PIN_0);
+//    
+//   // return LL_pin;                                
+//}
+
+
 
 //constexpr void Gpio::get_GPIO_InitTypeDef(LL_GPIO_InitTypeDef* pLL_GPIO_Init)
 //{
@@ -492,28 +508,7 @@ constexpr uint8_t Gpio::getPin(Pin_t  pin)
 //    return mode;                                
 //}
 //
-constexpr uint32_t Gpio::get_LL_pin()
-{
-    const uint32_t LL_pin = (  _pin == 0 ? LL_GPIO_PIN_0 :
-                                _pin == 1 ? LL_GPIO_PIN_1 :  
-                                _pin == 2 ? LL_GPIO_PIN_2 :
-                                _pin == 3 ? LL_GPIO_PIN_3 :
-                                _pin == 4 ? LL_GPIO_PIN_4 :
-                                _pin == 5 ? LL_GPIO_PIN_5 :
-                                _pin == 6 ? LL_GPIO_PIN_6 :
-                                _pin == 7 ? LL_GPIO_PIN_7 :
-                                _pin == 8 ? LL_GPIO_PIN_8 :
-                                _pin == 9 ? LL_GPIO_PIN_9 :
-                                _pin == 10 ? LL_GPIO_PIN_10 :
-                                _pin == 11 ? LL_GPIO_PIN_11 :
-                                _pin == 12 ? LL_GPIO_PIN_12 :
-                                _pin == 13 ? LL_GPIO_PIN_13 :
-                                _pin == 14 ? LL_GPIO_PIN_14 :
-                                _pin == 15 ? LL_GPIO_PIN_15 :                                     
-                                 LL_GPIO_PIN_0);
-    
-    return LL_pin;                                
-}
+
 
                          
 

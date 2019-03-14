@@ -116,6 +116,7 @@ void I2C_Slave_Test()
 
 void INA219_Test()
 {
+    static uint16_t DevAddress[10];
     static INA219::Power_t Power;
     static Peripherals::I2C_Master I2C1_Master(I2C_Master::I2C1_SCL_B6_SDA_B7);
     static INA219 INA219_Obj(&I2C1_Master,0x80);
@@ -123,6 +124,7 @@ void INA219_Test()
     INA219_Obj.SetCalibration_32V_2A();
     while(1)
     {
+        I2C1_Master.Scan(DevAddress,10);
         INA219_Obj.Run(&Power);
         printf("V = %f      I = %f \n",Power.Voltage,Power.Current);
         HAL_Delay(100);
@@ -630,11 +632,11 @@ void ScreenLongTouchHandler(void)
 void Display_Buffer_Test()
 {
     uint8_t Txcomplete=0;
-    static Peripherals::GpioOutput      CS(GPIOA,GPIO_PIN_4);
+    static Peripherals::GpioOutput      CS(GPIOB,GPIO_PIN_1); // for Power monitor new board CS = PB1 else PA4
     static Peripherals::SPI_DMA         SPI_Obj(Peripherals::SPI_Base::SPI1_A4_A5_A6_A7,&CS, 100000);
-    static Peripherals::GpioOutput      D_C(GPIOB,GPIO_PIN_1);
-    static Peripherals::GpioOutput      Backlight(GPIOA,GPIO_PIN_1);
-    static Peripherals::GpioOutput      Reset(GPIOB,GPIO_PIN_0);
+    static Peripherals::GpioOutput      D_C(GPIOB,GPIO_PIN_0); // for Power monitor new board DC = PB0 else PB1
+    static Peripherals::GpioOutput      Backlight(GPIOB,GPIO_PIN_5); // for Power monitor new board BKL = PB5 else PA1
+    static Peripherals::GpioOutput      Reset(GPIOB,GPIO_PIN_10); // for Power monitor new board Reset = PB10 else PB0
     static Peripherals::Nokia5110LCD    LCD(&SPI_Obj,&CS,&D_C,&Reset,&Backlight);
     static Screen MyScreen((char *)
                        "Amit          "
@@ -656,7 +658,10 @@ void Display_Buffer_Test()
             Txcomplete = LCD.Refresh();
         }
                
-        HAL_Delay(100);
+        HAL_Delay(1000);
+        LCD.BackLightON();
+        HAL_Delay(1000);
+        LCD.BackLightOFF();
        // LCD.ClearBuffer();
     }   
 }
@@ -691,7 +696,7 @@ void SD_Test()
 		while(1);
 	}
 	/* Opens an existing file. If not exist, creates a new file. */
-	fr = SD_Card.open(&fil, "Test_1_Nov18_2.txt", FA_WRITE | FA_OPEN_ALWAYS); // 736438
+	fr = SD_Card.open(&fil, "Test_10_Feb19_2.txt", FA_WRITE | FA_OPEN_ALWAYS); // 736438
     
 	if (fr == FR_OK) 
 	{

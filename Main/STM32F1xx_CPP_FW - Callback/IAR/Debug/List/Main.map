@@ -1,0 +1,880 @@
+###############################################################################
+#
+# IAR ELF Linker V8.30.1.114/W32 for ARM                  10/Mar/2019  21:52:07
+# Copyright 2007-2018 IAR Systems AB.
+#
+#    Output file  =  
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\STM32F1xx_CPP_FW
+#        - Callback\IAR\Debug\Exe\Main.out
+#    Map file     =  
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\STM32F1xx_CPP_FW
+#        - Callback\IAR\Debug\List\Main.map
+#    Command line =  
+#        -f C:\Users\achaudha\AppData\Local\Temp\EWA99.tmp
+#        ("C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\STM32F1xx_CPP_FW
+#        - Callback\IAR\Debug\Obj\BtnInt.o"
+#        "C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\STM32F1xx_CPP_FW
+#        - Callback\IAR\Debug\Obj\BtnPoll.o"
+#        "C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\STM32F1xx_CPP_FW
+#        - Callback\IAR\Debug\Obj\CPP_HAL.o"
+#        "C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\STM32F1xx_CPP_FW
+#        - Callback\IAR\Debug\Obj\Gpio.o"
+#        "C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\STM32F1xx_CPP_FW
+#        - Callback\IAR\Debug\Obj\GpioInput.o"
+#        "C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\STM32F1xx_CPP_FW
+#        - Callback\IAR\Debug\Obj\GpioOutput.o"
+#        "C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\STM32F1xx_CPP_FW
+#        - Callback\IAR\Debug\Obj\HwButton.o"
+#        "C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\STM32F1xx_CPP_FW
+#        - Callback\IAR\Debug\Obj\Interrupt.o"
+#        "C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\STM32F1xx_CPP_FW
+#        - Callback\IAR\Debug\Obj\main.o"
+#        "C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\STM32F1xx_CPP_FW
+#        - Callback\IAR\Debug\Obj\printf.o"
+#        "C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\STM32F1xx_CPP_FW
+#        - Callback\IAR\Debug\Obj\RotaryEncoderPoll.o"
+#        "C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\STM32F1xx_CPP_FW
+#        - Callback\IAR\Debug\Obj\startup_stm32f103xb.o"
+#        "C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\STM32F1xx_CPP_FW
+#        - Callback\IAR\Debug\Obj\stm32f1xx_hal.o"
+#        "C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\STM32F1xx_CPP_FW
+#        - Callback\IAR\Debug\Obj\stm32f1xx_hal_cortex.o"
+#        "C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\STM32F1xx_CPP_FW
+#        - Callback\IAR\Debug\Obj\stm32f1xx_hal_pwr.o"
+#        "C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\STM32F1xx_CPP_FW
+#        - Callback\IAR\Debug\Obj\stm32f1xx_hal_rcc.o"
+#        "C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\STM32F1xx_CPP_FW
+#        - Callback\IAR\Debug\Obj\stm32f1xx_hal_rcc_ex.o"
+#        "C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\STM32F1xx_CPP_FW
+#        - Callback\IAR\Debug\Obj\stm32f1xx_it.o"
+#        "C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\STM32F1xx_CPP_FW
+#        - Callback\IAR\Debug\Obj\stm32f1xx_ll_exti.o"
+#        "C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\STM32F1xx_CPP_FW
+#        - Callback\IAR\Debug\Obj\stm32f1xx_ll_gpio.o"
+#        "C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\STM32F1xx_CPP_FW
+#        - Callback\IAR\Debug\Obj\stm32f1xx_ll_pwr.o"
+#        "C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\STM32F1xx_CPP_FW
+#        - Callback\IAR\Debug\Obj\stm32f1xx_ll_rcc.o"
+#        "C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\STM32F1xx_CPP_FW
+#        - Callback\IAR\Debug\Obj\stm32f1xx_ll_utils.o"
+#        "C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\STM32F1xx_CPP_FW
+#        - Callback\IAR\Debug\Obj\system_stm32f1xx.o"
+#        "C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\STM32F1xx_CPP_FW
+#        - Callback\IAR\Debug\Obj\Test.o"
+#        "C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\STM32F1xx_CPP_FW
+#        - Callback\IAR\Debug\Obj\Utils.o" --no_out_extension -o
+#        "C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\STM32F1xx_CPP_FW
+#        - Callback\IAR\Debug\Exe\Main.out" --redirect _Printf=_PrintfFullNoMb
+#        --redirect _Scanf=_ScanfFullNoMb --map
+#        "C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\STM32F1xx_CPP_FW
+#        - Callback\IAR\Debug\List\Main.map" --config
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\CPP_Drivers\Gpio\System\stm32f103x8.icf
+#        --semihosting --entry __iar_program_start --vfe --text_out locale)
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor                     = *
+__CPP_Exceptions              = Disabled
+__CPP_Language                = C++14
+__Heap_Handler                = Basic
+__SystemLibrary               = DLib
+__dlib_dynamic_initialization = normal
+__dlib_version                = 6
+
+
+*******************************************************************************
+*** HEAP SELECTION
+***
+
+The basic heap was selected because some modules are built with
+size limitations (and not runtime checking), and --advanced_heap
+was not specified.
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at 0x800'0000 { ro section .intvec };
+"P1":  place in [from 0x800'0000 to 0x800'ffff] { ro };
+define block CSTACK with size = 2K, alignment = 8 { };
+define block HEAP with size = 2K, alignment = 8 { };
+"P2":  place in [from 0x2000'0000 to 0x2000'4fff] {
+          rw, block CSTACK, block HEAP };
+initialize by copy { rw };
+
+  Section                Kind         Address    Size  Object
+  -------                ----         -------    ----  ------
+"A0":                                            0xec
+  .intvec                ro code   0x800'0000    0xec  startup_stm32f103xb.o [1]
+                                 - 0x800'00ec    0xec
+
+"P1":                                          0x23cc
+  .text                  ro code   0x800'00ec   0x62c  stm32f1xx_hal_rcc.o [1]
+  .text                  ro code   0x800'0718     0xc  stm32f1xx_hal.o [1]
+  .text                  ro code   0x800'0724    0x4c  stm32f1xx_hal.o [1]
+  .text                  ro code   0x800'0770    0x86  ABImemcpy.o [5]
+  .text                  ro code   0x800'07f6    0x3a  zero_init3.o [5]
+  .text                  ro code   0x800'0830   0x14a  stm32f1xx_hal_cortex.o [1]
+  .rodata                const     0x800'097a     0x2  stm32f1xx_hal_rcc.o [1]
+  .text                  ro code   0x800'097c   0x494  GpioInput.o [1]
+  .text                  ro code   0x800'0e10     0xe  GpioInput.o [1]
+  .text                  ro code   0x800'0e1e     0xa  cxxabi.o [3]
+  .text                  ro code   0x800'0e28     0xe  GpioInput.o [1]
+  .text                  ro code   0x800'0e36    0x28  GpioInput.o [1]
+  .text                  ro code   0x800'0e5e     0x2  Test.o [1]
+  .text                  ro code   0x800'0e60    0x8c  Gpio.o [1]
+  .text                  ro code   0x800'0eec    0x18  GpioInput.o [1]
+  .text                  ro code   0x800'0f04   0x164  stm32f1xx_ll_gpio.o [1]
+  .text                  ro code   0x800'1068    0x38  Test.o [1]
+  .text                  ro code   0x800'10a0    0x24  GpioInput.o [1]
+  .text                  ro code   0x800'10c4    0x8c  Interrupt.o [1]
+  .text                  ro code   0x800'1150   0x106  stm32f1xx_ll_exti.o [1]
+  .text                  ro code   0x800'1256    0x2c  GpioInput.o [1]
+  .text                  ro code   0x800'1282     0xc  Test.o [1]
+  .rodata                const     0x800'128e     0x1  Test.o [1]
+  .rodata                const     0x800'128f     0x1  Test.o [1]
+  .text                  ro code   0x800'1290    0xa0  cppinit.o [2]
+  .text                  ro code   0x800'1330    0x26  GpioInput.o [1]
+  .text                  ro code   0x800'1356     0x2  GpioInput.o [1]
+  .text                  ro code   0x800'1358    0x18  Test.o [1]
+  .text                  ro code   0x800'1370    0x10  GpioInput.o [1]
+  .text                  ro code   0x800'1380     0xe  Test.o [1]
+  .text                  ro code   0x800'138e    0x18  Test.o [1]
+  .text                  ro code   0x800'13a6     0x6  abort.o [2]
+  .text                  ro code   0x800'13ac     0x4  Test.o [1]
+  .text                  ro code   0x800'13b0     0x2  Test.o [1]
+  .text                  ro code   0x800'13b2    0x10  Test.o [1]
+  .rodata                const     0x800'13c2     0x1  Test.o [1]
+  .rodata                const     0x800'13c3     0x1  unwind_debug.o [6]
+  .text                  ro code   0x800'13c4    0x28  GpioInput.o [1]
+  .text                  ro code   0x800'13ec    0x14  GpioInput.o [1]
+  .text                  ro code   0x800'1400    0x54  Test.o [1]
+  .text                  ro code   0x800'1454    0x76  GpioInput.o [1]
+  .text                  ro code   0x800'14ca     0xc  Test.o [1]
+  .text                  ro code   0x800'14d8    0x14  exit.o [6]
+  .text                  ro code   0x800'14ec     0x4  Test.o [1]
+  .text                  ro code   0x800'14f0    0x20  Test.o [1]
+  .text                  ro code   0x800'1510     0x2  Test.o [1]
+  .text                  ro code   0x800'1512     0x2  GpioInput.o [1]
+  .text                  ro code   0x800'1514    0x5a  GpioInput.o [1]
+  .text                  ro code   0x800'156e     0xe  Test.o [1]
+  .text                  ro code   0x800'157c     0x2  Test.o [1]
+  .text                  ro code   0x800'157e    0x3a  Test.o [1]
+  .text                  ro code   0x800'15b8   0x140  heap0.o [2]
+  .text                  ro code   0x800'16f8    0x2c  xgetmemchunk.o [2]
+  .text                  ro code   0x800'1724   0x12c  stm32f1xx_hal_rcc_ex.o [1]
+  .text                  ro code   0x800'1850    0xbe  main.o [1]
+  .text                  ro code   0x800'1910    0x26  stm32f1xx_hal.o [1]
+  .text                  ro code   0x800'1938    0xa8  Test.o [1]
+  .text                  ro code   0x800'19e0    0x58  BtnPoll.o [1]
+  .text                  ro code   0x800'1a38    0x1c  Test.o [1]
+  .text                  ro code   0x800'1a54    0x10  Test.o [1]
+  .text                  ro code   0x800'1a64    0x3a  Test.o [1]
+  .text                  ro code   0x800'1a9e     0x2  Test.o [1]
+  .text                  ro code   0x800'1aa0    0x18  Test.o [1]
+  .text                  ro code   0x800'1ab8    0xa2  GpioOutput.o [1]
+  .text                  ro code   0x800'1b5a     0xc  Test.o [1]
+  .text                  ro code   0x800'1b66     0xe  Test.o [1]
+  .text                  ro code   0x800'1b74     0xc  Test.o [1]
+  .text                  ro code   0x800'1b80     0x2  Test.o [1]
+  .text                  ro code   0x800'1b82    0x40  Test.o [1]
+  .text                  ro code   0x800'1bc2     0xe  Test.o [1]
+  .text                  ro code   0x800'1bd0    0x28  stm32f1xx_ll_utils.o [1]
+  .text                  ro code   0x800'1bf8     0xe  Test.o [1]
+  .text                  ro code   0x800'1c06     0xe  Test.o [1]
+  .text                  ro code   0x800'1c14    0x2a  Test.o [1]
+  .text                  ro code   0x800'1c3e    0x10  Test.o [1]
+  .text                  ro code   0x800'1c4e     0x2  Test.o [1]
+  .text                  ro code   0x800'1c50    0x2a  Test.o [1]
+  .text                  ro code   0x800'1c7a    0x3a  Test.o [1]
+  .text                  ro code   0x800'1cb4     0x4  Test.o [1]
+  .text                  ro code   0x800'1cb8    0x3c  Test.o [1]
+  .text                  ro code   0x800'1cf4     0xc  Test.o [1]
+  .text                  ro code   0x800'1d00    0x24  Test.o [1]
+  .text                  ro code   0x800'1d24     0x2  Test.o [1]
+  .text                  ro code   0x800'1d26     0xc  Test.o [1]
+  .text                  ro code   0x800'1d32     0x2  Test.o [1]
+  .rodata                const     0x800'1d34    0x64  main.o [1]
+  .text                  ro code   0x800'1d98    0x58  system_stm32f1xx.o [1]
+  .text                  ro code   0x800'1df0    0x54  Test.o [1]
+  .text                  ro code   0x800'1e44     0xc  Test.o [1]
+  .text                  ro code   0x800'1e50     0x2  Test.o [1]
+  .text                  ro code   0x800'1e52    0x10  Test.o [1]
+  .text                  ro code   0x800'1e62     0xc  Test.o [1]
+  .text                  ro code   0x800'1e6e    0x2a  Test.o [1]
+  .text                  ro code   0x800'1e98     0x2  Test.o [1]
+  .text                  ro code   0x800'1e9a    0x12  Test.o [1]
+  .text                  ro code   0x800'1eac     0x2  Test.o [1]
+  .text                  ro code   0x800'1eae     0x2  Test.o [1]
+  .text                  ro code   0x800'1eb0    0x2a  Test.o [1]
+  .text                  ro code   0x800'1eda    0x24  Test.o [1]
+  .text                  ro code   0x800'1efe    0x3a  Test.o [1]
+  .text                  ro code   0x800'1f38    0x24  newop_0.o [3]
+  .text                  ro code   0x800'1f5c    0x3c  Test.o [1]
+  .text                  ro code   0x800'1f98     0x4  nomemory.o [3]
+  .text                  ro code   0x800'1f9c    0x24  Test.o [1]
+  .rodata                const     0x800'1fc0    0x40  Test.o [1]
+  .text                  ro code   0x800'2000    0x3c  Test.o [1]
+  .text                  ro code   0x800'203c     0x2  Test.o [1]
+  .text                  ro code   0x800'203e    0x24  Test.o [1]
+  .text                  ro code   0x800'2062    0x3c  Test.o [1]
+  .text                  ro code   0x800'209e     0xc  Test.o [1]
+  .text                  ro code   0x800'20aa     0x2  Test.o [1]
+  .text                  ro code   0x800'20ac     0x2  Test.o [1]
+  .text                  ro code   0x800'20ae     0xc  Test.o [1]
+  .text                  ro code   0x800'20ba    0x2a  Test.o [1]
+  .text                  ro code   0x800'20e4     0x2  Test.o [1]
+  .text                  ro code   0x800'20e6     0x2  Test.o [1]
+  .text                  ro code   0x800'20e8    0x2a  Test.o [1]
+  .text                  ro code   0x800'2112    0x3a  Test.o [1]
+  .text                  ro code   0x800'214c    0x2e  Test.o [1]
+  .text                  ro code   0x800'217a    0x10  Test.o [1]
+  .text                  ro code   0x800'218a    0x14  Test.o [1]
+  .text                  ro code   0x800'219e    0x10  Test.o [1]
+  .text                  ro code   0x800'21ae    0x12  Test.o [1]
+  .text                  ro code   0x800'21c0    0x10  Test.o [1]
+  .text                  ro code   0x800'21d0     0xe  Test.o [1]
+  .text                  ro code   0x800'21de     0xa  delop_0.o [3]
+  .text                  ro code   0x800'21e8     0x4  heaptramp0.o [2]
+  .text                  ro code   0x800'21ec    0x2c  copy_init3.o [5]
+  .text                  ro code   0x800'2218    0x28  data_init.o [5]
+  .rodata                const     0x800'2240    0x24  Test.o [1]
+  .iar.init_table        const     0x800'2264    0x28  - Linker created -
+  .text                  ro code   0x800'228c    0x20  Test.o [1]
+  .text                  ro code   0x800'22ac    0x1c  Test.o [1]
+  .text                  ro code   0x800'22c8     0x2  Test.o [1]
+  .text                  ro code   0x800'22ca    0x1c  Test.o [1]
+  .text                  ro code   0x800'22e6    0x1e  Test.o [1]
+  .text                  ro code   0x800'2304    0x20  cmain_call_ctors.o [5]
+  .text                  ro code   0x800'2324    0x1e  cmain.o [5]
+  .text                  ro code   0x800'2342     0x4  low_level_init.o [2]
+  .text                  ro code   0x800'2346     0x4  exit.o [2]
+  .text                  ro code   0x800'234c     0xe  cexit.o [5]
+  .text                  ro code   0x800'235a    0x1c  stm32f1xx_it.o [1]
+  .text                  ro code   0x800'2378    0x18  stm32f1xx_hal.o [1]
+  .rodata                const     0x800'2390    0x14  GpioInput.o [1]
+  Initializer bytes      const     0x800'23a4    0x14  <for P2-1>
+  .rodata                const     0x800'23b8    0x10  GpioInput.o [1]
+  .rodata                const     0x800'23c8    0x10  stm32f1xx_hal_rcc.o [1]
+  .rodata                const     0x800'23d8    0x10  system_stm32f1xx.o [1]
+  .text                  ro code   0x800'23e8    0x10  startup_stm32f103xb.o [1]
+  .text                  ro code   0x800'23f8     0xc  cstartup_M.o [5]
+  SHT$$PREINIT_ARRAY               0x800'2404     0x0  <Block>
+  SHT$$INIT_ARRAY                  0x800'2404     0x8  <Block>
+    .init_array          const     0x800'2404     0x4  GpioInput.o [1]
+    .init_array          const     0x800'2408     0x4  Test.o [1]
+  __iar_tls$$INIT_ARRAY            0x800'240c     0x0  <Block>
+  .text                  ro code   0x800'240c     0x4  startup_stm32f103xb.o [1]
+  .text                  ro code   0x800'2410     0x4  startup_stm32f103xb.o [1]
+  .text                  ro code   0x800'2414     0x4  startup_stm32f103xb.o [1]
+  .text                  ro code   0x800'2418     0x4  startup_stm32f103xb.o [1]
+  .text                  ro code   0x800'241c     0x4  startup_stm32f103xb.o [1]
+  .text                  ro code   0x800'2420     0x4  startup_stm32f103xb.o [1]
+  .text                  ro code   0x800'2424     0x4  startup_stm32f103xb.o [1]
+  .text                  ro code   0x800'2428     0x4  startup_stm32f103xb.o [1]
+  .text                  ro code   0x800'242c     0x4  startup_stm32f103xb.o [1]
+  .text                  ro code   0x800'2430     0x4  startup_stm32f103xb.o [1]
+  .text                  ro code   0x800'2434     0x4  startup_stm32f103xb.o [1]
+  .text                  ro code   0x800'2438     0x4  startup_stm32f103xb.o [1]
+  .text                  ro code   0x800'243c     0x4  startup_stm32f103xb.o [1]
+  .text                  ro code   0x800'2440     0x4  startup_stm32f103xb.o [1]
+  .text                  ro code   0x800'2444     0x4  startup_stm32f103xb.o [1]
+  .text                  ro code   0x800'2448     0x4  startup_stm32f103xb.o [1]
+  .text                  ro code   0x800'244c     0x4  startup_stm32f103xb.o [1]
+  .text                  ro code   0x800'2450     0x4  startup_stm32f103xb.o [1]
+  .text                  ro code   0x800'2454     0x4  startup_stm32f103xb.o [1]
+  .text                  ro code   0x800'2458     0x4  startup_stm32f103xb.o [1]
+  .text                  ro code   0x800'245c     0x4  startup_stm32f103xb.o [1]
+  .text                  ro code   0x800'2460     0x4  startup_stm32f103xb.o [1]
+  .text                  ro code   0x800'2464     0x4  startup_stm32f103xb.o [1]
+  .text                  ro code   0x800'2468     0x4  startup_stm32f103xb.o [1]
+  .text                  ro code   0x800'246c     0x4  startup_stm32f103xb.o [1]
+  .text                  ro code   0x800'2470     0x4  startup_stm32f103xb.o [1]
+  .text                  ro code   0x800'2474     0x4  startup_stm32f103xb.o [1]
+  .text                  ro code   0x800'2478     0x4  startup_stm32f103xb.o [1]
+  .text                  ro code   0x800'247c     0x4  startup_stm32f103xb.o [1]
+  .text                  ro code   0x800'2480     0x4  startup_stm32f103xb.o [1]
+  .text                  ro code   0x800'2484     0x4  startup_stm32f103xb.o [1]
+  .text                  ro code   0x800'2488     0x4  startup_stm32f103xb.o [1]
+  .text                  ro code   0x800'248c     0x4  startup_stm32f103xb.o [1]
+  .text                  ro code   0x800'2490     0x4  startup_stm32f103xb.o [1]
+  .text                  ro code   0x800'2494     0x4  startup_stm32f103xb.o [1]
+  .text                  ro code   0x800'2498     0x4  startup_stm32f103xb.o [1]
+  .text                  ro code   0x800'249c     0x4  startup_stm32f103xb.o [1]
+  .text                  ro code   0x800'24a0     0x4  startup_stm32f103xb.o [1]
+  .text                  ro code   0x800'24a4     0x4  startup_stm32f103xb.o [1]
+  .text                  ro code   0x800'24a8     0x4  startup_stm32f103xb.o [1]
+  .text                  ro code   0x800'24ac     0x4  startup_stm32f103xb.o [1]
+  .text                  ro code   0x800'24b0     0x4  startup_stm32f103xb.o [1]
+  .text                  ro code   0x800'24b4     0x4  startup_stm32f103xb.o [1]
+  .text                  ro code   0x800'24b8     0x0  cstart_call_dtors.o [5]
+  .rodata                const     0x800'24b8     0x0  zero_init3.o [5]
+  .rodata                const     0x800'24b8     0x0  copy_init3.o [5]
+                                 - 0x800'24b8  0x23cc
+
+Absolute sections:                              0x100
+  .noinit                uninit   0x2000'0100   0x100  Interrupt.o [1]
+                                - 0x2000'0200   0x100
+
+"P2", part 1 of 3:                               0x14
+  P2-1                            0x2000'0200    0x11  <Init block>
+    .data                inited   0x2000'0200     0x4  stm32f1xx_hal.o [1]
+    .data                inited   0x2000'0204     0x4  system_stm32f1xx.o [1]
+    .data                inited   0x2000'0208     0x8  Test.o [1]
+    .data                inited   0x2000'0210     0x1  stm32f1xx_hal.o [1]
+                                - 0x2000'0211    0x11
+
+"P2", part 2 of 3:                               0xdc
+  .bss                   zero     0x2000'0214    0x40  GpioInput.o [1]
+  .bss                   zero     0x2000'0258    0x28  GpioInput.o [1]
+  .bss                   zero     0x2000'0280    0x20  Test.o [1]
+  .bss                   zero     0x2000'02a0    0x20  Test.o [1]
+  .bss                   zero     0x2000'02c0    0x10  Test.o [1]
+  .bss                   zero     0x2000'02d0     0x8  heap0.o [2]
+  .bss                   zero     0x2000'02d8     0x4  stm32f1xx_hal.o [1]
+  .bss                   zero     0x2000'02dc     0x4  cppinit.o [2]
+  .bss                   zero     0x2000'02e0     0x4  cppinit.o [2]
+  .bss                   zero     0x2000'02e4     0x4  new.o [3]
+  .bss                   zero     0x2000'02e8     0x4  xgetmemchunk.o [2]
+  .bss                   zero     0x2000'02ec     0x1  Test.o [1]
+                                - 0x2000'02ed    0xd9
+
+"P2", part 3 of 3:                             0x1190
+  .iar.dynexit                    0x2000'02f0   0x18c  <Block>
+    .iar.dynexit         uninit   0x2000'02f0     0xc  cppinit.o [2]
+    .iar.dynexit         uninit   0x2000'02fc   0x180  <Block tail>
+  CSTACK                          0x2000'0480   0x800  <Block>
+    CSTACK               uninit   0x2000'0480   0x800  <Block tail>
+  HEAP                            0x2000'0c80   0x800  <Block>
+    HEAP                 uninit   0x2000'0c80   0x800  <Block tail>
+                                - 0x2000'1480  0x1190
+
+Unused ranges:
+
+         From           To    Size
+         ----           --    ----
+   0x800'24b8   0x800'ffff  0xdb48
+  0x2000'0000  0x2000'00ff   0x100
+  0x2000'1480  0x2000'4fff  0x3b80
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address      Size
+          -------      ----
+Zero (__iar_zero_init3)
+    1 destination range, total size 0xd9:
+          0x2000'0214  0xd9
+
+Copy (__iar_copy_init3)
+    1 source range, total size 0x14 (117% of destination):
+           0x800'23a4  0x14
+    1 destination range, total size 0x11:
+          0x2000'0200  0x11
+
+Extra (__iar_cstart_call_ctors)
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module                  ro code  ro data  rw data  rw data
+                                                        (abs)
+    ------                  -------  -------  -------  -------
+command line/config:
+    ----------------------------------------------------------
+    Total:
+
+C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\STM32F1xx_CPP_FW - Callback\IAR\Debug\Obj: [1]
+    BtnPoll.o                    88
+    Gpio.o                      140
+    GpioInput.o               1 670       40      104
+    GpioOutput.o                162
+    Interrupt.o                 140                        256
+    Test.o                    2 114      115       89
+    main.o                      190      100
+    startup_stm32f103xb.o       424
+    stm32f1xx_hal.o             150        5        9
+    stm32f1xx_hal_cortex.o      330
+    stm32f1xx_hal_rcc.o       1 580       18
+    stm32f1xx_hal_rcc_ex.o      300
+    stm32f1xx_it.o               28
+    stm32f1xx_ll_exti.o         262
+    stm32f1xx_ll_gpio.o         356
+    stm32f1xx_ll_utils.o         40
+    system_stm32f1xx.o           88       20        4
+    ----------------------------------------------------------
+    Total:                    8 062      298      206      256
+
+dl7M_tln.a: [2]
+    abort.o                       6
+    cppinit.o                   160                20
+    exit.o                        4
+    heap0.o                     320                 8
+    heaptramp0.o                  4
+    low_level_init.o              4
+    xgetmemchunk.o               44                 4
+    ----------------------------------------------------------
+    Total:                      542                32
+
+dlpp7M_tl_nc.a: [3]
+    cxxabi.o                     10
+    delop_0.o                    10
+    new.o                                           4
+    newop_0.o                    36
+    nomemory.o                    4
+    ----------------------------------------------------------
+    Total:                       60                 4
+
+m7M_tl.a: [4]
+    ----------------------------------------------------------
+    Total:
+
+rt7M_tl.a: [5]
+    ABImemcpy.o                 134
+    cexit.o                      14
+    cmain.o                      30
+    cmain_call_ctors.o           32
+    copy_init3.o                 44
+    cstart_call_dtors.o
+    cstartup_M.o                 12
+    data_init.o                  40
+    zero_init3.o                 58
+    ----------------------------------------------------------
+    Total:                      364
+
+shb_l.a: [6]
+    exit.o                       20
+    unwind_debug.o                         1
+    ----------------------------------------------------------
+    Total:                       20        1
+
+    Gaps                         10                 4
+    Linker created                        43    4 480
+--------------------------------------------------------------
+    Grand Total:              9 058      342    4 726      256
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                       Address   Size  Type      Object
+-----                       -------   ----  ----      ------
+.iar.dynexit$$Base      0x2000'02f0          --   Gb  - Linker created -
+.iar.dynexit$$Limit     0x2000'047c          --   Gb  - Linker created -
+.iar.init_table$$Base    0x800'2264          --   Gb  - Linker created -
+.iar.init_table$$Limit   0x800'228c          --   Gb  - Linker created -
+?main                    0x800'2325         Code  Gb  cmain.o [5]
+AHBPrescTable            0x800'23d8   0x10  Data  Gb  system_stm32f1xx.o [1]
+Aldata                  0x2000'02d0    0x8  Data  Lc  heap0.o [2]
+BSP::BtnPoll::BtnPoll(HAL::Gpio::Pin_t, BSP::BtnPoll::Pull_t, unsigned char, void (*)(), void (*)())
+                         0x800'19e1   0x50  Code  Gb  BtnPoll.o [1]
+BSP::Led::Blink(unsigned int, unsigned int, unsigned int)
+                         0x800'1a65   0x3a  Code  Gb  Test.o [1]
+BSP::Led::HwInit(void *)
+                         0x800'1a55   0x10  Code  Gb  Test.o [1]
+BSP::Led::Off()          0x800'1b75    0xc  Code  Gb  Test.o [1]
+BSP::Led::On()           0x800'1b5b    0xc  Code  Gb  Test.o [1]
+BSP::Led::_delay(unsigned int)
+                         0x800'1b67    0xe  Code  Gb  Test.o [1]
+BusFault_Handler         0x800'2361    0x2  Code  Gb  stm32f1xx_it.o [1]
+Button_ISR_cb(int)       0x800'19b1   0x18  Code  Gb  Test.o [1]
+C13_Led                 0x2000'0208    0x8  Data  Gb  Test.o [1]
+CSTACK$$Base            0x2000'0480          --   Gb  - Linker created -
+CSTACK$$Limit           0x2000'0c80          --   Gb  - Linker created -
+DebugMon_Handler         0x800'2367    0x2  Code  Gb  stm32f1xx_it.o [1]
+DtorRecArray            0x2000'02f0    0xc  Data  Lc  cppinit.o [2]
+Gpio_Intr_Intput_Test()
+                         0x800'1965   0x48  Code  Gb  Test.o [1]
+Gpio_Intr_Intput_Test()::Button
+                        0x2000'02c0   0x10  Data  Lc  Test.o [1]
+Gpio_Intr_Intput_Test()::static guard for Button
+                        0x2000'02ec    0x1  Data  Lc  Test.o [1]
+HAL::Gpio::ClockEnable()
+                         0x800'0e77   0x5c  Code  Gb  Gpio.o [1]
+HAL::Gpio::Gpio(HAL::Gpio::Pin_t)
+                         0x800'1331   0x26  Code  Gb  GpioInput.o [1]
+HAL::Gpio::Gpio(HAL::Gpio::Pin_t) [subobject]
+                         0x800'0e29    0xe  Code  Gb  GpioInput.o [1]
+HAL::Gpio::getPin(HAL::Gpio::Pin_t)
+                         0x800'13ed   0x14  Code  Gb  GpioInput.o [1]
+HAL::Gpio::getPort(HAL::Gpio::Pin_t)
+                         0x800'13c5   0x28  Code  Gb  GpioInput.o [1]
+HAL::Gpio::get_LL_pin(unsigned short) const
+                         0x800'1069   0x38  Code  Gb  Test.o [1]
+HAL::GpioInput::ConfigureInterrupt(unsigned int)
+                         0x800'0abd   0xdc  Code  Gb  GpioInput.o [1]
+HAL::GpioInput::EXTI0_IRQHandler()
+                         0x800'0d49   0x1e  Code  Gb  GpioInput.o [1]
+HAL::GpioInput::EXTI15_10_IRQHandler()
+                         0x800'0c8d   0xbc  Code  Gb  GpioInput.o [1]
+HAL::GpioInput::EXTI1_IRQHandler()
+                         0x800'0d69   0x1e  Code  Gb  GpioInput.o [1]
+HAL::GpioInput::EXTI2_IRQHandler()
+                         0x800'0d89   0x1e  Code  Gb  GpioInput.o [1]
+HAL::GpioInput::EXTI3_IRQHandler()
+                         0x800'0da9   0x1e  Code  Gb  GpioInput.o [1]
+HAL::GpioInput::EXTI4_IRQHandler()
+                         0x800'0dc9   0x1e  Code  Gb  GpioInput.o [1]
+HAL::GpioInput::EXTI5_9_IRQHandler()
+                         0x800'0bed   0xa0  Code  Gb  GpioInput.o [1]
+HAL::GpioInput::ExtLineInit()
+                         0x800'0b99   0x54  Code  Gb  GpioInput.o [1]
+HAL::GpioInput::GpioInput(HAL::Gpio::Pin_t, HAL::GpioInput::GpioInput_Params_t, HAL::GpioInput::Intr_Event_Edge_t, std::function<int (int)>)
+                         0x800'09d3   0x2e  Code  Gb  GpioInput.o [1]
+HAL::GpioInput::GpioInput(HAL::Gpio::Pin_t, HAL::GpioInput::GpioInput_Params_t, HAL::GpioInput::Intr_Event_Edge_t, void (*)())
+                         0x800'09ab   0x28  Code  Gb  GpioInput.o [1]
+HAL::GpioInput::HwInit(void *)
+                         0x800'0a01   0x6a  Code  Gb  GpioInput.o [1]
+HAL::GpioInput::MapPin2ExtLine(unsigned int)
+                         0x800'10a1   0x24  Code  Gb  GpioInput.o [1]
+HAL::GpioInput::_GPIO_ISRs
+                        0x2000'0214   0x40  Data  Gb  GpioInput.o [1]
+HAL::GpioInput::get_GPIO_InitTypeDef(LL_GPIO_InitTypeDef *)
+                         0x800'0a6b   0x52  Code  Gb  GpioInput.o [1]
+HAL::GpioInput::m_callback
+                        0x2000'0258   0x28  Data  Gb  GpioInput.o [1]
+HAL::GpioOutput::High()
+                         0x800'1bc3    0xe  Code  Gb  Test.o [1]
+HAL::GpioOutput::HwInit(void *)
+                         0x800'1b1b   0x40  Code  Gb  GpioOutput.o [1]
+HAL::GpioOutput::Low()   0x800'1bf9    0xe  Code  Gb  Test.o [1]
+HAL::GpioOutput::get_GPIO_InitTypeDef(LL_GPIO_InitTypeDef *)
+                         0x800'1ab9   0x62  Code  Gb  GpioOutput.o [1]
+HAL::Interrupt::EnableInterrupt(HAL::Interrupt::IRQn)
+                         0x800'10c5   0x22  Code  Gb  Interrupt.o [1]
+HAL::Interrupt::RegisterInterrupt_Vct_Table(void (*)(), HAL::Interrupt::IRQn, unsigned char, unsigned char)
+                         0x800'10e7   0x38  Code  Gb  Interrupt.o [1]
+HAL::Interrupt::Relocate_Vector_Table()
+                         0x800'111f   0x24  Code  Gb  Interrupt.o [1]
+HAL::Interrupt::Vectors_RAM
+                        0x2000'0100  0x100  Data  Gb  Interrupt.o [1]
+HAL_GetTick              0x800'0719    0xc  Code  Wk  stm32f1xx_hal.o [1]
+HAL_IncTick              0x800'2379   0x18  Code  Wk  stm32f1xx_hal.o [1]
+HAL_Init                 0x800'1911   0x20  Code  Gb  stm32f1xx_hal.o [1]
+HAL_InitTick             0x800'0725   0x4c  Code  Wk  stm32f1xx_hal.o [1]
+HAL_NVIC_SetPriority     0x800'0901   0x2a  Code  Gb  stm32f1xx_hal_cortex.o [1]
+HAL_NVIC_SetPriorityGrouping
+                         0x800'08f5    0xc  Code  Gb  stm32f1xx_hal_cortex.o [1]
+HAL_RCCEx_PeriphCLKConfig
+                         0x800'1725  0x118  Code  Gb  stm32f1xx_hal_rcc_ex.o [1]
+HAL_RCC_ClockConfig      0x800'04ad  0x190  Code  Gb  stm32f1xx_hal_rcc.o [1]
+HAL_RCC_GetHCLKFreq      0x800'06ad    0x6  Code  Gb  stm32f1xx_hal_rcc.o [1]
+HAL_RCC_GetSysClockFreq
+                         0x800'063d   0x70  Code  Gb  stm32f1xx_hal_rcc.o [1]
+HAL_RCC_OscConfig        0x800'00ed  0x3c0  Code  Gb  stm32f1xx_hal_rcc.o [1]
+HAL_SYSTICK_CLKSourceConfig
+                         0x800'0937   0x1c  Code  Gb  stm32f1xx_hal_cortex.o [1]
+HAL_SYSTICK_Config       0x800'092b    0xc  Code  Gb  stm32f1xx_hal_cortex.o [1]
+HAL_SYSTICK_IRQHandler   0x800'0971    0x8  Code  Gb  stm32f1xx_hal_cortex.o [1]
+HEAP$$Base              0x2000'0c80          --   Gb  - Linker created -
+HEAP$$Limit             0x2000'1480          --   Gb  - Linker created -
+HardFault_Handler        0x800'235d    0x2  Code  Gb  stm32f1xx_it.o [1]
+LL_EXTI_Init             0x800'11b1   0xa6  Code  Gb  stm32f1xx_ll_exti.o [1]
+LL_GPIO_Init             0x800'0fd9   0x90  Code  Gb  stm32f1xx_ll_gpio.o [1]
+LL_mDelay                0x800'1bd1   0x24  Code  Gb  stm32f1xx_ll_utils.o [1]
+MemManage_Handler        0x800'235f    0x2  Code  Gb  stm32f1xx_it.o [1]
+NMI_Handler              0x800'235b    0x2  Code  Gb  stm32f1xx_it.o [1]
+PendSV_Handler           0x800'2369    0x2  Code  Gb  stm32f1xx_it.o [1]
+Region$$Table$$Base      0x800'2264          --   Gb  - Linker created -
+Region$$Table$$Limit     0x800'228c          --   Gb  - Linker created -
+SHT$$INIT_ARRAY$$Base    0x800'2404          --   Gb  - Linker created -
+SHT$$INIT_ARRAY$$Limit   0x800'240c          --   Gb  - Linker created -
+SHT$$PREINIT_ARRAY$$Base
+                         0x800'2404          --   Gb  - Linker created -
+SHT$$PREINIT_ARRAY$$Limit
+                         0x800'2404          --   Gb  - Linker created -
+SVC_Handler              0x800'2365    0x2  Code  Gb  stm32f1xx_it.o [1]
+SysTick_Handler          0x800'236b    0xc  Code  Gb  stm32f1xx_it.o [1]
+SystemClock_Config()     0x800'1865   0xa4  Code  Gb  main.o [1]
+SystemCoreClock         0x2000'0204    0x4  Data  Gb  system_stm32f1xx.o [1]
+SystemInit               0x800'1d99   0x3e  Code  Gb  system_stm32f1xx.o [1]
+UsageFault_Handler       0x800'2363    0x2  Code  Gb  stm32f1xx_it.o [1]
+Virtual function table for std::_Func_impl<int (*)(int), std::allocator<int>, int, int>
+                         0x800'2240   0x24  Data  Gb  Test.o [1]
+[local to GpioInput_cpp]::LL_EXTI_IsEnabledIT_0_31(unsigned int)
+                         0x800'0995   0x16  Code  Lc  GpioInput.o [1]
+[local to Gpio_cpp]::LL_APB2_GRP1_EnableClock(unsigned int)
+                         0x800'0e61   0x16  Code  Lc  Gpio.o [1]
+[local to stm32f1xx_hal_cortex_c]::NVIC_EncodePriority(unsigned int, unsigned int, unsigned int)
+                         0x800'0885   0x40  Code  Lc  stm32f1xx_hal_cortex.o [1]
+[local to stm32f1xx_hal_cortex_c]::NVIC_GetPriorityGrouping()
+                         0x800'084f    0xa  Code  Lc  stm32f1xx_hal_cortex.o [1]
+[local to stm32f1xx_hal_cortex_c]::NVIC_SetPriority(IRQn_Type, unsigned int)
+                         0x800'0859   0x2c  Code  Lc  stm32f1xx_hal_cortex.o [1]
+[local to stm32f1xx_hal_cortex_c]::NVIC_SetPriorityGrouping(unsigned int)
+                         0x800'0831   0x1e  Code  Lc  stm32f1xx_hal_cortex.o [1]
+[local to stm32f1xx_hal_cortex_c]::SysTick_Config(unsigned int)
+                         0x800'08c5   0x30  Code  Lc  stm32f1xx_hal_cortex.o [1]
+[local to stm32f1xx_hal_rcc_c]::RCC_Delay(unsigned int)
+                         0x800'06b3   0x26  Code  Lc  stm32f1xx_hal_rcc.o [1]
+[local to stm32f1xx_ll_exti_c]::LL_EXTI_DisableEvent_0_31(unsigned int)
+                         0x800'116f    0xa  Code  Lc  stm32f1xx_ll_exti.o [1]
+[local to stm32f1xx_ll_exti_c]::LL_EXTI_DisableFallingTrig_0_31(unsigned int)
+                         0x800'1197    0xa  Code  Lc  stm32f1xx_ll_exti.o [1]
+[local to stm32f1xx_ll_exti_c]::LL_EXTI_DisableIT_0_31(unsigned int)
+                         0x800'115b    0xa  Code  Lc  stm32f1xx_ll_exti.o [1]
+[local to stm32f1xx_ll_exti_c]::LL_EXTI_DisableRisingTrig_0_31(unsigned int)
+                         0x800'1183    0xa  Code  Lc  stm32f1xx_ll_exti.o [1]
+[local to stm32f1xx_ll_exti_c]::LL_EXTI_EnableEvent_0_31(unsigned int)
+                         0x800'1165    0xa  Code  Lc  stm32f1xx_ll_exti.o [1]
+[local to stm32f1xx_ll_exti_c]::LL_EXTI_EnableFallingTrig_0_31(unsigned int)
+                         0x800'118d    0xa  Code  Lc  stm32f1xx_ll_exti.o [1]
+[local to stm32f1xx_ll_exti_c]::LL_EXTI_EnableIT_0_31(unsigned int)
+                         0x800'1151    0xa  Code  Lc  stm32f1xx_ll_exti.o [1]
+[local to stm32f1xx_ll_exti_c]::LL_EXTI_EnableRisingTrig_0_31(unsigned int)
+                         0x800'1179    0xa  Code  Lc  stm32f1xx_ll_exti.o [1]
+[local to stm32f1xx_ll_gpio_c]::LL_GPIO_SetPinMode(GPIO_TypeDef *, unsigned int, unsigned int)
+                         0x800'0f05   0x3c  Code  Lc  stm32f1xx_ll_gpio.o [1]
+[local to stm32f1xx_ll_gpio_c]::LL_GPIO_SetPinOutputType(GPIO_TypeDef *, unsigned int, unsigned int)
+                         0x800'0f7d   0x3c  Code  Lc  stm32f1xx_ll_gpio.o [1]
+[local to stm32f1xx_ll_gpio_c]::LL_GPIO_SetPinPull(GPIO_TypeDef *, unsigned int, unsigned int)
+                         0x800'0fb9   0x20  Code  Lc  stm32f1xx_ll_gpio.o [1]
+[local to stm32f1xx_ll_gpio_c]::LL_GPIO_SetPinSpeed(GPIO_TypeDef *, unsigned int, unsigned int)
+                         0x800'0f41   0x3c  Code  Lc  stm32f1xx_ll_gpio.o [1]
+_Error_Handler           0x800'190d    0x2  Code  Gb  main.o [1]
+__aeabi_atexit           0x800'0e1f    0xa  Code  Gb  cxxabi.o [3]
+__aeabi_memcpy4          0x800'0771         Code  Gb  ABImemcpy.o [5]
+__aeabi_memcpy8          0x800'0771         Code  Gb  ABImemcpy.o [5]
+__basic_free             0x800'1665   0x16  Code  Gb  heap0.o [2]
+__basic_free_intern      0x800'167b   0x7a  Code  Lc  heap0.o [2]
+__basic_malloc           0x800'15b9   0x18  Code  Gb  heap0.o [2]
+__basic_malloc_intern    0x800'15d1   0x94  Code  Lc  heap0.o [2]
+__call_ctors             0x800'1291   0x18  Code  Gb  cppinit.o [2]
+__call_dtors             0x800'12df    0xc  Code  Gb  cppinit.o [2]
+__call_dtors0            0x800'12eb   0x36  Code  Gb  cppinit.o [2]
+__cexit_call_dtors       0x800'234f         Code  Gb  cexit.o [5]
+__cmain                  0x800'2325         Code  Gb  cmain.o [5]
+__cstart_call_dtors      0x800'24b8         Data  Gb  cstart_call_dtors.o [5]
+__cxa_atexit             0x800'12a9   0x36  Code  Gb  cppinit.o [2]
+__data_GetMemChunk       0x800'16f9   0x2c  Code  Gb  xgetmemchunk.o [2]
+__data_GetMemChunk::start
+                        0x2000'02e8    0x4  Data  Lc  xgetmemchunk.o [2]
+__dso_handle            0x2000'02e0    0x4  Data  Gb  cppinit.o [2]
+__exit                   0x800'14d9   0x14  Code  Gb  exit.o [6]
+__iar_copy_init3         0x800'21ed   0x2c  Code  Gb  copy_init3.o [5]
+__iar_cstart_call_ctors
+                         0x800'2305   0x20  Code  Gb  cmain_call_ctors.o [5]
+__iar_data_init3         0x800'2219   0x28  Code  Gb  data_init.o [5]
+__iar_debug_exceptions   0x800'13c3    0x1  Data  Gb  unwind_debug.o [6]
+__iar_program_start      0x800'23f9         Code  Gb  cstartup_M.o [5]
+__iar_tls$$INIT_ARRAY$$Base
+                         0x800'240c          --   Gb  - Linker created -
+__iar_tls$$INIT_ARRAY$$Limit
+                         0x800'240c          --   Gb  - Linker created -
+__iar_zero_init3         0x800'07f7   0x3a  Code  Gb  zero_init3.o [5]
+__low_level_init         0x800'2343    0x4  Code  Gb  low_level_init.o [2]
+__sti__routine           0x800'097d   0x18  Code  Lc  GpioInput.o [1]
+__sti__routine           0x800'1939   0x2c  Code  Lc  Test.o [1]
+__vector_table           0x800'0000         Data  Gb  startup_stm32f103xb.o [1]
+_call_main               0x800'2331         Code  Gb  cmain.o [5]
+_exit                    0x800'234d         Code  Gb  cexit.o [5]
+_main                    0x800'233f         Code  Gb  cmain.o [5]
+abort                    0x800'13a7    0x6  Code  Gb  abort.o [2]
+bool std::_Test_callable<int (*)(int)>(int (*)(int) const &)
+                         0x800'1c07    0xe  Code  Gb  Test.o [1]
+bool std::_Test_callable<int (*)(int)>(int (*)(int) const &, std::integral_constant<bool, (bool)1>)
+                         0x800'1c3f   0x10  Code  Gb  Test.o [1]
+btn                     0x2000'0280   0x20  Data  Gb  Test.o [1]
+btn_A1                  0x2000'02a0   0x20  Data  Gb  Test.o [1]
+const std::allocator<int>& && std::forward<const std::allocator<int>&>(std::remove_reference<const std::allocator<int>&>::type &)
+                         0x800'1c4f    0x2  Code  Gb  Test.o [1]
+decltype((_Invoker<int (*&)(int), int...>::_Call(std::forward<int (*&)(int)>(param#1), std::forward<int>(param#2)...))) std::invoke<int (*&)(int), int>(int (*&)(int) &&, int &&...)
+                         0x800'22cb   0x1c  Code  Gb  Test.o [1]
+decltype((std::forward<int (*&)(int)>(param#1)(std::forward<int>(param#2)...))) std::_Invoker_functor::_Call<int (*&)(int), int>(int (*&)(int) &&, int &&...)
+                         0x800'22e7   0x1e  Code  Gb  Test.o [1]
+exit                     0x800'2347    0x4  Code  Gb  exit.o [2]
+free                     0x800'21e9    0x4  Code  Gb  heaptramp0.o [2]
+int && std::forward<int>(std::remove_reference<int>::type &)
+                         0x800'13b1    0x2  Code  Gb  Test.o [1]
+int (*&)(int) && std::forward<int (*&)(int)>(std::remove_reference<int (*&)(int)>::type &)
+                         0x800'22c9    0x2  Code  Gb  Test.o [1]
+int (*)(int) && std::forward<int (*)(int)>(std::remove_reference<int (*)(int)>::type &)
+                         0x800'1b81    0x2  Code  Gb  Test.o [1]
+int (*const &)(int) && std::forward<int (*const &)(int)>(std::remove_reference<int (*const &)(int)>::type &)
+                         0x800'1eaf    0x2  Code  Gb  Test.o [1]
+int std::_Invoke_ret<int, int (*&)(int), int>(std::_Forced<int, (bool)0>, int (*&)(int), int &&...)
+                         0x800'22ad   0x1c  Code  Gb  Test.o [1]
+main                     0x800'1851   0x14  Code  Gb  main.o [1]
+next_abi_dtor_rec       0x2000'02dc    0x4  Data  Lc  cppinit.o [2]
+operator delete (void *)
+                         0x800'21df    0xa  Code  Gb  delop_0.o [3]
+operator new (unsigned int)
+                         0x800'1f39   0x24  Code  Gb  newop_0.o [3]
+operator new (unsigned int, void *)
+                         0x800'1cb5    0x4  Code  Gb  Test.o [1]
+std::_Compressed_pair<std::allocator<int>, int (*)(int), (bool)1>::_Compressed_pair<const std::allocator<int>&, int (*)(int)>(std::_One_then_variadic_args_t, const std::allocator<int>& &&, int (*)(int) &&...)
+                         0x800'1d01   0x24  Code  Gb  Test.o [1]
+std::_Compressed_pair<std::allocator<int>, int (*)(int), (bool)1>::_Compressed_pair<const std::allocator<int>&, int (*const &)(int)>(std::_One_then_variadic_args_t, const std::allocator<int>& &&, int (*const &)(int) &&...)
+                         0x800'1f9d   0x24  Code  Gb  Test.o [1]
+std::_Compressed_pair<std::allocator<int>, int (*)(int), (bool)1>::_Compressed_pair<std::allocator<int>, int (*)(int)>(std::_One_then_variadic_args_t, std::allocator<int> &&, int (*)(int) &&...)
+                         0x800'203f   0x24  Code  Gb  Test.o [1]
+std::_Compressed_pair<std::allocator<int>, int (*)(int), (bool)1>::_Get_first()
+                         0x800'20e5    0x2  Code  Gb  Test.o [1]
+std::_Compressed_pair<std::allocator<int>, int (*)(int), (bool)1>::_Get_first() const
+                         0x800'1e99    0x2  Code  Gb  Test.o [1]
+std::_Compressed_pair<std::allocator<int>, int (*)(int), (bool)1>::_Get_second()
+                         0x800'20e7    0x2  Code  Gb  Test.o [1]
+std::_Compressed_pair<std::allocator<int>, int (*)(int), (bool)1>::_Get_second() const
+                         0x800'1ead    0x2  Code  Gb  Test.o [1]
+std::_Func_base<int, int>::_Func_base()
+                         0x800'1d25    0x2  Code  Gb  Test.o [1]
+std::_Func_base<int, int>::_Func_base() [subobject]
+                         0x800'1cf5    0xc  Code  Gb  Test.o [1]
+std::_Func_class<int, int>::_Empty() const
+                         0x800'138f   0x18  Code  Gb  Test.o [1]
+std::_Func_class<int, int>::_Func_class()
+                         0x800'13b3   0x10  Code  Gb  Test.o [1]
+std::_Func_class<int, int>::_Func_class() [subobject]
+                         0x800'1283    0xc  Code  Gb  Test.o [1]
+std::_Func_class<int, int>::_Getimpl() const
+                         0x800'13ad    0x4  Code  Gb  Test.o [1]
+std::_Func_class<int, int>::_Getspace()
+                         0x800'1511    0x2  Code  Gb  Test.o [1]
+std::_Func_class<int, int>::_Getspace() const
+                         0x800'157d    0x2  Code  Gb  Test.o [1]
+std::_Func_class<int, int>::_Local() const
+                         0x800'14f1   0x20  Code  Gb  Test.o [1]
+std::_Func_class<int, int>::_Reset_copy(const std::_Func_class<int, int>&)
+                         0x800'1401   0x54  Code  Gb  Test.o [1]
+std::_Func_class<int, int>::_Reset_move(std::_Func_class<int, int>&&)
+                         0x800'1515   0x5a  Code  Gb  GpioInput.o [1]
+std::_Func_class<int, int>::_Set(std::_Func_base<int, int> *)
+                         0x800'14ed    0x4  Code  Gb  Test.o [1]
+std::_Func_class<int, int>::_Swap(std::_Func_class<int, int>&)
+                         0x800'1455   0x76  Code  Gb  GpioInput.o [1]
+std::_Func_class<int, int>::_Tidy()
+                         0x800'157f   0x3a  Code  Gb  Test.o [1]
+std::_Func_class<int, int>::operator ()(int) const
+                         0x800'1257   0x2c  Code  Gb  GpioInput.o [1]
+std::_Func_class<int, int>::~_Func_class()
+                         0x800'156f    0xe  Code  Gb  Test.o [1]
+std::_Func_class<int, int>::~_Func_class() [subobject]
+                         0x800'14cb    0xc  Code  Gb  Test.o [1]
+std::_Func_impl<int (*)(int), std::allocator<int>, int, int> * std::_Allocate<std::_Func_impl<int (*)(int), std::allocator<int>, int, int>>(unsigned int, std::_Func_impl<int (*)(int), std::allocator<int>, int, int> *, bool)
+                         0x800'1edb   0x24  Code  Gb  Test.o [1]
+std::_Func_impl<int (*)(int), std::allocator<int>, int, int>::_Callee()
+                         0x800'20af    0xc  Code  Gb  Test.o [1]
+std::_Func_impl<int (*)(int), std::allocator<int>, int, int>::_Callee() const
+                         0x800'1e63    0xc  Code  Gb  Test.o [1]
+std::_Func_impl<int (*)(int), std::allocator<int>, int, int>::_Copy(void *) const
+                         0x800'1df1   0x54  Code  Gb  Test.o [1]
+std::_Func_impl<int (*)(int), std::allocator<int>, int, int>::_Delete_this(bool)
+                         0x800'214d   0x2e  Code  Gb  Test.o [1]
+std::_Func_impl<int (*)(int), std::allocator<int>, int, int>::_Do_call(int &&)
+                         0x800'228d   0x20  Code  Gb  Test.o [1]
+std::_Func_impl<int (*)(int), std::allocator<int>, int, int>::_Func_impl<int (*)(int), const std::allocator<int>&>(int (*)(int) &&, const std::allocator<int>& &&)
+                         0x800'1cb9   0x3c  Code  Gb  Test.o [1]
+std::_Func_impl<int (*)(int), std::allocator<int>, int, int>::_Func_impl<int (*)(int), std::allocator<int>>(int (*)(int) &&, std::allocator<int> &&)
+                         0x800'2001   0x3c  Code  Gb  Test.o [1]
+std::_Func_impl<int (*)(int), std::allocator<int>, int, int>::_Func_impl<int (*const &)(int), const std::allocator<int>&>(int (*const &)(int) &&, const std::allocator<int>& &&)
+                         0x800'1f5d   0x3c  Code  Gb  Test.o [1]
+std::_Func_impl<int (*)(int), std::allocator<int>, int, int>::_Move(void *)
+                         0x800'2063   0x3c  Code  Gb  Test.o [1]
+std::_Func_impl<int (*)(int), std::allocator<int>, int, int>::_Myax()
+                         0x800'209f    0xc  Code  Gb  Test.o [1]
+std::_Func_impl<int (*)(int), std::allocator<int>, int, int>::_Myax() const
+                         0x800'1e45    0xc  Code  Gb  Test.o [1]
+std::_Func_impl<int (*)(int), std::allocator<int>, int, int>::~_Func_impl()
+                         0x800'0e5f    0x2  Code  Gb  Test.o [1]
+std::_NomemoryNothrow()
+                         0x800'1f99    0x4  Code  Gb  nomemory.o [3]
+std::_Wrap_alloc<std::allocator<std::_Func_impl<int (*)(int), std::allocator<int>, int, int>>>::_Wrap_alloc<std::allocator<int>>(std::allocator<int> &)
+                         0x800'20ab    0x2  Code  Gb  Test.o [1]
+std::_Wrap_alloc<std::allocator<std::_Func_impl<int (*)(int), std::allocator<int>, int, int>>>::_Wrap_alloc<std::allocator<int>>(std::allocator<int> const &)
+                         0x800'1e51    0x2  Code  Gb  Test.o [1]
+std::_Wrap_alloc<std::allocator<std::_Func_impl<int (*)(int), std::allocator<int>, int, int>>>::allocate(unsigned int)
+                         0x800'1e53   0x10  Code  Gb  Test.o [1]
+std::_Wrap_alloc<std::allocator<std::_Func_impl<int (*)(int), std::allocator<int>, int, int>>>::deallocate(std::_Func_impl<int (*)(int), std::allocator<int>, int, int> *, unsigned int)
+                         0x800'218b   0x14  Code  Gb  Test.o [1]
+std::__iar_New_hand     0x2000'02e4    0x4  Data  Gb  new.o [3]
+std::allocator<int> && std::forward<std::allocator<int>>(std::remove_reference<std::allocator<int>>::type &)
+                         0x800'203d    0x2  Code  Gb  Test.o [1]
+std::allocator<int>::allocator(const std::allocator<int>&)
+                         0x800'1d33    0x2  Code  Gb  Test.o [1]
+std::allocator<int>::allocator(const std::allocator<int>&) [subobject]
+                         0x800'1d27    0xc  Code  Gb  Test.o [1]
+std::allocator<std::_Func_impl<int (*)(int), std::allocator<int>, int, int>>::allocate(unsigned int)
+                         0x800'1e9b   0x12  Code  Gb  Test.o [1]
+std::allocator<std::_Func_impl<int (*)(int), std::allocator<int>, int, int>>::deallocate(std::_Func_impl<int (*)(int), std::allocator<int>, int, int> *, unsigned int)
+                         0x800'21af   0x12  Code  Gb  Test.o [1]
+std::function<int (int)> & && std::forward<std::function<int (int)> &>(std::remove_reference<std::function<int (int)> &>::type &)
+                         0x800'1357    0x2  Code  Gb  GpioInput.o [1]
+std::function<int (int)>& std::function<int (int)>::operator =<std::function<int (int)>&>(std::function<int (int)>& &&)
+                         0x800'0e37   0x28  Code  Gb  GpioInput.o [1]
+std::function<int (int)>::function()
+                         0x800'0e11    0xe  Code  Gb  GpioInput.o [1]
+std::function<int (int)>::function(const std::function<int (int)>&)
+                         0x800'1359   0x18  Code  Gb  Test.o [1]
+std::function<int (int)>::function<int (*)(int)>(int (*)(int))
+                         0x800'1a39   0x1c  Code  Gb  Test.o [1]
+std::function<int (int)>::operator bool() const
+                         0x800'0eed   0x18  Code  Gb  GpioInput.o [1]
+std::function<int (int)>::swap(std::function<int (int)>&)
+                         0x800'1371   0x10  Code  Gb  GpioInput.o [1]
+std::function<int (int)>::~function()
+                         0x800'1381    0xe  Code  Gb  Test.o [1]
+std::remove_reference<int (*&)(int)>::type && std::move<int (*&)(int)>(int (*&)(int) &&)
+                         0x800'1a9f    0x2  Code  Gb  Test.o [1]
+std::remove_reference<std::_Func_class<int, int> &>::type && std::move<std::_Func_class<int, int> &>(std::_Func_class<int, int> & &&)
+                         0x800'1513    0x2  Code  Gb  GpioInput.o [1]
+std::remove_reference<std::allocator<int>&>::type && std::move<std::allocator<int>&>(std::allocator<int>& &&)
+                         0x800'20ad    0x2  Code  Gb  Test.o [1]
+uwTick                  0x2000'02d8    0x4  Data  Gb  stm32f1xx_hal.o [1]
+uwTickFreq              0x2000'0210    0x1  Data  Gb  stm32f1xx_hal.o [1]
+uwTickPrio              0x2000'0200    0x4  Data  Gb  stm32f1xx_hal.o [1]
+void std::_Deallocate<std::_Func_impl<int (*)(int), std::allocator<int>, int, int>>(std::_Func_impl<int (*)(int), std::allocator<int>, int, int> *, unsigned int)
+                         0x800'21d1    0xe  Code  Gb  Test.o [1]
+void std::_Func_class<int, int>::_Reset<int (*)(int)>(int (*)(int) &&)
+                         0x800'1aa1   0x18  Code  Gb  Test.o [1]
+void std::_Func_class<int, int>::_Reset_alloc<int (*)(int), std::allocator<int>>(int (*)(int) &&, std::allocator<int> const &)
+                         0x800'1b83   0x40  Code  Gb  Test.o [1]
+void std::_Wrap_alloc<std::allocator<std::_Func_impl<int (*)(int), std::allocator<int>, int, int>>>::construct<std::_Func_impl<int (*)(int), std::allocator<int>, int, int>, int (*)(int), const std::allocator<int>&>(std::_Func_impl<int (*)(int), std::allocator<int>, int, int> *, int (*)(int), const std::allocator<int>& &&...)
+                         0x800'1c15   0x2a  Code  Gb  Test.o [1]
+void std::_Wrap_alloc<std::allocator<std::_Func_impl<int (*)(int), std::allocator<int>, int, int>>>::construct<std::_Func_impl<int (*)(int), std::allocator<int>, int, int>, int (*)(int), std::allocator<int>>(std::_Func_impl<int (*)(int), std::allocator<int>, int, int> *, int (*)(int), std::allocator<int> &&...)
+                         0x800'20bb   0x2a  Code  Gb  Test.o [1]
+void std::_Wrap_alloc<std::allocator<std::_Func_impl<int (*)(int), std::allocator<int>, int, int>>>::construct<std::_Func_impl<int (*)(int), std::allocator<int>, int, int>, int (*const &)(int), const std::allocator<int>&>(std::_Func_impl<int (*)(int), std::allocator<int>, int, int> *, int (*const &)(int), const std::allocator<int>& &&...)
+                         0x800'1e6f   0x2a  Code  Gb  Test.o [1]
+void std::_Wrap_alloc<std::allocator<std::_Func_impl<int (*)(int), std::allocator<int>, int, int>>>::destroy<std::_Func_impl<int (*)(int), std::allocator<int>, int, int>>(std::_Func_impl<int (*)(int), std::allocator<int>, int, int> *)
+                         0x800'217b   0x10  Code  Gb  Test.o [1]
+void std::allocator<std::_Func_impl<int (*)(int), std::allocator<int>, int, int>>::construct<std::_Func_impl<int (*)(int), std::allocator<int>, int, int>, int (*)(int), const std::allocator<int>&>(std::_Func_impl<int (*)(int), std::allocator<int>, int, int> *, int (*)(int), const std::allocator<int>& &&...)
+                         0x800'1c7b   0x3a  Code  Gb  Test.o [1]
+void std::allocator<std::_Func_impl<int (*)(int), std::allocator<int>, int, int>>::construct<std::_Func_impl<int (*)(int), std::allocator<int>, int, int>, int (*)(int), std::allocator<int>>(std::_Func_impl<int (*)(int), std::allocator<int>, int, int> *, int (*)(int), std::allocator<int> &&...)
+                         0x800'2113   0x3a  Code  Gb  Test.o [1]
+void std::allocator<std::_Func_impl<int (*)(int), std::allocator<int>, int, int>>::construct<std::_Func_impl<int (*)(int), std::allocator<int>, int, int>, int (*const &)(int), const std::allocator<int>&>(std::_Func_impl<int (*)(int), std::allocator<int>, int, int> *, int (*const &)(int), const std::allocator<int>& &&...)
+                         0x800'1eff   0x3a  Code  Gb  Test.o [1]
+void std::allocator<std::_Func_impl<int (*)(int), std::allocator<int>, int, int>>::destroy<std::_Func_impl<int (*)(int), std::allocator<int>, int, int>>(std::_Func_impl<int (*)(int), std::allocator<int>, int, int> *)
+                         0x800'21c1   0x10  Code  Gb  Test.o [1]
+void std::allocator_traits<std::allocator<std::_Func_impl<int (*)(int), std::allocator<int>, int, int>>>::construct<std::_Func_impl<int (*)(int), std::allocator<int>, int, int>, int (*)(int), const std::allocator<int>&>(std::allocator<std::_Func_impl<int (*)(int), std::allocator<int>, int, int>>&, std::_Func_impl<int (*)(int), std::allocator<int>, int, int> *, int (*)(int), const std::allocator<int>& &&...)
+                         0x800'1c51   0x2a  Code  Gb  Test.o [1]
+void std::allocator_traits<std::allocator<std::_Func_impl<int (*)(int), std::allocator<int>, int, int>>>::construct<std::_Func_impl<int (*)(int), std::allocator<int>, int, int>, int (*)(int), std::allocator<int>>(std::allocator<std::_Func_impl<int (*)(int), std::allocator<int>, int, int>>&, std::_Func_impl<int (*)(int), std::allocator<int>, int, int> *, int (*)(int), std::allocator<int> &&...)
+                         0x800'20e9   0x2a  Code  Gb  Test.o [1]
+void std::allocator_traits<std::allocator<std::_Func_impl<int (*)(int), std::allocator<int>, int, int>>>::construct<std::_Func_impl<int (*)(int), std::allocator<int>, int, int>, int (*const &)(int), const std::allocator<int>&>(std::allocator<std::_Func_impl<int (*)(int), std::allocator<int>, int, int>>&, std::_Func_impl<int (*)(int), std::allocator<int>, int, int> *, int (*const &)(int), const std::allocator<int>& &&...)
+                         0x800'1eb1   0x2a  Code  Gb  Test.o [1]
+void std::allocator_traits<std::allocator<std::_Func_impl<int (*)(int), std::allocator<int>, int, int>>>::destroy<std::_Func_impl<int (*)(int), std::allocator<int>, int, int>>(std::allocator<std::_Func_impl<int (*)(int), std::allocator<int>, int, int>>&, std::_Func_impl<int (*)(int), std::allocator<int>, int, int> *)
+                         0x800'219f   0x10  Code  Gb  Test.o [1]
+
+
+[1] = C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\STM32F1xx_CPP_FW - Callback\IAR\Debug\Obj
+[2] = dl7M_tln.a
+[3] = dlpp7M_tl_nc.a
+[4] = m7M_tl.a
+[5] = rt7M_tl.a
+[6] = shb_l.a
+
+  9 058 bytes of readonly  code memory
+    342 bytes of readonly  data memory
+  4 726 bytes of readwrite data memory (+ 256 absolute)
+
+Errors: none
+Warnings: none
