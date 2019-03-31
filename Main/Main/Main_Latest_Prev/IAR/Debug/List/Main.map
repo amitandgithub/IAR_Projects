@@ -1,0 +1,753 @@
+###############################################################################
+#
+# IAR ELF Linker V8.30.1.114/W32 for ARM                  18/Jan/2019  08:25:53
+# Copyright 2007-2018 IAR Systems AB.
+#
+#    Output file  =  
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest_Prev\IAR\Debug\Exe\Main.out
+#    Map file     =  
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest_Prev\IAR\Debug\List\Main.map
+#    Command line =  
+#        -f C:\Users\achaudha\AppData\Local\Temp\EW8A04.tmp
+#        (C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest_Prev\IAR\Debug\Obj\ControlScreen.o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest_Prev\IAR\Debug\Obj\diskio.o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest_Prev\IAR\Debug\Obj\DisplayBuffer.o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest_Prev\IAR\Debug\Obj\fat_sd_spi.o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest_Prev\IAR\Debug\Obj\ff.o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest_Prev\IAR\Debug\Obj\GpioInput.o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest_Prev\IAR\Debug\Obj\GpioOutput.o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest_Prev\IAR\Debug\Obj\HwButton.o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest_Prev\IAR\Debug\Obj\HwButtonIntr.o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest_Prev\IAR\Debug\Obj\I2C_Base.o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest_Prev\IAR\Debug\Obj\I2C_Master.o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest_Prev\IAR\Debug\Obj\I2C_Slave.o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest_Prev\IAR\Debug\Obj\INA219.o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest_Prev\IAR\Debug\Obj\Interrupt.o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest_Prev\IAR\Debug\Obj\main.o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest_Prev\IAR\Debug\Obj\Nokia5110LCD.o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest_Prev\IAR\Debug\Obj\Peripheral.o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest_Prev\IAR\Debug\Obj\printf.o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest_Prev\IAR\Debug\Obj\RTC_Module.o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest_Prev\IAR\Debug\Obj\Screen.o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest_Prev\IAR\Debug\Obj\SD.o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest_Prev\IAR\Debug\Obj\SPI_Base.o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest_Prev\IAR\Debug\Obj\SPI_DMA.o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest_Prev\IAR\Debug\Obj\SPI_IT.o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest_Prev\IAR\Debug\Obj\SPI_Poll.o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest_Prev\IAR\Debug\Obj\startup_stm32f103xb.o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest_Prev\IAR\Debug\Obj\stm32f1xx_hal.o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest_Prev\IAR\Debug\Obj\stm32f1xx_hal_cortex.o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest_Prev\IAR\Debug\Obj\stm32f1xx_hal_dma.o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest_Prev\IAR\Debug\Obj\stm32f1xx_hal_gpio.o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest_Prev\IAR\Debug\Obj\stm32f1xx_hal_gpio_ex.o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest_Prev\IAR\Debug\Obj\stm32f1xx_hal_i2c.o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest_Prev\IAR\Debug\Obj\stm32f1xx_hal_pwr.o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest_Prev\IAR\Debug\Obj\stm32f1xx_hal_rcc.o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest_Prev\IAR\Debug\Obj\stm32f1xx_hal_rcc_ex.o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest_Prev\IAR\Debug\Obj\stm32f1xx_hal_rtc.o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest_Prev\IAR\Debug\Obj\stm32f1xx_hal_spi.o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest_Prev\IAR\Debug\Obj\stm32f1xx_it.o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest_Prev\IAR\Debug\Obj\stm32f1xx_ll_exti.o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest_Prev\IAR\Debug\Obj\system_stm32f1xx.o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest_Prev\IAR\Debug\Obj\Test.o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest_Prev\IAR\Debug\Obj\UI.o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest_Prev\IAR\Debug\Obj\Utils.o
+#        --no_out_extension -o
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest_Prev\IAR\Debug\Exe\Main.out
+#        --redirect _Printf=_PrintfFullNoMb --redirect _Scanf=_ScanfFullNoMb
+#        --map
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest_Prev\IAR\Debug\List\Main.map
+#        --config
+#        C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\CPP_Drivers\Gpio\System\stm32f103x8.icf
+#        --semihosting --entry __iar_program_start --vfe --text_out locale)
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor                     = *
+__CPP_Exceptions              = Disabled
+__CPP_Language                = C++14
+__Heap_Handler                = Basic
+__SystemLibrary               = DLib
+__dlib_dynamic_initialization = normal
+__dlib_version                = 6
+
+
+*******************************************************************************
+*** HEAP SELECTION
+***
+
+The basic heap was selected because some modules are built with
+size limitations (and not runtime checking), and --advanced_heap
+was not specified.
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at 0x800'0000 { ro section .intvec };
+"P1":  place in [from 0x800'0000 to 0x800'ffff] { ro };
+define block CSTACK with size = 2K, alignment = 8 { };
+define block HEAP with size = 2K, alignment = 8 { };
+"P2":  place in [from 0x2000'0000 to 0x2000'4fff] {
+          rw, block CSTACK, block HEAP };
+initialize by copy { rw };
+
+  Section                Kind         Address    Size  Object
+  -------                ----         -------    ----  ------
+"A0":                                            0xec
+  .intvec                ro code   0x800'0000    0xec  startup_stm32f103xb.o [1]
+                                 - 0x800'00ec    0xec
+
+"P1":                                          0x44ce
+  .text                  ro code   0x800'00ec  0x1e52  ff.o [1]
+  .text                  ro code   0x800'1f3e    0x3a  zero_init3.o [5]
+  .text                  ro code   0x800'1f78   0x14c  diskio.o [1]
+  .text                  ro code   0x800'20c4   0x8aa  fat_sd_spi.o [1]
+  .rodata                const     0x800'296e     0x2  stm32f1xx_hal_rcc.o [1]
+  .text                  ro code   0x800'2970    0x10  fat_sd_spi.o [1]
+  .text                  ro code   0x800'2980    0x10  fat_sd_spi.o [1]
+  .text                  ro code   0x800'2990    0xac  SD.o [1]
+  .text                  ro code   0x800'2a3c     0x2  fat_sd_spi.o [1]
+  .text                  ro code   0x800'2a3e     0xa  Test.o [1]
+  .text                  ro code   0x800'2a48     0x8  Test.o [1]
+  .text                  ro code   0x800'2a50     0x4  SD.o [1]
+  .text                  ro code   0x800'2a54   0x344  SPI_Base.o [1]
+  .text                  ro code   0x800'2d98    0x14  SPI_Base.o [1]
+  .text                  ro code   0x800'2dac     0xe  SPI_Base.o [1]
+  .rodata                const     0x800'2dba     0x1  unwind_debug.o [6]
+  .text                  ro code   0x800'2dbc   0x268  stm32f1xx_hal_gpio.o [1]
+  .text                  ro code   0x800'3024    0x9c  stm32f1xx_hal_spi.o [1]
+  .text                  ro code   0x800'30c0   0x608  stm32f1xx_hal_rcc.o [1]
+  .text                  ro code   0x800'36c8    0x86  ABImemcpy.o [5]
+  .text                  ro code   0x800'3750     0xc  stm32f1xx_hal.o [1]
+  .text                  ro code   0x800'375c    0x3c  stm32f1xx_hal.o [1]
+  .text                  ro code   0x800'3798   0x14a  stm32f1xx_hal_cortex.o [1]
+  .text                  ro code   0x800'38e4    0x8c  Interrupt.o [1]
+  .text                  ro code   0x800'3970   0x198  Test.o [1]
+  .text                  ro code   0x800'3b08   0x174  GpioOutput.o [1]
+  .text                  ro code   0x800'3c7c    0x1e  stm32f1xx_hal.o [1]
+  .text                  ro code   0x800'3c9a     0xe  Test.o [1]
+  .text                  ro code   0x800'3ca8    0xd4  SPI_Poll.o [1]
+  .text                  ro code   0x800'3d7c     0xa  cxxabi.o [3]
+  .text                  ro code   0x800'3d88    0x66  ABImemset.o [5]
+  .text                  ro code   0x800'3dee    0x18  Test.o [1]
+  .text                  ro code   0x800'3e06    0x18  Test.o [1]
+  .text                  ro code   0x800'3e1e     0xe  Test.o [1]
+  .text                  ro code   0x800'3e2c    0x18  Test.o [1]
+  .text                  ro code   0x800'3e44     0xc  SPI_Poll.o [1]
+  .text                  ro code   0x800'3e50     0xc  SPI_Poll.o [1]
+  .text                  ro code   0x800'3e5c    0xa0  cppinit.o [2]
+  .text                  ro code   0x800'3efc     0xc  SPI_Poll.o [1]
+  .text                  ro code   0x800'3f08     0xe  SPI_Poll.o [1]
+  .text                  ro code   0x800'3f18   0x12c  stm32f1xx_hal_rcc_ex.o [1]
+  .text                  ro code   0x800'4044    0xbe  main.o [1]
+  .text                  ro code   0x800'4104    0x2a  stm32f1xx_hal.o [1]
+  .rodata                const     0x800'4130    0x80  ff.o [1]
+  .rodata                const     0x800'41b0    0x5c  main.o [1]
+  .text                  ro code   0x800'420c    0x58  system_stm32f1xx.o [1]
+  .rodata                const     0x800'4264    0x38  SPI_Poll.o [1]
+  .text                  ro code   0x800'429c    0x38  packbits_init_single.o [5]
+  .text                  ro code   0x800'42d4    0x30  iarttio.o [6]
+  .text                  ro code   0x800'4304     0xc  XShttio.o [2]
+  .text                  ro code   0x800'4310    0x28  data_init.o [5]
+  .rodata                const     0x800'4338    0x24  SPI_Base.o [1]
+  .iar.init_table        const     0x800'435c    0x24  - Linker created -
+  .text                  ro code   0x800'4380    0x20  cmain_call_ctors.o [5]
+  .text                  ro code   0x800'43a0    0x1e  cmain.o [5]
+  .text                  ro code   0x800'43be     0x4  low_level_init.o [2]
+  .text                  ro code   0x800'43c2     0x4  exit.o [2]
+  .text                  ro code   0x800'43c8     0xe  cexit.o [5]
+  .text                  ro code   0x800'43d8    0x14  exit.o [6]
+  .rodata                const     0x800'43ec    0x1c  GpioOutput.o [1]
+  .rodata                const     0x800'4408    0x1c  SPI_Poll.o [1]
+  .text                  ro code   0x800'4424    0x1c  stm32f1xx_it.o [1]
+  .text                  ro code   0x800'4440    0x18  stm32f1xx_hal.o [1]
+  .text                  ro code   0x800'4458    0x18  Test.o [1]
+  .text                  ro code   0x800'4470     0x6  Test.o [1]
+  .rodata                const     0x800'4478    0x14  Test.o [1]
+  .rodata                const     0x800'448c    0x10  ff.o [1]
+  .rodata                const     0x800'449c    0x10  stm32f1xx_hal_rcc.o [1]
+  .rodata                const     0x800'44ac    0x10  system_stm32f1xx.o [1]
+  .text                  ro code   0x800'44bc    0x10  startup_stm32f103xb.o [1]
+  .rodata                const     0x800'44cc     0xc  ff.o [1]
+  .text                  ro code   0x800'44d8     0xc  cstartup_M.o [5]
+  .rodata                const     0x800'44e4     0x8  ff.o [1]
+  SHT$$PREINIT_ARRAY               0x800'44ec     0x0  <Block>
+  SHT$$INIT_ARRAY                  0x800'44ec     0x8  <Block>
+    .init_array          const     0x800'44ec     0x4  SPI_Base.o [1]
+    .init_array          const     0x800'44f0     0x4  Test.o [1]
+  __iar_tls$$INIT_ARRAY            0x800'44f4     0x0  <Block>
+  .text                  ro code   0x800'44f4     0x4  startup_stm32f103xb.o [1]
+  .text                  ro code   0x800'44f8     0x4  startup_stm32f103xb.o [1]
+  .text                  ro code   0x800'44fc     0x4  startup_stm32f103xb.o [1]
+  .text                  ro code   0x800'4500     0x4  startup_stm32f103xb.o [1]
+  .text                  ro code   0x800'4504     0x4  startup_stm32f103xb.o [1]
+  .text                  ro code   0x800'4508     0x4  startup_stm32f103xb.o [1]
+  .text                  ro code   0x800'450c     0x4  startup_stm32f103xb.o [1]
+  .text                  ro code   0x800'4510     0x4  startup_stm32f103xb.o [1]
+  .text                  ro code   0x800'4514     0x4  startup_stm32f103xb.o [1]
+  .text                  ro code   0x800'4518     0x4  startup_stm32f103xb.o [1]
+  .text                  ro code   0x800'451c     0x4  startup_stm32f103xb.o [1]
+  .text                  ro code   0x800'4520     0x4  startup_stm32f103xb.o [1]
+  .text                  ro code   0x800'4524     0x4  startup_stm32f103xb.o [1]
+  .text                  ro code   0x800'4528     0x4  startup_stm32f103xb.o [1]
+  .text                  ro code   0x800'452c     0x4  startup_stm32f103xb.o [1]
+  .text                  ro code   0x800'4530     0x4  startup_stm32f103xb.o [1]
+  .text                  ro code   0x800'4534     0x4  startup_stm32f103xb.o [1]
+  .text                  ro code   0x800'4538     0x4  startup_stm32f103xb.o [1]
+  .text                  ro code   0x800'453c     0x4  startup_stm32f103xb.o [1]
+  .text                  ro code   0x800'4540     0x4  startup_stm32f103xb.o [1]
+  .text                  ro code   0x800'4544     0x4  startup_stm32f103xb.o [1]
+  .text                  ro code   0x800'4548     0x4  startup_stm32f103xb.o [1]
+  .text                  ro code   0x800'454c     0x4  startup_stm32f103xb.o [1]
+  .text                  ro code   0x800'4550     0x4  startup_stm32f103xb.o [1]
+  .text                  ro code   0x800'4554     0x4  startup_stm32f103xb.o [1]
+  .text                  ro code   0x800'4558     0x4  startup_stm32f103xb.o [1]
+  .text                  ro code   0x800'455c     0x4  startup_stm32f103xb.o [1]
+  .text                  ro code   0x800'4560     0x4  startup_stm32f103xb.o [1]
+  .text                  ro code   0x800'4564     0x4  startup_stm32f103xb.o [1]
+  .text                  ro code   0x800'4568     0x4  startup_stm32f103xb.o [1]
+  .text                  ro code   0x800'456c     0x4  startup_stm32f103xb.o [1]
+  .text                  ro code   0x800'4570     0x4  startup_stm32f103xb.o [1]
+  .text                  ro code   0x800'4574     0x4  startup_stm32f103xb.o [1]
+  .text                  ro code   0x800'4578     0x4  startup_stm32f103xb.o [1]
+  .text                  ro code   0x800'457c     0x4  startup_stm32f103xb.o [1]
+  .text                  ro code   0x800'4580     0x4  startup_stm32f103xb.o [1]
+  .text                  ro code   0x800'4584     0x4  startup_stm32f103xb.o [1]
+  .text                  ro code   0x800'4588     0x4  startup_stm32f103xb.o [1]
+  .text                  ro code   0x800'458c     0x4  startup_stm32f103xb.o [1]
+  .text                  ro code   0x800'4590     0x4  startup_stm32f103xb.o [1]
+  .text                  ro code   0x800'4594     0x4  startup_stm32f103xb.o [1]
+  .text                  ro code   0x800'4598     0x4  startup_stm32f103xb.o [1]
+  .text                  ro code   0x800'459c     0x4  startup_stm32f103xb.o [1]
+  .text                  ro code   0x800'45a0     0x0  cstart_call_dtors.o [5]
+  .rodata                const     0x800'45a0     0x0  zero_init3.o [5]
+  .rodata                const     0x800'45a0     0x0  packbits_init_single.o [5]
+  Initializer bytes      const     0x800'45a0    0x1a  <for P2-1>
+                                 - 0x800'45ba  0x44ce
+
+Absolute sections:                              0x100
+  .noinit                uninit   0x2000'0100   0x100  Interrupt.o [1]
+                                - 0x2000'0200   0x100
+
+"P2", part 1 of 3:                              0x40c
+  P2-1                            0x2000'0200   0x40c  <Init block>
+    .data                inited   0x2000'0200     0x4  system_stm32f1xx.o [1]
+    .data                inited   0x2000'0204   0x400  Test.o [1]
+    .data                inited   0x2000'0604     0x8  XShttio.o [2]
+                                - 0x2000'060c   0x40c
+
+"P2", part 2 of 3:                              0x694
+  .bss                   zero     0x2000'060c   0x32c  SPI_Base.o [1]
+  .bss                   zero     0x2000'0938   0x200  ff.o [1]
+  .bss                   zero     0x2000'0b38    0x58  SPI_Base.o [1]
+  .bss                   zero     0x2000'0b90    0x58  SPI_Base.o [1]
+  .bss                   zero     0x2000'0be8    0x34  SPI_Base.o [1]
+  .bss                   zero     0x2000'0c1c    0x10  diskio.o [1]
+  .bss                   zero     0x2000'0c2c    0x10  Test.o [1]
+  .bss                   zero     0x2000'0c3c    0x10  Test.o [1]
+  .bss                   zero     0x2000'0c4c     0xc  Test.o [1]
+  .bss                   zero     0x2000'0c58     0x4  ff.o [1]
+  .bss                   zero     0x2000'0c60     0x8  stm32f1xx_hal.o [1]
+  .bss                   zero     0x2000'0c68     0x4  SD.o [1]
+  .bss                   zero     0x2000'0c6c     0x4  SD.o [1]
+  .bss                   zero     0x2000'0c70     0x4  SD.o [1]
+  .bss                   zero     0x2000'0c74     0x4  SPI_Base.o [1]
+  .bss                   zero     0x2000'0c78     0x4  SPI_Base.o [1]
+  .bss                   zero     0x2000'0c7c     0x4  SPI_Base.o [1]
+  .bss                   zero     0x2000'0c80     0x4  SPI_Base.o [1]
+  .bss                   zero     0x2000'0c84     0x4  SPI_Base.o [1]
+  .bss                   zero     0x2000'0c88     0x4  SPI_Base.o [1]
+  .bss                   zero     0x2000'0c8c     0x4  Test.o [1]
+  .bss                   zero     0x2000'0c90     0x4  cppinit.o [2]
+  .bss                   zero     0x2000'0c94     0x4  cppinit.o [2]
+  .bss                   zero     0x2000'0c98     0x2  ff.o [1]
+  .bss                   zero     0x2000'0c9a     0x1  SD.o [1]
+  .bss                   zero     0x2000'0c9b     0x1  Test.o [1]
+  .bss                   zero     0x2000'0c9c     0x1  Test.o [1]
+                                - 0x2000'0c9d   0x691
+
+"P2", part 3 of 3:                              0x990
+  .iar.dynexit                    0x2000'0ca0   0x18c  <Block>
+    .iar.dynexit         uninit   0x2000'0ca0     0xc  cppinit.o [2]
+    .iar.dynexit         uninit   0x2000'0cac   0x180  <Block tail>
+  CSTACK                          0x2000'0e30   0x800  <Block>
+    CSTACK               uninit   0x2000'0e30   0x800  <Block tail>
+                                - 0x2000'1630   0x990
+
+Unused ranges:
+
+         From           To    Size
+         ----           --    ----
+   0x800'45ba   0x800'ffff  0xba46
+  0x2000'0000  0x2000'00ff   0x100
+  0x2000'1630  0x2000'4fff  0x39d0
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address      Size
+          -------      ----
+Zero (__iar_zero_init3)
+    1 destination range, total size 0x691:
+          0x2000'060c  0x691
+
+Copy/packbits (__iar_packbits_init_single3)
+    1 source range, total size 0x1a (2% of destination):
+           0x800'45a0   0x1a
+    1 destination range, total size 0x40c:
+          0x2000'0200  0x40c
+
+Extra (__iar_cstart_call_ctors)
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module                  ro code  ro data  rw data  rw data
+                                                        (abs)
+    ------                  -------  -------  -------  -------
+command line/config:
+    ----------------------------------------------------------
+    Total:
+
+C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest_Prev\IAR\Debug\Obj: [1]
+    GpioOutput.o                372       28
+    Interrupt.o                 140                        256
+    SD.o                        176                13
+    SPI_Base.o                  870       40    1 064
+    SPI_Poll.o                  262       84
+    Test.o                      556       49    1 074
+    diskio.o                    332                16
+    fat_sd_spi.o              2 252
+    ff.o                      7 762      164      518
+    main.o                      190       92
+    startup_stm32f103xb.o       424
+    stm32f1xx_hal.o             168                 8
+    stm32f1xx_hal_cortex.o      330
+    stm32f1xx_hal_gpio.o        616
+    stm32f1xx_hal_rcc.o       1 544       18
+    stm32f1xx_hal_rcc_ex.o      300
+    stm32f1xx_hal_spi.o         156
+    stm32f1xx_it.o               28
+    system_stm32f1xx.o           88       16        4
+    ----------------------------------------------------------
+    Total:                   16 566      491    2 697      256
+
+dl7M_tln.a: [2]
+    XShttio.o                    12        1        8
+    cppinit.o                   160                20
+    exit.o                        4
+    low_level_init.o              4
+    ----------------------------------------------------------
+    Total:                      180        1       28
+
+dlpp7M_tl_nc.a: [3]
+    cxxabi.o                     10
+    ----------------------------------------------------------
+    Total:                       10
+
+m7M_tl.a: [4]
+    ----------------------------------------------------------
+    Total:
+
+rt7M_tl.a: [5]
+    ABImemcpy.o                 134
+    ABImemset.o                 102
+    cexit.o                      14
+    cmain.o                      30
+    cmain_call_ctors.o           32
+    cstart_call_dtors.o
+    cstartup_M.o                 12
+    data_init.o                  40
+    packbits_init_single.o       56
+    zero_init3.o                 58
+    ----------------------------------------------------------
+    Total:                      478
+
+shb_l.a: [6]
+    exit.o                       20
+    iarttio.o                    48
+    unwind_debug.o                         1
+    ----------------------------------------------------------
+    Total:                       68        1
+
+    Gaps                         15        4        4
+    Linker created                        36    2 432
+--------------------------------------------------------------
+    Grand Total:             17 317      533    5 161      256
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                       Address   Size  Type      Object
+-----                       -------   ----  ----      ------
+.iar.dynexit$$Base      0x2000'0ca0          --   Gb  - Linker created -
+.iar.dynexit$$Limit     0x2000'0e2c          --   Gb  - Linker created -
+.iar.init_table$$Base    0x800'435c          --   Gb  - Linker created -
+.iar.init_table$$Limit   0x800'4380          --   Gb  - Linker created -
+?main                    0x800'43a1         Code  Gb  cmain.o [5]
+AHBPrescTable            0x800'44ac   0x10  Data  Gb  system_stm32f1xx.o [1]
+BusFault_Handler         0x800'442b    0x2  Code  Gb  stm32f1xx_it.o [1]
+CSTACK$$Base            0x2000'0e30          --   Gb  - Linker created -
+CSTACK$$Limit           0x2000'1630          --   Gb  - Linker created -
+DebugMon_Handler         0x800'4431    0x2  Code  Gb  stm32f1xx_it.o [1]
+DtorRecArray            0x2000'0ca0    0xc  Data  Lc  cppinit.o [2]
+ExCvt                    0x800'4130   0x80  Data  Lc  ff.o [1]
+FatFs                   0x2000'0c58    0x4  Data  Lc  ff.o [1]
+Fsid                    0x2000'0c98    0x2  Data  Lc  ff.o [1]
+Gpio_Output_Test()       0x800'3985   0x46  Code  Gb  Test.o [1]
+HAL_Delay                0x800'3c7d   0x1e  Code  Wk  stm32f1xx_hal.o [1]
+HAL_GPIO_Init            0x800'2dbd  0x226  Code  Gb  stm32f1xx_hal_gpio.o [1]
+HAL_GetTick              0x800'3751    0xc  Code  Wk  stm32f1xx_hal.o [1]
+HAL_IncTick              0x800'4441   0x18  Code  Wk  stm32f1xx_hal.o [1]
+HAL_Init                 0x800'4105   0x24  Code  Gb  stm32f1xx_hal.o [1]
+HAL_InitTick             0x800'375d   0x3c  Code  Wk  stm32f1xx_hal.o [1]
+HAL_NVIC_SetPriority     0x800'3869   0x2a  Code  Gb  stm32f1xx_hal_cortex.o [1]
+HAL_NVIC_SetPriorityGrouping
+                         0x800'385d    0xc  Code  Gb  stm32f1xx_hal_cortex.o [1]
+HAL_RCCEx_PeriphCLKConfig
+                         0x800'3f19  0x118  Code  Gb  stm32f1xx_hal_rcc_ex.o [1]
+HAL_RCC_ClockConfig      0x800'3481  0x16c  Code  Gb  stm32f1xx_hal_rcc.o [1]
+HAL_RCC_GetHCLKFreq      0x800'365b    0x6  Code  Gb  stm32f1xx_hal_rcc.o [1]
+HAL_RCC_GetSysClockFreq
+                         0x800'35ed   0x6e  Code  Gb  stm32f1xx_hal_rcc.o [1]
+HAL_RCC_OscConfig        0x800'30c1  0x3c0  Code  Gb  stm32f1xx_hal_rcc.o [1]
+HAL_SPI_Init             0x800'3025   0x9a  Code  Gb  stm32f1xx_hal_spi.o [1]
+HAL_SYSTICK_CLKSourceConfig
+                         0x800'389f   0x1c  Code  Gb  stm32f1xx_hal_cortex.o [1]
+HAL_SYSTICK_Config       0x800'3893    0xc  Code  Gb  stm32f1xx_hal_cortex.o [1]
+HAL_SYSTICK_IRQHandler   0x800'38d9    0x8  Code  Gb  stm32f1xx_hal_cortex.o [1]
+HardFault_Handler        0x800'4427    0x2  Code  Gb  stm32f1xx_it.o [1]
+LED                     0x2000'0c2c   0x10  Data  Gb  Test.o [1]
+LfnBuf                  0x2000'0938  0x200  Data  Lc  ff.o [1]
+LfnOfs                   0x800'448c   0x10  Data  Lc  ff.o [1]
+MemManage_Handler        0x800'4429    0x2  Code  Gb  stm32f1xx_it.o [1]
+NMI_Handler              0x800'4425    0x2  Code  Gb  stm32f1xx_it.o [1]
+PendSV_Handler           0x800'4433    0x2  Code  Gb  stm32f1xx_it.o [1]
+Peripherals::GpioOutput::GpioOutput(GPIO_TypeDef *, unsigned short)
+                         0x800'3b09   0x26  Code  Gb  GpioOutput.o [1]
+Peripherals::GpioOutput::GpioOutput(GPIO_TypeDef *, unsigned short, Peripherals::GpioOutput::MODE_t, Peripherals::GpioOutput::SPEED_t, unsigned int)
+                         0x800'3b2f   0x30  Code  Gb  GpioOutput.o [1]
+Peripherals::GpioOutput::HwInit()
+                         0x800'3b5f  0x100  Code  Gb  GpioOutput.o [1]
+Peripherals::GpioOutput::Off()
+                         0x800'2a3f    0xa  Code  Gb  Test.o [1]
+Peripherals::GpioOutput::On()
+                         0x800'2a49    0x8  Code  Gb  Test.o [1]
+Peripherals::GpioOutput::ToggleOutput()
+                         0x800'3c9b    0xe  Code  Gb  Test.o [1]
+Peripherals::Interrupt::EnableInterrupt(Peripherals::Interrupt::IRQn)
+                         0x800'38e5   0x20  Code  Gb  Interrupt.o [1]
+Peripherals::Interrupt::RegisterInterrupt_Vct_Table(void (*)(), Peripherals::Interrupt::IRQn, unsigned char, unsigned char)
+                         0x800'3905   0x38  Code  Gb  Interrupt.o [1]
+Peripherals::Interrupt::Relocate_Vector_Table()
+                         0x800'393d   0x24  Code  Gb  Interrupt.o [1]
+Peripherals::Interrupt::Vectors_RAM
+                        0x2000'0100  0x100  Data  Gb  Interrupt.o [1]
+Peripherals::Peripheral::Peripheral()
+                         0x800'3efd    0xc  Code  Gb  SPI_Poll.o [1]
+Peripherals::Peripheral::Peripheral() [subobject]
+                         0x800'3e45    0xc  Code  Gb  SPI_Poll.o [1]
+Peripherals::SD::HwInit()
+                         0x800'29d1   0x36  Code  Gb  SD.o [1]
+Peripherals::SD::SD(Peripherals::SPI_Poll *, Peripherals::GpioOutput *)
+                         0x800'2991   0x40  Code  Gb  SD.o [1]
+Peripherals::SD::close(FIL *)
+                         0x800'3e1f    0xe  Code  Gb  Test.o [1]
+Peripherals::SD::m_SPI_SD
+                        0x2000'0c70    0x4  Data  Gb  SD.o [1]
+Peripherals::SD::m_SPIx
+                        0x2000'0c9a    0x1  Data  Gb  SD.o [1]
+Peripherals::SD::m_pSD_CS
+                        0x2000'0c6c    0x4  Data  Gb  SD.o [1]
+Peripherals::SD::m_pSpiDriverSD
+                        0x2000'0c68    0x4  Data  Gb  SD.o [1]
+Peripherals::SD::mount(FATFS *, char const *, unsigned char)
+                         0x800'3def   0x18  Code  Gb  Test.o [1]
+Peripherals::SD::open(FIL *, char const *, unsigned char)
+                         0x800'3e07   0x18  Code  Gb  Test.o [1]
+Peripherals::SD::print(FIL *, char const *, ...)
+                         0x800'3e2d   0x18  Code  Gb  Test.o [1]
+Peripherals::SD::spi_cs_high()
+                         0x800'2981   0x10  Code  Gb  fat_sd_spi.o [1]
+Peripherals::SD::spi_cs_low()
+                         0x800'2971   0x10  Code  Gb  fat_sd_spi.o [1]
+Peripherals::SD::spi_set_speed(unsigned int)
+                         0x800'2a3d    0x2  Code  Gb  fat_sd_spi.o [1]
+Peripherals::SD::spi_txrx(unsigned char)
+                         0x800'2a07   0x1c  Code  Gb  SD.o [1]
+Peripherals::SPI_Base::GetStatus(Peripherals::SPI_Base::SPIx_t)
+                         0x800'2d47   0x16  Code  Gb  SPI_Base.o [1]
+Peripherals::SPI_Base::SPI1_Q
+                        0x2000'060c  0x32c  Data  Gb  SPI_Base.o [1]
+Peripherals::SPI_Base::SPI1_Status
+                        0x2000'0c74    0x4  Data  Gb  SPI_Base.o [1]
+Peripherals::SPI_Base::SPI2_Q
+                        0x2000'0be8   0x34  Data  Gb  SPI_Base.o [1]
+Peripherals::SPI_Base::SPI2_Status
+                        0x2000'0c78    0x4  Data  Gb  SPI_Base.o [1]
+Peripherals::SPI_Base::SPI_Base()
+                         0x800'3f09    0xe  Code  Gb  SPI_Poll.o [1]
+Peripherals::SPI_Base::SPI_Base() [subobject]
+                         0x800'3e51    0xc  Code  Gb  SPI_Poll.o [1]
+Peripherals::SPI_Base::SPI_Init(Peripherals::SPI_Base::SPIx_t, unsigned int, __SPI_HandleTypeDef *)
+                         0x800'2a69  0x296  Code  Gb  SPI_Base.o [1]
+Peripherals::SPI_Base::SetFrequency(unsigned int)
+                         0x800'2cff   0x48  Code  Gb  SPI_Base.o [1]
+Peripherals::SPI_Base::m_hspi_1
+                        0x2000'0b38   0x58  Data  Gb  SPI_Base.o [1]
+Peripherals::SPI_Base::m_hspi_2
+                        0x2000'0b90   0x58  Data  Gb  SPI_Base.o [1]
+Peripherals::SPI_Base::m_pChipSelect_SPI1
+                        0x2000'0c7c    0x4  Data  Gb  SPI_Base.o [1]
+Peripherals::SPI_Base::m_pChipSelect_SPI2
+                        0x2000'0c80    0x4  Data  Gb  SPI_Base.o [1]
+Peripherals::SPI_Base::m_phspi_1
+                        0x2000'0c84    0x4  Data  Gb  SPI_Base.o [1]
+Peripherals::SPI_Base::m_phspi_2
+                        0x2000'0c88    0x4  Data  Gb  SPI_Base.o [1]
+Peripherals::SPI_Poll::GetSPIx()
+                         0x800'2a51    0x4  Code  Gb  SD.o [1]
+Peripherals::SPI_Poll::HwDeinit()
+                         0x800'4471    0x6  Code  Gb  Test.o [1]
+Peripherals::SPI_Poll::HwInit()
+                         0x800'3d0f   0x4e  Code  Gb  SPI_Poll.o [1]
+Peripherals::SPI_Poll::SPI_Poll(Peripherals::SPI_Base::SPIx_t, Peripherals::GpioOutput *, unsigned int, __SPI_HandleTypeDef *)
+                         0x800'3ca9   0x66  Code  Gb  SPI_Poll.o [1]
+Peripherals::SPI_Poll::~SPI_Poll()
+                         0x800'4459   0x18  Code  Gb  Test.o [1]
+Region$$Table$$Base      0x800'435c          --   Gb  - Linker created -
+Region$$Table$$Limit     0x800'4380          --   Gb  - Linker created -
+SD_Test()                0x800'39cb  0x102  Code  Gb  Test.o [1]
+SD_Test()::CS2          0x2000'0c3c   0x10  Data  Lc  Test.o [1]
+SD_Test()::Printf_Delay
+                        0x2000'0c8c    0x4  Data  Lc  Test.o [1]
+SD_Test()::SPI2_Obj     0x2000'0c4c    0xc  Data  Lc  Test.o [1]
+SD_Test()::name         0x2000'0204  0x400  Data  Lc  Test.o [1]
+SD_Test()::static guard for CS2
+                        0x2000'0c9b    0x1  Data  Lc  Test.o [1]
+SD_Test()::static guard for SPI2_Obj
+                        0x2000'0c9c    0x1  Data  Lc  Test.o [1]
+SD_ff_hw                0x2000'0c1c   0x10  Data  Gb  diskio.o [1]
+SHT$$INIT_ARRAY$$Base    0x800'44ec          --   Gb  - Linker created -
+SHT$$INIT_ARRAY$$Limit   0x800'44f4          --   Gb  - Linker created -
+SHT$$PREINIT_ARRAY$$Base
+                         0x800'44ec          --   Gb  - Linker created -
+SHT$$PREINIT_ARRAY$$Limit
+                         0x800'44ec          --   Gb  - Linker created -
+SVC_Handler              0x800'442f    0x2  Code  Gb  stm32f1xx_it.o [1]
+SysTick_Handler          0x800'4435    0xc  Code  Gb  stm32f1xx_it.o [1]
+SystemClock_Config()     0x800'4059   0xa4  Code  Gb  main.o [1]
+SystemCoreClock         0x2000'0200    0x4  Data  Gb  system_stm32f1xx.o [1]
+SystemInit               0x800'420d   0x3e  Code  Gb  system_stm32f1xx.o [1]
+UsageFault_Handler       0x800'442d    0x2  Code  Gb  stm32f1xx_it.o [1]
+Utils::Queue<Peripherals::SPI_Base::Transaction_t *, (unsigned int)10>::Queue()
+                         0x800'2dad    0xe  Code  Gb  SPI_Base.o [1]
+Utils::Queue<Peripherals::SPI_Base::Transaction_t *, (unsigned int)200>::Queue()
+                         0x800'2d99   0x14  Code  Gb  SPI_Base.o [1]
+Virtual function table for Peripherals::GpioOutput
+                         0x800'43ec   0x1c  Data  Gb  GpioOutput.o [1]
+Virtual function table for Peripherals::Peripheral
+                         0x800'4408   0x1c  Data  Gb  SPI_Poll.o [1]
+Virtual function table for Peripherals::SPI_Poll
+                         0x800'4264   0x38  Data  Gb  SPI_Poll.o [1]
+[local to fat_sd_spi_c]::crc16_ccitt(unsigned short, unsigned char)
+                         0x800'2117   0x2e  Code  Lc  fat_sd_spi.o [1]
+[local to fat_sd_spi_c]::crc7_one(unsigned char, unsigned char)
+                         0x800'20f7   0x20  Code  Lc  fat_sd_spi.o [1]
+[local to fat_sd_spi_c]::sd_cmd(unsigned char, unsigned int)
+                         0x800'2169   0x96  Code  Lc  fat_sd_spi.o [1]
+[local to fat_sd_spi_c]::sd_get_data(hwif *, unsigned char *, int)
+                         0x800'2505   0x86  Code  Lc  fat_sd_spi.o [1]
+[local to fat_sd_spi_c]::sd_get_r1()
+                         0x800'21ff   0x24  Code  Lc  fat_sd_spi.o [1]
+[local to fat_sd_spi_c]::sd_get_r2()
+                         0x800'2223   0x30  Code  Lc  fat_sd_spi.o [1]
+[local to fat_sd_spi_c]::sd_get_r7(unsigned int *)
+                         0x800'2253   0x48  Code  Lc  fat_sd_spi.o [1]
+[local to fat_sd_spi_c]::sd_init(hwif *)
+                         0x800'22af  0x22a  Code  Lc  fat_sd_spi.o [1]
+[local to fat_sd_spi_c]::sd_nec()
+                         0x800'229b   0x14  Code  Lc  fat_sd_spi.o [1]
+[local to fat_sd_spi_c]::sd_put_data(hwif *, unsigned char const *, int)
+                         0x800'258b   0xa6  Code  Lc  fat_sd_spi.o [1]
+[local to fat_sd_spi_c]::sd_read_cid(hwif *)
+                         0x800'272d   0x5a  Code  Lc  fat_sd_spi.o [1]
+[local to fat_sd_spi_c]::sd_read_csd(hwif *)
+                         0x800'2639   0xf4  Code  Lc  fat_sd_spi.o [1]
+[local to fat_sd_spi_c]::sd_read_status(hwif *)
+                         0x800'24d9   0x2c  Code  Lc  fat_sd_spi.o [1]
+[local to fat_sd_spi_c]::sd_readsector(hwif *, unsigned int, unsigned char *)
+                         0x800'2787   0x7a  Code  Lc  fat_sd_spi.o [1]
+[local to fat_sd_spi_c]::sd_writesector(hwif *, unsigned int, unsigned char const *)
+                         0x800'2801   0x80  Code  Lc  fat_sd_spi.o [1]
+[local to ff_c]::check_fs(FATFS *, unsigned long)
+                         0x800'10d1   0x7a  Code  Lc  ff.o [1]
+[local to ff_c]::chk_chr(char const *, int)
+                         0x800'0145   0x14  Code  Lc  ff.o [1]
+[local to ff_c]::cmp_lfn(unsigned short *, unsigned char *)
+                         0x800'08ef   0xbc  Code  Lc  ff.o [1]
+[local to ff_c]::create_chain(FATFS *, unsigned long)
+                         0x800'0599   0xe6  Code  Lc  ff.o [1]
+[local to ff_c]::create_name(DIR *, char const **)
+                         0x800'0d7d  0x272  Code  Lc  ff.o [1]
+[local to ff_c]::dir_alloc(DIR *, unsigned int)
+                         0x800'083f   0x6e  Code  Lc  ff.o [1]
+[local to ff_c]::dir_find(DIR *)
+                         0x800'0b0d  0x11e  Code  Lc  ff.o [1]
+[local to ff_c]::dir_next(DIR *, int)
+                         0x800'0721  0x11e  Code  Lc  ff.o [1]
+[local to ff_c]::dir_register(DIR *)
+                         0x800'0c2b  0x152  Code  Lc  ff.o [1]
+[local to ff_c]::dir_sdi(DIR *, unsigned int)
+                         0x800'067f   0xa2  Code  Lc  ff.o [1]
+[local to ff_c]::find_volume(FATFS **, char const **, unsigned char)
+                         0x800'1151  0x3d8  Code  Lc  ff.o [1]
+[local to ff_c]::fit_lfn(unsigned short const *, unsigned char *, unsigned char, unsigned char)
+                         0x800'09ab   0x8a  Code  Lc  ff.o [1]
+[local to ff_c]::follow_path(DIR *, char const *)
+                         0x800'0fef   0x96  Code  Lc  ff.o [1]
+[local to ff_c]::gen_numname(unsigned char *, unsigned char const *, unsigned short const *, unsigned int)
+                         0x800'0a35   0xb8  Code  Lc  ff.o [1]
+[local to ff_c]::get_ldnumber(char const **)
+                         0x800'1085   0x4c  Code  Lc  ff.o [1]
+[local to ff_c]::ld_clust(FATFS *, unsigned char const *)
+                         0x800'08ad   0x26  Code  Lc  ff.o [1]
+[local to ff_c]::mem_cmp(void const *, void const *, unsigned int)
+                         0x800'011f   0x26  Code  Lc  ff.o [1]
+[local to ff_c]::mem_cpy(void *, void const *, unsigned int)
+                         0x800'00ed   0x1c  Code  Lc  ff.o [1]
+[local to ff_c]::mem_set(void *, int, unsigned int)
+                         0x800'0109   0x16  Code  Lc  ff.o [1]
+[local to ff_c]::move_window(FATFS *, unsigned long)
+                         0x800'01b3   0x42  Code  Lc  ff.o [1]
+[local to ff_c]::putc_bfd(putbuff *, char)
+                         0x800'1c31   0x3e  Code  Lc  ff.o [1]
+[local to ff_c]::remove_chain(FATFS *, unsigned long)
+                         0x800'0525   0x74  Code  Lc  ff.o [1]
+[local to ff_c]::st_clust(unsigned char *, unsigned long)
+                         0x800'08d3   0x1c  Code  Lc  ff.o [1]
+[local to ff_c]::sum_sfn(unsigned char const *)
+                         0x800'0aed   0x20  Code  Lc  ff.o [1]
+[local to ff_c]::sync_fs(FATFS *)
+                         0x800'01f5   0xda  Code  Lc  ff.o [1]
+[local to ff_c]::sync_window(FATFS *)
+                         0x800'0159   0x5a  Code  Lc  ff.o [1]
+[local to ff_c]::validate(void *)
+                         0x800'1529   0x36  Code  Lc  ff.o [1]
+[local to stm32f1xx_hal_cortex_c]::NVIC_EncodePriority(unsigned int, unsigned int, unsigned int)
+                         0x800'37ed   0x40  Code  Lc  stm32f1xx_hal_cortex.o [1]
+[local to stm32f1xx_hal_cortex_c]::NVIC_GetPriorityGrouping()
+                         0x800'37b7    0xa  Code  Lc  stm32f1xx_hal_cortex.o [1]
+[local to stm32f1xx_hal_cortex_c]::NVIC_SetPriority(IRQn_Type, unsigned int)
+                         0x800'37c1   0x2c  Code  Lc  stm32f1xx_hal_cortex.o [1]
+[local to stm32f1xx_hal_cortex_c]::NVIC_SetPriorityGrouping(unsigned int)
+                         0x800'3799   0x1e  Code  Lc  stm32f1xx_hal_cortex.o [1]
+[local to stm32f1xx_hal_cortex_c]::SysTick_Config(unsigned int)
+                         0x800'382d   0x30  Code  Lc  stm32f1xx_hal_cortex.o [1]
+[local to stm32f1xx_hal_rcc_c]::RCC_Delay(unsigned int)
+                         0x800'3661   0x26  Code  Lc  stm32f1xx_hal_rcc.o [1]
+_Error_Handler           0x800'4101    0x2  Code  Gb  main.o [1]
+__aeabi_atexit           0x800'3d7d    0xa  Code  Gb  cxxabi.o [3]
+__aeabi_memcpy4          0x800'36c9         Code  Gb  ABImemcpy.o [5]
+__aeabi_memcpy8          0x800'36c9         Code  Gb  ABImemcpy.o [5]
+__aeabi_memset           0x800'3d89         Code  Gb  ABImemset.o [5]
+__call_ctors             0x800'3e5d   0x18  Code  Gb  cppinit.o [2]
+__call_dtors             0x800'3eab    0xc  Code  Gb  cppinit.o [2]
+__call_dtors0            0x800'3eb7   0x36  Code  Gb  cppinit.o [2]
+__cexit_call_dtors       0x800'43cb         Code  Gb  cexit.o [5]
+__cmain                  0x800'43a1         Code  Gb  cmain.o [5]
+__cstart_call_dtors      0x800'45a0         Data  Gb  cstart_call_dtors.o [5]
+__cxa_atexit             0x800'3e75   0x36  Code  Gb  cppinit.o [2]
+__dso_handle            0x2000'0c94    0x4  Data  Gb  cppinit.o [2]
+__exit                   0x800'43d9   0x14  Code  Gb  exit.o [6]
+__iar_Memset             0x800'3d89         Code  Gb  ABImemset.o [5]
+__iar_Memset_word        0x800'3d91         Code  Gb  ABImemset.o [5]
+__iar_close_ttio         0x800'42d5   0x2e  Code  Gb  iarttio.o [6]
+__iar_cstart_call_ctors
+                         0x800'4381   0x20  Code  Gb  cmain_call_ctors.o [5]
+__iar_data_init3         0x800'4311   0x28  Code  Gb  data_init.o [5]
+__iar_debug_exceptions   0x800'2dba    0x1  Data  Gb  unwind_debug.o [6]
+__iar_lookup_ttioh       0x800'4305    0x4  Code  Gb  XShttio.o [2]
+__iar_packbits_init_single3
+                         0x800'429d   0x38  Code  Gb  packbits_init_single.o [5]
+__iar_program_start      0x800'44d9         Code  Gb  cstartup_M.o [5]
+__iar_tls$$INIT_ARRAY$$Base
+                         0x800'44f4          --   Gb  - Linker created -
+__iar_tls$$INIT_ARRAY$$Limit
+                         0x800'44f4          --   Gb  - Linker created -
+__iar_ttio_handles      0x2000'0604    0x8  Data  Lc  XShttio.o [2]
+__iar_zero_init3         0x800'1f3f   0x3a  Code  Gb  zero_init3.o [5]
+__low_level_init         0x800'43bf    0x4  Code  Gb  low_level_init.o [2]
+__sti__routine           0x800'2a55   0x14  Code  Lc  SPI_Base.o [1]
+__sti__routine           0x800'3971   0x14  Code  Lc  Test.o [1]
+__vector_table           0x800'0000         Data  Gb  startup_stm32f103xb.o [1]
+_call_main               0x800'43ad         Code  Gb  cmain.o [5]
+_exit                    0x800'43c9         Code  Gb  cexit.o [5]
+_main                    0x800'43bb         Code  Gb  cmain.o [5]
+clust2sect(FATFS *, unsigned long)
+                         0x800'02cf   0x1c  Code  Gb  ff.o [1]
+crc16(unsigned char const *, int)
+                         0x800'2145   0x24  Code  Gb  fat_sd_spi.o [1]
+disk_initialize          0x800'1f8b   0x16  Code  Gb  diskio.o [1]
+disk_ioctl               0x800'201d   0x3c  Code  Gb  diskio.o [1]
+disk_read                0x800'1fa1   0x3e  Code  Gb  diskio.o [1]
+disk_status              0x800'1f79   0x12  Code  Gb  diskio.o [1]
+disk_write               0x800'1fdf   0x3e  Code  Gb  diskio.o [1]
+exit                     0x800'43c3    0x4  Code  Gb  exit.o [2]
+f_close                  0x800'1a9b   0x2e  Code  Gb  ff.o [1]
+f_lseek                  0x800'1ac9  0x158  Code  Gb  ff.o [1]
+f_mount                  0x800'155f   0x5c  Code  Gb  ff.o [1]
+f_open                   0x800'15bb  0x1be  Code  Gb  ff.o [1]
+f_printf                 0x800'1c6f  0x2d0  Code  Gb  ff.o [1]
+f_sync                   0x800'1a03   0x98  Code  Gb  ff.o [1]
+f_write                  0x800'178d  0x276  Code  Gb  ff.o [1]
+ff_convert               0x800'20bd    0x4  Code  Gb  diskio.o [1]
+ff_wtoupper              0x800'20c1    0x4  Code  Gb  diskio.o [1]
+get_fat(FATFS *, unsigned long)
+                         0x800'02eb   0xfe  Code  Gb  ff.o [1]
+get_fattime              0x800'2059   0x5c  Code  Gb  diskio.o [1]
+hwif_init(hwif *)        0x800'2881   0x56  Code  Gb  fat_sd_spi.o [1]
+main                     0x800'4045   0x14  Code  Gb  main.o [1]
+next_abi_dtor_rec       0x2000'0c90    0x4  Data  Lc  cppinit.o [2]
+put_fat(FATFS *, unsigned long, unsigned long)
+                         0x800'03e9  0x13c  Code  Gb  ff.o [1]
+sd_read(hwif *, unsigned int, unsigned char *)
+                         0x800'28d7   0x4c  Code  Gb  fat_sd_spi.o [1]
+sd_write(hwif *, unsigned int, unsigned char const *)
+                         0x800'2923   0x4c  Code  Gb  fat_sd_spi.o [1]
+spi_cs_high()            0x800'20cd    0x8  Code  Gb  fat_sd_spi.o [1]
+spi_cs_low()             0x800'20c5    0x8  Code  Gb  fat_sd_spi.o [1]
+spi_init()               0x800'20d5    0x8  Code  Gb  fat_sd_spi.o [1]
+spi_set_speed(unsigned int)
+                         0x800'20dd    0xc  Code  Gb  fat_sd_spi.o [1]
+spi_txrx(unsigned char)
+                         0x800'20e9    0xe  Code  Gb  fat_sd_spi.o [1]
+uwTick                  0x2000'0c60    0x8  Data  Gb  stm32f1xx_hal.o [1]
+
+
+[1] = C:\Amit_Chaudhary\STM32\Projects\IAR\IAR_Projects\Main\Main_Latest_Prev\IAR\Debug\Obj
+[2] = dl7M_tln.a
+[3] = dlpp7M_tl_nc.a
+[4] = m7M_tl.a
+[5] = rt7M_tl.a
+[6] = shb_l.a
+
+  17 317 bytes of readonly  code memory
+     533 bytes of readonly  data memory
+   5 161 bytes of readwrite data memory (+ 256 absolute)
+
+Errors: none
+Warnings: none
